@@ -11,5 +11,14 @@
 	<atom:link href="https://getsrevel.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>My First Post</title>
+      <link>https://getsrevel.github.io/posts/my-first-post/</link>
+      <pubDate>Sun, 06 Oct 2019 20:21:27 +0200</pubDate>
+      
+      <guid>https://getsrevel.github.io/posts/my-first-post/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
