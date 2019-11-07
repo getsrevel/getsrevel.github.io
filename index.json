@@ -1,0 +1,85 @@
+[
+{
+	"uri": "https://getsrevel.github.io/p5js/",
+	"title": "Basics of js",
+	"tags": [],
+	"description": "",
+	"content": " Chapter 1 Basic js These are some examples of vanilla javascript.\nPlain js\n"
+},
+{
+	"uri": "https://getsrevel.github.io/",
+	"title": "Ananke: a Hugo Theme",
+	"tags": [],
+	"description": "The last theme you&#39;ll ever need. Maybe.",
+	"content": "Welcome to my blog with some of my work in progress. I\u0026rsquo;ve been working on this book idea. You can read some of the chapters below.\nhttps://getsrevel.github.io/\n"
+},
+{
+	"uri": "https://getsrevel.github.io/posts/my-first-post/",
+	"title": "My First Post",
+	"tags": [],
+	"description": "",
+	"content": "Here is some content\nLink to Hmm\n"
+},
+{
+	"uri": "https://getsrevel.github.io/p5js/plain-js/",
+	"title": "plain js example",
+	"tags": [],
+	"description": "",
+	"content": "  Fusion Drive combines a hard drive with a flash storage (solid-state drive) and presents it as a single logical volume with the space of both drives combined.\n some more\n Donec massa lacus, ultricies a ullamcorper in, fermentum sed augue. Nunc augue augue, aliquam non hendrerit ac, commodo vel nisi.\n Sed adipiscing elit vitae augue consectetur a gravida nunc vehicula. Donec auctor odio non est accumsan facilisis. Aliquam id turpis in dolor tincidunt mollis ac eu diam.\n Mauris sit amet ligula egestas, feugiat metus tincidunt, luctus libero. Donec congue finibus tempor. Vestibulum aliquet sollicitudin erat, ut aliquet purus posuere luctus.\n In this example, \u0026lt;section\u0026gt;\u0026lt;/section\u0026gt; should be wrapped as code.\n// Some comments line 1 of code line 2 of code line 3 of code  An information disclaimer\n\rgrunt.initConfig({ assemble: { options: { assets: \u0026#39;docs/assets\u0026#39;, data: \u0026#39;src/data/*.{json,yml}\u0026#39;, helpers: \u0026#39;src/custom-helpers.js\u0026#39;, partials: [\u0026#39;src/partials/**/*.{hbs,md}\u0026#39;] }, pages: { options: { layout: \u0026#39;default.hbs\u0026#39; }, files: { \u0026#39;./\u0026#39;: [\u0026#39;src/templates/pages/index.hbs\u0026#39;] } } } };  \r\rIs this learn theme rocks ?\r\r\rYes !.\r\r See https://mermaidjs.github.io/#/flowchart?id=nodes-amp-shapes\ngraph RL;\rA[Hard edge] --|Link text| B(Round edge)\rB -- C{Decision}\rC --|One| D[Result one]\rC --|Two| E[Result two]\r\ralternative mermaid syntax graph LR; A[Hard edge] --\u0026gt;|Link text| B(Round edge) B --\u0026gt; C{Decision} C --\u0026gt;|One| D[Result one] C --\u0026gt;|Two| E[Result two] mermaid docs\ngraph TD; A[Hard edge] --\u0026gt;|Link text| B(Round edge) B --\u0026gt; C{Decision} C --\u0026gt;|One| D[Result one] C --\u0026gt;|Two| E[Result two] flow chart with a title graph TD; title[\u0026lt;u\u0026gt;My Title\u0026lt;/u\u0026gt;] title--\u0026gt;FirstStep style title fill:#FFF,stroke:#FF0 linkStyle 0 stroke:#000,stroke-width:0; FirstStep[Hard edge] --\u0026gt;|Link text| B(Round edge) B --\u0026gt; C{Decision} C --\u0026gt;|One| D[Result one] C --\u0026gt;|Two| E[Result two] Loops, alt and opt sequenceDiagram loop Daily query Alice-\u0026gt;\u0026gt;Bob: Hello Bob, how are you? alt is sick Bob-\u0026gt;\u0026gt;Alice: Not so good :( else is well Bob-\u0026gt;\u0026gt;Alice: Feeling fresh like a daisy end opt Extra response Bob-\u0026gt;\u0026gt;Alice: Thanks for asking end end Message to self in loop sequenceDiagram participant Alice participant Bob Alice-\u0026gt;\u0026gt;John: Hello John, how are you? loop Healthcheck John-\u0026gt;\u0026gt;John: Fight against hypochondria end Note right of John: Rational thoughts\u0026lt;br/\u0026gt;prevail... John--\u0026gt;\u0026gt;Alice: Great! John-\u0026gt;\u0026gt;Bob: How about you? Bob--\u0026gt;\u0026gt;John: Jolly good! Klik her \u0026hellip; eller her \u0026hellip; eller hvad med her  Target content\n199 200 201 202 203 204 205 206 207 208 209 210 211 212 213 214 215 216 217 218 219 220  // GetTitleFunc returns a func that can be used to transform a string to\r// title case.\r//\r// The supported styles are\r//\r// - \u0026#34;Go\u0026#34; (strings.Title)\r// - \u0026#34;AP\u0026#34; (see https://www.apstylebook.com/)\r// - \u0026#34;Chicago\u0026#34; (see https://www.chicagomanualofstyle.org/home.html)\r//\r// If an unknown or empty style is provided, AP style is what you get.\rfunc GetTitleFunc(style string) func(s string) string {\rswitch strings.ToLower(style) {\rcase \u0026#34;go\u0026#34;:\rreturn strings.Title\rcase \u0026#34;chicago\u0026#34;:\rtc := transform.NewTitleConverter(transform.ChicagoStyle)\rreturn tc.Title\r default:\rtc := transform.NewTitleConverter(transform.APStyle)\rreturn tc.Title\r}\r}   function hmm(arg){ let x = 31; return 42 * x; }  hmm  "
+},
+{
+	"uri": "https://getsrevel.github.io/posts/",
+	"title": "Articles",
+	"tags": [],
+	"description": "",
+	"content": "Articles are paginated with only three posts here for example. You can set the number of entries to show on this page with the \u0026ldquo;pagination\u0026rdquo; setting in the config file.\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Amet enim a recusandae cupiditate! Unde sit, reiciendis veniam, sint tempora explicabo fuga inventore commodi nisi est nostrum, illum repudiandae aspernatur nesciunt. Commodi necessitatibus quisquam quidem quas expedita dolorum distinctio excepturi fugiat unde nobis, tempora modi hic nihil nemo consequatur nisi impedit repellendus ullam fugit dolore explicabo velit illo repellat? Deserunt, molestiae! Fugiat ipsam unde perspiciatis illo ipsum veniam harum exercitationem delectus explicabo, adipisci tenetur recusandae labore ut, nemo asperiores blanditiis dolores accusantium! Dignissimos id quae sint nihil, odio voluptatum! Aperiam, quisquam. Omnis a soluta molestiae ea quam ex laudantium reiciendis, assumenda eum quibusdam saepe harum quis, iste sunt deserunt voluptatum sapiente quod? Eos, itaque atque! Magnam provident voluptatibus facere quidem rem? Tempore dicta commodi eveniet perspiciatis molestiae nihil, recusandae id hic, nesciunt quod dolores veniam iure dolorum ex, aperiam similique expedita odio dignissimos fuga ducimus illum. Deleniti molestias esse saepe repellat. Incidunt molestias perferendis quasi magni aliquid minima laboriosam quam corporis laudantium delectus pariatur a, quae reiciendis vero unde. Cupiditate ducimus consectetur enim earum quam non harum porro accusantium repellendus veniam? Hic, iusto dolores illo quidem tenetur repellendus nobis debitis perspiciatis? Omnis, ducimus placeat. Minus consequuntur ad incidunt vero assumenda excepturi aliquid nulla facilis, doloribus deleniti quam impedit nam, nihil quibusdam! Iure at reprehenderit, obcaecati commodi incidunt voluptates sunt quis? Dolores sapiente ratione magnam molestias velit ducimus magni perspiciatis consectetur aliquid, aperiam assumenda rem, tenetur, soluta architecto nobis praesentium quo incidunt!\nDebitis tempore sequi quod magni? Iusto molestiae animi sed amet expedita asperiores ex assumenda aut quos. Assumenda, asperiores a? Cupiditate quis natus ratione exercitationem tempore et aliquam aspernatur? Illum, unde. A architecto, eaque veritatis temporibus maiores eveniet odio pariatur praesentium quo exercitationem natus quasi atque? Praesentium voluptas voluptate quaerat, natus fugiat sint esse obcaecati excepturi ex dolore perspiciatis provident a.\n"
+},
+{
+	"uri": "https://getsrevel.github.io/p5js/plain-js/plain-js-example/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "\rDocument\r\r\rJavascript demo asdf\r\rKlik her\r... eller her\r... eller hvad med her\rTarget content\r\r"
+},
+{
+	"uri": "https://getsrevel.github.io/posts/hmm/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "\rDocument\r\r\rHmm html page\r\rLorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, impedit repudiandae, magnam sint porro quidem eveniet at adipisci assumenda rerum, consequuntur eos eligendi nihil mollitia inventore perferendis possimus. Error, similique.\rLaudantium, cumque architecto veritatis provident similique quia, ipsum aliquid mollitia beatae nam facilis unde quaerat autem tenetur neque natus doloremque incidunt, vel animi? Veniam eum odio ullam? Doloremque, possimus facere.\rIpsam, corporis dignissimos perferendis adipisci fuga saepe labore doloremque dolor exercitationem soluta? Neque illum quo cum aperiam, esse quae dicta labore earum porro sint asperiores harum officia eveniet vero! Facilis!\r\r\r"
+},
+{
+	"uri": "https://getsrevel.github.io/about/",
+	"title": "About",
+	"tags": [],
+	"description": "A few years ago, while visiting or, rather, rummaging about Notre-Dame, the author of this book found, in an obscure nook of one of the towers, the following word, engraved by hand upon the wall: —ANANKE.",
+	"content": "  Illustration from Victor Hugo et son temps (1881)   The Hunchback of Notre-Dame (French: Notre-Dame de Paris) is a French Romantic/Gothic novel by Victor Hugo, published in 1831. The original French title refers to Notre Dame Cathedral, on which the story is centered. English translator Frederic Shoberl named the novel The Hunchback of Notre Dame in 1833 because at the time, Gothic novels were more popular than Romance novels in England. The story is set in Paris, France in the Late Middle Ages, during the reign of Louis XI.\n"
+},
+{
+	"uri": "https://getsrevel.github.io/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/contact/",
+	"title": "Contact",
+	"tags": [],
+	"description": "We&#39;d love to hear from you",
+	"content": "This is an example of a custom shortcode that you can put right into your content. You will need to add a form action to the the shortcode to make it work. Check out Formspree for a simple, free form service.\n{{/* \u0026lt; form-contact action=\u0026ldquo;https://example.com\u0026quot; \u0026gt; */}}\n"
+},
+{
+	"uri": "https://getsrevel.github.io/hmm/",
+	"title": "Hmm asdf",
+	"tags": [],
+	"description": "We&#39;d love to hear from you",
+	"content": "\r\n\r\nLorem ipsum dolor sit amet consectetur, adipisicing elit. Amet enim a recusandae cupiditate! Unde sit, reiciendis veniam, sint tempora explicabo fuga inventore commodi nisi est nostrum, illum repudiandae aspernatur nesciunt.\r\nCommodi necessitatibus quisquam quidem quas expedita dolorum distinctio excepturi fugiat unde nobis, tempora modi hic nihil nemo consequatur nisi impedit repellendus ullam fugit dolore explicabo velit illo repellat? Deserunt, molestiae!\r\nFugiat ipsam unde perspiciatis illo ipsum veniam harum exercitationem delectus explicabo, adipisci tenetur recusandae labore ut, nemo asperiores blanditiis dolores accusantium! Dignissimos id quae sint nihil, odio voluptatum! Aperiam, quisquam.\r\nOmnis a soluta molestiae ea quam ex laudantium reiciendis, assumenda eum quibusdam saepe harum quis, iste sunt deserunt voluptatum sapiente quod? Eos, itaque atque! Magnam provident voluptatibus facere quidem rem?\r\nTempore dicta commodi eveniet perspiciatis molestiae nihil, recusandae id hic, nesciunt quod dolores veniam iure dolorum ex, aperiam similique expedita odio dignissimos fuga ducimus illum. Deleniti molestias esse saepe repellat.\r\nIncidunt molestias perferendis quasi magni aliquid minima laboriosam quam corporis laudantium delectus pariatur a, quae reiciendis vero unde. Cupiditate ducimus consectetur enim earum quam non harum porro accusantium repellendus veniam?\r\nHic, iusto dolores illo quidem tenetur repellendus nobis debitis perspiciatis? Omnis, ducimus placeat. Minus consequuntur ad incidunt vero assumenda excepturi aliquid nulla facilis, doloribus deleniti quam impedit nam, nihil quibusdam!\r\nIure at reprehenderit, obcaecati commodi incidunt voluptates sunt quis? Dolores sapiente ratione magnam molestias velit ducimus magni perspiciatis consectetur aliquid, aperiam assumenda rem, tenetur, soluta architecto nobis praesentium quo incidunt!\r\nDebitis tempore sequi quod magni? Iusto molestiae animi sed amet expedita asperiores ex assumenda aut quos. Assumenda, asperiores a? Cupiditate quis natus ratione exercitationem tempore et aliquam aspernatur? Illum, unde.\r\nA architecto, eaque veritatis temporibus maiores eveniet odio pariatur praesentium quo exercitationem natus quasi atque? Praesentium voluptas voluptate quaerat, natus fugiat sint esse obcaecati excepturi ex dolore perspiciatis provident a."
+},
+{
+	"uri": "https://getsrevel.github.io/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

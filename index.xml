@@ -17,7 +17,17 @@
       <pubDate>Sun, 06 Oct 2019 20:21:27 +0200</pubDate>
       
       <guid>https://getsrevel.github.io/posts/my-first-post/</guid>
-      <description></description>
+      <description>Here is some content
+Link to Hmm</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://getsrevel.github.io/p5js/plain-js/plain-js-example/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://getsrevel.github.io/p5js/plain-js/plain-js-example/</guid>
+      <description>DocumentJavascript demo asdfKlik her... eller her... eller hvad med herTarget content</description>
     </item>
     
     <item>
@@ -27,7 +37,18 @@
       
       <guid>https://getsrevel.github.io/contact/</guid>
       <description>This is an example of a custom shortcode that you can put right into your content. You will need to add a form action to the the shortcode to make it work. Check out Formspree for a simple, free form service.
-Your NameEmail AddressAn email address is required.Message</description>
+{{/* &amp;lt; form-contact action=&amp;ldquo;https://example.com&amp;quot; &amp;gt; */}}</description>
+    </item>
+    
+    <item>
+      <title>Hmm asdf</title>
+      <link>https://getsrevel.github.io/hmm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://getsrevel.github.io/hmm/</guid>
+      <description>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet enim a recusandae cupiditate! Unde sit, reiciendis veniam, sint tempora explicabo fuga inventore commodi nisi est nostrum, illum repudiandae aspernatur nesciunt.
+Commodi necessitatibus quisquam quidem quas expedita dolorum distinctio excepturi fugiat unde nobis, tempora modi hic nihil nemo consequatur nisi impedit repellendus ullam fugit dolore explicabo velit illo repellat? Deserunt, molestiae!
+Fugiat ipsam unde perspiciatis illo ipsum veniam harum exercitationem delectus explicabo, adipisci tenetur recusandae labore ut, nemo asperiores blanditiis dolores accusantium!</description>
     </item>
     
   </channel>
