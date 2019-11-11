@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Project on My New Hugo Site</title>
+    <link>https://getsrevel.github.io/project/</link>
+    <description>Recent content in Project on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Nov 2019 21:38:34 +0100</lastBuildDate>
+    
+	<atom:link href="https://getsrevel.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Stickman</title>
+      <link>https://getsrevel.github.io/project/stickman/</link>
+      <pubDate>Mon, 11 Nov 2019 21:35:57 +0100</pubDate>
+      
+      <guid>https://getsrevel.github.io/project/stickman/</guid>
+      <description>P5js introduktion  Drawing with pixels
+ p5
+ p5 code editor browserbaseret editor der ikke kræver installation.
+ p5 reference
+  Opgave: Lav en tændstikmand Opgaven går ud på at eksperimentere med computergrafik. Ved hjælp af p5js skal du lave et program der benytter forskellige tegne funktioner, til at generere en &amp;ldquo;tændstikmand&amp;rdquo;.
+Han skal som minimum bestå af:
+ hoved mund øjne krop arme ben  Ekstra: til den &amp;ldquo;kvikke elev&amp;rdquo;; få din tændstikmand til at ændre udseende dynamisk f.</description>
+    </item>
+    
+  </channel>
+</rss>

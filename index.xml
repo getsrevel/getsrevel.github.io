@@ -1,54 +1,99 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ananke: a Hugo Theme on My New Hugo Site</title>
+    <title>Getsrevel on My New Hugo Site</title>
     <link>https://getsrevel.github.io/</link>
-    <description>Recent content in Ananke: a Hugo Theme on My New Hugo Site</description>
+    <description>Recent content in Getsrevel on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 06 Oct 2019 20:21:27 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 11 Nov 2019 21:58:28 +0100</lastBuildDate>
     
 	<atom:link href="https://getsrevel.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>My First Post</title>
-      <link>https://getsrevel.github.io/posts/my-first-post/</link>
-      <pubDate>Sun, 06 Oct 2019 20:21:27 +0200</pubDate>
+      <title>Html</title>
+      <link>https://getsrevel.github.io/tech/html/</link>
+      <pubDate>Mon, 11 Nov 2019 21:41:09 +0100</pubDate>
       
-      <guid>https://getsrevel.github.io/posts/my-first-post/</guid>
-      <description>Here is some content
-Link to Hmm</description>
+      <guid>https://getsrevel.github.io/tech/html/</guid>
+      <description>HTML introduktion  HTML5 Tutorial Headings Paragraphs Lists Images figure figcaption  Video kursus (På dansk)  HTML Kursus  Quiz  HTML quiz  Opgave Lav et website i html der præsenterer dig selv og din yndlings kage:
+ Der skal være 2 sider  En beskrivelse af dig selv der navngives &amp;ldquo;profil.html&amp;rdquo; En anden side med en mad opskrift &amp;ldquo;opskrift.html&amp;rdquo;  Begge sider skal have en titel Der skal være links så man kan navigere mellem de to sider  På profil siden</description>
+    </item>
+    
+    <item>
+      <title>Iterativ udvikling</title>
+      <link>https://getsrevel.github.io/tech/development-model/</link>
+      <pubDate>Mon, 11 Nov 2019 21:58:28 +0100</pubDate>
+      
+      <guid>https://getsrevel.github.io/tech/development-model/</guid>
+      <description>graph LR; IDEA(&#34;Idé&#34;) -- PLANNING((&#34;Planlægning&#34;)) subgraph Iteration PLANNING -- IMPLEMENTATION((&#34;Udarbejdelse&#34;)) IMPLEMENTATION -- TEST((Evaluering / Test)) TEST -- PLANNING end TEST -- RELEASE(Frigivelse af færdigt system) </description>
+    </item>
+    
+    <item>
+      <title>Code Editors and IDE&#39;s</title>
+      <link>https://getsrevel.github.io/tools/code-editor/</link>
+      <pubDate>Mon, 11 Nov 2019 21:42:17 +0100</pubDate>
+      
+      <guid>https://getsrevel.github.io/tools/code-editor/</guid>
+      <description> For at kunne arbejde med HTML, CSS, javascript og andre tekst filer har vi brug for en god editor.
+Visual Studio Code  Visual studio code (kan bruges både på Windows og Mac)  Jetbrains produkter Der er mulighed for at bruge en lang række udviklingsmiljøer fra JetBrains i gratis &amp;ldquo;studenter versioner&amp;rdquo;.
+ https://www.jetbrains.com/student/  </description>
+    </item>
+    
+    <item>
+      <title>Stickman</title>
+      <link>https://getsrevel.github.io/project/stickman/</link>
+      <pubDate>Mon, 11 Nov 2019 21:35:57 +0100</pubDate>
+      
+      <guid>https://getsrevel.github.io/project/stickman/</guid>
+      <description>P5js introduktion  Drawing with pixels
+ p5
+ p5 code editor browserbaseret editor der ikke kræver installation.
+ p5 reference
+  Opgave: Lav en tændstikmand Opgaven går ud på at eksperimentere med computergrafik. Ved hjælp af p5js skal du lave et program der benytter forskellige tegne funktioner, til at generere en &amp;ldquo;tændstikmand&amp;rdquo;.
+Han skal som minimum bestå af:
+ hoved mund øjne krop arme ben  Ekstra: til den &amp;ldquo;kvikke elev&amp;rdquo;; få din tændstikmand til at ændre udseende dynamisk f.</description>
+    </item>
+    
+    <item>
+      <title>Git Intro</title>
+      <link>https://getsrevel.github.io/tools/git/</link>
+      <pubDate>Mon, 11 Nov 2019 21:34:01 +0100</pubDate>
+      
+      <guid>https://getsrevel.github.io/tools/git/</guid>
+      <description>Git introduktion  Git and GitHub for Poets - tutorial (codingtrain)Klik for at redigere titlen
+ Git installation vælg den der passer til dit operativ system. På mac er git sikkert allerede installeret. Bruger du linux, ved du formentlig selv hvordan du installerer pakker, der passer til din distribution.
+ Git book
+ How to use git in Visual Studio code
+  Basal Arbejdsgang graph TD; EDIT(&#34;opret/rediger/slet fil(er)&#34;) -- STAGE(&#34;</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://getsrevel.github.io/p5js/plain-js/plain-js-example/</link>
+      <link>https://getsrevel.github.io/example-drafts/p5js-demo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://getsrevel.github.io/p5js/plain-js/plain-js-example/</guid>
-      <description>DocumentJavascript demo asdfKlik her... eller her... eller hvad med herTarget content</description>
+      <guid>https://getsrevel.github.io/example-drafts/p5js-demo/</guid>
+      <description>       </description>
     </item>
     
     <item>
-      <title>Contact</title>
-      <link>https://getsrevel.github.io/contact/</link>
+      <title></title>
+      <link>https://getsrevel.github.io/example-drafts/plain-js/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://getsrevel.github.io/contact/</guid>
-      <description>This is an example of a custom shortcode that you can put right into your content. You will need to add a form action to the the shortcode to make it work. Check out Formspree for a simple, free form service.
-{{/* &amp;lt; form-contact action=&amp;ldquo;https://example.com&amp;quot; &amp;gt; */}}</description>
+      <guid>https://getsrevel.github.io/example-drafts/plain-js/</guid>
+      <description>Documenthtml page asdfLorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, impedit repudiandae, magnam sint porro quidem eveniet at adipisci assumenda rerum, consequuntur eos eligendi nihil mollitia inventore perferendis possimus. Error, similique.Laudantium, cumque architecto veritatis provident similique quia, ipsum aliquid mollitia beatae nam facilis unde quaerat autem tenetur neque natus doloremque incidunt, vel animi? Veniam eum odio ullam? Doloremque, possimus facere.Ipsam, corporis dignissimos perferendis adipisci fuga saepe labore doloremque dolor exercitationem soluta?</description>
     </item>
     
     <item>
-      <title>Hmm asdf</title>
-      <link>https://getsrevel.github.io/hmm/</link>
+      <title></title>
+      <link>https://getsrevel.github.io/tech/javascript/plain-js/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://getsrevel.github.io/hmm/</guid>
-      <description>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet enim a recusandae cupiditate! Unde sit, reiciendis veniam, sint tempora explicabo fuga inventore commodi nisi est nostrum, illum repudiandae aspernatur nesciunt.
-Commodi necessitatibus quisquam quidem quas expedita dolorum distinctio excepturi fugiat unde nobis, tempora modi hic nihil nemo consequatur nisi impedit repellendus ullam fugit dolore explicabo velit illo repellat? Deserunt, molestiae!
-Fugiat ipsam unde perspiciatis illo ipsum veniam harum exercitationem delectus explicabo, adipisci tenetur recusandae labore ut, nemo asperiores blanditiis dolores accusantium!</description>
+      <guid>https://getsrevel.github.io/tech/javascript/plain-js/</guid>
+      <description>DocumentDemo html pageLorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, impedit repudiandae, magnam sint porro quidem eveniet at adipisci assumenda rerum, consequuntur eos eligendi nihil mollitia inventore perferendis possimus. Error, similique.Laudantium, cumque architecto veritatis provident similique quia, ipsum aliquid mollitia beatae nam facilis unde quaerat autem tenetur neque natus doloremque incidunt, vel animi? Veniam eum odio ullam? Doloremque, possimus facere.Ipsam, corporis dignissimos perferendis adipisci fuga saepe labore doloremque dolor exercitationem soluta?</description>
     </item>
     
   </channel>

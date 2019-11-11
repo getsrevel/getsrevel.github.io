@@ -3,42 +3,78 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://getsrevel.github.io/p5js/</loc>
-    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+    <loc>https://getsrevel.github.io/tech/html/</loc>
+    <lastmod>2019-11-11T21:41:09+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://getsrevel.github.io/</loc>
-    <lastmod>2019-10-06T20:21:27+02:00</lastmod>
+    <lastmod>2019-11-11T21:58:28+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/posts/my-first-post/</loc>
-    <lastmod>2019-10-06T20:21:27+02:00</lastmod>
+    <loc>https://getsrevel.github.io/tech/development-model/</loc>
+    <lastmod>2019-11-11T21:58:28+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/p5js/plain-js/</loc>
-    <lastmod>2019-10-06T20:21:27+02:00</lastmod>
+    <loc>https://getsrevel.github.io/tools/code-editor/</loc>
+    <lastmod>2019-11-11T21:42:17+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/posts/</loc>
+    <loc>https://getsrevel.github.io/tech/css/</loc>
+    <lastmod>2019-11-11T21:41:14+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/</loc>
+    <lastmod>2019-11-11T21:40:44+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/project/</loc>
+    <lastmod>2019-11-11T21:38:34+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tools/</loc>
+    <lastmod>2019-11-11T21:38:34+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/project/stickman/</loc>
+    <lastmod>2019-11-11T21:35:57+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tools/git/</loc>
+    <lastmod>2019-11-11T21:34:01+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/example-drafts/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/p5js/plain-js/plain-js-example/</loc>
+    <loc>https://getsrevel.github.io/tech/javascript/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/example-drafts/p5js-demo/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/posts/hmm/</loc>
+    <loc>https://getsrevel.github.io/example-drafts/plain-js/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/about/</loc>
+    <loc>https://getsrevel.github.io/tech/javascript/plain-js/</loc>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -46,11 +82,7 @@
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/contact/</loc>
-  </url>
-  
-  <url>
-    <loc>https://getsrevel.github.io/hmm/</loc>
+    <loc>https://getsrevel.github.io/hold/</loc>
   </url>
   
   <url>

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Getsrevel :: My New Hugo Site</title>
+    <title>Iterativ udvikling :: My New Hugo Site</title>
 
     
     <link href="/css/nucleus.css?1573515155" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/tech/development-model/">
     <nav id="sidebar" class="">
 
 
@@ -94,7 +94,7 @@
   
     
     <li data-nav-id="/tech/" title="Tech" class="dd-item 
-        
+        parent
         
         
         ">
@@ -139,7 +139,7 @@
  
   
     
-      <li data-nav-id="/tech/development-model/" title="Iterativ udvikling" class="dd-item ">
+      <li data-nav-id="/tech/development-model/" title="Iterativ udvikling" class="dd-item active">
         <a href="/tech/development-model/">
         Iterativ udvikling
         
@@ -471,32 +471,89 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > Iterativ udvikling
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Iterativ udvikling
+            </h1>
           
 
         
 
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
-
- 
 
 
-<h1 id="getsrevel">Getsrevel</h1>
+<div class="mermaid" align="center">
+graph LR;
+    IDEA("Idé") --> PLANNING(("Planlægning")) 
+    subgraph Iteration
+        PLANNING --> IMPLEMENTATION(("Udarbejdelse"))
+        IMPLEMENTATION --> TEST((Evaluering / Test))
+        TEST --> PLANNING
+    end
+    TEST --> RELEASE(Frigivelse af færdigt system)
+</div>
 
-<p>Velkommen til mit website der primært erløse noter om programmering og andet &ldquo;work in progress&rdquo;, men måske finder du noget brugbart.</p>
+
+
+<footer class=" footline" >
 	
-  
-        
-            </div> 
+</footer>
+
+
         
         </div> 
         
@@ -528,8 +585,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -545,6 +600,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -612,6 +670,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -626,6 +685,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -834,8 +896,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/tech/javascript/plain-js/" title=""> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/tech/" title="Tech" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/tech/css/" title="Css" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
