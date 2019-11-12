@@ -14,6 +14,13 @@
 	"content": " Getsrevel Velkommen til mit website der primært er løse noter om programmering og andet \u0026ldquo;work in progress\u0026rdquo;, men måske finder du noget brugbart.\n"
 },
 {
+	"uri": "https://getsrevel.github.io/tech/hugo/",
+	"title": "Hugo Static Site Generator",
+	"tags": [],
+	"description": "",
+	"content": " Getting started with Hugo  Hugo Quickstart  Tilføj Indhold Inholdet skrives vha markdown, som bliver oversat til html.\n Markdown syntax explained Markdown usage with grav theme  Diagrammer med Mermaid.js Læs dokumentation af mermaid.js for mange flere detaljer.\n\rHer er et eksempel på hvordan man kan lave et flowchart.\n{{\u0026lt; mermaid \u0026gt;}} graph TD; EDIT(\u0026quot;opret/rediger/slet fil(er)\u0026quot;) --\u0026gt; STAGE(\u0026quot;udvælg ændringer\u0026quot;) STAGE --\u0026gt; COMMIT(\u0026quot;Commit i lokalt depot\u0026quot;) COMMIT --\u0026gt; DO_PUSH{Klar til offentliggørelse?} DO_PUSH --\u0026gt;|Nej| EDIT DO_PUSH --\u0026gt;|Ja| PUSH(\u0026quot;Skub ændriger til 'remote'\u0026quot;) PUSH --\u0026gt; EDIT {{\u0026lt; / mermaid \u0026gt;}}  Resultatet kommer til at se således ud.\ngraph LR; EDIT(\"opret/rediger/slet fil(er)\") -- STAGE(\"udvælg ændringer\") STAGE -- COMMIT(\"Commit i lokalt depot\") COMMIT -- DO_PUSH{Klar til offentliggørelse?} DO_PUSH --|Nej| EDIT DO_PUSH --|Ja| PUSH(\"Skub ændriger til 'remote'\") PUSH -- EDIT \r"
+},
+{
 	"uri": "https://getsrevel.github.io/tech/development-model/",
 	"title": "Iterativ udvikling",
 	"tags": [],

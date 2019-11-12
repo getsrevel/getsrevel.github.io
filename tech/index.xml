@@ -22,6 +22,18 @@
     </item>
     
     <item>
+      <title>Hugo Static Site Generator</title>
+      <link>https://getsrevel.github.io/tech/hugo/</link>
+      <pubDate>Tue, 12 Nov 2019 12:51:42 +0100</pubDate>
+      
+      <guid>https://getsrevel.github.io/tech/hugo/</guid>
+      <description>Getting started with Hugo  Hugo Quickstart  Tilføj Indhold Inholdet skrives vha markdown, som bliver oversat til html.
+ Markdown syntax explained Markdown usage with grav theme  Diagrammer med Mermaid.js Læs dokumentation af mermaid.js for mange flere detaljer.
+Her er et eksempel på hvordan man kan lave et flowchart.
+{{&amp;lt; mermaid &amp;gt;}} graph TD; EDIT(&amp;quot;opret/rediger/slet fil(er)&amp;quot;) --&amp;gt; STAGE(&amp;quot;udvælg ændringer&amp;quot;) STAGE --&amp;gt; COMMIT(&amp;quot;Commit i lokalt depot&amp;quot;) COMMIT --&amp;gt; DO_PUSH{Klar til offentliggørelse?</description>
+    </item>
+    
+    <item>
       <title>Iterativ udvikling</title>
       <link>https://getsrevel.github.io/tech/development-model/</link>
       <pubDate>Mon, 11 Nov 2019 21:58:28 +0100</pubDate>
