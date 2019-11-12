@@ -70,6 +70,27 @@
 	"content": " Git introduktion  Git and GitHub for Poets - tutorial (codingtrain)Klik for at redigere titlen\n Git installation vælg den der passer til dit operativ system. På mac er git sikkert allerede installeret. Bruger du linux, ved du formentlig selv hvordan du installerer pakker, der passer til din distribution.\n Git book\n How to use git in Visual Studio code\n  Basal Arbejdsgang graph TD; EDIT(\"opret/rediger/slet fil(er)\") -- STAGE(\"udvælg ændringer\") STAGE -- COMMIT(\"Commit i lokalt depot\") COMMIT -- DO_PUSH{Klar til offentliggørelse?} DO_PUSH --|Nej| EDIT DO_PUSH --|Ja| PUSH(\"Skub ændriger til 'remote'\") PUSH -- EDIT \r"
 },
 {
+	"uri": "https://getsrevel.github.io/hold/",
+	"title": "Hold",
+	"tags": [],
+	"description": "",
+	"content": " Projekt portfolio Programmering Her er en samling af elevernes små projekter.\n"
+},
+{
+	"uri": "https://getsrevel.github.io/hold/hold-b-2018/",
+	"title": "Programmering B 2018",
+	"tags": [],
+	"description": "",
+	"content": " Websites  Kasper - falken123321 (source)\n Andreas - neaxic (source)\n javel.dk   "
+},
+{
+	"uri": "https://getsrevel.github.io/hold/hold-b-2019/",
+	"title": "Programmering B 2019",
+	"tags": [],
+	"description": "",
+	"content": " Websites  Mae Chee - buttermyeggs (source) Hans hmfhtx (source) Benjamin satyrox (source) Jesper-L (source) TobiasPro (source) MarkusKaer (source) frederik7741 (source) tongo42069 (source)  "
+},
+{
 	"uri": "https://getsrevel.github.io/example-drafts/",
 	"title": "example-drafts",
 	"tags": [],
@@ -110,13 +131,6 @@
 	"tags": [],
 	"description": "",
 	"content": ""
-},
-{
-	"uri": "https://getsrevel.github.io/hold/",
-	"title": "Hold",
-	"tags": [],
-	"description": "",
-	"content": " Projekt portfolio Programmering Her er en samling af elevernes små projekter.\n"
 },
 {
 	"uri": "https://getsrevel.github.io/tags/",
