@@ -63,6 +63,7 @@ Visual Studio Code  Visual studio code (kan bruges både på Windows og Mac)  Je
  p5
  p5 code editor browserbaseret editor der ikke kræver installation.
  p5 reference
+ Variabler i javascript
   Tegn på skærmen  Tegne primitiver dokumentation af alle.  Nogle få udvalgte.
  rect() line() ellipse() arc()  Her er nogle eksempler på hvordan de kan bruges i koden: en linie, et rektangel, en ellipse, et buestykke.
 line(x1, y1, x2, y2); rect(x, y, w, h); arc(x, y, w, h, start, stop);  Brug af farver Når du skal tegne kan du vælge egenskaber for din &amp;ldquo;pensel&amp;rdquo;.</description>
