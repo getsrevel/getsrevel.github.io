@@ -21,9 +21,9 @@
  p5
  p5 code editor browserbaseret editor der ikke kræver installation.
  p5 reference
-  Opgave: Lav en tændstikmand Opgaven går ud på at eksperimentere med computergrafik. Ved hjælp af p5js skal du lave et program der benytter forskellige tegne funktioner, til at generere en &amp;ldquo;tændstikmand&amp;rdquo;.
-Han skal som minimum bestå af:
- hoved mund øjne krop arme ben  Ekstra: til den &amp;ldquo;kvikke elev&amp;rdquo;; få din tændstikmand til at ændre udseende dynamisk f.</description>
+  Tegn på skærmen  Tegne primitiver dokumentation af alle.  Nogle få udvalgte.
+ rect() line() ellipse() arc()  Her er nogle eksempler på hvordan de kan bruges i koden: en linie, et rektangel, en ellipse, et buestykke.
+line(x1, y1, x2, y2); rect(x, y, w, h); arc(x, y, w, h, start, stop);  Brug af farver Når du skal tegne kan du vælge egenskaber for din &amp;ldquo;pensel&amp;rdquo;.</description>
     </item>
     
   </channel>
