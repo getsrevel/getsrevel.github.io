@@ -28,7 +28,7 @@
       
       <guid>https://getsrevel.github.io/tech/hugo/</guid>
       <description>Kom igang med Hugo  Hugo Hugo Quickstart  Tilføj indhold Indholdet skrives ved hjælp af markdown, som bliver oversat til html.
- Markdown - John Gruber Markdown Markdown syntax explained Markdown usage with grav theme  Diagrammer med Mermaid.js Læs dokumentation af mermaid.js for mange flere detaljer.
+ Markdown - John Gruber Markdown Markdown syntax explained Markdown usage with grav theme Hugo shortcodes  Diagrammer med Mermaid.js Læs dokumentation af mermaid.js for mange flere detaljer.
 Her er et eksempel på hvordan man kan lave et flowchart.
 {{&amp;lt; mermaid &amp;gt;}} graph TD; EDIT(&amp;quot;opret/rediger/slet fil(er)&amp;quot;) --&amp;gt; STAGE(&amp;quot;udvælg ændringer&amp;quot;) STAGE --&amp;gt; COMMIT(&amp;quot;Commit i lokalt depot&amp;quot;) COMMIT --&amp;gt; DO_PUSH{Klar til offentliggørelse?</description>
     </item>
@@ -39,7 +39,7 @@
       <pubDate>Mon, 11 Nov 2019 21:58:28 +0100</pubDate>
       
       <guid>https://getsrevel.github.io/tech/development-model/</guid>
-      <description>graph LR; IDEA(&#34;Idé&#34;) -- PLANNING((&#34;Planlægning&#34;)) subgraph Iteration PLANNING -- IMPLEMENTATION((&#34;Udarbejdelse&#34;)) IMPLEMENTATION -- TEST((Evaluering / Test)) TEST -- PLANNING end TEST -- RELEASE(Frigivelse af færdigt system) </description>
+      <description>graph LR; IDEA(&#34;Idé&#34;) -- PLANNING((&#34;Planlægning&#34;)) PLANNING -- IMPLEMENTATION((&#34;Udarbejdelse&#34;)) IMPLEMENTATION -- TEST((Evaluering / Test)) TEST -- PLANNING TEST -- RELEASE(Frigivelse af færdigt system) </description>
     </item>
     
   </channel>
