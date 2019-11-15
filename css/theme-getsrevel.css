@@ -1,4 +1,7 @@
 
+/* Add font for the logo */
+@import url('https://fonts.googleapis.com/css?family=Supermercado+One&display=swap');
+
 :root{
     
     --MAIN-TEXT-color:#323232; /* Color of text by default */
@@ -25,9 +28,6 @@
     --MENU-SECTION-HR-color: #20272b; /* Color of <hr> separator in menu */
     
 }
-
-/* add font for the logo */
-@import url('https://fonts.googleapis.com/css?family=Supermercado+One&display=swap');
 
 body {
     color: var(--MAIN-TEXT-color) !important;
