@@ -12,20 +12,20 @@
     <title>Stickman :: My New Hugo Site</title>
 
     
-    <link href="/css/nucleus.css?1573812705" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1573812705" rel="stylesheet">
-    <link href="/css/hybrid.css?1573812705" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1573812705" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1573812705" rel="stylesheet">
-    <link href="/css/auto-complete.css?1573812705" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1573812705" rel="stylesheet">
-    <link href="/css/theme.css?1573812705" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1573812705" rel="stylesheet">
+    <link href="/css/nucleus.css?1573908752" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1573908752" rel="stylesheet">
+    <link href="/css/hybrid.css?1573908752" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1573908752" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1573908752" rel="stylesheet">
+    <link href="/css/auto-complete.css?1573908752" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1573908752" rel="stylesheet">
+    <link href="/css/theme.css?1573908752" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1573908752" rel="stylesheet">
     
-      <link href="/css/theme-getsrevel.css?1573812705" rel="stylesheet">
+      <link href="/css/theme-getsrevel.css?1573908752" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1573812705"></script>
+    <script src="/js/jquery-3.3.1.min.js?1573908752"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1573812705"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1573812705"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1573908752"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1573908752"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/getsrevel.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1573812705"></script>
+<script type="text/javascript" src="/js/search.js?1573908752"></script>
 
     
   </div>
@@ -587,8 +587,10 @@
 <li>
 <ul>
 <li><a href="#p5js-introduktion">P5js introduktion</a></li>
-<li><a href="#tegn-på-skærmen">Tegn på skærmen</a></li>
+<li><a href="#tegn-på-skærmen">Tegn på skærmen</a>
+<ul>
 <li><a href="#brug-af-farver">Brug af farver</a></li>
+</ul></li>
 <li><a href="#opgave-lav-en-tændstikmand">Opgave: Lav en tændstikmand</a></li>
 </ul></li>
 </ul>
@@ -621,8 +623,7 @@
 <h2 id="p5js-introduktion">P5js introduktion</h2>
 
 <ul>
-<li><a href="https://www.youtube.com/watch?v=a562vsSI2Po">Drawing with pixels</a> er en lille video der forklarer de grundlæggende principper i computergrafik.</li>
-<li><a href="https://p5js.org/">p5</a></li>
+<li><a href="https://p5js.org/">p5js</a></li>
 <li><a href="https://editor.p5js.org/">p5 code editor</a> browserbaseret editor der ikke kræver installation.</li>
 <li><a href="https://p5js.org/reference/">p5 reference</a> er dokumentation af de mange funktioner i p5.</li>
 <li><a href="http://javascript.info/variables#a-real-life-analogy">Variabler i javascript</a> bliver grundigt forklaret og bruger et metafor med en kasse, der måske kan hjælpe lidt på forståelsen.</li>
@@ -630,6 +631,14 @@
 </ul>
 
 <h2 id="tegn-på-skærmen">Tegn på skærmen</h2>
+
+<p>Denne video forklarer de grundlæggende principper i computergrafik.</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/a562vsSI2Po" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
 
 <ul>
 <li>Dokumentation af alle <a href="https://p5js.org/reference/#group-Shape">tegne primitiver i p5</a>.</li>
@@ -650,14 +659,14 @@ en linie, et rektangel, en ellipse, et buestykke.</p>
     <span style="color:#a6e22e">rect</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">w</span>, <span style="color:#a6e22e">h</span>);
     <span style="color:#a6e22e">arc</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">w</span>, <span style="color:#a6e22e">h</span>, <span style="color:#a6e22e">start</span>, <span style="color:#a6e22e">stop</span>);
 </code></pre></div>
-<h2 id="brug-af-farver">Brug af farver</h2>
+<h3 id="brug-af-farver">Brug af farver</h3>
 
 <p>Når du skal tegne kan du vælge egenskaber for din &ldquo;pensel&rdquo;.
 Dette gøres på inden du &ldquo;maler&rdquo;, på samme måde som med en rigtig pensel.</p>
 
 <ul>
 <li><a href="https://p5js.org/reference/#/p5/stroke">stroke()</a> vælger stregens farve.</li>
-<li><a href="https://p5js.org/reference/#/p5/strokeWeight">strokeWeight()</a> vælger stregens farve.</li>
+<li><a href="https://p5js.org/reference/#/p5/strokeWeight">strokeWeight()</a> vælger stregens tykkelse.</li>
 <li><a href="https://p5js.org/reference/#/p5/fill">fill()</a> vælger fyldfarven. Denne har kun betydning for lukkede figurer som f.eks. firkanter og cirkler.</li>
 </ul>
 
@@ -667,7 +676,7 @@ Dette gøres på inden du &ldquo;maler&rdquo;, på samme måde som med en rigtig
   <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">42</span>);
 </code></pre></div>
 <ul>
-<li><a href="https://www.google.com/search?q=color+picker">Color Picker - google</a></li>
+<li><a href="https://www.google.com/search?q=color+picker">Color Picker (google)</a> kan bruges til at vælge en farve og se hvilke argumenter du skal give til <a href="https://p5js.org/reference/#/p5/color">color()</a> funktionen.</li>
 <li><a href="https://www.w3schools.com/colors/colors_picker.asp">Color Picker - w3schools</a> er en del af en længere forklaring om farver på hjemmesider og computergrafik.</li>
 </ul>
 
@@ -1173,19 +1182,19 @@ f.eks. vha. museinput, knaptryk</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1573812705"></script>
-    <script src="/js/perfect-scrollbar.min.js?1573812705"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1573812705"></script>
-    <script src="/js/jquery.sticky.js?1573812705"></script>
-    <script src="/js/featherlight.min.js?1573812705"></script>
-    <script src="/js/highlight.pack.js?1573812705"></script>
+    <script src="/js/clipboard.min.js?1573908752"></script>
+    <script src="/js/perfect-scrollbar.min.js?1573908752"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1573908752"></script>
+    <script src="/js/jquery.sticky.js?1573908752"></script>
+    <script src="/js/featherlight.min.js?1573908752"></script>
+    <script src="/js/highlight.pack.js?1573908752"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1573812705"></script>
-    <script src="/js/learn.js?1573812705"></script>
-    <script src="/js/hugo-learn.js?1573812705"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1573908752"></script>
+    <script src="/js/learn.js?1573908752"></script>
+    <script src="/js/hugo-learn.js?1573908752"></script>
 
-    <link href="/mermaid/mermaid.css?1573812705" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1573812705"></script>
+    <link href="/mermaid/mermaid.css?1573908752" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1573908752"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
