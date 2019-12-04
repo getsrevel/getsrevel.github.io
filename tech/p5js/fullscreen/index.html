@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Iterativ udvikling :: My New Hugo Site</title>
+    <title>Fullscreen :: My New Hugo Site</title>
 
     
     <link href="/css/nucleus.css?1575461877" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tech/development-model/">
+  <body class="" data-url="/tech/p5js/fullscreen/">
     <nav id="sidebar" class="">
 
 
@@ -143,7 +143,7 @@
  
   
     
-      <li data-nav-id="/tech/development-model/" title="Iterativ udvikling" class="dd-item active">
+      <li data-nav-id="/tech/development-model/" title="Iterativ udvikling" class="dd-item ">
         <a href="/tech/development-model/">
         Iterativ udvikling
         
@@ -187,7 +187,7 @@
   
     
     <li data-nav-id="/tech/p5js/" title="p5js" class="dd-item 
-        
+        parent
         
         
         ">
@@ -214,8 +214,8 @@
   
     
     <li data-nav-id="/tech/p5js/fullscreen/" title="Fullscreen" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/tech/p5js/fullscreen/">
@@ -658,7 +658,13 @@
             
           
           
-            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > Iterativ udvikling
+            
+            
+          
+          
+            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/p5js/'>p5js</a> > Fullscreen
+          
+         
           
          
           
@@ -671,7 +677,14 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#demo">Demo</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -687,7 +700,7 @@
           
             <h1>
               
-              Iterativ udvikling
+              Fullscreen
             </h1>
           
 
@@ -696,21 +709,70 @@
 
 
 
-<div class="mermaid" align="center">
-graph LR;
-    IDEA("Idé") --> PLANNING(("Planlægning")) 
-    PLANNING --> IMPLEMENTATION(("Udarbejdelse"))
-    IMPLEMENTATION --> TEST((Evaluering / Test))
-    TEST --> PLANNING
-    TEST --> RELEASE(Frigivelse af færdigt system)
-</div>
+	
+
+<p>Her er et eksempel på hvordan man kan vise sin sketch på hele skærmen.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">cnv</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+  <span style="color:#a6e22e">cnv</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createCanvas</span>(<span style="color:#a6e22e">windowWidth</span>, <span style="color:#a6e22e">windowHeight</span>);
+  <span style="color:#a6e22e">centerCanvas</span>();
+  <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">200</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+  <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+  
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cSize</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>;
+  <span style="color:#a6e22e">fill</span>(<span style="color:#ae81ff">20</span>);
+  <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">width</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">height</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">cSize</span>);
+  <span style="color:#a6e22e">fill</span>(<span style="color:#ae81ff">255</span>);
+  <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>, <span style="color:#a6e22e">cSize</span>);
+  <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">width</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">100</span>, <span style="color:#a6e22e">cSize</span>);
+  <span style="color:#a6e22e">circle</span>(<span style="color:#ae81ff">100</span>, <span style="color:#a6e22e">height</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">100</span>, <span style="color:#a6e22e">cSize</span>);
+  <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">width</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">100</span>, <span style="color:#a6e22e">height</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">100</span>, <span style="color:#a6e22e">cSize</span>);
+
+  <span style="color:#a6e22e">fill</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">102</span>, <span style="color:#ae81ff">153</span>);
+  <span style="color:#a6e22e">textSize</span>(<span style="color:#ae81ff">20</span>);
+  <span style="color:#a6e22e">textAlign</span>(<span style="color:#a6e22e">CENTER</span>);
+  <span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;Click me!&#34;</span>, <span style="color:#a6e22e">width</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">height</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">cSize</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mousePressed</span>() {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">mouseX</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">mouseX</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">width</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">mouseY</span> <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">mouseY</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">height</span>) {
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">fs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">fullscreen</span>();
+    <span style="color:#a6e22e">fullscreen</span>(<span style="color:#f92672">!</span><span style="color:#a6e22e">fs</span>);
+  }
+}
+
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">centerCanvas</span>() {
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">windowWidth</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">width</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">windowHeight</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">height</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+  <span style="color:#a6e22e">cnv</span>.<span style="color:#a6e22e">position</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>);
+}
+
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">windowResized</span>() {
+  <span style="color:#a6e22e">resizeCanvas</span>(<span style="color:#a6e22e">windowWidth</span>, <span style="color:#a6e22e">windowHeight</span>);
+  <span style="color:#a6e22e">centerCanvas</span>();
+}
+</code></pre></div>
+
+<h2 id="demo">Demo</h2>
+
+<ul>
+<li>Her er et <a href="demo/">kørende eksempel</a></li>
+</ul>
+
+
 
 
 
 <footer class=" footline" >
 	
 </footer>
-
 
         
         </div> 
@@ -793,6 +855,96 @@ graph LR;
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                 
                 
 
@@ -816,10 +968,46 @@ graph LR;
                     
 
                     
+            
+        
+                    
                         
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -909,91 +1097,6 @@ graph LR;
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -1010,39 +1113,6 @@ graph LR;
             
                 
                     
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1056,6 +1126,9 @@ graph LR;
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1130,6 +1203,7 @@ graph LR;
             
                 
                     
+                    
                 
                 
 
@@ -1145,6 +1219,7 @@ graph LR;
             
                 
                     
+                    
                 
                 
 
@@ -1157,6 +1232,9 @@ graph LR;
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1368,10 +1446,10 @@ graph LR;
 	 
 	 
 		
-			<a class="nav nav-prev" href="/tech/javascript/plain-js/" title=""> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/tech/p5js/" title="p5js"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/tech/css/" title="Css" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/tech/p5js/fullscreen/demo/" title="" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1401,4 +1479,3 @@ graph LR;
 
   </body>
 </html>
-

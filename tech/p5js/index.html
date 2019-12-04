@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Iterativ udvikling :: My New Hugo Site</title>
+    <title>p5js :: My New Hugo Site</title>
 
     
     <link href="/css/nucleus.css?1575461877" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tech/development-model/">
+  <body class="" data-url="/tech/p5js/">
     <nav id="sidebar" class="">
 
 
@@ -143,7 +143,7 @@
  
   
     
-      <li data-nav-id="/tech/development-model/" title="Iterativ udvikling" class="dd-item active">
+      <li data-nav-id="/tech/development-model/" title="Iterativ udvikling" class="dd-item ">
         <a href="/tech/development-model/">
         Iterativ udvikling
         
@@ -187,8 +187,8 @@
   
     
     <li data-nav-id="/tech/p5js/" title="p5js" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/tech/p5js/">
@@ -642,8 +642,6 @@
                         </a>
                     </span>
                   
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  
                   <span class="links">
                  
                  
@@ -658,7 +656,7 @@
             
           
           
-            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > Iterativ udvikling
+            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > p5js
           
          
           
@@ -669,13 +667,6 @@
                   </span>
                 </div>
                 
-                    <div class="progress">
-    <div class="wrapper">
-
-    </div>
-</div>
-
-                
               </div>
             </div>
             
@@ -683,12 +674,9 @@
         
         </div>
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>
-              
-              Iterativ udvikling
-            </h1>
           
 
         
@@ -696,14 +684,13 @@
 
 
 
-<div class="mermaid" align="center">
-graph LR;
-    IDEA("Idé") --> PLANNING(("Planlægning")) 
-    PLANNING --> IMPLEMENTATION(("Udarbejdelse"))
-    IMPLEMENTATION --> TEST((Evaluering / Test))
-    TEST --> PLANNING
-    TEST --> RELEASE(Frigivelse af færdigt system)
-</div>
+	
+
+<h1 id="p5js">P5js</h1>
+
+<p>Lidt forskellige eksempler med p5.js.</p>
+
+
 
 
 
@@ -711,7 +698,8 @@ graph LR;
 	
 </footer>
 
-
+        
+            </div> 
         
         </div> 
         
@@ -793,6 +781,7 @@ graph LR;
             
                 
                     
+                    
                 
                 
 
@@ -807,6 +796,129 @@ graph LR;
             
             
                 
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -909,91 +1021,6 @@ graph LR;
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -1012,37 +1039,6 @@ graph LR;
                     
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1130,6 +1126,7 @@ graph LR;
             
                 
                     
+                    
                 
                 
 
@@ -1144,6 +1141,9 @@ graph LR;
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1368,10 +1368,10 @@ graph LR;
 	 
 	 
 		
-			<a class="nav nav-prev" href="/tech/javascript/plain-js/" title=""> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/tech/css/" title="Css"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/tech/css/" title="Css" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/tech/p5js/fullscreen/" title="Fullscreen" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1401,4 +1401,3 @@ graph LR;
 
   </body>
 </html>
-

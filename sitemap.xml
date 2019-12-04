@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://getsrevel.github.io/tech/p5js/fullscreen/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://getsrevel.github.io/</loc>
     <lastmod>2019-11-12T12:51:42+01:00</lastmod>
   </url>
@@ -30,6 +35,11 @@
   <url>
     <loc>https://getsrevel.github.io/tech/css/</loc>
     <lastmod>2019-11-11T21:41:14+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/</loc>
+    <lastmod>2019-11-11T21:40:44+01:00</lastmod>
   </url>
   
   <url>
@@ -99,6 +109,11 @@
   
   <url>
     <loc>https://getsrevel.github.io/tech/javascript/plain-js/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/fullscreen/demo/</loc>
     <priority>0</priority>
   </url>
   
