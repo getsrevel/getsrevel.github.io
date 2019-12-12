@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Asteroids Game</title>
+      <link>https://getsrevel.github.io/project/asteroid/</link>
+      <pubDate>Thu, 05 Dec 2019 10:35:53 +0100</pubDate>
+      
+      <guid>https://getsrevel.github.io/project/asteroid/</guid>
+      <description>Opgave: Lav et &amp;ldquo;Asteroids&amp;rdquo; spil  Opgaven skal laves i grupper. I skal lave implementationen i p5js I skal lave en kravspecifikation I skal bruge Trello til at styre jeres opgaver. &amp;ldquo;Oversæt&amp;rdquo; krav til jeres spil fra kravspecifikationen til opgaver på jeres trello board. Brug git og github til at samarbejde om koden.  Materiale  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5.</description>
+    </item>
+    
+    <item>
       <title>Stickman</title>
       <link>https://getsrevel.github.io/project/stickman/</link>
       <pubDate>Mon, 11 Nov 2019 21:35:57 +0100</pubDate>

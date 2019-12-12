@@ -8,13 +8,18 @@
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/fullscreen/</loc>
-    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+    <loc>https://getsrevel.github.io/project/asteroid/</loc>
+    <lastmod>2019-12-05T10:35:53+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://getsrevel.github.io/</loc>
-    <lastmod>2019-11-12T12:51:42+01:00</lastmod>
+    <lastmod>2019-12-05T10:35:53+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/fullscreen/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
   <url>
@@ -114,6 +119,11 @@
   
   <url>
     <loc>https://getsrevel.github.io/tech/p5js/fullscreen/demo/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/keyboard/demo/</loc>
     <priority>0</priority>
   </url>
   

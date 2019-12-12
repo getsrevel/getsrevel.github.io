@@ -6,7 +6,7 @@
     <description>Recent content in Getsrevel on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Nov 2019 12:51:42 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 05 Dec 2019 10:35:53 +0100</lastBuildDate>
     
 	<atom:link href="https://getsrevel.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,25 @@
       <guid>https://getsrevel.github.io/tech/html/</guid>
       <description>HTML introduktion  HTML5 Tutorial Headings Paragraphs Lists Images figure figcaption  Video kursus (På dansk)  HTML Kursus  Quiz  HTML quiz  Opgave Lav et website i html der præsenterer dig selv og din yndlings kage:
  Der skal være 2 sider  En beskrivelse af dig selv der navngives &amp;ldquo;profil.html&amp;rdquo; En anden side med en mad opskrift &amp;ldquo;opskrift.html&amp;rdquo;  Begge sider skal have en titel Der skal være links så man kan navigere mellem de to sider  På profil siden</description>
+    </item>
+    
+    <item>
+      <title>Asteroids Game</title>
+      <link>https://getsrevel.github.io/project/asteroid/</link>
+      <pubDate>Thu, 05 Dec 2019 10:35:53 +0100</pubDate>
+      
+      <guid>https://getsrevel.github.io/project/asteroid/</guid>
+      <description>Opgave: Lav et &amp;ldquo;Asteroids&amp;rdquo; spil  Opgaven skal laves i grupper. I skal lave implementationen i p5js I skal lave en kravspecifikation I skal bruge Trello til at styre jeres opgaver. &amp;ldquo;Oversæt&amp;rdquo; krav til jeres spil fra kravspecifikationen til opgaver på jeres trello board. Brug git og github til at samarbejde om koden.  Materiale  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5.</description>
+    </item>
+    
+    <item>
+      <title>Fullscreen</title>
+      <link>https://getsrevel.github.io/tech/p5js/fullscreen/</link>
+      <pubDate>Wed, 04 Dec 2019 12:46:20 +0100</pubDate>
+      
+      <guid>https://getsrevel.github.io/tech/p5js/fullscreen/</guid>
+      <description>Her er et eksempel på hvordan man kan vise sin sketch på hele skærmen.
+let cnv; let cnvSetup = { w: 400, h: 500 }; function setup() { cnv = createCanvas(cnvSetup.w, cnvSetup.h); cnv.parent(&amp;#34;fullscreen-sketch-holder-1&amp;#34;); background(255, 0, 200); } function draw() { background(220); const cSize = 50; fill(20); circle(width / 2, height / 2, cSize); fill(255); circle(100, 100, cSize); circle(width - 100, 100, cSize); circle(100, height - 100, cSize); circle(width - 100, height - 100, cSize); fill(0, 102, 153); textSize(20); textAlign(CENTER); text(&amp;#34;Click me!</description>
     </item>
     
     <item>
@@ -138,6 +157,15 @@ Visual Studio Code  Visual studio code (kan bruges både på Windows og Mac)  Je
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://getsrevel.github.io/tech/p5js/fullscreen/demo/</guid>
+      <description>          </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://getsrevel.github.io/tech/p5js/keyboard/demo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://getsrevel.github.io/tech/p5js/keyboard/demo/</guid>
       <description>          </description>
     </item>
     

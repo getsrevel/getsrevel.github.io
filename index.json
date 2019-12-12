@@ -7,11 +7,11 @@
 	"content": " HTML introduktion  HTML5 Tutorial Headings Paragraphs Lists Images figure figcaption  Video kursus (På dansk)  HTML Kursus  Quiz  HTML quiz  Opgave Lav et website i html der præsenterer dig selv og din yndlings kage:\n Der skal være 2 sider  En beskrivelse af dig selv der navngives \u0026ldquo;profil.html\u0026rdquo; En anden side med en mad opskrift \u0026ldquo;opskrift.html\u0026rdquo;  Begge sider skal have en titel Der skal være links så man kan navigere mellem de to sider  På profil siden\n Brug forskellige niveauer af overskrifter Lav mindst et afsnit med brødtekst (f.eks. En kort beskrivelse af dig selv) Indsæt et billede af dig selv  Giv det en figurtekst med dit navn   På siden med opskriften\n Lav overskrifter Indsæt et billede af kagen Lav en unummereret punktopstilling med ingredienser Lav en nummeret punktopstilling med fremgangsmåden Lav en henvisning (link) til kilden (hvor du fandt opskriften) Lav et link til \u0026ldquo;toppen\u0026rdquo; lokalt link på siden  "
 },
 {
-	"uri": "https://getsrevel.github.io/tech/p5js/fullscreen/",
-	"title": "Fullscreen",
+	"uri": "https://getsrevel.github.io/project/asteroid/",
+	"title": "Asteroids Game",
 	"tags": [],
 	"description": "",
-	"content": " Her er et eksempel på hvordan man kan vise sin sketch på hele skærmen.\nlet cnv; function setup() { cnv = createCanvas(windowWidth, windowHeight); centerCanvas(); background(255, 0, 200); } function draw() { background(220); const cSize = 50; fill(20); circle(width / 2, height / 2, cSize); fill(255); circle(100, 100, cSize); circle(width - 100, 100, cSize); circle(100, height - 100, cSize); circle(width - 100, height -100, cSize); fill(0, 102, 153); textSize(20); textAlign(CENTER); text(\u0026#34;Click me!\u0026#34;, width/2, height/2 - cSize); } function mousePressed() { if (mouseX \u0026gt; 0 \u0026amp;\u0026amp; mouseX \u0026lt; width \u0026amp;\u0026amp; mouseY \u0026gt; 0 \u0026amp;\u0026amp; mouseY \u0026lt; height) { let fs = fullscreen(); fullscreen(!fs); } } function centerCanvas() { let x = (windowWidth - width) / 2; let y = (windowHeight - height) / 2; cnv.position(x, y); } function windowResized() { resizeCanvas(windowWidth, windowHeight); centerCanvas(); }  Demo  Her er et kørende eksempel  "
+	"content": " Opgave: Lav et \u0026ldquo;Asteroids\u0026rdquo; spil  Opgaven skal laves i grupper. I skal lave implementationen i p5js I skal lave en kravspecifikation I skal bruge Trello til at styre jeres opgaver. \u0026ldquo;Oversæt\u0026rdquo; krav til jeres spil fra kravspecifikationen til opgaver på jeres trello board. Brug git og github til at samarbejde om koden.  Materiale  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5. Git  Javascript emner For at kunne lave spillet bliver det formentlig nyttigt at kende til disse koncepter\n Betingelser Løkker Funktioner Objekter Arrays  Coding Challenge #46.1: Asteroids with p5.js - Part 1   Coding Challenge #46.2: Asteroids with p5.js - Part 2   3.2: Trigonometry and Polar Coordinates - The Nature of Code   "
 },
 {
 	"uri": "https://getsrevel.github.io/",
@@ -19,6 +19,13 @@
 	"tags": [],
 	"description": "",
 	"content": " Getsrevel Velkommen til mit website der primært er løse noter om programmering og andet \u0026ldquo;work in progress\u0026rdquo;, men måske finder du noget brugbart.\n"
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/fullscreen/",
+	"title": "Fullscreen",
+	"tags": [],
+	"description": "",
+	"content": " Her er et eksempel på hvordan man kan vise sin sketch på hele skærmen.\nlet cnv; let cnvSetup = { w: 400, h: 500 }; function setup() { cnv = createCanvas(cnvSetup.w, cnvSetup.h); cnv.parent(\u0026#34;fullscreen-sketch-holder-1\u0026#34;); background(255, 0, 200); } function draw() { background(220); const cSize = 50; fill(20); circle(width / 2, height / 2, cSize); fill(255); circle(100, 100, cSize); circle(width - 100, 100, cSize); circle(100, height - 100, cSize); circle(width - 100, height - 100, cSize); fill(0, 102, 153); textSize(20); textAlign(CENTER); text(\u0026#34;Click me!\u0026#34;, width / 2, height / 2 - cSize); } function mousePressed() { if (mouseX \u0026gt; 0 \u0026amp;\u0026amp; mouseX \u0026lt; width \u0026amp;\u0026amp; mouseY \u0026gt; 0 \u0026amp;\u0026amp; mouseY \u0026lt; height) { let fs = fullscreen(); fullscreen(!fs); } } function centerCanvas() { let x = (windowWidth - width) / 2; let y = (windowHeight - height) / 2; cnv.position(x, y); } function windowResized() { const isfs = fullscreen(); if (isfs) { console.log(\u0026#34;IS full\u0026#34;); let bodyElement = document.body; bodyElement.style.overflow = \u0026#34;hidden\u0026#34;; cnv.parent(bodyElement); resizeCanvas(windowWidth, windowHeight); centerCanvas(); // cnv.parent(\u0026#34;fullscreen-sketch-holder-2\u0026#34;);  // resizeCanvas(600,500);  } else { console.log(\u0026#34;NORMAL\u0026#34;); cnv.parent(\u0026#34;fullscreen-sketch-holder-1\u0026#34;); resizeCanvas(cnvSetup.w, cnvSetup.h); cnv.elt.style.position = \u0026#39;initial\u0026#39;; //let pos = cnv.position();  let bodyElement = document.body; bodyElement.style.overflow = \u0026#34;auto\u0026#34;; } }  Demo  Her er et kørende eksempel  Inline demo Position 1  Position 2      "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/hugo/",
@@ -155,6 +162,13 @@
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/fullscreen/demo/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "          "
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/keyboard/demo/",
 	"title": "",
 	"tags": [],
 	"description": "",
