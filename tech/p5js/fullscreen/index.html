@@ -12,20 +12,20 @@
     <title>Fullscreen :: My New Hugo Site</title>
 
     
-    <link href="/css/nucleus.css?1576143105" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1576143105" rel="stylesheet">
-    <link href="/css/hybrid.css?1576143105" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1576143105" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1576143105" rel="stylesheet">
-    <link href="/css/auto-complete.css?1576143105" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1576143105" rel="stylesheet">
-    <link href="/css/theme.css?1576143105" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1576143105" rel="stylesheet">
+    <link href="/css/nucleus.css?1576157560" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1576157560" rel="stylesheet">
+    <link href="/css/hybrid.css?1576157560" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1576157560" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1576157560" rel="stylesheet">
+    <link href="/css/auto-complete.css?1576157560" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1576157560" rel="stylesheet">
+    <link href="/css/theme.css?1576157560" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1576157560" rel="stylesheet">
     
-      <link href="/css/theme-getsrevel.css?1576143105" rel="stylesheet">
+      <link href="/css/theme-getsrevel.css?1576157560" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1576143105"></script>
+    <script src="/js/jquery-3.3.1.min.js?1576157560"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1576143105"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1576143105"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1576157560"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1576157560"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/getsrevel.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1576143105"></script>
+<script type="text/javascript" src="/js/search.js?1576157560"></script>
 
     
   </div>
@@ -200,6 +200,8 @@
         <ul>
           
           
+            
+          
           
           
         
@@ -211,13 +213,33 @@
  
   
     
-      <li data-nav-id="/tech/p5js/fullscreen/" title="Fullscreen" class="dd-item active">
-        <a href="/tech/p5js/fullscreen/">
-        Fullscreen
+    <li data-nav-id="/tech/p5js/keyboard/" title="Keyboard" class="dd-item 
         
-        </a>
+        
+        
+        ">
+      <a href="/tech/p5js/keyboard/">
+          Keyboard
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+             
+            
+          
+        
+        </ul>
+              
     </li>
-     
   
  
 
@@ -230,13 +252,33 @@
  
   
     
-      <li data-nav-id="/tech/p5js/fullscreen/demo/" title="" class="dd-item ">
-        <a href="/tech/p5js/fullscreen/demo/">
+    <li data-nav-id="/tech/p5js/fullscreen/" title="Fullscreen" class="dd-item 
+        parent
+        active
         
+        ">
+      <a href="/tech/p5js/fullscreen/">
+          Fullscreen
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
         
-        </a>
+          
+             
+            
+          
+        
+        </ul>
+              
     </li>
-     
   
  
 
@@ -249,16 +291,39 @@
  
   
     
-      <li data-nav-id="/tech/p5js/keyboard/demo/" title="" class="dd-item ">
-        <a href="/tech/p5js/keyboard/demo/">
+    <li data-nav-id="/tech/p5js/my-demo/" title="p5 demo presentation" class="dd-item 
         
         
-        </a>
+        
+        ">
+      <a href="/tech/p5js/my-demo/">
+          p5 demo presentation
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+             
+            
+          
+        
+        </ul>
+              
     </li>
-     
   
  
 
+            
+          
+             
             
           
         
@@ -703,11 +768,7 @@
 <li>
 <ul>
 <li><a href="#demo">Demo</a></li>
-<li><a href="#inline-demo">Inline demo</a>
-<ul>
-<li><a href="#position-1">Position 1</a></li>
-<li><a href="#position-2">Position 2</a></li>
-</ul></li>
+<li><a href="#inline-demo">Inline demo</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -735,6 +796,7 @@
 
 
 
+	
 
 <p>Her er et eksempel på hvordan man kan vise sin sketch på hele skærmen.</p>
 
@@ -746,7 +808,7 @@
 
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
   <span style="color:#a6e22e">cnv</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">createCanvas</span>(<span style="color:#a6e22e">cnvSetup</span>.<span style="color:#a6e22e">w</span>, <span style="color:#a6e22e">cnvSetup</span>.<span style="color:#a6e22e">h</span>);
-  <span style="color:#a6e22e">cnv</span>.<span style="color:#a6e22e">parent</span>(<span style="color:#e6db74">&#34;fullscreen-sketch-holder-1&#34;</span>);
+  <span style="color:#a6e22e">cnv</span>.<span style="color:#a6e22e">parent</span>(<span style="color:#e6db74">&#34;sketch-holder&#34;</span>);
   <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">255</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">200</span>);
 }
 
@@ -812,25 +874,21 @@
 
 <h2 id="inline-demo">Inline demo</h2>
 
-<h3 id="position-1">Position 1</h3>
+<div id="sketch-holder"></div>
 
-<div id="fullscreen-sketch-holder-1"></div>
+<script src="/p5lib/p5.js"></script>
+<script src="/p5lib/p5.dom.min.js"></script>
+<script src="/p5lib/p5.sound.min.js"></script>
 
-<h3 id="position-2">Position 2</h3>
+<script src="./demo/sketch.js"></script>
 
-<div id="fullscreen-sketch-holder-2"></div>
 
-<script src="../p5lib/p5.js"></script>
-<script src="../p5lib/p5.dom.min.js"></script>
-<script src="../p5lib/p5.sound.min.js"></script>
 
-<script src="./demo/fullscreen-sketch.js"></script>
 
 
 <footer class=" footline" >
 	
 </footer>
-
 
         
         </div> 
@@ -919,25 +977,10 @@
 
                     
                     
-                    
-
-                    
                         
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -952,25 +995,13 @@
 
                     
                     
+                        
+                    
                     
 
-                    
-            
-        
                     
                         
             
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -982,30 +1013,19 @@
             
                 
                     
+                    
                 
                 
 
                     
+                    
+                        
                     
                     
 
                     
                         
             
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1017,6 +1037,9 @@
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -1030,82 +1053,13 @@
                         
             
             
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
+        
                     
             
         
                     
                         
             
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -1189,25 +1143,10 @@
 
                     
                     
-                    
-
-                    
                         
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
                     
                     
 
-                    
-            
-        
                     
                         
             
@@ -1222,25 +1161,13 @@
 
                     
                     
+                        
+                    
                     
 
-                    
-            
-        
                     
                         
             
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -1252,10 +1179,13 @@
             
                 
                     
+                    
                 
                 
 
                     
+                    
+                        
                     
                     
 
@@ -1263,19 +1193,39 @@
                         
             
             
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
+        
                     
             
         
                     
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
             
         
                     
@@ -1295,28 +1245,10 @@
                     
 
                     
-            
-        
-                    
                         
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -1329,21 +1261,8 @@
             
         
                     
-                        
             
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
+        
                     
             
         
@@ -1358,9 +1277,272 @@
 
                     
                     
+                        
+                    
                     
 
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
             
         
                     
@@ -1576,10 +1758,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/tech/p5js/" title="p5js"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/tech/p5js/keyboard/" title="Keyboard"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/tech/p5js/fullscreen/demo/" title="" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/tech/p5js/my-demo/" title="p5 demo presentation" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -1589,19 +1771,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1576143106"></script>
-    <script src="/js/perfect-scrollbar.min.js?1576143106"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1576143106"></script>
-    <script src="/js/jquery.sticky.js?1576143106"></script>
-    <script src="/js/featherlight.min.js?1576143106"></script>
-    <script src="/js/highlight.pack.js?1576143106"></script>
+    <script src="/js/clipboard.min.js?1576157560"></script>
+    <script src="/js/perfect-scrollbar.min.js?1576157560"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1576157560"></script>
+    <script src="/js/jquery.sticky.js?1576157560"></script>
+    <script src="/js/featherlight.min.js?1576157560"></script>
+    <script src="/js/highlight.pack.js?1576157560"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1576143106"></script>
-    <script src="/js/learn.js?1576143106"></script>
-    <script src="/js/hugo-learn.js?1576143106"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1576157560"></script>
+    <script src="/js/learn.js?1576157560"></script>
+    <script src="/js/hugo-learn.js?1576157560"></script>
 
-    <link href="/mermaid/mermaid.css?1576143106" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1576143106"></script>
+    <link href="/mermaid/mermaid.css?1576157560" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1576157560"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
@@ -1609,4 +1791,3 @@
 
   </body>
 </html>
-

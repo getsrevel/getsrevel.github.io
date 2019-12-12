@@ -31,16 +31,6 @@
     </item>
     
     <item>
-      <title>Fullscreen</title>
-      <link>https://getsrevel.github.io/tech/p5js/fullscreen/</link>
-      <pubDate>Wed, 04 Dec 2019 12:46:20 +0100</pubDate>
-      
-      <guid>https://getsrevel.github.io/tech/p5js/fullscreen/</guid>
-      <description>Her er et eksempel på hvordan man kan vise sin sketch på hele skærmen.
-let cnv; let cnvSetup = { w: 400, h: 500 }; function setup() { cnv = createCanvas(cnvSetup.w, cnvSetup.h); cnv.parent(&amp;#34;fullscreen-sketch-holder-1&amp;#34;); background(255, 0, 200); } function draw() { background(220); const cSize = 50; fill(20); circle(width / 2, height / 2, cSize); fill(255); circle(100, 100, cSize); circle(width - 100, 100, cSize); circle(100, height - 100, cSize); circle(width - 100, height - 100, cSize); fill(0, 102, 153); textSize(20); textAlign(CENTER); text(&amp;#34;Click me!</description>
-    </item>
-    
-    <item>
       <title>Hugo Static Site Generator</title>
       <link>https://getsrevel.github.io/tech/hugo/</link>
       <pubDate>Tue, 12 Nov 2019 12:51:42 +0100</pubDate>
@@ -149,24 +139,6 @@ Visual Studio Code  Visual studio code (kan bruges både på Windows og Mac)  Je
       
       <guid>https://getsrevel.github.io/tech/javascript/plain-js/</guid>
       <description>DocumentDemo html pageLorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, impedit repudiandae, magnam sint porro quidem eveniet at adipisci assumenda rerum, consequuntur eos eligendi nihil mollitia inventore perferendis possimus. Error, similique.Laudantium, cumque architecto veritatis provident similique quia, ipsum aliquid mollitia beatae nam facilis unde quaerat autem tenetur neque natus doloremque incidunt, vel animi? Veniam eum odio ullam? Doloremque, possimus facere.Ipsam, corporis dignissimos perferendis adipisci fuga saepe labore doloremque dolor exercitationem soluta?</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://getsrevel.github.io/tech/p5js/fullscreen/demo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://getsrevel.github.io/tech/p5js/fullscreen/demo/</guid>
-      <description>          </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://getsrevel.github.io/tech/p5js/keyboard/demo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://getsrevel.github.io/tech/p5js/keyboard/demo/</guid>
-      <description>          </description>
     </item>
     
   </channel>

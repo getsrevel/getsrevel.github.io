@@ -6,7 +6,7 @@ let cnvSetup = {
 
 function setup() {
   cnv = createCanvas(cnvSetup.w, cnvSetup.h);
-  cnv.parent("fullscreen-sketch-holder-1");
+  cnv.parent("sketch-holder");
   background(255, 0, 200);
 }
 

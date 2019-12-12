@@ -18,6 +18,11 @@
   </url>
   
   <url>
+    <loc>https://getsrevel.github.io/tech/p5js/keyboard/</loc>
+    <lastmod>2019-12-04T13:22:34+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://getsrevel.github.io/tech/p5js/fullscreen/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
@@ -103,6 +108,31 @@
   </url>
   
   <url>
+    <loc>https://getsrevel.github.io/tech/p5js/fullscreen/demo/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/keyboard/demo/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/my-demo/demo/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/my-demo/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/demo/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://getsrevel.github.io/example-drafts/p5js-demo/</loc>
     <priority>0</priority>
   </url>
@@ -114,16 +144,6 @@
   
   <url>
     <loc>https://getsrevel.github.io/tech/javascript/plain-js/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://getsrevel.github.io/tech/p5js/fullscreen/demo/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://getsrevel.github.io/tech/p5js/keyboard/demo/</loc>
     <priority>0</priority>
   </url>
   

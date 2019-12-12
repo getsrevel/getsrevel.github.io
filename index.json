@@ -21,11 +21,18 @@
 	"content": " Getsrevel Velkommen til mit website der primært er løse noter om programmering og andet \u0026ldquo;work in progress\u0026rdquo;, men måske finder du noget brugbart.\n"
 },
 {
+	"uri": "https://getsrevel.github.io/tech/p5js/keyboard/",
+	"title": "Keyboard",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://getsrevel.github.io/tech/p5js/fullscreen/",
 	"title": "Fullscreen",
 	"tags": [],
 	"description": "",
-	"content": " Her er et eksempel på hvordan man kan vise sin sketch på hele skærmen.\nlet cnv; let cnvSetup = { w: 400, h: 500 }; function setup() { cnv = createCanvas(cnvSetup.w, cnvSetup.h); cnv.parent(\u0026#34;fullscreen-sketch-holder-1\u0026#34;); background(255, 0, 200); } function draw() { background(220); const cSize = 50; fill(20); circle(width / 2, height / 2, cSize); fill(255); circle(100, 100, cSize); circle(width - 100, 100, cSize); circle(100, height - 100, cSize); circle(width - 100, height - 100, cSize); fill(0, 102, 153); textSize(20); textAlign(CENTER); text(\u0026#34;Click me!\u0026#34;, width / 2, height / 2 - cSize); } function mousePressed() { if (mouseX \u0026gt; 0 \u0026amp;\u0026amp; mouseX \u0026lt; width \u0026amp;\u0026amp; mouseY \u0026gt; 0 \u0026amp;\u0026amp; mouseY \u0026lt; height) { let fs = fullscreen(); fullscreen(!fs); } } function centerCanvas() { let x = (windowWidth - width) / 2; let y = (windowHeight - height) / 2; cnv.position(x, y); } function windowResized() { const isfs = fullscreen(); if (isfs) { console.log(\u0026#34;IS full\u0026#34;); let bodyElement = document.body; bodyElement.style.overflow = \u0026#34;hidden\u0026#34;; cnv.parent(bodyElement); resizeCanvas(windowWidth, windowHeight); centerCanvas(); // cnv.parent(\u0026#34;fullscreen-sketch-holder-2\u0026#34;);  // resizeCanvas(600,500);  } else { console.log(\u0026#34;NORMAL\u0026#34;); cnv.parent(\u0026#34;fullscreen-sketch-holder-1\u0026#34;); resizeCanvas(cnvSetup.w, cnvSetup.h); cnv.elt.style.position = \u0026#39;initial\u0026#39;; //let pos = cnv.position();  let bodyElement = document.body; bodyElement.style.overflow = \u0026#34;auto\u0026#34;; } }  Demo  Her er et kørende eksempel  Inline demo Position 1  Position 2      "
+	"content": " Her er et eksempel på hvordan man kan vise sin sketch på hele skærmen.\nlet cnv; let cnvSetup = { w: 400, h: 500 }; function setup() { cnv = createCanvas(cnvSetup.w, cnvSetup.h); cnv.parent(\u0026#34;sketch-holder\u0026#34;); background(255, 0, 200); } function draw() { background(220); const cSize = 50; fill(20); circle(width / 2, height / 2, cSize); fill(255); circle(100, 100, cSize); circle(width - 100, 100, cSize); circle(100, height - 100, cSize); circle(width - 100, height - 100, cSize); fill(0, 102, 153); textSize(20); textAlign(CENTER); text(\u0026#34;Click me!\u0026#34;, width / 2, height / 2 - cSize); } function mousePressed() { if (mouseX \u0026gt; 0 \u0026amp;\u0026amp; mouseX \u0026lt; width \u0026amp;\u0026amp; mouseY \u0026gt; 0 \u0026amp;\u0026amp; mouseY \u0026lt; height) { let fs = fullscreen(); fullscreen(!fs); } } function centerCanvas() { let x = (windowWidth - width) / 2; let y = (windowHeight - height) / 2; cnv.position(x, y); } function windowResized() { const isfs = fullscreen(); if (isfs) { console.log(\u0026#34;IS full\u0026#34;); let bodyElement = document.body; bodyElement.style.overflow = \u0026#34;hidden\u0026#34;; cnv.parent(bodyElement); resizeCanvas(windowWidth, windowHeight); centerCanvas(); // cnv.parent(\u0026#34;fullscreen-sketch-holder-2\u0026#34;);  // resizeCanvas(600,500);  } else { console.log(\u0026#34;NORMAL\u0026#34;); cnv.parent(\u0026#34;fullscreen-sketch-holder-1\u0026#34;); resizeCanvas(cnvSetup.w, cnvSetup.h); cnv.elt.style.position = \u0026#39;initial\u0026#39;; //let pos = cnv.position();  let bodyElement = document.body; bodyElement.style.overflow = \u0026#34;auto\u0026#34;; } }  Demo  Her er et kørende eksempel  Inline demo      "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/hugo/",
@@ -140,6 +147,41 @@
 	"content": " Basic js demo Her er indholdet af my-script.js.\n// This file is included from the html file\r\rconsole.log(\u0026#34;Hej i konsollen\u0026#34;);\rfunction myFunction() {\rconsole.log(\u0026#34;AV!!!\u0026#34;);\r}\rfunction myOtherFunction(){\rconsole.log(\u0026#34;Hej med dig\u0026#34;);\r}\rfunction myThirdFunction(){\ralert(\u0026#34;Hvad har du gang i?\u0026#34;);\r}  Her er indholdet af index.html, så du kan se hvordan scriptet hentes ind i html siden, og funktionerne kan bindes til eventhandlere på de knapper der er indsat på siden.\n\u0026lt;!DOCTYPE html\u0026gt;\r\u0026lt;html lang=\u0026#34;en\u0026#34;\u0026gt;\r\u0026lt;head\u0026gt;\r\u0026lt;meta charset=\u0026#34;UTF-8\u0026#34;\u0026gt;\r\u0026lt;meta name=\u0026#34;viewport\u0026#34; content=\u0026#34;width=device-width, initial-scale=1.0\u0026#34;\u0026gt;\r\u0026lt;meta http-equiv=\u0026#34;X-UA-Compatible\u0026#34; content=\u0026#34;ie=edge\u0026#34;\u0026gt;\r\u0026lt;title\u0026gt;Document\u0026lt;/title\u0026gt;\r\u0026lt;/head\u0026gt;\r\u0026lt;body\u0026gt;\r\u0026lt;h1\u0026gt;Demo html page\u0026lt;/h1\u0026gt;\r\u0026lt;p\u0026gt;\r\u0026lt;span\u0026gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, impedit repudiandae, magnam sint porro quidem eveniet at adipisci assumenda rerum, consequuntur eos eligendi nihil mollitia inventore perferendis possimus. Error, similique.\u0026lt;/span\u0026gt;\r\u0026lt;span\u0026gt;Laudantium, cumque architecto veritatis provident similique quia, ipsum aliquid mollitia beatae nam facilis unde quaerat autem tenetur neque natus doloremque incidunt, vel animi? Veniam eum odio ullam? Doloremque, possimus facere.\u0026lt;/span\u0026gt;\r\u0026lt;span\u0026gt;Ipsam, corporis dignissimos perferendis adipisci fuga saepe labore doloremque dolor exercitationem soluta? Neque illum quo cum aperiam, esse quae dicta labore earum porro sint asperiores harum officia eveniet vero! Facilis!\u0026lt;/span\u0026gt;\r\u0026lt;/p\u0026gt;\r\u0026lt;script src=\u0026#34;my-script.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt;\r \u0026lt;button onclick=\u0026#34;myFunction()\u0026#34;\u0026gt;Klik her\u0026lt;/button\u0026gt;\r\u0026lt;button onclick=\u0026#34;myOtherFunction()\u0026#34;\u0026gt;... eller her\u0026lt;/button\u0026gt;\r\u0026lt;button onclick=\u0026#34;myThirdFunction()\u0026#34;\u0026gt;... eller hvad med her\u0026lt;/button\u0026gt;\r\r\u0026lt;p\u0026gt;\r\u0026lt;span\u0026gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae placeat consectetur cum hic error aperiam distinctio repellat nulla, soluta voluptatibus. Voluptate vel ducimus sunt asperiores laboriosam, amet rerum sapiente sequi.\u0026lt;/span\u0026gt;\r\u0026lt;span\u0026gt;Suscipit dolorem voluptas ex iste, quaerat natus, corporis recusandae in assumenda labore eius! Amet, dignissimos laudantium? Sunt maiores quia ratione nihil hic fugit iusto aliquid autem? Facilis cumque vitae laborum.\u0026lt;/span\u0026gt;\r\u0026lt;span\u0026gt;Sequi maiores quia consequuntur quas, placeat sint ipsa fuga totam molestias est earum, odio alias, quo molestiae. Eaque, facere nesciunt, atque laboriosam accusantium non dicta minus iste consectetur, deserunt iusto?\u0026lt;/span\u0026gt;\r\u0026lt;span\u0026gt;Voluptas possimus corporis explicabo in neque illum accusantium quas! Exercitationem quae saepe deserunt magnam nihil sint aut in nam excepturi dolor nulla animi natus, nesciunt illo architecto obcaecati recusandae similique?\u0026lt;/span\u0026gt;\r\u0026lt;/p\u0026gt;\r\u0026lt;/body\u0026gt;\r\u0026lt;/html\u0026gt; Kørende eksempel Prøv det kørende eksempel.\n Plain js  "
 },
 {
+	"uri": "https://getsrevel.github.io/tech/p5js/fullscreen/demo/",
+	"title": "p5 demo live",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/keyboard/demo/",
+	"title": "p5 demo live",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/my-demo/demo/",
+	"title": "p5 demo live",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/my-demo/",
+	"title": "p5 demo presentation",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/demo/",
+	"title": "p5 examples",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://getsrevel.github.io/example-drafts/p5js-demo/",
 	"title": "",
 	"tags": [],
@@ -159,20 +201,6 @@
 	"tags": [],
 	"description": "",
 	"content": "\rDocument\r\r\rDemo html page\r\rLorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, impedit repudiandae, magnam sint porro quidem eveniet at adipisci assumenda rerum, consequuntur eos eligendi nihil mollitia inventore perferendis possimus. Error, similique.\rLaudantium, cumque architecto veritatis provident similique quia, ipsum aliquid mollitia beatae nam facilis unde quaerat autem tenetur neque natus doloremque incidunt, vel animi? Veniam eum odio ullam? Doloremque, possimus facere.\rIpsam, corporis dignissimos perferendis adipisci fuga saepe labore doloremque dolor exercitationem soluta? Neque illum quo cum aperiam, esse quae dicta labore earum porro sint asperiores harum officia eveniet vero! Facilis!\r\rKlik her\r... eller her\r... eller hvad med her\r\rLorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae placeat consectetur cum hic error aperiam distinctio repellat nulla, soluta voluptatibus. Voluptate vel ducimus sunt asperiores laboriosam, amet rerum sapiente sequi.\rSuscipit dolorem voluptas ex iste, quaerat natus, corporis recusandae in assumenda labore eius! Amet, dignissimos laudantium? Sunt maiores quia ratione nihil hic fugit iusto aliquid autem? Facilis cumque vitae laborum.\rSequi maiores quia consequuntur quas, placeat sint ipsa fuga totam molestias est earum, odio alias, quo molestiae. Eaque, facere nesciunt, atque laboriosam accusantium non dicta minus iste consectetur, deserunt iusto?\rVoluptas possimus corporis explicabo in neque illum accusantium quas! Exercitationem quae saepe deserunt magnam nihil sint aut in nam excepturi dolor nulla animi natus, nesciunt illo architecto obcaecati recusandae similique?\r\r"
-},
-{
-	"uri": "https://getsrevel.github.io/tech/p5js/fullscreen/demo/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": "          "
-},
-{
-	"uri": "https://getsrevel.github.io/tech/p5js/keyboard/demo/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": "          "
 },
 {
 	"uri": "https://getsrevel.github.io/categories/",
