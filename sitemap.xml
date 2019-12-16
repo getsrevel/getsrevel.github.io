@@ -8,6 +8,16 @@
   </url>
   
   <url>
+    <loc>https://getsrevel.github.io/tech/p5js/intro/</loc>
+    <lastmod>2019-12-04T12:44:31+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/key-pressed-multi/</loc>
+    <lastmod>2019-12-16T22:30:39+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://getsrevel.github.io/project/asteroid/</loc>
     <lastmod>2019-12-05T10:35:53+01:00</lastmod>
   </url>
@@ -18,12 +28,117 @@
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/keyboard/</loc>
+    <loc>https://getsrevel.github.io/tech/p5js/key-is-pressed/</loc>
     <lastmod>2019-12-04T13:22:34+01:00</lastmod>
   </url>
   
   <url>
+    <loc>https://getsrevel.github.io/tech/p5js/asteroids-game-demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://getsrevel.github.io/tech/p5js/fullscreen/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/fullscreen-demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/key-pressed-simple/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/object-vector/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/asteroids-game-demo/demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/fullscreen-demo/demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/fullscreen/demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/key-is-pressed/demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/key-pressed-multi/demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/key-pressed-simple/demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/multitouch/demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/my-demo/demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/object-vector/demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/polar-loop/demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/polar/demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/tacospin/demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/multitouch/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/my-demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/polar/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/polar-loop/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/tacospin/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
@@ -108,27 +223,12 @@
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/fullscreen/demo/</loc>
+    <loc>https://getsrevel.github.io/tech/p5js/canvas/demo/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/keyboard/demo/</loc>
-    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getsrevel.github.io/tech/p5js/my-demo/demo/</loc>
-    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getsrevel.github.io/tech/p5js/my-demo/</loc>
-    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getsrevel.github.io/tech/p5js/demo/</loc>
+    <loc>https://getsrevel.github.io/tech/p5js/canvas/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
   </url>
   
@@ -144,6 +244,11 @@
   
   <url>
     <loc>https://getsrevel.github.io/tech/javascript/plain-js/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/multitouch/demo/</loc>
     <priority>0</priority>
   </url>
   

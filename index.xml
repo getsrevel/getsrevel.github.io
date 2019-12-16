@@ -22,6 +22,16 @@
     </item>
     
     <item>
+      <title>Intro</title>
+      <link>https://getsrevel.github.io/tech/p5js/intro/</link>
+      <pubDate>Wed, 04 Dec 2019 12:44:31 +0100</pubDate>
+      
+      <guid>https://getsrevel.github.io/tech/p5js/intro/</guid>
+      <description>P5js introduktion  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5. Variabler i javascript bliver grundigt forklaret og bruger et metafor med en kasse, der måske kan hjælpe lidt på forståelsen. Variable scope forklaret ved et eksempel.  Tegn på skærmen Denne video forklarer de grundlæggende principper i computergrafik.
+   Dokumentation af alle tegne primitiver i p5.</description>
+    </item>
+    
+    <item>
       <title>Asteroids Game</title>
       <link>https://getsrevel.github.io/project/asteroid/</link>
       <pubDate>Thu, 05 Dec 2019 10:35:53 +0100</pubDate>
@@ -68,8 +78,10 @@ Visual Studio Code  Visual studio code (kan bruges både på Windows og Mac)  Je
       <pubDate>Mon, 11 Nov 2019 21:35:57 +0100</pubDate>
       
       <guid>https://getsrevel.github.io/project/stickman/</guid>
-      <description>P5js introduktion  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5. Variabler i javascript bliver grundigt forklaret og bruger et metafor med en kasse, der måske kan hjælpe lidt på forståelsen. Variable scope forklaret ved et eksempel.  Tegn på skærmen Denne video forklarer de grundlæggende principper i computergrafik.
-   Dokumentation af alle tegne primitiver i p5.</description>
+      <description>Opgave: Lav en tændstikmand Opgaven går ud på at eksperimentere med computergrafik. Ved hjælp af p5js skal du lave et program der benytter forskellige tegne funktioner, til at generere en &amp;ldquo;tændstikmand&amp;rdquo;.
+Han skal som minimum bestå af:
+ hoved mund øjne krop arme ben  Ekstra: til den &amp;ldquo;kvikke elev&amp;rdquo;; få din tændstikmand til at ændre udseende dynamisk f.eks. vha. museinput, knaptryk
+ hovedets størrelse blinke med øjnene ændre farver  Vær kreativ :-)</description>
     </item>
     
     <item>
@@ -139,6 +151,15 @@ Visual Studio Code  Visual studio code (kan bruges både på Windows og Mac)  Je
       
       <guid>https://getsrevel.github.io/tech/javascript/plain-js/</guid>
       <description>DocumentDemo html pageLorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, impedit repudiandae, magnam sint porro quidem eveniet at adipisci assumenda rerum, consequuntur eos eligendi nihil mollitia inventore perferendis possimus. Error, similique.Laudantium, cumque architecto veritatis provident similique quia, ipsum aliquid mollitia beatae nam facilis unde quaerat autem tenetur neque natus doloremque incidunt, vel animi? Veniam eum odio ullam? Doloremque, possimus facere.Ipsam, corporis dignissimos perferendis adipisci fuga saepe labore doloremque dolor exercitationem soluta?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://getsrevel.github.io/tech/p5js/multitouch/demo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://getsrevel.github.io/tech/p5js/multitouch/demo/</guid>
+      <description>          </description>
     </item>
     
   </channel>
