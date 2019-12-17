@@ -21,6 +21,20 @@
 	"content": " Dette eksempel viser hvordan man opretter et lærred, og tegner figure på skærmen. Der benyttes variabler og musemarkørens position til at styre hvor på skærmen der tegnes.\nfunction setup() { createCanvas(600, 800); } function draw() { background(220); fill(255); let x; x = mouseY; let y = mouseX; ellipse(x,y, 150); x = 200; ellipse(x, y, 50); fill(255, 0, 0); ellipse(width,height, 120); let cx = width /2; let cy = height / 2; ellipse(cx,cy, 50); }  Demo Prøv det kørende eksempel\n"
 },
 {
+	"uri": "https://getsrevel.github.io/",
+	"title": "Getsrevel",
+	"tags": [],
+	"description": "",
+	"content": " Getsrevel Velkommen til mit website der primært er løse noter om programmering og andet \u0026ldquo;work in progress\u0026rdquo;, men måske finder du noget brugbart.\n"
+},
+{
+	"uri": "https://getsrevel.github.io/project/weather-station/",
+	"title": "Weather Station",
+	"tags": [],
+	"description": "",
+	"content": " Opgave: Mobil vejrstation Gør det muligt at se data fra en vejrstatation på en nem og overskuelig måde. Løsningen skal virke på mobil, tablet og computeren.\n Opgaven løses i grupper. Der skal laves en kravspecifikation. I skal bruge et projetstyrings værktøj til at styre jeres opgaver, f.eks. Trello eller Milanote. \u0026ldquo;Oversæt\u0026rdquo; krav fra kravspecifikationen til konkrete opgaver på jeres trello board. Løsningen skal designes så den ikke belaster verstationen unødigt når den bruges samtidig af mange brugere, f.eks. ved at sende unødigt mange forespørgsler. Design og implementation skal dokumenteres. Brug git og github til at samarbejde om koden.  Som kilde til vejrdata kan f.eks. benyttes vejrobservationer fra Hanstholm havns vejrstation.\nMateriale  Hanstholm havns vejrstation vejrobservationer hvert 10. minut. Trello kanban board til projektstyring Milanote projektstyring og idegenerering  Milanote plans \u0026amp; pricing   "
+},
+{
 	"uri": "https://getsrevel.github.io/tech/mindstorms/",
 	"title": "Mindstorms",
 	"tags": [],
@@ -39,14 +53,7 @@
 	"title": "Asteroids Game",
 	"tags": [],
 	"description": "",
-	"content": " Opgave: Lav et \u0026ldquo;Asteroids\u0026rdquo; spil  Opgaven skal laves i grupper. I skal lave implementationen i p5js I skal lave en kravspecifikation I skal bruge Trello til at styre jeres opgaver. \u0026ldquo;Oversæt\u0026rdquo; krav til jeres spil fra kravspecifikationen til opgaver på jeres trello board. Brug git og github til at samarbejde om koden.  Materiale  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5. Git  Javascript emner For at kunne lave spillet bliver det formentlig nyttigt at kende til disse koncepter\n Betingelser Løkker Funktioner Objekter Arrays  Coding Challenge #46.1: Asteroids with p5.js - Part 1   Coding Challenge #46.2: Asteroids with p5.js - Part 2   3.2: Trigonometry and Polar Coordinates - The Nature of Code   "
-},
-{
-	"uri": "https://getsrevel.github.io/",
-	"title": "Getsrevel",
-	"tags": [],
-	"description": "",
-	"content": " Getsrevel Velkommen til mit website der primært er løse noter om programmering og andet \u0026ldquo;work in progress\u0026rdquo;, men måske finder du noget brugbart.\n"
+	"content": " Opgave: Lav et \u0026ldquo;Asteroids\u0026rdquo; spil  Opgaven skal laves i grupper. I skal lave en kravspecifikation I skal lave implementationen i p5js I skal bruge Trello til at styre jeres opgaver. \u0026ldquo;Oversæt\u0026rdquo; krav til jeres spil fra kravspecifikationen til opgaver på jeres trello board. Brug git og github til at samarbejde om koden.  Materiale  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5. Git  Javascript emner For at kunne lave spillet bliver det formentlig nyttigt at kende til disse koncepter\n Betingelser Løkker Funktioner Objekter Arrays  Coding Challenge #46.1: Asteroids with p5.js - Part 1   Coding Challenge #46.2: Asteroids with p5.js - Part 2   3.2: Trigonometry and Polar Coordinates - The Nature of Code   "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/key-is-pressed/",
@@ -208,6 +215,13 @@
 	"tags": [],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/project/recursion/",
+	"title": "Rekursion",
+	"tags": [],
+	"description": "",
+	"content": " Intro Søg på recursion på google.\nFibonacci serie  Fibonacci sequence - Wikipedia   Efficient solution:\n Binet\u0026rsquo;s Fibonacci number formula  Towers of Hanoi   Denne gennemgang viser hvordan man kan bruge rekursion til at løse \u0026ldquo;Towers of Hanoi\u0026rdquo; spillet.\nHer er python kode fra videoen.\ndef move(f,t): print(\u0026#34;Flyt: {} ==\u0026gt; {}!\u0026#34;.format(f,t)) def moveVia(f,v,t): move(f,v) move(v,t) def hanoi(n,f,h,t): if n == 0: pass else: hanoi(n-1, f, t, h) move(f,t) hanoi(n-1, h, f ,t) Her er en anden gennemgang af towers of hanoi.\n  Relateret  Recursion - wikipedia  "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/hugo/",

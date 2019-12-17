@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>key pressed simple :: My New Hugo Site</title>
+    <title>Rekursion :: My New Hugo Site</title>
 
     
     <link href="/css/nucleus.css?1576593506" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tech/p5js/key-pressed-simple/">
+  <body class="" data-url="/project/recursion/">
     <nav id="sidebar" class="">
 
 
@@ -79,7 +79,7 @@
   
     
     <li data-nav-id="/tech/" title="Tech" class="dd-item 
-        parent
+        
         
         
         ">
@@ -211,7 +211,7 @@
   
     
     <li data-nav-id="/tech/p5js/" title="p5js" class="dd-item 
-        parent
+        
         
         
         ">
@@ -365,7 +365,7 @@
   
     
     <li data-nav-id="/project/" title="Project" class="dd-item 
-        
+        parent
         
         
         ">
@@ -427,7 +427,7 @@
  
   
     
-      <li data-nav-id="/project/recursion/" title="Rekursion" class="dd-item ">
+      <li data-nav-id="/project/recursion/" title="Rekursion" class="dd-item active">
         <a href="/project/recursion/">
         Rekursion
         
@@ -744,13 +744,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/p5js/'>p5js</a> > key pressed simple
-          
-         
+            <a href='/'>Getsrevel</a> > <a href='/project/'>Project</a> > Rekursion
           
          
           
@@ -763,7 +757,17 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#intro">Intro</a></li>
+<li><a href="#fibonacci-serie">Fibonacci serie</a></li>
+<li><a href="#towers-of-hanoi">Towers of Hanoi</a></li>
+<li><a href="#relateret">Relateret</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -779,7 +783,7 @@
           
             <h1>
               
-              key pressed simple
+              Rekursion
             </h1>
           
 
@@ -788,14 +792,70 @@
 
 
 
-	
+
+<h2 id="intro">Intro</h2>
+
+<p>Søg på <a href="https://www.google.dk/search?q=recursion">recursion</a> på google.</p>
+
+<h2 id="fibonacci-serie">Fibonacci serie</h2>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Dynamic_programming#Fibonacci_sequence">Fibonacci sequence</a> - Wikipedia
+<br /></li>
+</ul>
+
+<p>Efficient solution:</p>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Jacques_Philippe_Marie_Binet#Binet's_Fibonacci_number_formula">Binet&rsquo;s Fibonacci number formula</a></li>
+</ul>
+
+<h2 id="towers-of-hanoi">Towers of Hanoi</h2>
 
 
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/8lhxIOAfDss" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<p>Denne gennemgang viser hvordan man kan bruge rekursion til at løse &ldquo;Towers of Hanoi&rdquo; spillet.</p>
+
+<p>Her er python kode fra videoen.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">move</span>(f,t):
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Flyt: {} ==&gt; {}!&#34;</span><span style="color:#f92672">.</span>format(f,t))
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">moveVia</span>(f,v,t):
+    move(f,v)
+    move(v,t)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hanoi</span>(n,f,h,t):
+    <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+        <span style="color:#66d9ef">pass</span>
+    <span style="color:#66d9ef">else</span>:
+        hanoi(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, f, t, h)
+        move(f,t)
+        hanoi(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, h, f ,t)</code></pre></div>
+
+<p>Her er en anden gennemgang af towers of hanoi.</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/2SUvWfNJSsM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<h2 id="relateret">Relateret</h2>
+
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Recursion_(computer_science)">Recursion - wikipedia</a></li>
+</ul>
 
 
 <footer class=" footline" >
 	
 </footer>
+
 
         
         </div> 
@@ -828,6 +888,8 @@
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -843,9 +905,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -894,7 +953,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -909,9 +967,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1161,7 +1216,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -1178,9 +1232,6 @@
             
                 
                     
-                        
-                        
-                    
                 
                 
 
@@ -1413,7 +1464,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -1430,9 +1480,6 @@
             
                 
                     
-                        
-                        
-                    
                 
                 
 
@@ -1635,7 +1682,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1650,9 +1696,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1840,6 +1883,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1852,6 +1896,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1885,6 +1932,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1900,6 +1948,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2041,10 +2092,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/tech/css/" title="Css"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/project/asteroid/" title="Asteroids Game"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/tech/p5js/intro/" title="Intro" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/project/stickman/" title="Stickman" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2074,3 +2125,4 @@
 
   </body>
 </html>
+

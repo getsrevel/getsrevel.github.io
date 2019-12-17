@@ -6,7 +6,7 @@
     <description>Recent content in Getsrevel on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Dec 2019 10:35:53 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 17 Dec 2019 12:32:28 +0100</lastBuildDate>
     
 	<atom:link href="https://getsrevel.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -32,12 +32,35 @@
     </item>
     
     <item>
+      <title>Weather Station</title>
+      <link>https://getsrevel.github.io/project/weather-station/</link>
+      <pubDate>Tue, 17 Dec 2019 12:32:28 +0100</pubDate>
+      
+      <guid>https://getsrevel.github.io/project/weather-station/</guid>
+      <description>Opgave: Mobil vejrstation Gør det muligt at se data fra en vejrstatation på en nem og overskuelig måde. Løsningen skal virke på mobil, tablet og computeren.
+ Opgaven løses i grupper. Der skal laves en kravspecifikation. I skal bruge et projetstyrings værktøj til at styre jeres opgaver, f.eks. Trello eller Milanote. &amp;ldquo;Oversæt&amp;rdquo; krav fra kravspecifikationen til konkrete opgaver på jeres trello board. Løsningen skal designes så den ikke belaster verstationen unødigt når den bruges samtidig af mange brugere, f.</description>
+    </item>
+    
+    <item>
       <title>Asteroids Game</title>
       <link>https://getsrevel.github.io/project/asteroid/</link>
       <pubDate>Thu, 05 Dec 2019 10:35:53 +0100</pubDate>
       
       <guid>https://getsrevel.github.io/project/asteroid/</guid>
-      <description>Opgave: Lav et &amp;ldquo;Asteroids&amp;rdquo; spil  Opgaven skal laves i grupper. I skal lave implementationen i p5js I skal lave en kravspecifikation I skal bruge Trello til at styre jeres opgaver. &amp;ldquo;Oversæt&amp;rdquo; krav til jeres spil fra kravspecifikationen til opgaver på jeres trello board. Brug git og github til at samarbejde om koden.  Materiale  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5.</description>
+      <description>Opgave: Lav et &amp;ldquo;Asteroids&amp;rdquo; spil  Opgaven skal laves i grupper. I skal lave en kravspecifikation I skal lave implementationen i p5js I skal bruge Trello til at styre jeres opgaver. &amp;ldquo;Oversæt&amp;rdquo; krav til jeres spil fra kravspecifikationen til opgaver på jeres trello board. Brug git og github til at samarbejde om koden.  Materiale  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5.</description>
+    </item>
+    
+    <item>
+      <title>Rekursion</title>
+      <link>https://getsrevel.github.io/project/recursion/</link>
+      <pubDate>Thu, 21 Nov 2019 13:07:12 +0100</pubDate>
+      
+      <guid>https://getsrevel.github.io/project/recursion/</guid>
+      <description>Intro Søg på recursion på google.
+Fibonacci serie  Fibonacci sequence - Wikipedia   Efficient solution:
+ Binet&amp;rsquo;s Fibonacci number formula  Towers of Hanoi   Denne gennemgang viser hvordan man kan bruge rekursion til at løse &amp;ldquo;Towers of Hanoi&amp;rdquo; spillet.
+Her er python kode fra videoen.
+def move(f,t): print(&amp;#34;Flyt: {} ==&amp;gt; {}!&amp;#34;.format(f,t)) def moveVia(f,v,t): move(f,v) move(v,t) def hanoi(n,f,h,t): if n == 0: pass else: hanoi(n-1, f, t, h) move(f,t) hanoi(n-1, h, f ,t) Her er en anden gennemgang af towers of hanoi.</description>
     </item>
     
     <item>
