@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://getsrevel.github.io/tech/p5js/canvas/</loc>
+    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://getsrevel.github.io/tech/mindstorms/</loc>
     <lastmod>2019-12-17T08:46:29+01:00</lastmod>
   </url>
@@ -73,11 +78,6 @@
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/fullscreen/demo/</loc>
-    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://getsrevel.github.io/tech/p5js/key-is-pressed/demo/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
@@ -119,6 +119,11 @@
   
   <url>
     <loc>https://getsrevel.github.io/tech/p5js/vector/demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/fullscreen/demo/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
@@ -229,11 +234,6 @@
   
   <url>
     <loc>https://getsrevel.github.io/tech/p5js/canvas/demo/</loc>
-    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getsrevel.github.io/tech/p5js/canvas/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
   </url>
   

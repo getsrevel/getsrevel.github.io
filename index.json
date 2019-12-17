@@ -14,11 +14,18 @@
 	"content": " P5js introduktion  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5. Variabler i javascript bliver grundigt forklaret og bruger et metafor med en kasse, der måske kan hjælpe lidt på forståelsen. Variable scope forklaret ved et eksempel.  Tegn på skærmen Denne video forklarer de grundlæggende principper i computergrafik.\n   Dokumentation af alle tegne primitiver i p5.  Her nogle få udvalgte, der formentlig kan bruges til at løse opgaven.\n rect() line() ellipse() arc()  Her er nogle eksempler på hvordan de kan bruges i koden: en linie, et rektangel, en ellipse, et buestykke.\nline(x1, y1, x2, y2); rect(x, y, w, h); arc(x, y, w, h, start, stop);  Brug af farver Når du skal tegne kan du vælge egenskaber for din \u0026ldquo;pensel\u0026rdquo;. Dette gøres på inden du \u0026ldquo;maler\u0026rdquo;, på samme måde som med en rigtig pensel.\n stroke() vælger stregens farve. strokeWeight() vælger stregens tykkelse. fill() vælger fyldfarven. Denne har kun betydning for lukkede figurer som f.eks. firkanter og cirkler.  Du kan bruge color() til at oprette en farve, og gemme værdien i en variabel, så den nemt kan genbruges forskellige steder i programmet. Her er et eksempel:\nlet myColor = color(250, 142, 0) fill(myColor); circle(100, 150, 42);   Color Picker (google) kan bruges til at vælge en farve og se hvilke argumenter du skal give til color() funktionen. Color Picker - w3schools er en del af en længere forklaring om farver på hjemmesider og computergrafik.  "
 },
 {
+	"uri": "https://getsrevel.github.io/tech/p5js/canvas/",
+	"title": "Canvas",
+	"tags": [],
+	"description": "",
+	"content": " Dette eksempel viser hvordan man opretter et lærred, og tegner figure på skærmen. Der benyttes variabler og musemarkørens position til at styre hvor på skærmen der tegnes.\nfunction setup() { createCanvas(600, 800); } function draw() { background(220); fill(255); let x; x = mouseY; let y = mouseX; ellipse(x,y, 150); x = 200; ellipse(x, y, 50); fill(255, 0, 0); ellipse(width,height, 120); let cx = width /2; let cy = height / 2; ellipse(cx,cy, 50); }  Demo Prøv det kørende eksempel\n"
+},
+{
 	"uri": "https://getsrevel.github.io/tech/mindstorms/",
 	"title": "Mindstorms",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": " En nem måde at komme i gang med at programmere til lego mindstorms EV3, er ved at bruge værktøjet Makecode. For at kunne benytte dette, kræves at din EV3 klods er opdateret til firmware version 1.10E eller nyere.\nProgrammering Du kan lave dit program ved hjælp af blok programmering, som du måske kender hvis du har arbejdet med Scratch, eller Applab.\n  Makecode udviklingsmiljøet i blokprogrammerings mode. Simulatoren ses i venstre side.   Udviklingsmiljøet indeholder mulighed for at simulere dit program direkte i din browser uden at overføre det til en fysisk EV3 brik. Du kan se en grafisk visning af de enheder, der forventes at være tilsluttet til din EV3, på baggrund af indholdet af din kode. Du kan også køre dit program som en simulering, og se om det opfører sig som forventet, ved at manipulere de virtuelle input i browseren. Det kan dog være vanskeligt at simulere noget hvor der er en fysisk kobling mellem input og output, som f.eks. en liniefølger, så du får også brug for at test med en EV3 klods.\nSom det også er tilfældet med Applab, kan du vælge at skrive dit program i javascript. Her er et eksempel på et program der starter og stopper en motor, afhængigt af om en knap er trykket ind.\nforever(function () { if (sensors.touch2.isPressed()) { motors.mediumC.run(50) } else { motors.mediumC.stop() } })  En af fordelene ved at bruge tekstbaseret kode som f.eks. javascript er, at du nemt kan klippe/klistre stumper af kode fra forskellige programmer, og sætte dem sammen til et nyt program.\nMateriale  Makecode editor til EV3. Fejlfinding  "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/key-pressed-multi/",
@@ -60,7 +67,7 @@
 	"title": "Fullscreen",
 	"tags": [],
 	"description": "",
-	"content": " Her er et eksempel på hvordan man kan vise sin sketch på hele skærmen.\nlet cnv; let cnvSetup = { w: 400, h: 500 }; function setup() { cnv = createCanvas(cnvSetup.w, cnvSetup.h); cnv.parent(\u0026#34;sketch-holder\u0026#34;); background(255, 0, 200); } function draw() { background(220); const cSize = 50; fill(20); circle(width / 2, height / 2, cSize); fill(255); circle(100, 100, cSize); circle(width - 100, 100, cSize); circle(100, height - 100, cSize); circle(width - 100, height - 100, cSize); fill(0, 102, 153); textSize(20); textAlign(CENTER); text(\u0026#34;Click me!\u0026#34;, width / 2, height / 2 - cSize); } function mousePressed() { if (mouseX \u0026gt; 0 \u0026amp;\u0026amp; mouseX \u0026lt; width \u0026amp;\u0026amp; mouseY \u0026gt; 0 \u0026amp;\u0026amp; mouseY \u0026lt; height) { let fs = fullscreen(); fullscreen(!fs); } } function centerCanvas() { let x = (windowWidth - width) / 2; let y = (windowHeight - height) / 2; cnv.position(x, y); } function windowResized() { const isfs = fullscreen(); if (isfs) { console.log(\u0026#34;IS full\u0026#34;); let bodyElement = document.body; bodyElement.style.overflow = \u0026#34;hidden\u0026#34;; cnv.parent(bodyElement); resizeCanvas(windowWidth, windowHeight); centerCanvas(); // cnv.parent(\u0026#34;fullscreen-sketch-holder-2\u0026#34;);  // resizeCanvas(600,500);  } else { console.log(\u0026#34;NORMAL\u0026#34;); cnv.parent(\u0026#34;fullscreen-sketch-holder-1\u0026#34;); resizeCanvas(cnvSetup.w, cnvSetup.h); cnv.elt.style.position = \u0026#39;initial\u0026#39;; //let pos = cnv.position();  let bodyElement = document.body; bodyElement.style.overflow = \u0026#34;auto\u0026#34;; } }  Demo Prøv det kørende eksempel\nInline demo      "
+	"content": ""
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/fullscreen-demo/",
@@ -92,13 +99,6 @@
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/fullscreen-demo/demo/",
-	"title": "p5 demo live",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://getsrevel.github.io/tech/p5js/fullscreen/demo/",
 	"title": "p5 demo live",
 	"tags": [],
 	"description": "",
@@ -163,6 +163,13 @@
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/vector/demo/",
 	"title": "p5 demo live",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/fullscreen/demo/",
+	"title": "p5 fullscreen demo live",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -316,17 +323,10 @@
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/canvas/demo/",
-	"title": "p5 demo live",
+	"title": "p5 canvas demo live",
 	"tags": [],
 	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://getsrevel.github.io/tech/p5js/canvas/",
-	"title": "p5 demo presentation",
-	"tags": [],
-	"description": "",
-	"content": ""
+	"content": " "
 },
 {
 	"uri": "https://getsrevel.github.io/example-drafts/p5js-demo/",
