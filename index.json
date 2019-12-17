@@ -14,6 +14,13 @@
 	"content": " P5js introduktion  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5. Variabler i javascript bliver grundigt forklaret og bruger et metafor med en kasse, der måske kan hjælpe lidt på forståelsen. Variable scope forklaret ved et eksempel.  Tegn på skærmen Denne video forklarer de grundlæggende principper i computergrafik.\n   Dokumentation af alle tegne primitiver i p5.  Her nogle få udvalgte, der formentlig kan bruges til at løse opgaven.\n rect() line() ellipse() arc()  Her er nogle eksempler på hvordan de kan bruges i koden: en linie, et rektangel, en ellipse, et buestykke.\nline(x1, y1, x2, y2); rect(x, y, w, h); arc(x, y, w, h, start, stop);  Brug af farver Når du skal tegne kan du vælge egenskaber for din \u0026ldquo;pensel\u0026rdquo;. Dette gøres på inden du \u0026ldquo;maler\u0026rdquo;, på samme måde som med en rigtig pensel.\n stroke() vælger stregens farve. strokeWeight() vælger stregens tykkelse. fill() vælger fyldfarven. Denne har kun betydning for lukkede figurer som f.eks. firkanter og cirkler.  Du kan bruge color() til at oprette en farve, og gemme værdien i en variabel, så den nemt kan genbruges forskellige steder i programmet. Her er et eksempel:\nlet myColor = color(250, 142, 0) fill(myColor); circle(100, 150, 42);   Color Picker (google) kan bruges til at vælge en farve og se hvilke argumenter du skal give til color() funktionen. Color Picker - w3schools er en del af en længere forklaring om farver på hjemmesider og computergrafik.  "
 },
 {
+	"uri": "https://getsrevel.github.io/tech/mindstorms/",
+	"title": "Mindstorms",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://getsrevel.github.io/tech/p5js/key-pressed-multi/",
 	"title": "key press multi",
 	"tags": [],
@@ -70,8 +77,8 @@
 	"content": ""
 },
 {
-	"uri": "https://getsrevel.github.io/tech/p5js/object-vector/",
-	"title": "object vector",
+	"uri": "https://getsrevel.github.io/tech/p5js/multitouch/",
+	"title": "multitouch",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -133,13 +140,6 @@
 	"content": ""
 },
 {
-	"uri": "https://getsrevel.github.io/tech/p5js/object-vector/demo/",
-	"title": "p5 demo live",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
 	"uri": "https://getsrevel.github.io/tech/p5js/polar-loop/demo/",
 	"title": "p5 demo live",
 	"tags": [],
@@ -161,8 +161,8 @@
 	"content": ""
 },
 {
-	"uri": "https://getsrevel.github.io/tech/p5js/multitouch/",
-	"title": "p5DemoPresentation",
+	"uri": "https://getsrevel.github.io/tech/p5js/vector/demo/",
+	"title": "p5 demo live",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -191,6 +191,13 @@
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/tacospin/",
 	"title": "tacospin",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/vector/",
+	"title": "vector",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -341,13 +348,6 @@
 	"tags": [],
 	"description": "",
 	"content": "\rDocument\r\r\rDemo html page\r\rLorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, impedit repudiandae, magnam sint porro quidem eveniet at adipisci assumenda rerum, consequuntur eos eligendi nihil mollitia inventore perferendis possimus. Error, similique.\rLaudantium, cumque architecto veritatis provident similique quia, ipsum aliquid mollitia beatae nam facilis unde quaerat autem tenetur neque natus doloremque incidunt, vel animi? Veniam eum odio ullam? Doloremque, possimus facere.\rIpsam, corporis dignissimos perferendis adipisci fuga saepe labore doloremque dolor exercitationem soluta? Neque illum quo cum aperiam, esse quae dicta labore earum porro sint asperiores harum officia eveniet vero! Facilis!\r\rKlik her\r... eller her\r... eller hvad med her\r\rLorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae placeat consectetur cum hic error aperiam distinctio repellat nulla, soluta voluptatibus. Voluptate vel ducimus sunt asperiores laboriosam, amet rerum sapiente sequi.\rSuscipit dolorem voluptas ex iste, quaerat natus, corporis recusandae in assumenda labore eius! Amet, dignissimos laudantium? Sunt maiores quia ratione nihil hic fugit iusto aliquid autem? Facilis cumque vitae laborum.\rSequi maiores quia consequuntur quas, placeat sint ipsa fuga totam molestias est earum, odio alias, quo molestiae. Eaque, facere nesciunt, atque laboriosam accusantium non dicta minus iste consectetur, deserunt iusto?\rVoluptas possimus corporis explicabo in neque illum accusantium quas! Exercitationem quae saepe deserunt magnam nihil sint aut in nam excepturi dolor nulla animi natus, nesciunt illo architecto obcaecati recusandae similique?\r\r"
-},
-{
-	"uri": "https://getsrevel.github.io/tech/p5js/multitouch/demo/",
-	"title": "",
-	"tags": [],
-	"description": "",
-	"content": "          "
 },
 {
 	"uri": "https://getsrevel.github.io/categories/",

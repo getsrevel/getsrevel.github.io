@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://getsrevel.github.io/tech/mindstorms/</loc>
+    <lastmod>2019-12-17T08:46:29+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://getsrevel.github.io/tech/p5js/key-pressed-multi/</loc>
     <lastmod>2019-12-16T22:30:39+01:00</lastmod>
   </url>
@@ -53,7 +58,7 @@
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/object-vector/</loc>
+    <loc>https://getsrevel.github.io/tech/p5js/multitouch/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
@@ -98,11 +103,6 @@
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/object-vector/demo/</loc>
-    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://getsrevel.github.io/tech/p5js/polar-loop/demo/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
@@ -118,7 +118,7 @@
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/multitouch/</loc>
+    <loc>https://getsrevel.github.io/tech/p5js/vector/demo/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
@@ -139,6 +139,11 @@
   
   <url>
     <loc>https://getsrevel.github.io/tech/p5js/tacospin/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/vector/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
@@ -244,11 +249,6 @@
   
   <url>
     <loc>https://getsrevel.github.io/tech/javascript/plain-js/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://getsrevel.github.io/tech/p5js/multitouch/demo/</loc>
     <priority>0</priority>
   </url>
   
