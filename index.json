@@ -1,12 +1,5 @@
 [
 {
-	"uri": "https://getsrevel.github.io/tech/html/",
-	"title": "Html",
-	"tags": [],
-	"description": "",
-	"content": " HTML introduktion  HTML5 Tutorial Headings Paragraphs Lists Images figure figcaption  Video kursus (På dansk)  HTML Kursus  Quiz  HTML quiz  Opgave Lav et website i html der præsenterer dig selv og din yndlings kage:\n Der skal være 2 sider  En beskrivelse af dig selv der navngives \u0026ldquo;profil.html\u0026rdquo; En anden side med en mad opskrift \u0026ldquo;opskrift.html\u0026rdquo;  Begge sider skal have en titel Der skal være links så man kan navigere mellem de to sider  På profil siden\n Brug forskellige niveauer af overskrifter Lav mindst et afsnit med brødtekst (f.eks. En kort beskrivelse af dig selv) Indsæt et billede af dig selv  Giv det en figurtekst med dit navn   På siden med opskriften\n Lav overskrifter Indsæt et billede af kagen Lav en unummereret punktopstilling med ingredienser Lav en nummeret punktopstilling med fremgangsmåden Lav en henvisning (link) til kilden (hvor du fandt opskriften) Lav et link til \u0026ldquo;toppen\u0026rdquo; lokalt link på siden  "
-},
-{
 	"uri": "https://getsrevel.github.io/tech/p5js/intro/",
 	"title": "Intro",
 	"tags": [],
@@ -14,11 +7,25 @@
 	"content": " P5js introduktion  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5. Variabler i javascript bliver grundigt forklaret og bruger et metafor med en kasse, der måske kan hjælpe lidt på forståelsen. Variable scope forklaret ved et eksempel.  Tegn på skærmen Denne video forklarer de grundlæggende principper i computergrafik.\n   Dokumentation af alle tegne primitiver i p5.  Her nogle få udvalgte, der formentlig kan bruges til at løse opgaven.\n rect() line() ellipse() arc()  Her er nogle eksempler på hvordan de kan bruges i koden: en linie, et rektangel, en ellipse, et buestykke.\nline(x1, y1, x2, y2); rect(x, y, w, h); arc(x, y, w, h, start, stop);  Brug af farver Når du skal tegne kan du vælge egenskaber for din \u0026ldquo;pensel\u0026rdquo;. Dette gøres på inden du \u0026ldquo;maler\u0026rdquo;, på samme måde som med en rigtig pensel.\n stroke() vælger stregens farve. strokeWeight() vælger stregens tykkelse. fill() vælger fyldfarven. Denne har kun betydning for lukkede figurer som f.eks. firkanter og cirkler.  Du kan bruge color() til at oprette en farve, og gemme værdien i en variabel, så den nemt kan genbruges forskellige steder i programmet. Her er et eksempel:\nlet myColor = color(250, 142, 0) fill(myColor); circle(100, 150, 42);   Color Picker (google) kan bruges til at vælge en farve og se hvilke argumenter du skal give til color() funktionen. Color Picker - w3schools er en del af en længere forklaring om farver på hjemmesider og computergrafik.  "
 },
 {
+	"uri": "https://getsrevel.github.io/tech/html/",
+	"title": "Html",
+	"tags": [],
+	"description": "",
+	"content": " HTML introduktion  HTML5 Tutorial Headings Paragraphs Lists Images figure figcaption  Video kursus (På dansk)  HTML Kursus  Quiz  HTML quiz  Opgave Lav et website i html der præsenterer dig selv og din yndlings kage:\n Der skal være 2 sider  En beskrivelse af dig selv der navngives \u0026ldquo;profil.html\u0026rdquo; En anden side med en mad opskrift \u0026ldquo;opskrift.html\u0026rdquo;  Begge sider skal have en titel Der skal være links så man kan navigere mellem de to sider  På profil siden\n Brug forskellige niveauer af overskrifter Lav mindst et afsnit med brødtekst (f.eks. En kort beskrivelse af dig selv) Indsæt et billede af dig selv  Giv det en figurtekst med dit navn   På siden med opskriften\n Lav overskrifter Indsæt et billede af kagen Lav en unummereret punktopstilling med ingredienser Lav en nummeret punktopstilling med fremgangsmåden Lav en henvisning (link) til kilden (hvor du fandt opskriften) Lav et link til \u0026ldquo;toppen\u0026rdquo; lokalt link på siden  "
+},
+{
+	"uri": "https://getsrevel.github.io/tech/css/",
+	"title": "Css",
+	"tags": [],
+	"description": "",
+	"content": " CSS introduktion  CSS Tutorial Same Page Different Stylesheets CSS Syntax and Selectors Three Ways to Insert CSS CSS Box Model CSS Grid Layout Module  Quiz  CSS quiz  CSS Flexbox  A guide to flexbox  Spil  CSS Grid Garden Flexbox froggy  Eksempler  zebra stripes on a table Fancy table  Opgave Arbejd med styling af HTML elementer vha CSS i eksternt stylesheet\n Brug html struktur (index.html) Lav styling af siden ved hjælp af CSS i en ekstern fil (style.css)  "
+},
+{
 	"uri": "https://getsrevel.github.io/tech/p5js/canvas/",
 	"title": "Canvas",
 	"tags": [],
 	"description": "",
-	"content": " Dette eksempel viser hvordan man opretter et lærred, og tegner figure på skærmen. Der benyttes variabler og musemarkørens position til at styre hvor på skærmen der tegnes.\nfunction setup() { createCanvas(600, 800); } function draw() { background(220); fill(255); let x; x = mouseY; let y = mouseX; ellipse(x,y, 150); x = 200; ellipse(x, y, 50); fill(255, 0, 0); ellipse(width,height, 120); let cx = width /2; let cy = height / 2; ellipse(cx,cy, 50); }  Demo Prøv det kørende eksempel\n"
+	"content": " Dette eksempel viser hvordan man opretter et lærred, og tegner figure på skærmen. Der benyttes variabler og musemarkørens position til at styre hvor på skærmen der tegnes.\nfunction setup() { createCanvas(600, 800); } function draw() { background(220); fill(255); // variable declaration  let x; // variable assignment  x = mouseX; // declaration and assignment in one line  let y = mouseY; ellipse(x,y, 150); x = 200; ellipse(x, y, 50); fill(255, 0, 0); ellipse(width,height, 120); let cx = width /2; let cy = height / 2; ellipse(cx,cy, 50); }  Demo Prøv det kørende eksempel\n"
 },
 {
 	"uri": "https://getsrevel.github.io/",
@@ -46,7 +53,7 @@
 	"title": "key press multi",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": " Her er et eksempel der viser hvordan man kan håndtere input fra flere taster på en gang.\nlet cx; let cy; let state = { up: false, down: false, left: false, right: false, engine: false }; function setup() { createCanvas(400, 600); cx = width / 2; cy = height / 2; } function draw() { background(220); fill(\u0026#34;gray\u0026#34;); textSize(20); text(`Move using arrow keys and space`, 10, 30); // show  if (state.engine) { fill(\u0026#34;red\u0026#34;); } else { fill(\u0026#34;gray\u0026#34;); } strokeWeight(5); circle(cx, cy, 50); // update position  const step = 1; if (state.left) { cx -= step; } if (state.right) { cx += step; } if (state.up) { cy -= step; } if (state.down) { cy += step; } } function keyPressed() { if (key === \u0026#34; \u0026#34;) { state.engine = true; } if (keyCode === LEFT_ARROW) { state.left = true; } if (keyCode === RIGHT_ARROW) { state.right = true; } if (keyCode === UP_ARROW) { state.up = true; } if (keyCode === DOWN_ARROW) { state.down = true; } } function keyReleased() { if (key === \u0026#34; \u0026#34;) { state.engine = false; } if (keyCode === LEFT_ARROW) { state.left = false; } if (keyCode === RIGHT_ARROW) { state.right = false; } if (keyCode === UP_ARROW) { state.up = false; } if (keyCode === DOWN_ARROW) { state.down = false; } }  Bemærk at både keyPressed() og keyReleased() hændelser håndteres for alle gyldige input.\nStatus for de enkelte input registreres i variablen state, som er en klasse med de nødvendige attributter.\nDenne måde at håndtere input bevirker at figuren kan bevæges uafhængigt af repeat rate i keyboard indstillingerne.\nDemo Prøv det kørende eksempel\n"
 },
 {
 	"uri": "https://getsrevel.github.io/project/asteroid/",
@@ -60,7 +67,7 @@
 	"title": "Keyboard",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "  Keycode.info  I dette eksempel bruges keyIsPressed til at ændre fyldfarven på figuren.\nfunction setup() {\rlet canvas = createCanvas(400, 400);\rcanvas.parent(\u0026#34;sketch-holder\u0026#34;);\r}\rfunction draw() {\rbackground(100, 0, 0);\rfill(\u0026#34;red\u0026#34;);\rcircle(50, 150, 50);\rcircle(width - 50, 50, 50);\rif (keyIsPressed === true) {\rfill(0);\r} else {\rfill(255);\r}\r rect(25, 25, 50, 50);\r}   canvas { display: inline; }  Demo Prøv det kørende eksempel på en selvstændig side.\nDemo Prøv at trykke på en vilkårlig tast på tastaturet.\n     "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/asteroids-game-demo/",
@@ -98,6 +105,13 @@
 	"content": ""
 },
 {
+	"uri": "https://getsrevel.github.io/tech/p5js/canvas/demo/",
+	"title": "p5 canvas demo",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
 	"uri": "https://getsrevel.github.io/tech/p5js/asteroids-game-demo/demo/",
 	"title": "p5 demo live",
 	"tags": [],
@@ -116,14 +130,14 @@
 	"title": "p5 demo live",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "  "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/key-pressed-multi/demo/",
 	"title": "p5 demo live",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": " "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/key-pressed-simple/demo/",
@@ -245,13 +259,6 @@
 	"content": " For at kunne arbejde med HTML, CSS, javascript og andre tekst filer har vi brug for en god editor.\nVisual Studio Code  Visual studio code (kan bruges både på Windows og Mac)  Jetbrains produkter Der er mulighed for at bruge en lang række udviklingsmiljøer fra JetBrains i gratis \u0026ldquo;studenter versioner\u0026rdquo;.\n https://www.jetbrains.com/student/  "
 },
 {
-	"uri": "https://getsrevel.github.io/tech/css/",
-	"title": "Css",
-	"tags": [],
-	"description": "",
-	"content": " CSS introduktion  CSS Tutorial Same Page Different Stylesheets CSS Syntax and Selectors Three Ways to Insert CSS CSS Box Model CSS Grid Layout Module  Quiz  CSS quiz  CSS Flexbox  A guide to flexbox  TODO: lav en nyt billede\nSimpelt eksempel:\nSpil  CSS Grid Garden  Øvelse Arbejd med styling af HTML elementer vha CSS i ekstern stylesheet - Brug html struktur (index.html) - Lav styling af siden vha CSS i en ekstern fil (style.css)\nEksempler:  zebra stripes on a table\n Fancy table\n  :first-child(even) "
-},
-{
 	"uri": "https://getsrevel.github.io/tech/p5js/",
 	"title": "p5js",
 	"tags": [],
@@ -306,13 +313,6 @@
 	"tags": [],
 	"description": "",
 	"content": " Basic js demo Her er indholdet af my-script.js.\n// This file is included from the html file\r\rconsole.log(\u0026#34;Hej i konsollen\u0026#34;);\rfunction myFunction() {\rconsole.log(\u0026#34;AV!!!\u0026#34;);\r}\rfunction myOtherFunction(){\rconsole.log(\u0026#34;Hej med dig\u0026#34;);\r}\rfunction myThirdFunction(){\ralert(\u0026#34;Hvad har du gang i?\u0026#34;);\r}  Her er indholdet af index.html, så du kan se hvordan scriptet hentes ind i html siden, og funktionerne kan bindes til eventhandlere på de knapper der er indsat på siden.\n\u0026lt;!DOCTYPE html\u0026gt;\r\u0026lt;html lang=\u0026#34;en\u0026#34;\u0026gt;\r\u0026lt;head\u0026gt;\r\u0026lt;meta charset=\u0026#34;UTF-8\u0026#34;\u0026gt;\r\u0026lt;meta name=\u0026#34;viewport\u0026#34; content=\u0026#34;width=device-width, initial-scale=1.0\u0026#34;\u0026gt;\r\u0026lt;meta http-equiv=\u0026#34;X-UA-Compatible\u0026#34; content=\u0026#34;ie=edge\u0026#34;\u0026gt;\r\u0026lt;title\u0026gt;Document\u0026lt;/title\u0026gt;\r\u0026lt;/head\u0026gt;\r\u0026lt;body\u0026gt;\r\u0026lt;h1\u0026gt;Demo html page\u0026lt;/h1\u0026gt;\r\u0026lt;p\u0026gt;\r\u0026lt;span\u0026gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, impedit repudiandae, magnam sint porro quidem eveniet at adipisci assumenda rerum, consequuntur eos eligendi nihil mollitia inventore perferendis possimus. Error, similique.\u0026lt;/span\u0026gt;\r\u0026lt;span\u0026gt;Laudantium, cumque architecto veritatis provident similique quia, ipsum aliquid mollitia beatae nam facilis unde quaerat autem tenetur neque natus doloremque incidunt, vel animi? Veniam eum odio ullam? Doloremque, possimus facere.\u0026lt;/span\u0026gt;\r\u0026lt;span\u0026gt;Ipsam, corporis dignissimos perferendis adipisci fuga saepe labore doloremque dolor exercitationem soluta? Neque illum quo cum aperiam, esse quae dicta labore earum porro sint asperiores harum officia eveniet vero! Facilis!\u0026lt;/span\u0026gt;\r\u0026lt;/p\u0026gt;\r\u0026lt;script src=\u0026#34;my-script.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt;\r \u0026lt;button onclick=\u0026#34;myFunction()\u0026#34;\u0026gt;Klik her\u0026lt;/button\u0026gt;\r\u0026lt;button onclick=\u0026#34;myOtherFunction()\u0026#34;\u0026gt;... eller her\u0026lt;/button\u0026gt;\r\u0026lt;button onclick=\u0026#34;myThirdFunction()\u0026#34;\u0026gt;... eller hvad med her\u0026lt;/button\u0026gt;\r\r\u0026lt;p\u0026gt;\r\u0026lt;span\u0026gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae placeat consectetur cum hic error aperiam distinctio repellat nulla, soluta voluptatibus. Voluptate vel ducimus sunt asperiores laboriosam, amet rerum sapiente sequi.\u0026lt;/span\u0026gt;\r\u0026lt;span\u0026gt;Suscipit dolorem voluptas ex iste, quaerat natus, corporis recusandae in assumenda labore eius! Amet, dignissimos laudantium? Sunt maiores quia ratione nihil hic fugit iusto aliquid autem? Facilis cumque vitae laborum.\u0026lt;/span\u0026gt;\r\u0026lt;span\u0026gt;Sequi maiores quia consequuntur quas, placeat sint ipsa fuga totam molestias est earum, odio alias, quo molestiae. Eaque, facere nesciunt, atque laboriosam accusantium non dicta minus iste consectetur, deserunt iusto?\u0026lt;/span\u0026gt;\r\u0026lt;span\u0026gt;Voluptas possimus corporis explicabo in neque illum accusantium quas! Exercitationem quae saepe deserunt magnam nihil sint aut in nam excepturi dolor nulla animi natus, nesciunt illo architecto obcaecati recusandae similique?\u0026lt;/span\u0026gt;\r\u0026lt;/p\u0026gt;\r\u0026lt;/body\u0026gt;\r\u0026lt;/html\u0026gt; Kørende eksempel Prøv det kørende eksempel.\n Plain js  "
-},
-{
-	"uri": "https://getsrevel.github.io/tech/p5js/canvas/demo/",
-	"title": "p5 canvas demo live",
-	"tags": [],
-	"description": "",
-	"content": " "
 },
 {
 	"uri": "https://getsrevel.github.io/example-drafts/p5js-demo/",

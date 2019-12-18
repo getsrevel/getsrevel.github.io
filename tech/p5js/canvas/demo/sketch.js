@@ -6,9 +6,13 @@ function draw() {
   background(220);
   fill(255);
   
+  // variable declaration
   let x;
-  x = mouseY;  
-  let y = mouseX;
+  // variable assignment
+  x = mouseX;  
+
+  // declaration and assignment in one line
+  let y = mouseY;
   
   ellipse(x,y, 150);
   
