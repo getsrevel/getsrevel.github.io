@@ -31,8 +31,7 @@ Visual Studio Code  Visual studio code (kan bruges både på Windows og Mac)  Je
       <description>Git introduktion  Git and GitHub for Poets - tutorial (codingtrain)Klik for at redigere titlen
  Git installation vælg den der passer til dit operativ system. På mac er git sikkert allerede installeret. Bruger du linux, ved du formentlig selv hvordan du installerer pakker, der passer til din distribution.
  Git book
- How to use git in Visual Studio code
-  Basal Arbejdsgang graph TD; EDIT(&#34;opret/rediger/slet fil(er)&#34;) -- STAGE(&#34;</description>
+ About Version Control What is Git? Git in Visual Studio Code  How to use git in Visual Studio code</description>
     </item>
     
   </channel>

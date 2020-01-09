@@ -12,20 +12,20 @@
     <title>Weather Station :: My New Hugo Site</title>
 
     
-    <link href="/css/nucleus.css?1576766605" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1576766605" rel="stylesheet">
-    <link href="/css/hybrid.css?1576766605" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1576766605" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1576766605" rel="stylesheet">
-    <link href="/css/auto-complete.css?1576766605" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1576766605" rel="stylesheet">
-    <link href="/css/theme.css?1576766605" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1576766605" rel="stylesheet">
+    <link href="/css/nucleus.css?1578558784" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1578558784" rel="stylesheet">
+    <link href="/css/hybrid.css?1578558784" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1578558784" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1578558784" rel="stylesheet">
+    <link href="/css/auto-complete.css?1578558784" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1578558784" rel="stylesheet">
+    <link href="/css/theme.css?1578558784" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1578558784" rel="stylesheet">
     
-      <link href="/css/theme-getsrevel.css?1576766605" rel="stylesheet">
+      <link href="/css/theme-getsrevel.css?1578558784" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1576766605"></script>
+    <script src="/js/jquery-3.3.1.min.js?1578558784"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1576766605"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1576766605"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1578558784"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1578558784"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/getsrevel.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1576766605"></script>
+<script type="text/javascript" src="/js/search.js?1578558784"></script>
 
     
   </div>
@@ -731,7 +731,14 @@
 <li>
 <ul>
 <li><a href="#opgave-mobil-vejrstation">Opgave: Mobil vejrstation</a></li>
-<li><a href="#materiale">Materiale</a></li>
+<li><a href="#materiale">Materiale</a>
+<ul>
+<li><a href="#firebase">Firebase</a>
+<ul>
+<li><a href="#hotdog-status-firebase-tutorial">Hotdog status - Firebase tutorial</a></li>
+<li><a href="#firecasts-firebase-intro">Firecasts firebase intro</a></li>
+</ul></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -762,7 +769,7 @@
 
 <h2 id="opgave-mobil-vejrstation">Opgave: Mobil vejrstation</h2>
 
-<p>Gør det muligt at se data fra en vejrstatation på en nem og overskuelig måde.
+<p>Lav et it system der gør det muligt at se data fra en vejrstatation på en nem og overskuelig måde.
 Løsningen skal virke på mobil, tablet og computeren.</p>
 
 <ul>
@@ -780,6 +787,7 @@ Løsningen skal virke på mobil, tablet og computeren.</p>
 <h2 id="materiale">Materiale</h2>
 
 <ul>
+<li><a href="https://informatik.systime.dk/index.php?id=878&amp;L=0">Kravspecifikation - informatik bog</a></li>
 <li><a href="http://www.hyde.dk/hanstholm/vejrstation.asp">Hanstholm havns vejrstation</a> vejrobservationer hvert 10. minut.</li>
 <li><a href="https://trello.com/">Trello</a> kanban board til projektstyring</li>
 <li><a href="https://milanote.com/">Milanote</a> projektstyring og idegenerering
@@ -788,6 +796,30 @@ Løsningen skal virke på mobil, tablet og computeren.</p>
 <li><a href="https://milanote.com/plans">Milanote plans &amp; pricing</a></li>
 </ul></li>
 </ul>
+
+<h3 id="firebase">Firebase</h3>
+
+<ul>
+<li><a href="https://firebase.google.com/docs/firestore?authuser=0">Firebase introduction docs</a></li>
+<li><a href="https://www.youtube.com/watch?v=2Vf1D-rUMwE">Hotdog status - Firebase tutorial</a></li>
+<li><a href="https://www.youtube.com/watch?v=v_hR4K4auoQ">Firecasts firebase intro</a></li>
+</ul>
+
+<h4 id="hotdog-status-firebase-tutorial">Hotdog status - Firebase tutorial</h4>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/2Vf1D-rUMwE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<h4 id="firecasts-firebase-intro">Firecasts firebase intro</h4>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/v_hR4K4auoQ" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
 
 
 <footer class=" footline" >
@@ -2413,23 +2445,33 @@ Løsningen skal virke på mobil, tablet og computeren.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1576766605"></script>
-    <script src="/js/perfect-scrollbar.min.js?1576766605"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1576766605"></script>
-    <script src="/js/jquery.sticky.js?1576766605"></script>
-    <script src="/js/featherlight.min.js?1576766605"></script>
-    <script src="/js/highlight.pack.js?1576766605"></script>
+    <script src="/js/clipboard.min.js?1578558784"></script>
+    <script src="/js/perfect-scrollbar.min.js?1578558784"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1578558784"></script>
+    <script src="/js/jquery.sticky.js?1578558784"></script>
+    <script src="/js/featherlight.min.js?1578558784"></script>
+    <script src="/js/highlight.pack.js?1578558784"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1576766605"></script>
-    <script src="/js/learn.js?1576766605"></script>
-    <script src="/js/hugo-learn.js?1576766605"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1578558784"></script>
+    <script src="/js/learn.js?1578558784"></script>
+    <script src="/js/hugo-learn.js?1578558784"></script>
 
-    <link href="/mermaid/mermaid.css?1576766605" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1576766605"></script>
+    <link href="/mermaid/mermaid.css?1578558784" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1578558784"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
     
+
+<script>
+  mermaid.initialize({
+    startOnLoad: true,
+    sequenceDiagram: {
+      mirrorActors: false,
+      bottomMarginAdj: 200
+    }
+  });
+</script>
 
   </body>
 </html>
