@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>p5 demo live on My New Hugo Site</title>
+    <title>p5 demo live on Getsrevel</title>
     <link>https://getsrevel.github.io/tech/p5js/key-is-pressed/demo/</link>
-    <description>Recent content in p5 demo live on My New Hugo Site</description>
+    <description>Recent content in p5 demo live on Getsrevel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 04 Dec 2019 12:46:20 +0100</lastBuildDate>

@@ -27,7 +27,6 @@ function draw() {
 
     it.render();
     it.update();
-    it.edges();
   });
 
   lasers.forEach((laser, laserIndex) => {
@@ -55,9 +54,7 @@ function draw() {
   });
 
   ship.update();
-  ship.turn();
   ship.render();
-  ship.edges();
 
   stats.render();
 }
@@ -67,20 +64,27 @@ function keyPressed() {
     lasers.push(new Laser(ship.pos, ship.heading));
   }
 
-  if (keyCode === RIGHT_ARROW) {
-    ship.setRotation(0.1);
+  if (keyCode === RIGHT_ARROW || key == "d") {
+    ship.isTurningRight = true;
   }
-  if (keyCode === LEFT_ARROW) {
-    ship.setRotation(-0.1);
+  if (keyCode === LEFT_ARROW || key == "a") {
+    ship.isTurningLeft = true;
   }
-  if (keyCode === UP_ARROW) {
+  if (keyCode === UP_ARROW || key == "w") {
     ship.boosting(true);
   }
 }
 
 function keyReleased() {
-  ship.setRotation(0);
-  ship.boosting(false);
+  if (keyCode === RIGHT_ARROW || key == "d") {
+    ship.isTurningRight = false;
+  }
+  if (keyCode === LEFT_ARROW || key == "a") {
+    ship.isTurningLeft = false;
+  }
+  if (keyCode === UP_ARROW || key == "w") {
+    ship.boosting(false);
+  }
 }
 
 function windowResized() {

@@ -21,6 +21,7 @@ function Asteroid(pos, r) {
 
   this.update = () => {
     this.pos.add(this.vel);
+    this.edges();
   };
 
   this.render = () => {

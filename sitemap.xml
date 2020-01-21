@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>https://getsrevel.github.io/tech/node/web-scraping/</loc>
+    <lastmod>2020-01-15T22:34:12+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://getsrevel.github.io/</loc>
     <lastmod>2019-12-17T12:32:28+01:00</lastmod>
   </url>
@@ -188,6 +193,11 @@
   </url>
   
   <url>
+    <loc>https://getsrevel.github.io/tech/node/</loc>
+    <lastmod>2019-11-11T21:40:44+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://getsrevel.github.io/tech/p5js/</loc>
     <lastmod>2019-11-11T21:40:44+01:00</lastmod>
   </url>
@@ -239,6 +249,11 @@
   
   <url>
     <loc>https://getsrevel.github.io/tech/javascript/plain-js/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/javascript/strings/</loc>
     <priority>0</priority>
   </url>
   

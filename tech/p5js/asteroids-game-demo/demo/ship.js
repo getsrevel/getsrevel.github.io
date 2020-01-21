@@ -5,6 +5,11 @@ function Ship() {
 
   this.heading = 0;
   this.rotation = 0;
+
+  this.isTurningRight = false;
+  this.isTurningLeft = false;
+  this.turnspeed = .08;
+
   this.vel = createVector(0, 0);
   this.isBoosing = false;
   this.shield = 120;
@@ -13,8 +18,19 @@ function Ship() {
     if (this.isBoosing) {
       this.boost();
     }
+    this.rotation = 0;
+    if(this.isTurningLeft){
+      this.rotation += this.turnspeed;
+    }
+    if(this.isTurningRight){
+      this.rotation -= this.turnspeed;
+    }
+
     this.pos.add(this.vel);
     this.vel.mult(0.99);
+
+    this.turn();
+    this.edges();
   };
 
   this.boosting = state => {
@@ -74,10 +90,6 @@ function Ship() {
     } else if (this.pos.y < -this.r) {
       this.pos.y = height + this.r;
     }
-  };
-
-  this.setRotation = function(angle) {
-    this.rotation = angle;
   };
 
   this.turn = function() {
