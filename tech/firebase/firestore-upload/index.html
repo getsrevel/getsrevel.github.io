@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>p5js :: Getsrevel</title>
+    <title>Firestore Node Upload :: Getsrevel</title>
 
     
     <link href="/css/nucleus.css?1580292426" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tech/p5js/">
+  <body class="" data-url="/tech/firebase/firestore-upload/">
     <nav id="sidebar" class="">
 
 
@@ -149,7 +149,7 @@
   
     
     <li data-nav-id="/tech/firebase/" title="Firebase" class="dd-item 
-        
+        parent
         
         
         ">
@@ -215,8 +215,8 @@
   
     
     <li data-nav-id="/tech/firebase/firestore-upload/" title="Firestore Node Upload" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/tech/firebase/firestore-upload/">
@@ -370,8 +370,8 @@
   
     
     <li data-nav-id="/tech/p5js/" title="p5js" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/tech/p5js/">
@@ -875,6 +875,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -889,7 +891,13 @@
             
           
           
-            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > p5js
+            
+            
+          
+          
+            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/firebase/'>Firebase</a> > Firestore Node Upload
+          
+         
           
          
           
@@ -900,6 +908,26 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#opsætning-af-node-projekt">Opsætning af Node projekt</a></li>
+<li><a href="#firestore-upload-eksempel">Firestore upload eksempel</a></li>
+<li><a href="#håndtering-af-private-nøgler">Håndtering af private nøgler</a></li>
+</ul></li>
+<li><a href="#materiale">Materiale</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -907,9 +935,12 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Firestore Node Upload
+            </h1>
           
 
         
@@ -919,9 +950,118 @@
 
 	
 
-<h1 id="p5js">P5js</h1>
+<p>I dette eksempel forbindes der til <a href="https://firebase.google.com/docs/firestore">Firestore</a> via Node.js. Dvs. koden der skal afvikles på serveren kan skrives i javascript,
+og vi kan derfor genbruge viden om syntaks fra arbejdet med p5js.</p>
 
-<p>Lidt forskellige eksempler med p5.js.</p>
+<h3 id="opsætning-af-node-projekt">Opsætning af Node projekt</h3>
+
+<p>For at kunne arbejde med firestore fra node.js, skal der laves en pakke / projekt at arbejde i.
+Dette kan gøres ved at lave en top mappe og køre denne kommando for at generere en package.json fil.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm init</code></pre></div>
+
+<p>Man bliver så bedt om at svare på en række spørgsmål, og ender med en struktur der ser nogenlunde sådan ud:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;firestore-demo&#34;</span>,
+  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;1.0.0&#34;</span>,
+  <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+  <span style="color:#f92672">&#34;main&#34;</span>: <span style="color:#e6db74">&#34;index.js&#34;</span>,
+  <span style="color:#f92672">&#34;scripts&#34;</span>: {
+    <span style="color:#f92672">&#34;test&#34;</span>: <span style="color:#e6db74">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>
+  },
+  <span style="color:#f92672">&#34;author&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+  <span style="color:#f92672">&#34;license&#34;</span>: <span style="color:#e6db74">&#34;ISC&#34;</span>
+}</code></pre></div>
+
+<p>For at kunne benytte Firebase SDK skal vi have dette installeret, hvilket kan klares med kommandoen.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install firebase-admin --save</code></pre></div>
+
+<p>Dette tilføjet Firebase som afhængighed og package.json ser nu nogenlunde således ud.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;firestore-demo&#34;</span>,
+  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;1.0.0&#34;</span>,
+  <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+  <span style="color:#f92672">&#34;main&#34;</span>: <span style="color:#e6db74">&#34;index.js&#34;</span>,
+  <span style="color:#f92672">&#34;scripts&#34;</span>: {
+    <span style="color:#f92672">&#34;test&#34;</span>: <span style="color:#e6db74">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>
+  },
+  <span style="color:#f92672">&#34;author&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+  <span style="color:#f92672">&#34;license&#34;</span>: <span style="color:#e6db74">&#34;ISC&#34;</span>,
+<span style="display:block;width:100%;background-color:#3c3d38">  <span style="color:#f92672">&#34;dependencies&#34;</span>: {
+</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#f92672">&#34;@google-cloud/firestore&#34;</span>: <span style="color:#e6db74">&#34;^3.4.1&#34;</span>,
+</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#f92672">&#34;firebase-admin&#34;</span>: <span style="color:#e6db74">&#34;^8.9.1&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">  }
+</span>}</code></pre></div>
+
+<p>Som det ses er der nu tilføjet afhængigheder til firebase pakkerne.
+De nærmere <a href="https://firebase.google.com/docs/admin/setup">detaljer kan findes i denne guide</a>.</p>
+
+<p>Dette er et eksempel på en hvordan man kan lave et lille program der indsætter en stump data i firestore.</p>
+
+<h3 id="firestore-upload-eksempel">Firestore upload eksempel</h3>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Add the Firebase Admin SDK to Your Server
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">admin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;firebase-admin&#34;</span>);
+
+<span style="color:#75715e">// Import crecential for the service account
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">serviceAccount</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;./serviceAccountKey.json&#34;</span>);
+
+<span style="color:#75715e">// Initialize the default app
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">admin</span>.<span style="color:#a6e22e">initializeApp</span>({
+  <span style="color:#a6e22e">credential</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">admin</span>.<span style="color:#a6e22e">credential</span>.<span style="color:#a6e22e">cert</span>(<span style="color:#a6e22e">serviceAccount</span>),
+  <span style="color:#a6e22e">databaseURL</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://coldhawaiiweather.firebaseio.com&#34;</span>
+});
+
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">db</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">admin</span>.<span style="color:#a6e22e">firestore</span>();
+
+<span style="color:#75715e">// Generate some fake weather data
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">weatherData</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">time</span><span style="color:#f92672">:</span> Date.<span style="color:#a6e22e">now</span>(),
+  <span style="color:#a6e22e">windSpeed</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">getRandomInt</span>(<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">3</span>),
+  <span style="color:#a6e22e">windDir</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">getRandomInt</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">359</span>),
+};
+
+<span style="color:#75715e">// Add document to Firestore
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">addDoc</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection</span>(<span style="color:#e6db74">&#34;weather&#34;</span>).<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">weatherData</span>);
+
+<span style="color:#75715e">// Helper - Generates random integer values 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getRandomInt</span>(<span style="color:#a6e22e">max</span>, <span style="color:#a6e22e">min</span>) {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">diff</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">min</span>;
+  <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> Math.<span style="color:#a6e22e">floor</span>(<span style="color:#a6e22e">diff</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">min</span>);
+}
+</code></pre></div>
+
+<p>Der skal bruges en såkaldt <em>Service Account</em>, for at kunne forbindes fra node til firebase.
+Guiden forklarer hvad du skal gøre for at <a href="https://firebase.google.com/docs/admin/setup#initialize-sdk">oprette en service account</a> til dit firebase projekt.
+Disse oplysninger er private, så vær opmærksom på ikke at holde dem for dig selv.
+For eksemplet virker skal oplysningerne om din <em>Service Account</em> oprettes i file <code>serviceAccountKey.json</code>.</p>
+
+<h3 id="håndtering-af-private-nøgler">Håndtering af private nøgler</h3>
+
+<p>For at undgå at sprede disse oplysninger er det en god ide at tilføje denne fil til listen over <a href="https://git-scm.com/docs/gitignore">filer der skal ignoreres af git</a>.
+Dvs. at din <code>.gitignore</code> fil kunne se således ud.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># ignore packages downloaded from npm</span>
+node_modules/
+
+<span style="color:#75715e"># avoid storing firebase login credentials</span>
+serviceAccountKey.json</code></pre></div>
+
+<p>Hvis javascript eksemplet gemmes i en fil med navnet <em>firebase-upload-demo.js</em>, kan programmet køres med kommandoen</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">node firebase-upload-demo.js</code></pre></div>
+
+<h2 id="materiale">Materiale</h2>
+
+<ul>
+<li><a href="https://firebase.google.com/docs/firestore">Clouc Firestore</a> dokumentation.</li>
+<li><a href="https://firebase.google.com/docs/admin/setup">Add the Firebase Admin SDK to Your Server</a> guide til at komme i gang med firebase på en server.</li>
+<li><a href="https://firebase.google.com/docs/firestore/quickstart">Cloud Firestore quickstart</a> guide til at komme i gang med firestore.</li>
+<li><a href="https://git-scm.com/docs/gitignore">gitignore</a> dokumentation.</li>
+</ul>
 
 
 
@@ -931,8 +1071,6 @@
 	
 </footer>
 
-        
-            </div> 
         
         </div> 
         
@@ -1014,6 +1152,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1028,6 +1167,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1052,6 +1194,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1070,6 +1213,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1120,7 +1266,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -1136,9 +1281,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1466,6 +1608,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1480,6 +1623,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1504,6 +1650,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1522,6 +1669,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1569,6 +1719,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1584,6 +1735,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1608,6 +1762,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1626,6 +1781,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1677,7 +1835,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1692,9 +1849,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2036,6 +2190,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -2051,6 +2206,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2075,6 +2233,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2093,6 +2252,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2144,7 +2306,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -2159,9 +2320,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2506,7 +2664,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -2522,9 +2679,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2978,10 +3132,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/tech/node/web-scraping/" title="Web Scraping"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/tech/firebase/firestore-client/" title="Firestore Client"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/tech/p5js/intro/" title="Intro" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/tech/mindstorms/" title="Mindstorms" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

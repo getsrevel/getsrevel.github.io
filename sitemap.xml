@@ -23,6 +23,26 @@
   </url>
   
   <url>
+    <loc>https://getsrevel.github.io/tech/firebase/firestore-client/</loc>
+    <lastmod>2020-01-29T10:46:51+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/firebase/firestore-client/demo/</loc>
+    <lastmod>2020-01-29T10:46:51+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/firebase/</loc>
+    <lastmod>2020-01-28T10:46:51+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/firebase/firestore-upload/</loc>
+    <lastmod>2020-01-28T10:46:51+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://getsrevel.github.io/tech/node/web-scraping/</loc>
     <lastmod>2020-01-15T22:34:12+01:00</lastmod>
   </url>
@@ -228,23 +248,13 @@
   </url>
   
   <url>
+    <loc>https://getsrevel.github.io/tech/javascript/</loc>
+    <lastmod>2019-08-22T12:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://getsrevel.github.io/example-drafts/</loc>
     <lastmod>2017-03-02T12:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getsrevel.github.io/tech/javascript/</loc>
-    <lastmod>2017-03-02T12:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getsrevel.github.io/example-drafts/p5js-demo/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://getsrevel.github.io/example-drafts/plain-js/</loc>
-    <priority>0</priority>
   </url>
   
   <url>

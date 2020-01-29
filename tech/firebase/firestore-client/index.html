@@ -9,23 +9,23 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>p5js :: Getsrevel</title>
+    <title>Firestore Client :: Getsrevel</title>
 
     
-    <link href="/css/nucleus.css?1580292426" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1580292426" rel="stylesheet">
-    <link href="/css/hybrid.css?1580292426" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1580292426" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1580292426" rel="stylesheet">
-    <link href="/css/auto-complete.css?1580292426" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1580292426" rel="stylesheet">
-    <link href="/css/theme.css?1580292426" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1580292426" rel="stylesheet">
+    <link href="/css/nucleus.css?1580292425" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1580292425" rel="stylesheet">
+    <link href="/css/hybrid.css?1580292425" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1580292425" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1580292425" rel="stylesheet">
+    <link href="/css/auto-complete.css?1580292425" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1580292425" rel="stylesheet">
+    <link href="/css/theme.css?1580292425" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1580292425" rel="stylesheet">
     
-      <link href="/css/theme-getsrevel.css?1580292426" rel="stylesheet">
+      <link href="/css/theme-getsrevel.css?1580292425" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1580292426"></script>
+    <script src="/js/jquery-3.3.1.min.js?1580292425"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tech/p5js/">
+  <body class="" data-url="/tech/firebase/firestore-client/">
     <nav id="sidebar" class="">
 
 
@@ -55,14 +55,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1580292426"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1580292426"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1580292425"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1580292425"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/getsrevel.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1580292426"></script>
+<script type="text/javascript" src="/js/search.js?1580292425"></script>
 
     
   </div>
@@ -149,7 +149,7 @@
   
     
     <li data-nav-id="/tech/firebase/" title="Firebase" class="dd-item 
-        
+        parent
         
         
         ">
@@ -176,8 +176,8 @@
   
     
     <li data-nav-id="/tech/firebase/firestore-client/" title="Firestore Client" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/tech/firebase/firestore-client/">
@@ -370,8 +370,8 @@
   
     
     <li data-nav-id="/tech/p5js/" title="p5js" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/tech/p5js/">
@@ -875,6 +875,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -889,7 +891,13 @@
             
           
           
-            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > p5js
+            
+            
+          
+          
+            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/firebase/'>Firebase</a> > Firestore Client
+          
+         
           
          
           
@@ -900,6 +908,25 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#getting-started-with-cloud-firestore-on-the-web-firecasts-https-www-youtube-com-watch-v-2vf1d-rumwe"><a href="https://www.youtube.com/watch?v=2Vf1D-rUMwE">Getting Started With Cloud Firestore on the Web - Firecasts</a></a></li>
+</ul></li>
+<li><a href="#demo">Demo</a></li>
+<li><a href="#materiale">Materiale</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -907,9 +934,12 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Firestore Client
+            </h1>
           
 
         
@@ -919,9 +949,121 @@
 
 	
 
-<h1 id="p5js">P5js</h1>
+<p>I dette eksempel forbindes der til <a href="https://firebase.google.com/docs/firestore">Firestore</a> fra en browser ved hjælp af javascript.</p>
 
-<p>Lidt forskellige eksempler med p5.js.</p>
+<p>Videoen viser en gennemgang af de fundamentale principper i Cloud Firestore.</p>
+
+<h3 id="getting-started-with-cloud-firestore-on-the-web-firecasts-https-www-youtube-com-watch-v-2vf1d-rumwe"><a href="https://www.youtube.com/watch?v=2Vf1D-rUMwE">Getting Started With Cloud Firestore on the Web - Firecasts</a></h3>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/2Vf1D-rUMwE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+
+<h2 id="demo">Demo</h2>
+
+<p>Hvis du følger videoen burde du ende op med et kørendene eksempel, der ser nogenlunde sådan ud.</p>
+
+<blockquote>
+
+<h1 id="hotdogOutPut">Hot dog status</h1>
+<input type="text" id="latestHotdogStatus" />
+<button id="saveButton">Save</button>
+</blockquote>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+  https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+<script src="demo/app.js"></script>
+
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fas fa-chevron-down' : 'fas fa-chevron-right';});});">
+        <i style="font-size:x-small;" class="fas fa-chevron-right"></i>
+        <span>
+        
+    	
+    	Koden du ender op kommer til at ligne dette.
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+        <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Your web app&#39;s Firebase configuration
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">firebaseConfig</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">apiKey</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;AIzaSyAof7A2wpEylAFHsKWvqeJU8VkYN7G1VMI&#34;</span>,
+  <span style="color:#a6e22e">authDomain</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;coldhawaiiweather.firebaseapp.com&#34;</span>,
+  <span style="color:#a6e22e">databaseURL</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://coldhawaiiweather.firebaseio.com&#34;</span>,
+  <span style="color:#a6e22e">projectId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;coldhawaiiweather&#34;</span>,
+  <span style="color:#a6e22e">storageBucket</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;coldhawaiiweather.appspot.com&#34;</span>,
+  <span style="color:#a6e22e">messagingSenderId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;645018619046&#34;</span>,
+  <span style="color:#a6e22e">appId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;1:645018619046:web:2ae11bff4009e1e965f867&#34;</span>,
+  <span style="color:#a6e22e">measurementId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;G-61E1DX0Z3Q&#34;</span>
+};
+
+<span style="color:#75715e">// Initialize Firebase
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">firebase</span>.<span style="color:#a6e22e">initializeApp</span>(<span style="color:#a6e22e">firebaseConfig</span>);
+<span style="color:#a6e22e">firebase</span>.<span style="color:#a6e22e">analytics</span>();
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">firestore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">firebase</span>.<span style="color:#a6e22e">firestore</span>();
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">docRef</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">firestore</span>.<span style="color:#a6e22e">doc</span>(<span style="color:#e6db74">&#34;samples/sandwichData&#34;</span>);
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">outputHeader</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#hotdogOutPut&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">inputTextField</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#latestHotdogStatus&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">saveButton</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#34;#saveButton&#34;</span>);
+
+<span style="color:#a6e22e">saveButton</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#a6e22e">e</span> =&gt; {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">textToSave</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">inputTextField</span>.<span style="color:#a6e22e">value</span>;
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;save clicked &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">textToSave</span>);
+
+  <span style="color:#a6e22e">docRef</span>
+    .<span style="color:#a6e22e">set</span>({
+      <span style="color:#a6e22e">hotdogStatus</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">textToSave</span>
+    })
+    .<span style="color:#a6e22e">then</span>(() =&gt; {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;saved!&#34;</span>);
+    })
+    .<span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">error</span> =&gt; {
+      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;got an error: &#34;</span>, <span style="color:#a6e22e">error</span>);
+    });
+});
+
+<span style="color:#a6e22e">thingToDoWhithDocumentData</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">doc</span> =&gt; {
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">doc</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">doc</span>.<span style="color:#a6e22e">exists</span>) {
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myData</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">doc</span>.<span style="color:#a6e22e">data</span>();
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Got snapshot doc: &#34;</span>, <span style="color:#a6e22e">doc</span>);
+    <span style="color:#a6e22e">outputHeader</span>.<span style="color:#a6e22e">innerText</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hot dog Status: &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">myData</span>.<span style="color:#a6e22e">hotdogStatus</span>;
+  }
+};
+
+<span style="color:#a6e22e">getRealtimeUpdates</span> <span style="color:#f92672">=</span> () =&gt; {
+  <span style="color:#a6e22e">docRef</span>.<span style="color:#a6e22e">onSnapshot</span>(
+    { <span style="color:#a6e22e">includeMetadataChanges</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> },
+    <span style="color:#a6e22e">thingToDoWhithDocumentData</span>
+  );
+};
+
+<span style="color:#a6e22e">getRealtimeUpdates</span>();
+</code></pre></div>
+
+    </div>
+</div>
+
+<p>Du kan også se <a href="demo/">demonstrationen på en separat side</a>.</p>
+
+<h2 id="materiale">Materiale</h2>
+
+<ul>
+<li><a href="https://firebase.google.com/docs/firestore">Clouc Firestore</a> dokumentation.</li>
+<li><a href="https://www.youtube.com/watch?v=2Vf1D-rUMwE">Getting Started With Cloud Firestore on the Web - Firecasts</a></li>
+</ul>
 
 
 
@@ -931,8 +1073,6 @@
 	
 </footer>
 
-        
-            </div> 
         
         </div> 
         
@@ -1014,6 +1154,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1028,6 +1169,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1051,6 +1193,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1120,7 +1265,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -1136,9 +1280,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1466,6 +1607,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1480,6 +1622,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1503,6 +1646,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1569,6 +1715,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1585,6 +1732,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1607,6 +1755,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1676,7 +1827,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -1692,9 +1842,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2036,6 +2183,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -2052,6 +2200,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2074,6 +2223,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2143,7 +2295,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -2159,9 +2310,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2506,7 +2654,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -2522,9 +2669,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2978,10 +3122,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/tech/node/web-scraping/" title="Web Scraping"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/tech/firebase/" title="Firebase"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/tech/p5js/intro/" title="Intro" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/tech/firebase/firestore-upload/" title="Firestore Node Upload" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
