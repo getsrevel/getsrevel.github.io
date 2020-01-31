@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Rekursion :: Getsrevel</title>
+    <title>Sound :: Getsrevel</title>
 
     
     <link href="/css/nucleus.css?1580470796" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/project/recursion/">
+  <body class="" data-url="/tech/p5js/sound/">
     <nav id="sidebar" class="">
 
 
@@ -79,7 +79,7 @@
   
     
     <li data-nav-id="/tech/" title="Tech" class="dd-item 
-        
+        parent
         
         
         ">
@@ -370,7 +370,7 @@
   
     
     <li data-nav-id="/tech/p5js/" title="p5js" class="dd-item 
-        
+        parent
         
         
         ">
@@ -563,8 +563,8 @@
   
     
     <li data-nav-id="/tech/p5js/sound/" title="Sound" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/tech/p5js/sound/">
@@ -690,7 +690,7 @@
   
     
     <li data-nav-id="/project/" title="Project" class="dd-item 
-        parent
+        
         
         
         ">
@@ -752,7 +752,7 @@
  
   
     
-      <li data-nav-id="/project/recursion/" title="Rekursion" class="dd-item active">
+      <li data-nav-id="/project/recursion/" title="Rekursion" class="dd-item ">
         <a href="/project/recursion/">
         Rekursion
         
@@ -930,7 +930,13 @@
             
           
           
-            <a href='/'>Getsrevel</a> > <a href='/project/'>Project</a> > Rekursion
+            
+            
+          
+          
+            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/p5js/'>p5js</a> > Sound
+          
+         
           
          
           
@@ -947,10 +953,11 @@
 <ul>
 <li>
 <ul>
-<li><a href="#intro">Intro</a></li>
-<li><a href="#fibonacci-serie">Fibonacci serie</a></li>
-<li><a href="#towers-of-hanoi">Towers of Hanoi</a></li>
-<li><a href="#relateret">Relateret</a></li>
+<li><a href="#demo">Demo</a></li>
+<li><a href="#materiale">Materiale</a>
+<ul>
+<li><a href="#17-5-adding-sound-effects-p5-js-sound-tutorial-https-www-youtube-com-watch-v-40me1-yattc-list-plrqwx-v7uu6afcvjldakkgiixw70s7jpw"><a href="https://www.youtube.com/watch?v=40Me1-yAtTc&amp;list=PLRqwX-V7Uu6aFcVjlDAkkGIixw70s7jpW">17.5: Adding Sound Effects - p5.js Sound Tutorial</a></a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -969,7 +976,7 @@
           
             <h1>
               
-              Rekursion
+              Sound
             </h1>
           
 
@@ -978,70 +985,95 @@
 
 
 
+	
 
-<h2 id="intro">Intro</h2>
+<p>Her er et eksempel på hvordan man kan arbejde med lyd i p5.</p>
 
-<p>Søg på <a href="https://www.google.dk/search?q=recursion">recursion</a> på google.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">flickSound</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">whistleSound</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">whistleShortSound</span>
 
-<h2 id="fibonacci-serie">Fibonacci serie</h2>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">preload</span>() {
+  <span style="color:#a6e22e">flickSound</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadSound</span>(<span style="color:#e6db74">&#39;flick.mp3&#39;</span>);
+  <span style="color:#a6e22e">whistleSound</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadSound</span>(<span style="color:#e6db74">&#39;whistle.mp3&#39;</span>, <span style="color:#a6e22e">doneLoadingWhistleSound</span>);
+  <span style="color:#a6e22e">whistleShortSound</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadSound</span>(<span style="color:#e6db74">&#39;whistle-short.mp3&#39;</span>, () =&gt; { 
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;short ready&#39;</span>);
+  });
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">doneLoadingWhistleSound</span>(){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;doneLoadingWhistleSound&#34;</span>);
+  <span style="color:#75715e">//whistleSound.play();
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+  <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+  <span style="color:#a6e22e">fill</span>(<span style="color:#e6db74">&#34;blue&#34;</span>);
+  <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">width</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">height</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">50</span>);
+  <span style="color:#a6e22e">textSize</span>(<span style="color:#ae81ff">20</span>);
+  <span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;Tryk på: SPACE, K, L, W&#34;</span>, <span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">50</span>);
+  <span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;eller klik med musen&#34;</span>, <span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">80</span>);
+
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mouseClicked</span>(){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;flick started by mouse&#34;</span>);
+  <span style="color:#a6e22e">flickSound</span>.<span style="color:#a6e22e">play</span>();
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">keyPressed</span>(){
+  <span style="color:#66d9ef">if</span>(<span style="color:#e6db74">&#39; &#39;</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">key</span>){
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;flick started by keyboad&#34;</span>);
+    <span style="color:#a6e22e">flickSound</span>.<span style="color:#a6e22e">play</span>();
+  }
+
+  <span style="color:#66d9ef">if</span>(<span style="color:#e6db74">&#39;l&#39;</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">key</span>){
+    <span style="color:#a6e22e">whistleSound</span>.<span style="color:#a6e22e">setLoop</span>(<span style="color:#66d9ef">true</span>);
+    <span style="color:#a6e22e">whistleSound</span>.<span style="color:#a6e22e">play</span>();
+  }
+  <span style="color:#66d9ef">if</span>(<span style="color:#e6db74">&#39;k&#39;</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">key</span>){
+    <span style="color:#a6e22e">whistleSound</span>.<span style="color:#a6e22e">setLoop</span>(<span style="color:#66d9ef">false</span>);
+  }
+
+  <span style="color:#66d9ef">if</span>(<span style="color:#e6db74">&#39;w&#39;</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">key</span>) {
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;short whistle&#34;</span>);
+    <span style="color:#a6e22e">whistleShortSound</span>.<span style="color:#a6e22e">play</span>();
+  }
+}
+</code></pre></div>
+
+<h2 id="demo">Demo</h2>
+
+<p>Prøv det <a href="demo/">kørende eksempel</a>.</p>
+
+<h2 id="materiale">Materiale</h2>
 
 <ul>
-<li><a href="https://en.wikipedia.org/wiki/Dynamic_programming#Fibonacci_sequence">Fibonacci sequence</a> - Wikipedia
-<br /></li>
+<li><a href="https://p5js.org/reference/#/p5.SoundFile">p5.SoundFile</a> dokumentation.</li>
+<li><a href="https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aFcVjlDAkkGIixw70s7jpW">p5js Sound Tutorial</a> er en playliste der gennemgår en række anvendelser af lyd i p5.</li>
+<li><a href="https://www.youtube.com/watch?v=Pn1g1wjxl_0">17.1: Loading and Playing - p5.js Sound Tutorial</a></li>
+<li><a href="https://www.youtube.com/watch?v=40Me1-yAtTc&amp;list=PLRqwX-V7Uu6aFcVjlDAkkGIixw70s7jpW">17.5: Adding Sound Effects - p5.js Sound Tutorial</a></li>
 </ul>
 
-<p>Efficient solution:</p>
-
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Jacques_Philippe_Marie_Binet#Binet's_Fibonacci_number_formula">Binet&rsquo;s Fibonacci number formula</a></li>
-</ul>
-
-<h2 id="towers-of-hanoi">Towers of Hanoi</h2>
+<h3 id="17-5-adding-sound-effects-p5-js-sound-tutorial-https-www-youtube-com-watch-v-40me1-yattc-list-plrqwx-v7uu6afcvjldakkgiixw70s7jpw"><a href="https://www.youtube.com/watch?v=40Me1-yAtTc&amp;list=PLRqwX-V7Uu6aFcVjlDAkkGIixw70s7jpW">17.5: Adding Sound Effects - p5.js Sound Tutorial</a></h3>
 
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/8lhxIOAfDss" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube.com/embed/40Me1-yAtTc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
 
-<p>Denne gennemgang viser hvordan man kan bruge rekursion til at løse &ldquo;Towers of Hanoi&rdquo; spillet.</p>
-
-<p>Her er python kode fra videoen.</p>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">move</span>(f,t):
-    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74">&#34;Flyt: {} ==&gt; {}!&#34;</span><span style="color:#f92672">.</span>format(f,t))
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">moveVia</span>(f,v,t):
-    move(f,v)
-    move(v,t)
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hanoi</span>(n,f,h,t):
-    <span style="color:#66d9ef">if</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
-        <span style="color:#66d9ef">pass</span>
-    <span style="color:#66d9ef">else</span>:
-        hanoi(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, f, t, h)
-        move(f,t)
-        hanoi(n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, h, f ,t)</code></pre></div>
-
-<p>Her er en anden gennemgang af towers of hanoi.</p>
 
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/2SUvWfNJSsM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
-
-
-<h2 id="relateret">Relateret</h2>
-
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Recursion_(computer_science)">Recursion - wikipedia</a></li>
-</ul>
 
 
 <footer class=" footline" >
 	
 </footer>
-
 
         
         </div> 
@@ -1074,8 +1106,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1091,6 +1121,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1230,6 +1263,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1244,6 +1278,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1379,6 +1416,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1404,6 +1442,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1524,6 +1565,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1549,6 +1591,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1827,6 +1872,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -1843,6 +1889,9 @@
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -1976,6 +2025,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -2003,6 +2053,9 @@
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -2121,6 +2174,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -2148,6 +2202,9 @@
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -2336,6 +2393,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -2352,6 +2410,9 @@
             
                 
                     
+                        
+                        
+                    
                 
                 
 
@@ -2486,6 +2547,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2511,6 +2573,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2631,6 +2696,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2656,6 +2722,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2742,6 +2811,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2756,6 +2826,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2891,6 +2964,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2916,6 +2990,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3036,6 +3113,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -3061,6 +3139,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3113,7 +3194,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -3126,9 +3206,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3162,7 +3239,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -3178,9 +3254,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -3263,10 +3336,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/project/asteroid/" title="Asteroids Game"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/tech/p5js/key-is-pressed/" title="Keyboard"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/project/stickman/" title="Stickman" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/tech/javascript/" title="Javascript" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3306,4 +3379,3 @@
 
   </body>
 </html>
-

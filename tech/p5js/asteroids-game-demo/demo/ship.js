@@ -20,10 +20,10 @@ function Ship() {
     }
     this.rotation = 0;
     if(this.isTurningLeft){
-      this.rotation += this.turnspeed;
+      this.rotation -= this.turnspeed;
     }
     if(this.isTurningRight){
-      this.rotation -= this.turnspeed;
+      this.rotation += this.turnspeed;
     }
 
     this.pos.add(this.vel);
