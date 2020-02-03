@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Mindstorms :: Getsrevel</title>
+    <title>Times Table :: Getsrevel</title>
 
     
     <link href="/css/nucleus.css?1580734247" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tech/mindstorms/">
+  <body class="" data-url="/tech/p5js/times-table/">
     <nav id="sidebar" class="">
 
 
@@ -248,8 +248,8 @@
   
     
     <li data-nav-id="/tech/mindstorms/" title="Mindstorms" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/tech/mindstorms/">
@@ -370,7 +370,7 @@
   
     
     <li data-nav-id="/tech/p5js/" title="p5js" class="dd-item 
-        
+        parent
         
         
         ">
@@ -975,7 +975,13 @@
             
           
           
-            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > Mindstorms
+            
+            
+          
+          
+            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/p5js/'>p5js</a> > Times Table
+          
+         
           
          
           
@@ -988,15 +994,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#programmering">Programmering</a></li>
-<li><a href="#materiale">Materiale</a></li>
-</ul></li>
-</ul>
-</nav>
+
     </div>
 </div>
 
@@ -1012,7 +1010,7 @@
           
             <h1>
               
-              Mindstorms
+              Times Table
             </h1>
           
 
@@ -1022,48 +1020,6 @@
 
 
 	
-
-<p>En nem måde at komme i gang med at programmere til lego mindstorms EV3, er ved at bruge værktøjet
-<a href="https://makecode.mindstorms.com/">Makecode</a>.
-For at kunne benytte dette, kræves at din EV3 klods er
-<a href="https://makecode.mindstorms.com/troubleshoot">opdateret til firmware version 1.10E</a> eller nyere.</p>
-
-<h2 id="programmering">Programmering</h2>
-
-<p>Du kan lave dit program ved hjælp af blok programmering, som du måske kender hvis du har arbejdet med <a href="https://scratch.mit.edu/">Scratch</a>, eller <a href="https://code.org/educate/applab">Applab</a>.</p>
-
-<p><figure>
-    <img src="button-control-ide.png"/> <figcaption>
-            <h4>Makecode udviklingsmiljøet i blokprogrammerings mode. Simulatoren ses i venstre side.</h4>
-        </figcaption>
-</figure>
-
-<a href="https://makecode.mindstorms.com/#editor">Udviklingsmiljøet</a> indeholder mulighed for at simulere dit program direkte i din browser uden at overføre det til en fysisk EV3 brik.
-Du kan se en grafisk visning af de enheder, der forventes at være tilsluttet til din EV3, på baggrund af indholdet af din kode.
-Du kan også køre dit program som en simulering, og se om det opfører sig som forventet, ved at manipulere de virtuelle input i browseren.
-Det kan dog være vanskeligt at simulere noget hvor der er en fysisk kobling mellem input og output, som f.eks. en liniefølger, så du får også brug for at test med en EV3 klods.</p>
-
-<p>Som det også er tilfældet med Applab, kan du vælge at skrive dit program i javascript.
-Her er et eksempel på et program der starter og stopper en motor, afhængigt af om en knap er trykket ind.</p>
-
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">forever</span>(<span style="color:#66d9ef">function</span> () {
-    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">sensors</span>.<span style="color:#a6e22e">touch2</span>.<span style="color:#a6e22e">isPressed</span>()) {
-        <span style="color:#a6e22e">motors</span>.<span style="color:#a6e22e">mediumC</span>.<span style="color:#a6e22e">run</span>(<span style="color:#ae81ff">50</span>)
-    } <span style="color:#66d9ef">else</span> {
-        <span style="color:#a6e22e">motors</span>.<span style="color:#a6e22e">mediumC</span>.<span style="color:#a6e22e">stop</span>()
-    }
-})
-</code></pre></div>
-
-<p>En af fordelene ved at bruge tekstbaseret kode som f.eks. javascript er, at du nemt kan klippe/klistre stumper af kode fra forskellige programmer, og sætte dem sammen til et nyt program.</p>
-
-<h2 id="materiale">Materiale</h2>
-
-<ul>
-<li><a href="https://makecode.mindstorms.com/">Makecode</a> editor til EV3.</li>
-<li><a href="https://makecode.mindstorms.com/troubleshoot">Fejlfinding</a></li>
-</ul>
-
 
 
 
@@ -1210,7 +1166,6 @@ Her er et eksempel på et program der starter og stopper en motor, afhængigt af
             
                 
                     
-                    
                 
                 
 
@@ -1226,9 +1181,6 @@ Her er et eksempel på et program der starter og stopper en motor, afhængigt af
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1264,6 +1216,7 @@ Her er et eksempel på et program der starter og stopper en motor, afhængigt af
             
                 
                     
+                    
                 
                 
 
@@ -1278,6 +1231,9 @@ Her er et eksempel på et program der starter og stopper en motor, afhængigt af
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1774,7 +1730,6 @@ Her er et eksempel på et program der starter og stopper en motor, afhængigt af
             
                 
                     
-                    
                 
                 
 
@@ -1790,9 +1745,6 @@ Her er et eksempel på et program der starter og stopper en motor, afhængigt af
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1882,7 +1834,6 @@ Her er et eksempel på et program der starter og stopper en motor, afhængigt af
             
                 
                     
-                    
                 
                 
 
@@ -1898,9 +1849,6 @@ Her er et eksempel på et program der starter og stopper en motor, afhængigt af
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -1936,6 +1884,7 @@ Her er et eksempel på et program der starter og stopper en motor, afhængigt af
             
                 
                     
+                    
                 
                 
 
@@ -1950,6 +1899,9 @@ Her er et eksempel på et program der starter og stopper en motor, afhængigt af
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2461,7 +2413,6 @@ Her er et eksempel på et program der starter og stopper en motor, afhængigt af
             
                 
                     
-                    
                 
                 
 
@@ -2477,9 +2428,6 @@ Her er et eksempel på et program der starter og stopper en motor, afhængigt af
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2515,6 +2463,7 @@ Her er et eksempel på et program der starter og stopper en motor, afhængigt af
             
                 
                     
+                    
                 
                 
 
@@ -2529,6 +2478,9 @@ Her er et eksempel på et program der starter og stopper en motor, afhængigt af
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2986,6 +2938,7 @@ Her er et eksempel på et program der starter og stopper en motor, afhængigt af
             
                 
                     
+                    
                 
                 
 
@@ -3000,6 +2953,9 @@ Her er et eksempel på et program der starter og stopper en motor, afhængigt af
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3565,10 +3521,10 @@ Her er et eksempel på et program der starter og stopper en motor, afhængigt af
 	 
 	 
 		
-			<a class="nav nav-prev" href="/tech/firebase/firestore-upload/" title="Firestore Node Upload"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/tech/node/web-scraping/" title="Web Scraping"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/tech/node/" title="Node.js" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/tech/p5js/intro/" title="Intro" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3D Orbit on Getsrevel</title>
+    <link>https://getsrevel.github.io/tech/p5js/3d-orbit/</link>
+    <description>Recent content in 3D Orbit on Getsrevel</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Feb 2020 13:36:20 +0100</lastBuildDate>
+    
+	<atom:link href="https://getsrevel.github.io/tech/p5js/3d-orbit/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

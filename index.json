@@ -28,6 +28,48 @@
 	"content": " Dette eksempel viser hvordan man opretter et lærred, og tegner figure på skærmen. Der benyttes variabler og musemarkørens position til at styre hvor på skærmen der tegnes.\nfunction setup() { createCanvas(600, 800); } function draw() { background(220); fill(255); // variable declaration  let x; // variable assignment  x = mouseX; // declaration and assignment in one line  let y = mouseY; ellipse(x,y, 150); x = 200; ellipse(x, y, 50); fill(255, 0, 0); ellipse(width,height, 120); let cx = width /2; let cy = height / 2; ellipse(cx,cy, 50); }  Demo Prøv det kørende eksempel\n"
 },
 {
+	"uri": "https://getsrevel.github.io/tech/p5js/3d-orbit/",
+	"title": "3D Orbit",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/3d-orbit/demo/",
+	"title": "3D Orbit demo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/random-color/",
+	"title": "Random Color",
+	"tags": [],
+	"description": "",
+	"content": " Dette eksempel tegner cirkler med tilfældigt valgt fyldfarve.\nNår venstre museknap er trykket ned skiftes til fyldfarver i tilfældige gråtoner.\nfunction setup() { createCanvas(windowWidth, windowHeight); } function draw() { if (mouseIsPressed) { fill(random(255)); } else { fill(random(255), random(255),random(255)); } ellipse(mouseX, mouseY, 80, 80); }  Demo Prøv det kørende eksempel\n"
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/random-color/demo/",
+	"title": "Random Color demo",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/times-table/",
+	"title": "Times Table",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/times-table/demo/",
+	"title": "Times Table demo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://getsrevel.github.io/tech/firebase/firestore-client/",
 	"title": "Firestore Client",
 	"tags": [],
