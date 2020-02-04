@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>multitouch :: Getsrevel</title>
+    <title>Stickman demo :: Getsrevel</title>
 
     
     <link href="/css/nucleus.css?1580852686" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/tech/p5js/multitouch/">
+  <body class="" data-url="/tech/p5js/stickman-demo/">
     <nav id="sidebar" class="">
 
 
@@ -611,8 +611,8 @@
   
     
     <li data-nav-id="/tech/p5js/stickman-demo/" title="Stickman demo" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/tech/p5js/stickman-demo/">
@@ -1021,7 +1021,7 @@
             
           
           
-            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/p5js/'>p5js</a> > multitouch
+            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/p5js/'>p5js</a> > Stickman demo
           
          
           
@@ -1036,7 +1036,14 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#demo">Demo</a></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -1052,7 +1059,7 @@
           
             <h1>
               
-              multitouch
+              Stickman demo
             </h1>
           
 
@@ -1062,6 +1069,121 @@
 
 
 	
+
+<p>Denne demonstration er et eksempel på hvordan man kan bruge klasser og objekter til at strukturere koden.
+I eksemplet tegnes et par hoppende tændstikmænd med forskellige egenskaber.</p>
+
+<p>Filen <code>sketch.js</code> indeholder den sædvanlige struktur for et program skrevet i p5js.</p>
+
+<p>I <em>setup()</em> oprettes et lærred, og der oprettes to objekter af klassen stickman.
+Bemærk at det bliver initialiseret med forskellige egenskaber via deres constructor.</p>
+
+<p>I <em>draw()</em> kaldes metoderne <em>render()</em> og <em>update()</em> på begge de to StickMan objekter.</p>
+
+<p>Derudover er metoden <em>mouseClicked()</em> implementeret, og denne sørger for at kalde metoden jump på de to stickman objekter,
+med den effekt at de begge hopper når der klikkes med musen.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">man</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">otherMan</span>;
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+  <span style="color:#a6e22e">man</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">StickMan</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">25</span>, <span style="color:#e6db74">&#34;red&#34;</span>);
+  <span style="color:#a6e22e">otherMan</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">StickMan</span>(<span style="color:#a6e22e">width</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">30</span>, <span style="color:#e6db74">&#34;green&#34;</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+  <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+  <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">render</span>();
+  <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">update</span>();
+
+  <span style="color:#a6e22e">otherMan</span>.<span style="color:#a6e22e">render</span>();
+  <span style="color:#a6e22e">otherMan</span>.<span style="color:#a6e22e">update</span>();
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mouseClicked</span>() {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;click&#34;</span>);
+  <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">jump</span>();
+  <span style="color:#a6e22e">otherMan</span>.<span style="color:#a6e22e">jump</span>();
+}
+</code></pre></div>
+
+<p>Herunder ses implementationen af stickman klassen, som er lavet separat i filen <code>stickman.js</code> for at gøre koden mere overskuelig.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">StickMan</span> {
+  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">minHeight</span>, <span style="color:#a6e22e">jumpSpeed</span>, <span style="color:#a6e22e">color</span>) {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>;
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">jumpSpeed</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jumpSpeed</span>;
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">minHeight</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">minHeight</span>;
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">minHeight</span>;
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">color</span>;
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">height</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vy</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">gravity</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.5</span>;
+  }
+
+  <span style="color:#a6e22e">jump</span>() {
+    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">height</span>) {
+      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vy</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">jumpSpeed</span>;
+    }
+  }
+
+  <span style="color:#a6e22e">update</span>() {
+    <span style="color:#75715e">// fall down
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">+=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vy</span>;
+    <span style="color:#75715e">// increase fall speed due to gravity
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vy</span> <span style="color:#f92672">+=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">gravity</span>;
+    <span style="color:#75715e">// stop at floor
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">constrain</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">y</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">3000</span>, <span style="color:#a6e22e">height</span>);
+    <span style="color:#75715e">// change the size
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">mouseX</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">width</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">minHeight</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">minHeight</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">6</span>);
+  }
+
+  <span style="color:#a6e22e">render</span>() {
+    <span style="color:#75715e">// compute the dimensions of the body parts
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">headDiameter</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.2</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">headRadius</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">headDiameter</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">bodyHeight</span> <span style="color:#f92672">=</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">headDiameter</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.4</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">legHeight</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">headDiameter</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">bodyHeight</span>;
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">legWidth</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">headDiameter</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.5</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">armWidth</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">headDiameter</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.75</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">armHeight</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">headDiameter</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1.8</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">neckLength</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">headDiameter</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.3</span>;
+
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">headX</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">x</span>;
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">headY</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">-</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">headRadius</span>;
+
+    <span style="color:#75715e">// draw the stickman
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">push</span>();
+    <span style="color:#a6e22e">fill</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">color</span>);
+    <span style="color:#a6e22e">strokeWeight</span>(<span style="color:#ae81ff">3</span>);
+    <span style="color:#75715e">// head
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">headX</span>, <span style="color:#a6e22e">headY</span>, <span style="color:#a6e22e">headDiameter</span>);
+    <span style="color:#75715e">// body
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">line</span>(<span style="color:#a6e22e">headX</span>, <span style="color:#a6e22e">headY</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">headRadius</span>, <span style="color:#a6e22e">headX</span>, <span style="color:#a6e22e">headY</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">headRadius</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">bodyHeight</span>);
+    <span style="color:#75715e">// arms
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">shoulderY</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">headY</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">headRadius</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">neckLength</span>;
+    <span style="color:#a6e22e">line</span>(<span style="color:#a6e22e">headX</span>, <span style="color:#a6e22e">shoulderY</span>, <span style="color:#a6e22e">headX</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">armWidth</span>, <span style="color:#a6e22e">shoulderY</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">armHeight</span>);
+    <span style="color:#a6e22e">line</span>(<span style="color:#a6e22e">headX</span>, <span style="color:#a6e22e">shoulderY</span>, <span style="color:#a6e22e">headX</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">armWidth</span>, <span style="color:#a6e22e">shoulderY</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">armHeight</span>);
+    <span style="color:#75715e">// legs
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">legY</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">headY</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">headRadius</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">bodyHeight</span>;
+    <span style="color:#a6e22e">line</span>(<span style="color:#a6e22e">headX</span>, <span style="color:#a6e22e">legY</span>, <span style="color:#a6e22e">headX</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">legWidth</span>, <span style="color:#a6e22e">legY</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legHeight</span>);
+    <span style="color:#a6e22e">line</span>(<span style="color:#a6e22e">headX</span>, <span style="color:#a6e22e">legY</span>, <span style="color:#a6e22e">headX</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legWidth</span>, <span style="color:#a6e22e">legY</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legHeight</span>);
+    <span style="color:#a6e22e">pop</span>();
+  }
+}
+</code></pre></div>
+
+<p>Husk at begge filer skal inkluderes i html strukturen. Hvis de ligger i samme mappe som html filen kan det gøres således:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stickman.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sketch.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;</code></pre></div>
+
+<h2 id="demo">Demo</h2>
+
+<p>Prøv det <a href="demo/">kørende eksempel</a></p>
+
 
 
 
@@ -1449,6 +1571,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1471,6 +1594,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1655,6 +1781,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1677,6 +1804,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2173,6 +2303,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2195,6 +2326,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2379,6 +2513,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2401,6 +2536,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2808,6 +2946,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2830,6 +2969,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3014,6 +3156,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -3036,6 +3179,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3339,6 +3485,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -3361,6 +3508,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3545,6 +3695,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -3567,6 +3718,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3787,10 +3941,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/tech/node/web-scraping/" title="Web Scraping"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/tech/p5js/key-is-pressed/" title="Keyboard"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/tech/p5js/intro/" title="Intro" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/tech/p5js/sound/" title="Sound" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
