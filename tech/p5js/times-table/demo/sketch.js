@@ -17,15 +17,12 @@ function getVector(index, total) {
 let xoff = 0;
 
 function updateColor() {
-
   xoff = xoff + 0.01;
   let r = noise(xoff) * 255;
   let g = noise(xoff + 200) * 255;
   let b = noise(xoff + 400) * 255;
   stroke(r, g, b);
-
 }
-
 
 function draw() {
   background(0);
@@ -38,18 +35,14 @@ function draw() {
     total = map(mouseY, 0, height, 0, 200);
     factor = map(mouseX, 0, width, 0, 20);
   }
-  //total = map(mouseY, 0, height, 0, 10000);
-
 
   translate(width / 2, height / 2);
 
   textSize(32);
-
   text("total  " + nf(total, 0, 2), -width / 2 + 10, height / 2 - 70);
   text("factor " + nf(factor, 0, 3), -width / 2 + 10, height / 2 - 30);
 
   noFill();
-   // stroke(255, 150);
   strokeWeight(2);
   updateColor();
   ellipse(0, 0, r * 2);

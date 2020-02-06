@@ -16,7 +16,6 @@ function setup() {
 
 function doneLoadingWhistleSound(){
   console.log("doneLoadingWhistleSound");
-  //whistleSound.play();
 }
 
 function draw() {

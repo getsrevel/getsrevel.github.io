@@ -13,6 +13,11 @@
   </url>
   
   <url>
+    <loc>https://getsrevel.github.io/project/html-basics/</loc>
+    <lastmod>2019-11-11T21:41:09+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://getsrevel.github.io/tech/css/</loc>
     <lastmod>2019-11-11T21:41:14+01:00</lastmod>
   </url>
@@ -23,12 +28,17 @@
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/3d-orbit/</loc>
+    <loc>https://getsrevel.github.io/tech/chartjs/</loc>
+    <lastmod>2020-02-05T11:08:49+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/_drafts/3d-orbit/</loc>
     <lastmod>2020-02-03T13:36:20+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/3d-orbit/demo/</loc>
+    <loc>https://getsrevel.github.io/tech/p5js/_drafts/3d-orbit/demo/</loc>
     <lastmod>2020-02-03T13:36:20+01:00</lastmod>
   </url>
   
@@ -73,13 +83,23 @@
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/node/web-scraping/</loc>
-    <lastmod>2020-01-15T22:34:12+01:00</lastmod>
+    <loc>https://getsrevel.github.io/tech/regex/</loc>
+    <lastmod>2020-01-21T22:24:07+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://getsrevel.github.io/</loc>
-    <lastmod>2019-12-17T12:32:28+01:00</lastmod>
+    <lastmod>2020-01-21T14:11:13+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/node/intro/</loc>
+    <lastmod>2020-01-21T14:11:13+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/node/web-scraping/</loc>
+    <lastmod>2020-01-15T22:34:12+01:00</lastmod>
   </url>
   
   <url>
@@ -108,22 +128,22 @@
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/asteroids-game-demo/</loc>
+    <loc>https://getsrevel.github.io/tech/p5js/_drafts/asteroids-game-demo/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/fullscreen/</loc>
+    <loc>https://getsrevel.github.io/tech/p5js/_drafts/fullscreen/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/fullscreen-demo/</loc>
+    <loc>https://getsrevel.github.io/tech/p5js/_drafts/fullscreen-demo/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/key-pressed-simple/</loc>
+    <loc>https://getsrevel.github.io/tech/p5js/_drafts/key-pressed-simple/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
@@ -138,12 +158,37 @@
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/asteroids-game-demo/demo/</loc>
+    <loc>https://getsrevel.github.io/tech/p5js/_drafts/asteroids-game-demo/demo/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/fullscreen-demo/demo/</loc>
+    <loc>https://getsrevel.github.io/tech/p5js/_drafts/fullscreen-demo/demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/_drafts/key-pressed-simple/demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/_drafts/my-draft-demo/demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/_drafts/polar-loop/demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/_drafts/polar/demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/_drafts/vector/demo/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
@@ -153,12 +198,17 @@
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/key-pressed-multi/demo/</loc>
+    <loc>https://getsrevel.github.io/tech/p5js/tacospin/demo/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/key-pressed-simple/demo/</loc>
+    <loc>https://getsrevel.github.io/tech/p5js/_drafts/fullscreen/demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/key-pressed-multi/demo/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
@@ -168,52 +218,22 @@
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/my-demo/demo/</loc>
-    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getsrevel.github.io/tech/p5js/polar-loop/demo/</loc>
-    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getsrevel.github.io/tech/p5js/polar/demo/</loc>
-    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getsrevel.github.io/tech/p5js/tacospin/demo/</loc>
-    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getsrevel.github.io/tech/p5js/vector/demo/</loc>
-    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getsrevel.github.io/tech/p5js/fullscreen/demo/</loc>
-    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://getsrevel.github.io/tech/p5js/sound/demo/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/my-demo/</loc>
+    <loc>https://getsrevel.github.io/tech/p5js/_drafts/my-draft-demo/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/polar/</loc>
+    <loc>https://getsrevel.github.io/tech/p5js/_drafts/polar/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/polar-loop/</loc>
+    <loc>https://getsrevel.github.io/tech/p5js/_drafts/polar-loop/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
@@ -223,7 +243,7 @@
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/vector/</loc>
+    <loc>https://getsrevel.github.io/tech/p5js/_drafts/vector/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
@@ -298,12 +318,12 @@
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/stickman-demo/</loc>
+    <loc>https://getsrevel.github.io/tech/p5js/stickman-demo/demo/</loc>
     <lastmod>2019-02-04T08:29:07+01:00</lastmod>
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/tech/p5js/stickman-demo/demo/</loc>
+    <loc>https://getsrevel.github.io/tech/p5js/stickman-demo/</loc>
     <lastmod>2019-02-04T08:29:07+01:00</lastmod>
   </url>
   

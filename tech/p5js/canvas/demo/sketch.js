@@ -5,25 +5,26 @@ function setup() {
 function draw() {
   background(220);
   fill(255);
-  
+
   // variable declaration
   let x;
   // variable assignment
-  x = mouseX;  
+  x = mouseX;
 
   // declaration and assignment in one line
   let y = mouseY;
-  
-  ellipse(x,y, 150);
-  
+
+  circle(x, y, 150);
+
+  // assign a new value to x
   x = 200;
-  
-  ellipse(x, y, 50);
-  
+
+  ellipse(x, y, 80, 40);
+
   fill(255, 0, 0);
-  ellipse(width,height, 120);
-  
-  let cx = width /2;
+  circle(width, height, 120);
+
+  let cx = width / 2;
   let cy = height / 2;
-  ellipse(cx,cy, 50);
+  circle(cx, cy, 50);
 }

@@ -4,14 +4,21 @@
 	"title": "Intro",
 	"tags": [],
 	"description": "",
-	"content": " P5js introduktion  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5. Variabler i javascript bliver grundigt forklaret og bruger et metafor med en kasse, der måske kan hjælpe lidt på forståelsen. Variable scope forklaret ved et eksempel.  Tegn på skærmen Denne video forklarer de grundlæggende principper i computergrafik.\n   Dokumentation af alle tegne primitiver i p5.  Her nogle få udvalgte, der formentlig kan bruges til at løse opgaven.\n rect() line() ellipse() arc()  Her er nogle eksempler på hvordan de kan bruges i koden: en linie, et rektangel, en ellipse, et buestykke.\nline(x1, y1, x2, y2); rect(x, y, w, h); arc(x, y, w, h, start, stop);  Brug af farver Når du skal tegne kan du vælge egenskaber for din \u0026ldquo;pensel\u0026rdquo;. Dette gøres på inden du \u0026ldquo;maler\u0026rdquo;, på samme måde som med en rigtig pensel.\n stroke() vælger stregens farve. strokeWeight() vælger stregens tykkelse. fill() vælger fyldfarven. Denne har kun betydning for lukkede figurer som f.eks. firkanter og cirkler.  Du kan bruge color() til at oprette en farve, og gemme værdien i en variabel, så den nemt kan genbruges forskellige steder i programmet. Her er et eksempel:\nlet myColor = color(250, 142, 0) fill(myColor); circle(100, 150, 42);   Color Picker (google) kan bruges til at vælge en farve og se hvilke argumenter du skal give til color() funktionen. Color Picker - w3schools er en del af en længere forklaring om farver på hjemmesider og computergrafik.  "
+	"content": " P5js introduktion  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5. Variabler i javascript bliver grundigt forklaret og bruger et metafor med en kasse, der måske kan hjælpe lidt på forståelsen. Variable scope forklaret ved et eksempel.  Tegn på skærmen Denne video forklarer de grundlæggende principper i computergrafik.\n  Tegneprimitiver  Dokumentation af alle tegneprimitiver i p5.  Her nogle få udvalgte, der formentlig kan bruges til at løse opgaven.\n rect() line() ellipse() arc()  Her er nogle eksempler på hvordan de kan bruges i koden: en linie, et rektangel, en ellipse, et buestykke.\nline(x1, y1, x2, y2); rect(x, y, w, h); arc(x, y, w, h, start, stop);  Brug af farver Når du skal tegne kan du vælge egenskaber for din \u0026ldquo;pensel\u0026rdquo;. Dette gøres på inden du \u0026ldquo;maler\u0026rdquo;, på samme måde som med en rigtig pensel.\n stroke() vælger stregens farve. strokeWeight() vælger stregens tykkelse. fill() vælger fyldfarven. Denne har kun betydning for lukkede figurer som f.eks. firkanter og cirkler.  Du kan bruge color() til at oprette en farve, og gemme værdien i en variabel, så den nemt kan genbruges forskellige steder i programmet. Her er et eksempel:\nlet myColor = color(250, 142, 0) fill(myColor); circle(100, 150, 42);   Color Picker (google) kan bruges til at vælge en farve og se hvilke argumenter du skal give til color() funktionen. Color Picker - w3schools er en del af en længere forklaring om farver på hjemmesider og computergrafik.  "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/html/",
 	"title": "Html",
 	"tags": [],
 	"description": "",
-	"content": " HTML introduktion  HTML5 Tutorial Headings Paragraphs Lists Images figure figcaption  Video kursus (På dansk)  HTML Kursus  Quiz  HTML quiz  Opgave Lav et website i html der præsenterer dig selv og din yndlings kage:\n Der skal være 2 sider  En beskrivelse af dig selv der navngives \u0026ldquo;profil.html\u0026rdquo; En anden side med en mad opskrift \u0026ldquo;opskrift.html\u0026rdquo;  Begge sider skal have en titel Der skal være links så man kan navigere mellem de to sider  På profil siden\n Brug forskellige niveauer af overskrifter Lav mindst et afsnit med brødtekst (f.eks. En kort beskrivelse af dig selv) Indsæt et billede af dig selv  Giv det en figurtekst med dit navn   På siden med opskriften\n Lav overskrifter Indsæt et billede af kagen Lav en unummereret punktopstilling med ingredienser Lav en nummeret punktopstilling med fremgangsmåden Lav en henvisning (link) til kilden (hvor du fandt opskriften) Lav et link til \u0026ldquo;toppen\u0026rdquo; lokalt link på siden  "
+	"content": " HTML introduktion  HTML5 Tutorial Headings Paragraphs Lists Images figure figcaption  Video kursus (På dansk)  HTML Kursus  Quiz  HTML quiz  "
+},
+{
+	"uri": "https://getsrevel.github.io/project/html-basics/",
+	"title": "HTML Basics",
+	"tags": [],
+	"description": "",
+	"content": " Opgave: Mig og min kageopskrift Lav et website i html der præsenterer dig selv og din yndlings kage:\n Der skal være 2 sider  En beskrivelse af dig selv der navngives \u0026ldquo;profil.html\u0026rdquo; En anden side med en mad opskrift \u0026ldquo;opskrift.html\u0026rdquo;  Begge sider skal have en titel Der skal være links så man kan navigere mellem de to sider  På profil siden\n Brug forskellige niveauer af overskrifter Lav mindst et afsnit med brødtekst (f.eks. En kort beskrivelse af dig selv) Indsæt et billede af dig selv  Giv det en figurtekst med dit navn   På siden med opskriften\n Lav overskrifter Indsæt et billede af kagen Lav en unummereret punktopstilling med ingredienser Lav en nummeret punktopstilling med fremgangsmåden Lav en henvisning (link) til kilden (hvor du fandt opskriften) Lav et link til \u0026ldquo;toppen\u0026rdquo; lokalt link på siden  Materiale  HTML5 Tutorial Headings Paragraphs Lists Images figure figcaption  Video kursus (På dansk)  HTML Kursus  Quiz  HTML quiz  "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/css/",
@@ -25,17 +32,24 @@
 	"title": "Canvas",
 	"tags": [],
 	"description": "",
-	"content": " Dette eksempel viser hvordan man opretter et lærred, og tegner figure på skærmen. Der benyttes variabler og musemarkørens position til at styre hvor på skærmen der tegnes.\nfunction setup() { createCanvas(600, 800); } function draw() { background(220); fill(255); // variable declaration  let x; // variable assignment  x = mouseX; // declaration and assignment in one line  let y = mouseY; ellipse(x,y, 150); x = 200; ellipse(x, y, 50); fill(255, 0, 0); ellipse(width,height, 120); let cx = width /2; let cy = height / 2; ellipse(cx,cy, 50); }  Demo Prøv det kørende eksempel\n"
+	"content": " Dette eksempel viser hvordan man opretter et lærred og tegner figurer på skærmen. Der benyttes variabler og musemarkørens position til at styre hvor på skærmen der tegnes.\nfunction setup() { createCanvas(600, 800); } function draw() { background(220); fill(255); // variable declaration  let x; // variable assignment  x = mouseX; // declaration and assignment in one line  let y = mouseY; circle(x, y, 150); // assign a new value to x  x = 200; ellipse(x, y, 80, 40); fill(255, 0, 0); circle(width, height, 120); let cx = width / 2; let cy = height / 2; circle(cx, cy, 50); }  Demo Prøv det kørende eksempel\nMateriale  setup() createCanvas() draw() background() fill() mouseX mouseY circle() ellipse()  "
 },
 {
-	"uri": "https://getsrevel.github.io/tech/p5js/3d-orbit/",
+	"uri": "https://getsrevel.github.io/tech/chartjs/",
+	"title": "Chart.js",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/_drafts/3d-orbit/",
 	"title": "3D Orbit",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://getsrevel.github.io/tech/p5js/3d-orbit/demo/",
+	"uri": "https://getsrevel.github.io/tech/p5js/_drafts/3d-orbit/demo/",
 	"title": "3D Orbit demo",
 	"tags": [],
 	"description": "",
@@ -46,7 +60,7 @@
 	"title": "Random Color",
 	"tags": [],
 	"description": "",
-	"content": " Dette eksempel tegner cirkler med tilfældigt valgt fyldfarve.\nNår venstre museknap er trykket ned skiftes til fyldfarver i tilfældige gråtoner.\nfunction setup() { createCanvas(windowWidth, windowHeight); } function draw() { if (mouseIsPressed) { fill(random(255)); } else { fill(random(255), random(255),random(255)); } ellipse(mouseX, mouseY, 80, 80); }  Demo Prøv det kørende eksempel\n"
+	"content": " Dette eksempel tegner cirkler med tilfældigt valgt fyldfarve. Når venstre museknap er trykket ned skiftes til fyldfarver i tilfældige gråtoner.\nI eksemplet viser hvordan man kan bruge en betingelse (museknappen er trykket ned), og en en forgrening (if-sætning) til at få programmet til at ændre opførsel.\nfunction setup() { createCanvas(windowWidth, windowHeight); } function draw() { if (mouseIsPressed) { fill(random(255)); } else { fill(random(255), random(255),random(255)); } ellipse(mouseX, mouseY, 80, 80); }  Demo Prøv det kørende eksempel\nMateriale  setup() createCanvas() windowWidth windowHeight draw() mouseIsPressed random() fill() ellipse()  "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/random-color/demo/",
@@ -60,21 +74,21 @@
 	"title": "Times Table",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": " Dette eksempel er baseret på ideer fra denne video.\nlet r; let factor = 0; let total = 0; function setup() { createCanvas(windowWidth, windowHeight); r = height / 2 - 16; } function getVector(index, total) { const angle = map(index % total, 0, total, 0, TWO_PI); const v = p5.Vector.fromAngle(angle + PI); v.mult(r); return v; } let xoff = 0; function updateColor() { xoff = xoff + 0.01; let r = noise(xoff) * 255; let g = noise(xoff + 200) * 255; let b = noise(xoff + 400) * 255; stroke(r, g, b); } function draw() { background(0); let autoRun = true; if (autoRun) { total = 100; factor += 0.01; } else { total = map(mouseY, 0, height, 0, 200); factor = map(mouseX, 0, width, 0, 20); } translate(width / 2, height / 2); textSize(32); text(\u0026#34;total \u0026#34; + nf(total, 0, 2), -width / 2 + 10, height / 2 - 70); text(\u0026#34;factor \u0026#34; + nf(factor, 0, 3), -width / 2 + 10, height / 2 - 30); noFill(); strokeWeight(2); updateColor(); ellipse(0, 0, r * 2); strokeWeight(1); for (let i = 0; i \u0026lt; total; i++) { const a = getVector(i, total); const b = getVector(i * factor, total); line(a.x, a.y, b.x, b.y); } }  Demo Prøv det kørende eksempel\nMateriale  translate() rotate() noFill() text() textSize() nfc() nf() mouseX mouseY map() noise() mult() fromAngle()  Times Tables, Mandelbrot and the Heart of Mathematics   "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/times-table/demo/",
 	"title": "Times Table demo",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": " "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/firebase/firestore-client/",
 	"title": "Firestore Client",
 	"tags": [],
 	"description": "",
-	"content": " I dette eksempel forbindes der til Firestore fra en browser ved hjælp af javascript.\nVideoen viser en gennemgang af de fundamentale principper i Cloud Firestore.\nGetting Started With Cloud Firestore on the Web - Firecasts   Demo Hvis du følger videoen burde du ende op med et kørendene eksempel, der ser nogenlunde sådan ud.\n Hot dog status Save      \r\rKoden du ender op kommer til at ligne dette.\r\r\r// Your web app\u0026#39;s Firebase configuration var firebaseConfig = { apiKey: \u0026#34;AIzaSyAof7A2wpEylAFHsKWvqeJU8VkYN7G1VMI\u0026#34;, authDomain: \u0026#34;coldhawaiiweather.firebaseapp.com\u0026#34;, databaseURL: \u0026#34;https://coldhawaiiweather.firebaseio.com\u0026#34;, projectId: \u0026#34;coldhawaiiweather\u0026#34;, storageBucket: \u0026#34;coldhawaiiweather.appspot.com\u0026#34;, messagingSenderId: \u0026#34;645018619046\u0026#34;, appId: \u0026#34;1:645018619046:web:2ae11bff4009e1e965f867\u0026#34;, measurementId: \u0026#34;G-61E1DX0Z3Q\u0026#34; }; // Initialize Firebase firebase.initializeApp(firebaseConfig); firebase.analytics(); const firestore = firebase.firestore(); const docRef = firestore.doc(\u0026#34;samples/sandwichData\u0026#34;); const outputHeader = document.querySelector(\u0026#34;#hotdogOutPut\u0026#34;); const inputTextField = document.querySelector(\u0026#34;#latestHotdogStatus\u0026#34;); const saveButton = document.querySelector(\u0026#34;#saveButton\u0026#34;); saveButton.addEventListener(\u0026#34;click\u0026#34;, e =\u0026gt; { const textToSave = inputTextField.value; console.log(\u0026#34;save clicked \u0026#34; + textToSave); docRef .set({ hotdogStatus: textToSave }) .then(() =\u0026gt; { console.log(\u0026#34;saved!\u0026#34;); }) .catch(error =\u0026gt; { console.log(\u0026#34;got an error: \u0026#34;, error); }); }); thingToDoWhithDocumentData = doc =\u0026gt; { if (doc \u0026amp;\u0026amp; doc.exists) { const myData = doc.data(); console.log(\u0026#34;Got snapshot doc: \u0026#34;, doc); outputHeader.innerText = \u0026#34;Hot dog Status: \u0026#34; + myData.hotdogStatus; } }; getRealtimeUpdates = () =\u0026gt; { docRef.onSnapshot( { includeMetadataChanges: true }, thingToDoWhithDocumentData ); }; getRealtimeUpdates();  \r Du kan også se demonstrationen på en separat side.\nMateriale  Clouc Firestore dokumentation. Getting Started With Cloud Firestore on the Web - Firecasts  Firecasts firebase intro   "
+	"content": " I dette eksempel forbindes der til Firestore fra en browser ved hjælp af javascript.\nVideoen viser en gennemgang af de fundamentale principper i Cloud Firestore.\nGetting Started With Cloud Firestore on the Web - Firecasts   Demo Hvis du følger videoen burde du ende op med et kørendene eksempel, der ser nogenlunde sådan ud.\n Hot dog status Save      \r\rKoden du ender op kommer til at ligne dette.\r\r\r// Your web app\u0026#39;s Firebase configuration\rvar firebaseConfig = {\rapiKey: \u0026#34;AIzaSyAof7A2wpEylAFHsKWvqeJU8VkYN7G1VMI\u0026#34;,\rauthDomain: \u0026#34;coldhawaiiweather.firebaseapp.com\u0026#34;,\rdatabaseURL: \u0026#34;https://coldhawaiiweather.firebaseio.com\u0026#34;,\rprojectId: \u0026#34;coldhawaiiweather\u0026#34;,\rstorageBucket: \u0026#34;coldhawaiiweather.appspot.com\u0026#34;,\rmessagingSenderId: \u0026#34;645018619046\u0026#34;,\rappId: \u0026#34;1:645018619046:web:2ae11bff4009e1e965f867\u0026#34;,\rmeasurementId: \u0026#34;G-61E1DX0Z3Q\u0026#34;\r};\r// Initialize Firebase\rfirebase.initializeApp(firebaseConfig);\rfirebase.analytics();\rconst firestore = firebase.firestore();\rconst docRef = firestore.doc(\u0026#34;samples/sandwichData\u0026#34;);\rconst outputHeader = document.querySelector(\u0026#34;#hotdogOutPut\u0026#34;);\rconst inputTextField = document.querySelector(\u0026#34;#latestHotdogStatus\u0026#34;);\rconst saveButton = document.querySelector(\u0026#34;#saveButton\u0026#34;);\rsaveButton.addEventListener(\u0026#34;click\u0026#34;, e =\u0026gt; {\rconst textToSave = inputTextField.value;\rconsole.log(\u0026#34;save clicked \u0026#34; + textToSave);\rdocRef\r.set({\rhotdogStatus: textToSave\r})\r.then(() =\u0026gt; {\rconsole.log(\u0026#34;saved!\u0026#34;);\r})\r.catch(error =\u0026gt; {\rconsole.log(\u0026#34;got an error: \u0026#34;, error);\r});\r});\rthingToDoWhithDocumentData = doc =\u0026gt; {\rif (doc \u0026amp;\u0026amp; doc.exists) {\rconst myData = doc.data();\rconsole.log(\u0026#34;Got snapshot doc: \u0026#34;, doc);\routputHeader.innerText = \u0026#34;Hot dog Status: \u0026#34; + myData.hotdogStatus;\r}\r};\rgetRealtimeUpdates = () =\u0026gt; {\rdocRef.onSnapshot(\r{ includeMetadataChanges: true },\rthingToDoWhithDocumentData\r);\r};\rgetRealtimeUpdates(); \r\r Du kan også se demonstrationen på en separat side.\nMateriale  Clouc Firestore dokumentation. Getting Started With Cloud Firestore on the Web - Firecasts  Firecasts firebase intro   "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/firebase/firestore-client/demo/",
@@ -88,21 +102,21 @@
 	"title": "Firebase",
 	"tags": [],
 	"description": "",
-	"content": " Firebase Lidt eksempler med Firebase.\n"
+	"content": " Firebase Eksempler med Firebase.\n"
 },
 {
 	"uri": "https://getsrevel.github.io/tech/firebase/firestore-upload/",
 	"title": "Firestore Node Upload",
 	"tags": [],
 	"description": "",
-	"content": " I dette eksempel forbindes der til Firestore via Node.js. Dvs. koden der skal afvikles på serveren kan skrives i javascript, og vi kan derfor genbruge viden om syntaks fra arbejdet med p5js.\nOpsætning af Node projekt For at kunne arbejde med firestore fra node.js, skal der laves en pakke / projekt at arbejde i. Dette kan gøres ved at lave en top mappe og køre denne kommando for at generere en package.json fil.\nnpm init Man bliver så bedt om at svare på en række spørgsmål, og ender med en struktur der ser nogenlunde sådan ud:\n{\r\u0026#34;name\u0026#34;: \u0026#34;firestore-demo\u0026#34;,\r\u0026#34;version\u0026#34;: \u0026#34;1.0.0\u0026#34;,\r\u0026#34;description\u0026#34;: \u0026#34;\u0026#34;,\r\u0026#34;main\u0026#34;: \u0026#34;index.js\u0026#34;,\r\u0026#34;scripts\u0026#34;: {\r\u0026#34;test\u0026#34;: \u0026#34;echo \\\u0026#34;Error: no test specified\\\u0026#34; \u0026amp;\u0026amp; exit 1\u0026#34;\r},\r\u0026#34;author\u0026#34;: \u0026#34;\u0026#34;,\r\u0026#34;license\u0026#34;: \u0026#34;ISC\u0026#34;\r} For at kunne benytte Firebase SDK skal vi have dette installeret, hvilket kan klares med kommandoen.\nnpm install firebase-admin --save Dette tilføjet Firebase som afhængighed og package.json ser nu nogenlunde således ud.\n{\r\u0026#34;name\u0026#34;: \u0026#34;firestore-demo\u0026#34;,\r\u0026#34;version\u0026#34;: \u0026#34;1.0.0\u0026#34;,\r\u0026#34;description\u0026#34;: \u0026#34;\u0026#34;,\r\u0026#34;main\u0026#34;: \u0026#34;index.js\u0026#34;,\r\u0026#34;scripts\u0026#34;: {\r\u0026#34;test\u0026#34;: \u0026#34;echo \\\u0026#34;Error: no test specified\\\u0026#34; \u0026amp;\u0026amp; exit 1\u0026#34;\r},\r\u0026#34;author\u0026#34;: \u0026#34;\u0026#34;,\r\u0026#34;license\u0026#34;: \u0026#34;ISC\u0026#34;,\r\u0026#34;dependencies\u0026#34;: {\r\u0026#34;@google-cloud/firestore\u0026#34;: \u0026#34;^3.4.1\u0026#34;,\r\u0026#34;firebase-admin\u0026#34;: \u0026#34;^8.9.1\u0026#34;\r}\r} Som det ses er der nu tilføjet afhængigheder til firebase pakkerne. De nærmere detaljer kan findes i denne guide.\nDette er et eksempel på en hvordan man kan lave et lille program der indsætter en stump data i firestore.\nFirestore upload eksempel // Add the Firebase Admin SDK to Your Server\rlet admin = require(\u0026#34;firebase-admin\u0026#34;);\r// Import crecential for the service account\rlet serviceAccount = require(\u0026#34;./serviceAccountKey.json\u0026#34;);\r// Initialize the default app\rlet app = admin.initializeApp({\rcredential: admin.credential.cert(serviceAccount),\rdatabaseURL: \u0026#34;https://coldhawaiiweather.firebaseio.com\u0026#34;\r});\rlet db = admin.firestore();\r// Generate some fake weather data\rconst weatherData = {\rtime: Date.now(),\rwindSpeed: getRandomInt(15, 3),\rwindDir: getRandomInt(0, 359),\r};\r// Add document to Firestore\rlet addDoc = db.collection(\u0026#34;weather\u0026#34;).add(weatherData);\r// Helper - Generates random integer values function getRandomInt(max, min) {\rconst diff = max - min;\rreturn Math.floor(Math.random() * Math.floor(diff) + min);\r}  Der skal bruges en såkaldt Service Account, for at kunne forbindes fra node til firebase. Guiden forklarer hvad du skal gøre for at oprette en service account til dit firebase projekt. Disse oplysninger er private, så vær opmærksom på ikke at holde dem for dig selv. For eksemplet virker skal oplysningerne om din Service Account oprettes i file serviceAccountKey.json.\nHåndtering af private nøgler For at undgå at sprede disse oplysninger er det en god ide at tilføje denne fil til listen over filer der skal ignoreres af git. Dvs. at din .gitignore fil kunne se således ud.\n# ignore packages downloaded from npm\rnode_modules/\r# avoid storing firebase login credentials\rserviceAccountKey.json Hvis javascript eksemplet gemmes i en fil med navnet firebase-upload-demo.js, kan programmet køres med kommandoen\nnode firebase-upload-demo.js Materiale  Clouc Firestore dokumentation. Add the Firebase Admin SDK to Your Server guide til at komme i gang med firebase på en server. Cloud Firestore quickstart guide til at komme i gang med firestore. gitignore dokumentation.  "
+	"content": " I dette eksempel forbindes der til Firestore via Node.js. Dvs. koden der skal afvikles på serveren kan skrives i javascript, og vi kan derfor bruge viden om syntaks fra arbejdet med p5js.\nOpsætning af Node projekt For at kunne arbejde med firestore fra node.js, skal der laves en pakke / projekt at arbejde i. Dette kan gøres ved at oprette en mappe til projektet og køre denne kommando for at generere en package.json fil.\nnpm init Man bliver så bedt om at svare på en række spørgsmål, og ender med en struktur der ser nogenlunde sådan ud:\n{\r\u0026#34;name\u0026#34;: \u0026#34;firestore-demo\u0026#34;,\r\u0026#34;version\u0026#34;: \u0026#34;1.0.0\u0026#34;,\r\u0026#34;description\u0026#34;: \u0026#34;\u0026#34;,\r\u0026#34;main\u0026#34;: \u0026#34;index.js\u0026#34;,\r\u0026#34;scripts\u0026#34;: {\r\u0026#34;test\u0026#34;: \u0026#34;echo \\\u0026#34;Error: no test specified\\\u0026#34; \u0026amp;\u0026amp; exit 1\u0026#34;\r},\r\u0026#34;author\u0026#34;: \u0026#34;\u0026#34;,\r\u0026#34;license\u0026#34;: \u0026#34;ISC\u0026#34;\r} For at kunne benytte Firebase SDK skal vi have dette installeret, hvilket kan klares med kommandoen.\nnpm install firebase-admin --save Dette tilføjet Firebase som afhængighed og package.json ser nu nogenlunde således ud.\n{\r\u0026#34;name\u0026#34;: \u0026#34;firestore-demo\u0026#34;,\r\u0026#34;version\u0026#34;: \u0026#34;1.0.0\u0026#34;,\r\u0026#34;description\u0026#34;: \u0026#34;\u0026#34;,\r\u0026#34;main\u0026#34;: \u0026#34;index.js\u0026#34;,\r\u0026#34;scripts\u0026#34;: {\r\u0026#34;test\u0026#34;: \u0026#34;echo \\\u0026#34;Error: no test specified\\\u0026#34; \u0026amp;\u0026amp; exit 1\u0026#34;\r},\r\u0026#34;author\u0026#34;: \u0026#34;\u0026#34;,\r\u0026#34;license\u0026#34;: \u0026#34;ISC\u0026#34;,\r\u0026#34;dependencies\u0026#34;: {\r\u0026#34;@google-cloud/firestore\u0026#34;: \u0026#34;^3.4.1\u0026#34;,\r\u0026#34;firebase-admin\u0026#34;: \u0026#34;^8.9.1\u0026#34;\r }\r} Som det ses er der nu tilføjet afhængigheder til firebase pakkerne. De nærmere detaljer kan findes i denne guide.\nDette er et eksempel på en hvordan man kan lave et lille program, der indsætter en stump data i firestore.\nFirestore upload eksempel // Add the Firebase Admin SDK to Your Server\rlet admin = require(\u0026#34;firebase-admin\u0026#34;);\r// Import crecential for the service account\rlet serviceAccount = require(\u0026#34;./serviceAccountKey.json\u0026#34;);\r// Initialize the default app\rlet app = admin.initializeApp({\rcredential: admin.credential.cert(serviceAccount),\rdatabaseURL: \u0026#34;https://coldhawaiiweather.firebaseio.com\u0026#34;\r});\rlet db = admin.firestore();\r// Generate some fake weather data\rconst weatherData = {\rtime: Date.now(),\rwindSpeed: getRandomInt(15, 3),\rwindDir: getRandomInt(0, 359),\r};\r// Add document to Firestore\rlet addDoc = db.collection(\u0026#34;weather\u0026#34;).add(weatherData);\r// Helper - Generates random integer values function getRandomInt(max, min) {\rconst diff = max - min;\rreturn Math.floor(Math.random() * Math.floor(diff) + min);\r}  Der skal bruges en såkaldt Service Account, for at kunne forbindes fra node til firebase. Guiden forklarer, hvad du skal gøre for at oprette en service account til dit firebase projekt. Disse oplysninger er private, så vær opmærksom på ikke at holde dem for dig selv. For eksemplet virker skal oplysningerne om din Service Account oprettes i file serviceAccountKey.json.\nHåndtering af private nøgler For at undgå at sprede disse oplysninger er det en god ide at tilføje denne fil til listen over filer der skal ignoreres af git. Dvs. at din .gitignore fil kunne se således ud.\n# ignore packages downloaded from npm\rnode_modules/\r# avoid storing firebase login credentials\rserviceAccountKey.json Hvis javascript eksemplet gemmes i en fil med navnet firebase-upload-demo.js, kan programmet køres med kommandoen\nnode firebase-upload-demo.js Materiale  Clouc Firestore dokumentation. Add the Firebase Admin SDK to Your Server guide til at komme i gang med firebase på en server. Cloud Firestore quickstart guide til at komme i gang med firestore. gitignore dokumentation.  "
 },
 {
-	"uri": "https://getsrevel.github.io/tech/node/web-scraping/",
-	"title": "Web Scraping",
+	"uri": "https://getsrevel.github.io/tech/regex/",
+	"title": "Regex",
 	"tags": [],
 	"description": "",
-	"content": " Scraper eksempel Dette er et eksempel på en scraper der finder alle links på en side, og skriver deres URL ud i konsollen.\nconst cheerio = require(\u0026#34;cheerio\u0026#34;);\rconst axios = require(\u0026#34;axios\u0026#34;);\r// Swap this for the url you want to scrape\rconst url =\r\u0026#34;https://en.wikipedia.org/wiki/List_of_Presidents_of_the_United_States\u0026#34;;\raxios\r.get(url)\r.then(response =\u0026gt; {\rlet $ = cheerio.load(response.data);\r$(\u0026#34;a\u0026#34;).each(function(i, e) {\rlet links = $(e).attr(\u0026#34;href\u0026#34;);\rconsole.log(links);\r});\r})\r.catch(function(e) {\rconsole.log(e);\r});  For at køre eksemplet skal der installeres nogle biblioteker fra npm.\nFørst skal der lavet et projekt så node kan finde ud af at køre din fil, og har en package.json fil til at holde styr på projektet og afhængigheder af biblioteksmoduler.\nnpm init -y Dernæst har du mulighed for at installere disse afhængigheder.\nnpm --save install axios\rnpm --save install cheerio Nu kan du køre eksemplet med denne kommando:\nnode simple-scraper.js Her er et eksempel med samme funktionalitet, men hvor der bruges async/await syntaks i stedet for promise.then().\n// import the library modules you installed from npm\rconst cheerio = require(\u0026#34;cheerio\u0026#34;);\rconst axios = require(\u0026#34;axios\u0026#34;);\r// Define the scraping algorithm\rasync function runScraper(url) {\rtry {\rconst html = (await axios.get(url)).data;\rconst $ = cheerio.load(html);\r$(\u0026#34;a\u0026#34;).each(function(i, e) {\rconst url = $(e).attr(\u0026#34;href\u0026#34;);\rconsole.log(url);\r});\r} catch (error) {\rconsole.log(\u0026#34;error: \u0026#34; + error);\r}\r}\r// Swap this for the url you want to scrape\rconst url =\r\u0026#34;https://en.wikipedia.org/wiki/List_of_Presidents_of_the_United_States\u0026#34;;\r// run the scraper by calling the function\rrunScraper(url);  Tutorial Denne tutorial giver et eksempel på hvordan man kan hente en side med links til amerikanske præsidenter fra wikipedia, og ved at følge disse links hente de enkelte præsidenters navne og fødselsdage.\n The Ultimate Guide to Web Scraping with Node.js  Websider der bliver brugt i eksemplet:\nListen af præsidenter og deres links hentes fra\n List of presidents of the United States  Dette er et eksempel på en side der beskriver en specifik præsident.\n George Washington  NPM modules Her er en række biblioteker der kan bruges til at lave web scraping.\n Axios request-promise Cheerio html parsing on the server. Puppeteer Puppeteer source  Javascript articles  Promise basics Async/await The Pitfalls of Async/Await in Array Loops Why Axios Is Better Than Node-Fetch  "
+	"content": " Her er en stump tekst som kunne være et eksempel på noget input, hvor vi gerne vil finde alle telefonnumre.\nHere is my number 123-456-7893. Should you not be able to reach me there you can contact me at work (223)456-4305, or call my wife at 234.343.4521. Opgaven med at finde telefonnumre kan i dette tilfælde løses ved at at bruge denne regular expression eller regex.\n[\\(]\\*\\d{3}[)-\\.]\\d{3}[\\.-]\\d{4} Her er eksempel på hvordan det kan benyttes i javascript.\nconst re = /\\(?\\d{3}[)-\\.]\\d{3}[\\.-]\\d{4}/g;\rconst txt = `Here is my number 123-456-7893.\rShould you not be able to reach me there you can contact me at work (223)456-4305, or call my wife at 234.343.4521.`;\rconst phoneNumbers = txt.match(re);\rconsole.log(phoneNumbers);  Materiale  Regular expressions chapter - The Modern JavaScript Tutorial MDN\u0026rsquo;s Regular Expressions Reference MDN\u0026rsquo;s String.replace() Coding train video series on Regular expressions  2.1: Introduction to Regular Expressions - Programming with Text   2.2: Regular Expressions: Meta-characters - Programming with Text   2.3: Regular Expressions: Character Classes - Programming with Text   2.4: Regular Expressions: Capturing Groups - Programming with Text   2.5: Regular Expressions: Back References - Programming with Text   "
 },
 {
 	"uri": "https://getsrevel.github.io/",
@@ -110,6 +124,20 @@
 	"tags": [],
 	"description": "",
 	"content": " Getsrevel Velkommen til mit website der primært er løse noter om programmering og andet \u0026ldquo;work in progress\u0026rdquo;.\n"
+},
+{
+	"uri": "https://getsrevel.github.io/tech/node/intro/",
+	"title": "Intro",
+	"tags": [],
+	"description": "",
+	"content": "Her er nogle links til at komme i gang med node.js.\n Node.js Getting started guide Node guides npm - Node Package Manager Express web framework for node.js  "
+},
+{
+	"uri": "https://getsrevel.github.io/tech/node/web-scraping/",
+	"title": "Web Scraping",
+	"tags": [],
+	"description": "",
+	"content": " Dette er et eksempel på en scraper, der finder alle links på en side, og skriver deres URL ud i konsollen. Den benytter to pakker fra npm, så hele systemet ikke skal programmeres op fra grunden. Pakken axios benyttes i eksemplet til at arbejde med http requests, og cheerio bruges til at parse html strukturen, der returneres fra serveren, og uddrage de data man er interesseret i at arbejde videre med i programmet. Disse parkker skal installeres fra npm for at eksemplet kan eksekveres på din maskine.\nFørst skal der laves et projekt så node kan finde ud af at køre programmet, og har en package.json fil til at holde styr på projektet og afhængigheder af biblioteksmoduler.\nStart med at lave en mappe, som kan indeholde dit projekt. Kald den f.eks. web-scraping. I denne mappe skal du køre følgende kommando, for at oprette projekt filen package.json.\nnpm init -y Dernæst har du mulighed for at installere disse afhængigheder.\nnpm --save install axios\rnpm --save install cheerio Du burde nu have en package.json fil, der ser nogenlunde sådan ud:\n{ \u0026#34;name\u0026#34;: \u0026#34;web-scraping\u0026#34;, \u0026#34;version\u0026#34;: \u0026#34;1.0.0\u0026#34;, \u0026#34;description\u0026#34;: \u0026#34;\u0026#34;, \u0026#34;main\u0026#34;: \u0026#34;index.js\u0026#34;, \u0026#34;scripts\u0026#34;: { \u0026#34;test\u0026#34;: \u0026#34;echo \\\u0026#34;Error: no test specified\\\u0026#34; \u0026amp;\u0026amp; exit 1\u0026#34; }, \u0026#34;author\u0026#34;: \u0026#34;\u0026#34;, \u0026#34;license\u0026#34;: \u0026#34;ISC\u0026#34;, \u0026#34;dependencies\u0026#34;: { \u0026#34;axios\u0026#34;: \u0026#34;^0.19.1\u0026#34;, \u0026#34;cheerio\u0026#34;: \u0026#34;^1.0.0-rc.3\u0026#34;  } } Bemærk de to pakker der er listet under afhængigheder.\nDerefter skal du oprette filen simple-scraper.js med følgende indhold.\nconst cheerio = require(\u0026#34;cheerio\u0026#34;);\rconst axios = require(\u0026#34;axios\u0026#34;);\r// Swap this for the url you want to scrape\rconst url =\r\u0026#34;https://en.wikipedia.org/wiki/List_of_Presidents_of_the_United_States\u0026#34;;\raxios\r.get(url)\r.then(response =\u0026gt; {\rlet $ = cheerio.load(response.data);\r$(\u0026#34;a\u0026#34;).each(function(i, e) {\rlet links = $(e).attr(\u0026#34;href\u0026#34;);\rconsole.log(links);\r});\r})\r.catch(function(e) {\rconsole.log(e);\r});  Nu kan du køre eksemplet med denne kommando:\nnode simple-scraper.js Async / await version Her er et eksempel med samme funktionalitet, men hvor der bruges async / await syntaks i stedet for promise.then().\n// import the library modules you installed from npm\rconst cheerio = require(\u0026#34;cheerio\u0026#34;);\rconst axios = require(\u0026#34;axios\u0026#34;);\r// Define the scraping algorithm\rasync function runScraper(url) {\rtry {\rconst html = (await axios.get(url)).data;\rconst $ = cheerio.load(html);\r$(\u0026#34;a\u0026#34;).each(function(i, e) {\rconst url = $(e).attr(\u0026#34;href\u0026#34;);\rconsole.log(url);\r});\r} catch (error) {\rconsole.log(\u0026#34;error: \u0026#34; + error);\r}\r}\r// Swap this for the url you want to scrape\rconst url =\r\u0026#34;https://en.wikipedia.org/wiki/List_of_Presidents_of_the_United_States\u0026#34;;\r// run the scraper by calling the function\rrunScraper(url);  Materiale NPM pakker Her er en række pakker, der kan bruges til at lave scraping af websider.\n Axios request-promise Cheerio Puppeteer Puppeteer source  Javascript emner  Promise basics Async/await The Pitfalls of Async/Await in Array Loops Why Axios Is Better Than Node-Fetch  Tutorial Denne tutorial er et eksempel på hvordan man kan hente en side med links til amerikanske præsidenter fra wikipedia, og ved at følge disse links hente de enkelte præsidenters navne og fødselsdage.\n The Ultimate Guide to Web Scraping with Node.js  Websider der anvendes i eksemplet:\n List of presidents of the United States listen af præsidenter og deres links hentes fra denne side. George Washington er et eksempel på en side der beskriver en specifik præsident.  "
 },
 {
 	"uri": "https://getsrevel.github.io/project/weather-station/",
@@ -123,14 +151,14 @@
 	"title": "Mindstorms",
 	"tags": [],
 	"description": "",
-	"content": " En nem måde at komme i gang med at programmere til lego mindstorms EV3, er ved at bruge værktøjet Makecode. For at kunne benytte dette, kræves at din EV3 klods er opdateret til firmware version 1.10E eller nyere.\nProgrammering Du kan lave dit program ved hjælp af blok programmering, som du måske kender hvis du har arbejdet med Scratch, eller Applab.\n  Makecode udviklingsmiljøet i blokprogrammerings mode. Simulatoren ses i venstre side.   Udviklingsmiljøet indeholder mulighed for at simulere dit program direkte i din browser uden at overføre det til en fysisk EV3 brik. Du kan se en grafisk visning af de enheder, der forventes at være tilsluttet til din EV3, på baggrund af indholdet af din kode. Du kan også køre dit program som en simulering, og se om det opfører sig som forventet, ved at manipulere de virtuelle input i browseren. Det kan dog være vanskeligt at simulere noget hvor der er en fysisk kobling mellem input og output, som f.eks. en liniefølger, så du får også brug for at test med en EV3 klods.\nSom det også er tilfældet med Applab, kan du vælge at skrive dit program i javascript. Her er et eksempel på et program der starter og stopper en motor, afhængigt af om en knap er trykket ind.\nforever(function () { if (sensors.touch2.isPressed()) { motors.mediumC.run(50) } else { motors.mediumC.stop() } })  En af fordelene ved at bruge tekstbaseret kode som f.eks. javascript er, at du nemt kan klippe/klistre stumper af kode fra forskellige programmer, og sætte dem sammen til et nyt program.\nMateriale  Makecode editor til EV3. Fejlfinding  "
+	"content": " En nem måde at komme i gang med at programmere til lego mindstorms EV3, er ved at bruge værktøjet Makecode. For at kunne benytte dette, kræves at din EV3 klods er opdateret til firmware version 1.10E eller nyere.\nProgrammering Du kan lave dit program ved hjælp af blok programmering, som du måske kender hvis du har arbejdet med Scratch, eller Applab.\n  Makecode udviklingsmiljøet i blokprogrammerings mode. Simulatoren ses i venstre side.   Udviklingsmiljøet indeholder mulighed for at simulere dit program direkte i din browser uden at overføre det til en fysisk EV3 brik. Du kan se en grafisk visning af de enheder, der forventes at være tilsluttet til din EV3, på baggrund af indholdet af din kode. Du kan også køre dit program som en simulering, og se om det opfører sig som forventet, ved at manipulere de virtuelle input i browseren. Det kan dog være vanskeligt at simulere noget, hvor der er en fysisk kobling mellem input og output, som f.eks. en liniefølger, så du får også brug for at test med en EV3 klods.\nSom det også er tilfældet med Applab, kan du vælge at skrive dit program i javascript. Her er et eksempel på et program der starter og stopper en motor, afhængigt af om en knap er trykket ind.\nforever(function () { if (sensors.touch2.isPressed()) { motors.mediumC.run(50) } else { motors.mediumC.stop() } })  En af fordelene ved at bruge tekstbaseret kode som f.eks. javascript er, at du nemt kan klippe/klistre stumper af kode fra forskellige programmer, og sætte dem sammen til et nyt program.\nMateriale  Makecode editor til EV3. Fejlfinding af EV3 brikken.  "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/key-pressed-multi/",
-	"title": "key press multi",
+	"title": "Key Press Multi",
 	"tags": [],
 	"description": "",
-	"content": " Her er et eksempel der viser hvordan man kan håndtere input fra flere taster på en gang.\nlet cx; let cy; let state = { up: false, down: false, left: false, right: false,  engine: false }; function setup() { createCanvas(400, 600); cx = width / 2; cy = height / 2; } function draw() { background(220); fill(\u0026#34;gray\u0026#34;); textSize(20); text(`Move using arrow keys and space`, 10, 30); // show  if (state.engine) { fill(\u0026#34;red\u0026#34;); } else { fill(\u0026#34;gray\u0026#34;); } strokeWeight(5); circle(cx, cy, 50); // update position  const step = 1; if (state.left) { cx -= step; } if (state.right) { cx += step; }  if (state.up) { cy -= step; } if (state.down) { cy += step; } } function keyPressed() { if (key === \u0026#34; \u0026#34;) { state.engine = true; } if (keyCode === LEFT_ARROW) { state.left = true; } if (keyCode === RIGHT_ARROW) { state.right = true; } if (keyCode === UP_ARROW) { state.up = true; } if (keyCode === DOWN_ARROW) { state.down = true; } } function keyReleased() { if (key === \u0026#34; \u0026#34;) { state.engine = false; } if (keyCode === LEFT_ARROW) { state.left = false; } if (keyCode === RIGHT_ARROW) { state.right = false; }  if (keyCode === UP_ARROW) { state.up = false; } if (keyCode === DOWN_ARROW) { state.down = false; } }  Bemærk at både keyPressed() og keyReleased() hændelser håndteres for alle gyldige input.\nStatus for de enkelte input registreres i variablen state, som er en klasse med de nødvendige attributter.\nI eksemplet er håndteringen af højre piletast fremhævet.\nDenne måde at håndtere input bevirker at figuren kan bevæges uafhængigt af repeat rate i keyboard indstillingerne.\n  Eksempel på timing af keyboard input fra 2 piletaster   Demo Prøv det kørende eksempel\n"
+	"content": " Her er et eksempel der viser hvordan man kan håndtere input fra flere taster på en gang.\nlet cx; let cy; let state = { up: false, down: false, left: false,  right: false, boost: false }; function setup() { createCanvas(400, 600); cx = width / 2; cy = height / 2; } function draw() { background(220); fill(0); noStroke(); textSize(20); text(`Move using arrow keys and space`, 10, 30); // show  if (state.boost) { fill(\u0026#34;orange\u0026#34;); stroke(\u0026#34;red\u0026#34;); } else { fill(\u0026#34;gray\u0026#34;); stroke(0); } strokeWeight(5); circle(cx, cy, 50); // update position  const step = state.boost ? 5 : 1; if (state.left) { cx -= step; }  if (state.right) { cx += step; } if (state.up) { cy -= step; } if (state.down) { cy += step; } } function keyPressed() { if (key === \u0026#34; \u0026#34;) { state.boost = true; } if (keyCode === LEFT_ARROW) { state.left = true; }  if (keyCode === RIGHT_ARROW) { state.right = true; } if (keyCode === UP_ARROW) { state.up = true; } if (keyCode === DOWN_ARROW) { state.down = true; } } function keyReleased() { if (key === \u0026#34; \u0026#34;) { state.boost = false; } if (keyCode === LEFT_ARROW) { state.left = false; }  if (keyCode === RIGHT_ARROW) { state.right = false; } if (keyCode === UP_ARROW) { state.up = false; } if (keyCode === DOWN_ARROW) { state.down = false; } }  Bemærk at både keyPressed() og keyReleased() hændelser håndteres for alle gyldige input.\nStatus for de enkelte input registreres i variablen state, som er et objekt med de nødvendige attributter.\nI eksemplet er håndteringen af venstre piletast fremhævet.\nDenne måde at håndtere input bevirker at figuren kan bevæges diagonalt, ved at trykke på to taster samtidigt. Desuden er bevægelsen uafhængig af repeat rate i keyboard indstillingerne.\n  Eksempel på timing af keyboard input fra 2 piletaster   Demo Prøv det kørende eksempel\nMateriale  keyPressed() keyReleased() keyCode Keycode.info er et et værktøj vise hvilken kode der udsendes når der trykkes på de forskellige taster på tastaturet. fill() stroke() circle() noStroke()  "
 },
 {
 	"uri": "https://getsrevel.github.io/project/asteroid/",
@@ -144,31 +172,31 @@
 	"title": "Keyboard",
 	"tags": [],
 	"description": "",
-	"content": "  Keycode.info  I dette eksempel bruges keyIsPressed til at ændre fyldfarven på figuren.\nfunction setup() {\rlet canvas = createCanvas(400, 400);\rcanvas.parent(\u0026#34;sketch-holder\u0026#34;);\r}\rfunction draw() {\rbackground(100, 0, 0);\rfill(\u0026#34;red\u0026#34;);\rcircle(50, 150, 50);\rcircle(width - 50, 50, 50);\rif (keyIsPressed === true) {\rfill(0);\r} else {\rfill(255);\r}\r rect(25, 25, 50, 50);\r}   canvas { display: inline; }  Demo Prøv det kørende eksempel på en selvstændig side.\nDemo Prøv at trykke på en vilkårlig tast på tastaturet.\n     "
+	"content": " I dette eksempel bruges keyIsPressed til at ændre fyldfarven på figuren.\nfunction setup() {\rlet canvas = createCanvas(400, 400);\rcanvas.parent(\u0026#34;sketch-holder\u0026#34;);\r}\rfunction draw() {\rbackground(100, 0, 0);\rfill(\u0026#34;red\u0026#34;);\rcircle(50, 150, 50);\rcircle(width - 50, 50, 50);\rif (keyIsPressed === true) {\rfill(0);\r} else {\rfill(255);\r}\r rect(25, 25, 50, 50);\r}   canvas { display: inline; }  Demo Her kan du se en kørende version af programmet. Prøv at trykke på en vilkårlig tast på tastaturet.\n     Prøv også det kørende eksempel på en selvstændig side.\nMateriale  setup() createCanvas() parent() draw() keyIsPressed random() fill() circle()  "
 },
 {
-	"uri": "https://getsrevel.github.io/tech/p5js/asteroids-game-demo/",
+	"uri": "https://getsrevel.github.io/tech/p5js/_drafts/asteroids-game-demo/",
 	"title": "asteroids demo",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://getsrevel.github.io/tech/p5js/fullscreen/",
+	"uri": "https://getsrevel.github.io/tech/p5js/_drafts/fullscreen/",
 	"title": "Fullscreen",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://getsrevel.github.io/tech/p5js/fullscreen-demo/",
+	"uri": "https://getsrevel.github.io/tech/p5js/_drafts/fullscreen-demo/",
 	"title": "fullscreen demo",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://getsrevel.github.io/tech/p5js/key-pressed-simple/",
+	"uri": "https://getsrevel.github.io/tech/p5js/_drafts/key-pressed-simple/",
 	"title": "key pressed simple",
 	"tags": [],
 	"description": "",
@@ -176,10 +204,10 @@
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/multitouch/",
-	"title": "multitouch",
+	"title": "Multitouch",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": " Dette er et eksempel på hvordan man man håndtere flere samtidige berørings hændelser, f.eks. som knapper i et mobil spil, der kræver flere samtidige inputs.\nlet buttons = { left: false, right: false }; const bSize = 80; const margin = 20; let leftButton; let rightButton; function setup() { createCanvas(windowWidth, windowHeight); background(0); leftButton = createButton(\u0026#34;left\u0026#34;); leftButton.mousePressed(leftPressed); leftButton.mouseReleased(leftReleased); leftButton.touchStarted(leftPressed); leftButton.touchEnded(leftReleased); leftButton.style(\u0026#34;background-color\u0026#34;, \u0026#34;red\u0026#34;); leftButton.class(\u0026#34;noselect\u0026#34;);  leftButton.size(bSize, bSize); rightButton = createButton(\u0026#34;right\u0026#34;); rightButton.mousePressed(rightPressed); rightButton.mouseReleased(rightReleased); rightButton.touchStarted(rightPressed); rightButton.touchEnded(rightReleased); rightButton.style(\u0026#34;background-color\u0026#34;, \u0026#34;green\u0026#34;); rightButton.class(\u0026#34;noselect\u0026#34;);  rightButton.size(bSize, bSize); handleButtonPositions(); } function draw() { background(100); // left button  fill(buttons.left ? \u0026#34;red\u0026#34; : \u0026#34;pink\u0026#34;); rect(margin, margin, bSize, bSize); // right button  fill(buttons.right ? \u0026#34;green\u0026#34; : \u0026#34;teal\u0026#34;); rect(width - margin - bSize, margin, bSize, bSize); } const leftPressed = () =\u0026gt; (buttons.left = true); const leftReleased = () =\u0026gt; (buttons.left = false); const rightPressed = () =\u0026gt; (buttons.right = true); const rightReleased = () =\u0026gt; (buttons.right = false); const handleButtonPositions = () =\u0026gt; { leftButton.position(margin, height - margin - bSize); rightButton.position(width - margin - bSize, height - margin - bSize); }; function windowResized() { resizeCanvas(windowWidth, windowHeight); handleButtonPositions(); }  Bemærk at det er nødvendigt med en smule styling via CSS for at få eksemplet til at virke. Derfor er der tilføjet en klasse til button elementerne, og denne regel er tilføjet til stylesheet for siden.\n.noselect {\r-webkit-touch-callout: none; /* iOS Safari */\r-webkit-user-select: none; /* Safari */\r-khtml-user-select: none; /* Konqueror HTML */\r-moz-user-select: none; /* Old versions of Firefox */\r-ms-user-select: none; /* Internet Explorer/Edge */\ruser-select: none; /* Non-prefixed version, currently\rsupported by Chrome, Opera and Firefox */\r} Demo Prøv det kørende eksempel\n"
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/canvas/demo/",
@@ -189,14 +217,49 @@
 	"content": " "
 },
 {
-	"uri": "https://getsrevel.github.io/tech/p5js/asteroids-game-demo/demo/",
+	"uri": "https://getsrevel.github.io/tech/p5js/_drafts/asteroids-game-demo/demo/",
 	"title": "p5 demo live",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://getsrevel.github.io/tech/p5js/fullscreen-demo/demo/",
+	"uri": "https://getsrevel.github.io/tech/p5js/_drafts/fullscreen-demo/demo/",
+	"title": "p5 demo live",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/_drafts/key-pressed-simple/demo/",
+	"title": "p5 demo live",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/_drafts/my-draft-demo/demo/",
+	"title": "p5 demo live",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/_drafts/polar-loop/demo/",
+	"title": "p5 demo live",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/_drafts/polar/demo/",
+	"title": "p5 demo live",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/_drafts/vector/demo/",
 	"title": "p5 demo live",
 	"tags": [],
 	"description": "",
@@ -210,67 +273,32 @@
 	"content": "  "
 },
 {
-	"uri": "https://getsrevel.github.io/tech/p5js/key-pressed-multi/demo/",
+	"uri": "https://getsrevel.github.io/tech/p5js/tacospin/demo/",
 	"title": "p5 demo live",
 	"tags": [],
 	"description": "",
 	"content": " "
 },
 {
-	"uri": "https://getsrevel.github.io/tech/p5js/key-pressed-simple/demo/",
-	"title": "p5 demo live",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://getsrevel.github.io/tech/p5js/multitouch/demo/",
-	"title": "p5 demo live",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://getsrevel.github.io/tech/p5js/my-demo/demo/",
-	"title": "p5 demo live",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://getsrevel.github.io/tech/p5js/polar-loop/demo/",
-	"title": "p5 demo live",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://getsrevel.github.io/tech/p5js/polar/demo/",
-	"title": "p5 demo live",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://getsrevel.github.io/tech/p5js/tacospin/demo/",
-	"title": "p5 demo live",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://getsrevel.github.io/tech/p5js/vector/demo/",
-	"title": "p5 demo live",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://getsrevel.github.io/tech/p5js/fullscreen/demo/",
+	"uri": "https://getsrevel.github.io/tech/p5js/_drafts/fullscreen/demo/",
 	"title": "p5 fullscreen demo live",
 	"tags": [],
 	"description": "",
 	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/key-pressed-multi/demo/",
+	"title": "p5 key press multi demo",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/multitouch/demo/",
+	"title": "p5 multitouch demo",
+	"tags": [],
+	"description": "",
+	"content": " .noselect { -webkit-touch-callout: none; /* iOS Safari */ -webkit-user-select: none; /* Safari */ -khtml-user-select: none; /* Konqueror HTML */ -moz-user-select: none; /* Old versions of Firefox */ -ms-user-select: none; /* Internet Explorer/Edge */ user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */ }   "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/sound/demo/",
@@ -280,21 +308,21 @@
 	"content": " "
 },
 {
-	"uri": "https://getsrevel.github.io/tech/p5js/my-demo/",
+	"uri": "https://getsrevel.github.io/tech/p5js/_drafts/my-draft-demo/",
 	"title": "p5DemoPresentation",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://getsrevel.github.io/tech/p5js/polar/",
+	"uri": "https://getsrevel.github.io/tech/p5js/_drafts/polar/",
 	"title": "polar",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://getsrevel.github.io/tech/p5js/polar-loop/",
+	"uri": "https://getsrevel.github.io/tech/p5js/_drafts/polar-loop/",
 	"title": "polar loop",
 	"tags": [],
 	"description": "",
@@ -302,13 +330,13 @@
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/tacospin/",
-	"title": "tacospin",
+	"title": "Tacospin",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": " Dette er et eksempel på hvordan man kan loade et billede ind i p5, og ændre på skalering og rotation.\nlet img; function preload() { img = loadImage(\u0026#34;assets/taco.jpg\u0026#34;); } function setup() { createCanvas(600, 800); } let angle = 0; function draw() { background(220); const speed = map(mouseX, 0, width, -1, 1, true); // show angle value  const tHeight = 40; const margin = 10; textSize(tHeight); let tposY = margin + tHeight; text(`Angle ${nfc(angle, 2)}`, margin, tposY); tposY += margin + tHeight; text(`Speed ${nfc(speed, 2)}`, margin, tposY); // draw at center of canvas  const cx = width / 2; const cy = height / 2; translate(cx, cy); // compute image scale  const scale = 0.3; const dw = img.width * scale; const dh = img.height * scale; // draw image  rotate(angle); imageMode(CENTER); image(img, 0, 0, dw, dh); angle += 0.1 * speed; }  Demo Prøv det kørende eksempel\nMateriale  translate() rotate() image() imageMode() map() mouseX mouseY nfc()  "
 },
 {
-	"uri": "https://getsrevel.github.io/tech/p5js/vector/",
+	"uri": "https://getsrevel.github.io/tech/p5js/_drafts/vector/",
 	"title": "vector",
 	"tags": [],
 	"description": "",
@@ -319,7 +347,7 @@
 	"title": "Rekursion",
 	"tags": [],
 	"description": "",
-	"content": " Intro Søg på recursion på google.\nFibonacci serie  Fibonacci sequence - Wikipedia   Efficient solution:\n Binet\u0026rsquo;s Fibonacci number formula  Towers of Hanoi   Denne gennemgang viser hvordan man kan bruge rekursion til at løse \u0026ldquo;Towers of Hanoi\u0026rdquo; spillet.\nHer er python kode fra videoen.\ndef move(f,t): print(\u0026#34;Flyt: {} ==\u0026gt; {}!\u0026#34;.format(f,t)) def moveVia(f,v,t): move(f,v) move(v,t) def hanoi(n,f,h,t): if n == 0: pass else: hanoi(n-1, f, t, h) move(f,t) hanoi(n-1, h, f ,t) Her er en anden gennemgang af towers of hanoi.\n  Relateret  Recursion - wikipedia  "
+	"content": " Intro Søg på recursion på google.\nTowers of Hanoi   Denne gennemgang viser hvordan man kan bruge rekursion til at løse \u0026ldquo;Towers of Hanoi\u0026rdquo; spillet.\n\r\rPython kode fra videoen.\r\r\rdef move(f,t):\rprint(\u0026#34;Flyt: {} ==\u0026gt; {}!\u0026#34;.format(f,t))\rdef moveVia(f,v,t):\rmove(f,v)\rmove(v,t)\rdef hanoi(n,f,h,t):\rif n == 0:\rpass\relse:\rhanoi(n-1, f, t, h)\rmove(f,t)\rhanoi(n-1, h, f ,t) \r Opgave: Towers of hanoi i javascript Lav en implementation af løsningen på towers of hanoi i javascript ved hjælp af rekursion.\nRelateret Her er en anden gennemgang af towers of hanoi.\n   Recursion - wikipedia  Fibonacci serie  Fibonacci sequence - Wikipedia  Efficient solution:\n Binet\u0026rsquo;s Fibonacci number formula  "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/hugo/",
@@ -347,28 +375,28 @@
 	"title": "Node.js",
 	"tags": [],
 	"description": "",
-	"content": " Node.js Lidt forskellige eksempler med Node.js.\n"
+	"content": " Node.js Eksempler med Node.js.\n"
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/",
-	"title": "p5js",
+	"title": "p5.js",
 	"tags": [],
 	"description": "",
-	"content": " P5js Lidt forskellige eksempler med p5.js.\n"
+	"content": " P5js Eksempler med p5.js.\n"
 },
 {
 	"uri": "https://getsrevel.github.io/tech/",
 	"title": "Tech",
 	"tags": [],
 	"description": "",
-	"content": " Teknologi Her er en samling af forskellige teknologier vi arbejder med.\n"
+	"content": " Teknologi Eksempler med teknologier vi arbejder med i programmering.\n"
 },
 {
 	"uri": "https://getsrevel.github.io/project/",
 	"title": "Project",
 	"tags": [],
 	"description": "",
-	"content": " Projekter Her er en samling ideer til opgaver og software projekter.\n"
+	"content": " Projekter En samling ideer til opgaver og software projekter.\n"
 },
 {
 	"uri": "https://getsrevel.github.io/tools/",
@@ -389,35 +417,28 @@
 	"title": "Git Intro",
 	"tags": [],
 	"description": "",
-	"content": " Git introduktion  Git and GitHub for Poets - tutorial (codingtrain)Klik for at redigere titlen\n Git installation vælg den der passer til dit operativ system. På mac er git sikkert allerede installeret. Bruger du linux, ved du formentlig selv hvordan du installerer pakker, der passer til din distribution.\n Git book\n About Version Control What is Git? Git in Visual Studio Code  How to use git in Visual Studio code\n  Basal Arbejdsgang graph TD; EDIT(\"opret/rediger/slet fil(er)\") -- STAGE(\"udvælg ændringer\") STAGE -- COMMIT(\"Commit i lokalt depot\") COMMIT -- DO_PUSH{Klar til offentliggørelse?} DO_PUSH --|Nej| EDIT DO_PUSH --|Ja| PUSH(\"Skub ændriger til 'remote'\") PUSH -- EDIT \r"
+	"content": " Git introduktion  Git and GitHub for Poets Codingtrain tutorial. Git installation. Vælg den der passer til dit operativ system. På mac er git sikkert allerede installeret. Bruger du linux, ved du formentlig selv hvordan du installerer pakker, der passer til din distribution. Git book  About Version Control What is Git? Git in Visual Studio Code  How to use git in Visual Studio code  Basal Arbejdsgang graph TD; EDIT(\"opret/rediger/slet fil(er)\") -- STAGE(\"udvælg ændringer\") STAGE -- COMMIT(\"Commit i lokalt depot\") COMMIT -- DO_PUSH{Klar til offentliggørelse?} DO_PUSH --|Nej| EDIT DO_PUSH --|Ja| PUSH(\"Skub ændriger til 'remote'\") PUSH -- EDIT \r"
 },
 {
 	"uri": "https://getsrevel.github.io/tech/javascript/",
 	"title": "Javascript",
 	"tags": [],
 	"description": "",
-	"content": " Introduktion  Variabler i javascript bliver grundigt forklaret og bruger et metafor med en kasse, der måske kan hjælpe lidt på forståelsen. JavaScript reference  Basic js demo Her er indholdet af my-script.js.\n// This file is included from the html file\r\rconsole.log(\u0026#34;Hej i konsollen\u0026#34;);\rfunction myFunction() {\rconsole.log(\u0026#34;AV!!!\u0026#34;);\r}\rfunction myOtherFunction(){\rconsole.log(\u0026#34;Hej med dig\u0026#34;);\r}\rfunction myThirdFunction(){\ralert(\u0026#34;Hvad har du gang i?\u0026#34;);\r}  Her er indholdet af index.html, så du kan se hvordan scriptet hentes ind i html siden, og funktionerne kan bindes til eventhandlere på de knapper der er indsat på siden.\n\u0026lt;!DOCTYPE html\u0026gt;\r\u0026lt;html lang=\u0026#34;en\u0026#34;\u0026gt;\r\u0026lt;head\u0026gt;\r\u0026lt;meta charset=\u0026#34;UTF-8\u0026#34;\u0026gt;\r\u0026lt;meta name=\u0026#34;viewport\u0026#34; content=\u0026#34;width=device-width, initial-scale=1.0\u0026#34;\u0026gt;\r\u0026lt;meta http-equiv=\u0026#34;X-UA-Compatible\u0026#34; content=\u0026#34;ie=edge\u0026#34;\u0026gt;\r\u0026lt;title\u0026gt;Document\u0026lt;/title\u0026gt;\r\u0026lt;/head\u0026gt;\r\u0026lt;body\u0026gt;\r\u0026lt;h1\u0026gt;Demo html page\u0026lt;/h1\u0026gt;\r\u0026lt;p\u0026gt;\r\u0026lt;span\u0026gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, impedit repudiandae, magnam sint porro quidem eveniet at adipisci assumenda rerum, consequuntur eos eligendi nihil mollitia inventore perferendis possimus. Error, similique.\u0026lt;/span\u0026gt;\r\u0026lt;span\u0026gt;Laudantium, cumque architecto veritatis provident similique quia, ipsum aliquid mollitia beatae nam facilis unde quaerat autem tenetur neque natus doloremque incidunt, vel animi? Veniam eum odio ullam? Doloremque, possimus facere.\u0026lt;/span\u0026gt;\r\u0026lt;span\u0026gt;Ipsam, corporis dignissimos perferendis adipisci fuga saepe labore doloremque dolor exercitationem soluta? Neque illum quo cum aperiam, esse quae dicta labore earum porro sint asperiores harum officia eveniet vero! Facilis!\u0026lt;/span\u0026gt;\r\u0026lt;/p\u0026gt;\r\u0026lt;script src=\u0026#34;my-script.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt;\r \u0026lt;button onclick=\u0026#34;myFunction()\u0026#34;\u0026gt;Klik her\u0026lt;/button\u0026gt;\r\u0026lt;button onclick=\u0026#34;myOtherFunction()\u0026#34;\u0026gt;... eller her\u0026lt;/button\u0026gt;\r\u0026lt;button onclick=\u0026#34;myThirdFunction()\u0026#34;\u0026gt;... eller hvad med her\u0026lt;/button\u0026gt;\r\r\u0026lt;p\u0026gt;\r\u0026lt;span\u0026gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae placeat consectetur cum hic error aperiam distinctio repellat nulla, soluta voluptatibus. Voluptate vel ducimus sunt asperiores laboriosam, amet rerum sapiente sequi.\u0026lt;/span\u0026gt;\r\u0026lt;span\u0026gt;Suscipit dolorem voluptas ex iste, quaerat natus, corporis recusandae in assumenda labore eius! Amet, dignissimos laudantium? Sunt maiores quia ratione nihil hic fugit iusto aliquid autem? Facilis cumque vitae laborum.\u0026lt;/span\u0026gt;\r\u0026lt;span\u0026gt;Sequi maiores quia consequuntur quas, placeat sint ipsa fuga totam molestias est earum, odio alias, quo molestiae. Eaque, facere nesciunt, atque laboriosam accusantium non dicta minus iste consectetur, deserunt iusto?\u0026lt;/span\u0026gt;\r\u0026lt;span\u0026gt;Voluptas possimus corporis explicabo in neque illum accusantium quas! Exercitationem quae saepe deserunt magnam nihil sint aut in nam excepturi dolor nulla animi natus, nesciunt illo architecto obcaecati recusandae similique?\u0026lt;/span\u0026gt;\r\u0026lt;/p\u0026gt;\r\u0026lt;/body\u0026gt;\r\u0026lt;/html\u0026gt; Kørende eksempel Prøv det kørende eksempel.\n Plain js  "
+	"content": ""
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/hsl-colors/",
 	"title": "HSL Colors",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": " Et eksempel der viser hvordan HSL farver kan bruges i p5.\nfunction setup() { createCanvas(600, 600); } function draw() { translate(width / 2, height / 2); let x1 = 0; let y1 = 0; let x2 = mouseX - width / 2; let y2 = mouseY - height / 2; let angle = atan2(y2, x2); // d is the length of the line  // the distance from point 1 to point 2.  let d = int(dist(x1, y1, x2, y2)); let saturation = constrain(d, 0, 255); background(200); colorMode(HSB, 255); let hueVal = map(angle, -PI, PI, 0, 255); const luminance = 255; let c = color(hueVal, saturation, 255); fill(c); line(x1, y1, x2, y2); const circleDiameter = 30; circle(x1, y1, circleDiameter * 2); circle(x2, y2, circleDiameter); // Write values as text  let msg = `abs: ${d}, angle: ${nfc(angle, 2)}`; let hsvMsg = `hsv: ${nfc(hueVal, 0)}, sat: ${nfc(saturation)}`; push(); translate(x1, y1 - circleDiameter); fill(0); stroke(0); textSize(20); text(msg, 0, -5); text(hsvMsg, 0, -30); pop(); }  Demo Prøv det kørende eksempel\nMateriale  atan2() constrain() dist() colorMode() map() translate() nfc() text() textSize() push() pop() push()  "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/hsl-colors/demo/",
-	"title": "HSL Colors",
+	"title": "HSL Colors demo",
 	"tags": [],
 	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://getsrevel.github.io/tech/p5js/stickman-demo/",
-	"title": "Stickman demo",
-	"tags": [],
-	"description": "",
-	"content": " Denne demonstration er et eksempel på hvordan man kan bruge klasser og objekter til at strukturere koden. I eksemplet tegnes et par hoppende tændstikmænd med forskellige egenskaber.\nFilen sketch.js indeholder den sædvanlige struktur for et program skrevet i p5js.\nI setup() oprettes et lærred, og der oprettes to objekter af klassen stickman. Bemærk at det bliver initialiseret med forskellige egenskaber via deres constructor.\nI draw() kaldes metoderne render() og update() på begge de to StickMan objekter.\nDerudover er metoden mouseClicked() implementeret, og denne sørger for at kalde metoden jump på de to stickman objekter, med den effekt at de begge hopper når der klikkes med musen.\nlet man; let otherMan; function setup() { createCanvas(400, 400); man = new StickMan(100, 50, 25, \u0026#34;red\u0026#34;); otherMan = new StickMan(width - 100, 30, 30, \u0026#34;green\u0026#34;); } function draw() { background(220); man.render(); man.update(); otherMan.render(); otherMan.update(); } function mouseClicked() { console.log(\u0026#34;click\u0026#34;); man.jump(); otherMan.jump(); }  Herunder ses implementationen af stickman klassen, som er lavet separat i filen stickman.js for at gøre koden mere overskuelig.\nclass StickMan {\rconstructor(x, minHeight, jumpSpeed, color) {\rthis.x = x;\rthis.jumpSpeed = jumpSpeed;\rthis.minHeight = minHeight;\rthis.height = minHeight;\rthis.color = color;\rthis.y = height / 2;\rthis.vy = 0;\rthis.gravity = 1.5;\r}\rjump() {\rif (this.y == height) {\rthis.vy = - this.jumpSpeed;\r}\r}\rupdate() {\r// fall down\r this.y += this.vy;\r// increase fall speed due to gravity\r this.vy += this.gravity;\r// stop at floor\r this.y = constrain(this.y, -3000, height);\r// change the size\r this.height = map(mouseX, 0, width, this.minHeight, this.minHeight * 6);\r}\rrender() {\r// compute the dimensions of the body parts\r const headDiameter = this.height * 0.2;\rconst headRadius = headDiameter / 2;\rconst bodyHeight = (this.height - headDiameter) * 0.4;\rconst legHeight = this.height - headDiameter - bodyHeight;\rconst legWidth = headDiameter * 0.5;\rconst armWidth = headDiameter * 0.75;\rconst armHeight = headDiameter * 1.8;\rconst neckLength = headDiameter * 0.3;\rconst headX = this.x;\rconst headY = this.y - this.height + headRadius;\r// draw the stickman\r push();\rfill(this.color);\rstrokeWeight(3);\r// head\r circle(headX, headY, headDiameter);\r// body\r line(headX, headY + headRadius, headX, headY + headRadius + bodyHeight);\r// arms\r const shoulderY = headY + headRadius + neckLength;\rline(headX, shoulderY, headX - armWidth, shoulderY + armHeight);\rline(headX, shoulderY, headX + armWidth, shoulderY + armHeight);\r// legs\r const legY = headY + headRadius + bodyHeight;\rline(headX, legY, headX - legWidth, legY + legHeight);\rline(headX, legY, headX + legWidth, legY + legHeight);\rpop();\r}\r}  Husk at begge filer skal inkluderes i html strukturen. Hvis de ligger i samme mappe som html filen kan det gøres således:\n\u0026lt;script src=\u0026#34;stickman.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt;\r\u0026lt;script src=\u0026#34;sketch.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; Demo Prøv det kørende eksempel\n"
+	"content": " "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/stickman-demo/demo/",
@@ -427,11 +448,18 @@
 	"content": "  Klik med musen for at hoppe\n"
 },
 {
+	"uri": "https://getsrevel.github.io/tech/p5js/stickman-demo/",
+	"title": "Stickman Objects",
+	"tags": [],
+	"description": "",
+	"content": " Denne demonstration er et eksempel på hvordan man kan bruge klasser og objekter til at strukturere koden. I eksemplet tegnes et par hoppende tændstikmænd med forskellige egenskaber.\nFilen sketch.js indeholder den sædvanlige struktur for et program skrevet i p5js.\nI setup() oprettes et lærred, og der oprettes to objekter af klassen stickman. Bemærk at det bliver initialiseret med forskellige egenskaber via deres constructor.\nI draw() kaldes metoderne render() og update() på begge de to StickMan objekter.\nDerudover er metoden mouseClicked() implementeret, og denne sørger for at kalde metoden jump på de to stickman objekter, med den effekt at de begge hopper når der klikkes med musen.\nlet man; let otherMan; function setup() { createCanvas(400, 400); man = new StickMan(100, 50, 25, \u0026#34;red\u0026#34;); otherMan = new StickMan(width - 100, 30, 30, \u0026#34;green\u0026#34;); } function draw() { background(220); man.render(); man.update(); otherMan.render(); otherMan.update(); } function mouseClicked() { console.log(\u0026#34;click\u0026#34;); man.jump(); otherMan.jump(); }  Herunder ses implementationen af stickman klassen, som er lavet separat i filen stickman.js for at gøre koden mere overskuelig.\nclass StickMan {\rconstructor(x, minHeight, jumpSpeed, color) {\rthis.x = x;\rthis.jumpSpeed = jumpSpeed;\rthis.minHeight = minHeight;\rthis.height = minHeight;\rthis.color = color;\rthis.y = height / 2;\rthis.vy = 0;\rthis.gravity = 1.5;\r}\rjump() {\rif (this.y == height) {\rthis.vy = - this.jumpSpeed;\r}\r}\rupdate() {\r// fall down\r this.y += this.vy;\r// increase fall speed due to gravity\r this.vy += this.gravity;\r// stop at floor\r this.y = constrain(this.y, -3000, height);\r// change the size\r this.height = map(mouseX, 0, width, this.minHeight, this.minHeight * 6);\r}\rrender() {\r// compute the dimensions of the body parts\r const headDiameter = this.height * 0.2;\rconst headRadius = headDiameter / 2;\rconst bodyHeight = (this.height - headDiameter) * 0.4;\rconst legHeight = this.height - headDiameter - bodyHeight;\rconst legWidth = headDiameter * 0.5;\rconst armWidth = headDiameter * 0.75;\rconst armHeight = headDiameter * 1.8;\rconst neckLength = headDiameter * 0.3;\rconst headX = this.x;\rconst headY = this.y - this.height + headRadius;\r// draw the stickman\r push();\rfill(this.color);\rstrokeWeight(3);\r// head\r circle(headX, headY, headDiameter);\r// body\r line(headX, headY + headRadius, headX, headY + headRadius + bodyHeight);\r// arms\r const shoulderY = headY + headRadius + neckLength;\rline(headX, shoulderY, headX - armWidth, shoulderY + armHeight);\rline(headX, shoulderY, headX + armWidth, shoulderY + armHeight);\r// legs\r const legY = headY + headRadius + bodyHeight;\rline(headX, legY, headX - legWidth, legY + legHeight);\rline(headX, legY, headX + legWidth, legY + legHeight);\rpop();\r}\r}  Husk at begge filer skal inkluderes i html strukturen. Hvis de ligger i samme mappe som html filen kan det gøres således:\n\u0026lt;script src=\u0026#34;stickman.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt;\r\u0026lt;script src=\u0026#34;sketch.js\u0026#34;\u0026gt;\u0026lt;/script\u0026gt; Demo Prøv det kørende eksempel\nMateriale  Classes Mozilla Developer Network web documentation. The \u0026lt;script\u0026gt; Tag W3schools javascript tutorial. setup() createCanvas() width height draw() background() constrain() push() pop() fill() strokeWeight() circle() ellipse() line() mouseClicked()  "
+},
+{
 	"uri": "https://getsrevel.github.io/tech/p5js/sound/",
 	"title": "Sound",
 	"tags": [],
 	"description": "",
-	"content": " Her er et eksempel på hvordan man kan arbejde med lyd i p5.\nlet flickSound; let whistleSound; let whistleShortSound function preload() { flickSound = loadSound(\u0026#39;flick.mp3\u0026#39;); whistleSound = loadSound(\u0026#39;whistle.mp3\u0026#39;, doneLoadingWhistleSound); whistleShortSound = loadSound(\u0026#39;whistle-short.mp3\u0026#39;, () =\u0026gt; { console.log(\u0026#39;short ready\u0026#39;); }); } function setup() { createCanvas(400, 400); } function doneLoadingWhistleSound(){ console.log(\u0026#34;doneLoadingWhistleSound\u0026#34;); //whistleSound.play(); } function draw() { background(220); fill(\u0026#34;blue\u0026#34;); circle(width / 2, height / 2, 50); textSize(20); text(\u0026#34;Tryk på: SPACE, K, L, W\u0026#34;, 50,50); text(\u0026#34;eller klik med musen\u0026#34;, 50,80); } function mouseClicked(){ console.log(\u0026#34;flick started by mouse\u0026#34;); flickSound.play(); } function keyPressed(){ if(\u0026#39; \u0026#39; == key){ console.log(\u0026#34;flick started by keyboad\u0026#34;); flickSound.play(); } if(\u0026#39;l\u0026#39; == key){ whistleSound.setLoop(true); whistleSound.play(); } if(\u0026#39;k\u0026#39; == key){ whistleSound.setLoop(false); } if(\u0026#39;w\u0026#39; == key) { console.log(\u0026#34;short whistle\u0026#34;); whistleShortSound.play(); } }  Demo Prøv det kørende eksempel.\nMateriale  p5.SoundFile dokumentation. p5js Sound Tutorial er en playliste der gennemgår en række anvendelser af lyd i p5. 17.1: Loading and Playing - p5.js Sound Tutorial 17.5: Adding Sound Effects - p5.js Sound Tutorial  17.5: Adding Sound Effects - p5.js Sound Tutorial   "
+	"content": " Her er et eksempel på hvordan man kan arbejde med lyd i p5.\nlet flickSound; let whistleSound; let whistleShortSound function preload() { flickSound = loadSound(\u0026#39;flick.mp3\u0026#39;); whistleSound = loadSound(\u0026#39;whistle.mp3\u0026#39;, doneLoadingWhistleSound); whistleShortSound = loadSound(\u0026#39;whistle-short.mp3\u0026#39;, () =\u0026gt; { console.log(\u0026#39;short ready\u0026#39;); }); } function setup() { createCanvas(400, 400); } function doneLoadingWhistleSound(){ console.log(\u0026#34;doneLoadingWhistleSound\u0026#34;); } function draw() { background(220); fill(\u0026#34;blue\u0026#34;); circle(width / 2, height / 2, 50); textSize(20); text(\u0026#34;Tryk på: SPACE, K, L, W\u0026#34;, 50,50); text(\u0026#34;eller klik med musen\u0026#34;, 50,80); } function mouseClicked(){ console.log(\u0026#34;flick started by mouse\u0026#34;); flickSound.play(); } function keyPressed(){ if(\u0026#39; \u0026#39; == key){ console.log(\u0026#34;flick started by keyboad\u0026#34;); flickSound.play(); } if(\u0026#39;l\u0026#39; == key){ whistleSound.setLoop(true); whistleSound.play(); } if(\u0026#39;k\u0026#39; == key){ whistleSound.setLoop(false); } if(\u0026#39;w\u0026#39; == key) { console.log(\u0026#34;short whistle\u0026#34;); whistleShortSound.play(); } }  Demo Prøv det kørende eksempel.\nMateriale  p5.SoundFile dokumentation. p5js Sound Tutorial er en playliste der gennemgår en række anvendelser af lyd i p5. 17.1: Loading and Playing - p5.js Sound Tutorial 17.5: Adding Sound Effects - p5.js Sound Tutorial  17.5: Adding Sound Effects - p5.js Sound Tutorial   "
 },
 {
 	"uri": "https://getsrevel.github.io/example-drafts/",

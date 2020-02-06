@@ -6,7 +6,7 @@
     <description>Recent content on Getsrevel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Dec 2019 12:32:28 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jan 2020 14:11:13 +0100</lastBuildDate>
     
 	<atom:link href="https://getsrevel.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,7 +18,7 @@
       
       <guid>https://getsrevel.github.io/tech/p5js/intro/</guid>
       <description>P5js introduktion  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5. Variabler i javascript bliver grundigt forklaret og bruger et metafor med en kasse, der måske kan hjælpe lidt på forståelsen. Variable scope forklaret ved et eksempel.  Tegn på skærmen Denne video forklarer de grundlæggende principper i computergrafik.
-   Dokumentation af alle tegne primitiver i p5.</description>
+  Tegneprimitiver  Dokumentation af alle tegneprimitiver i p5.</description>
     </item>
     
     <item>
@@ -27,8 +27,28 @@
       <pubDate>Mon, 11 Nov 2019 21:41:09 +0100</pubDate>
       
       <guid>https://getsrevel.github.io/tech/html/</guid>
-      <description>HTML introduktion  HTML5 Tutorial Headings Paragraphs Lists Images figure figcaption  Video kursus (På dansk)  HTML Kursus  Quiz  HTML quiz  Opgave Lav et website i html der præsenterer dig selv og din yndlings kage:
- Der skal være 2 sider  En beskrivelse af dig selv der navngives &amp;ldquo;profil.html&amp;rdquo; En anden side med en mad opskrift &amp;ldquo;opskrift.html&amp;rdquo;  Begge sider skal have en titel Der skal være links så man kan navigere mellem de to sider  På profil siden</description>
+      <description> HTML introduktion  HTML5 Tutorial Headings Paragraphs Lists Images figure figcaption  Video kursus (På dansk)  HTML Kursus  Quiz  HTML quiz  </description>
+    </item>
+    
+    <item>
+      <title>HTML Basics</title>
+      <link>https://getsrevel.github.io/project/html-basics/</link>
+      <pubDate>Mon, 11 Nov 2019 21:41:09 +0100</pubDate>
+      
+      <guid>https://getsrevel.github.io/project/html-basics/</guid>
+      <description>Opgave: Mig og min kageopskrift Lav et website i html der præsenterer dig selv og din yndlings kage:
+ Der skal være 2 sider  En beskrivelse af dig selv der navngives &amp;ldquo;profil.html&amp;rdquo; En anden side med en mad opskrift &amp;ldquo;opskrift.html&amp;rdquo;  Begge sider skal have en titel Der skal være links så man kan navigere mellem de to sider  På profil siden
+ Brug forskellige niveauer af overskrifter Lav mindst et afsnit med brødtekst (f.</description>
+    </item>
+    
+    <item>
+      <title>Intro</title>
+      <link>https://getsrevel.github.io/tech/node/intro/</link>
+      <pubDate>Tue, 21 Jan 2020 14:11:13 +0100</pubDate>
+      
+      <guid>https://getsrevel.github.io/tech/node/intro/</guid>
+      <description>Her er nogle links til at komme i gang med node.js.
+ Node.js Getting started guide Node guides npm - Node Package Manager Express web framework for node.js  </description>
     </item>
     
     <item>
@@ -48,19 +68,6 @@
       
       <guid>https://getsrevel.github.io/project/asteroid/</guid>
       <description>Opgave: Lav et &amp;ldquo;Asteroids&amp;rdquo; spil  Opgaven skal laves i grupper. I skal lave en kravspecifikation I skal lave implementationen i p5js I skal bruge Trello til at styre jeres opgaver. &amp;ldquo;Oversæt&amp;rdquo; krav til jeres spil fra kravspecifikationen til opgaver på jeres trello board. Brug git og github til at samarbejde om koden.  Materiale  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5.</description>
-    </item>
-    
-    <item>
-      <title>Rekursion</title>
-      <link>https://getsrevel.github.io/project/recursion/</link>
-      <pubDate>Thu, 21 Nov 2019 13:07:12 +0100</pubDate>
-      
-      <guid>https://getsrevel.github.io/project/recursion/</guid>
-      <description>Intro Søg på recursion på google.
-Fibonacci serie  Fibonacci sequence - Wikipedia   Efficient solution:
- Binet&amp;rsquo;s Fibonacci number formula  Towers of Hanoi   Denne gennemgang viser hvordan man kan bruge rekursion til at løse &amp;ldquo;Towers of Hanoi&amp;rdquo; spillet.
-Her er python kode fra videoen.
-def move(f,t): print(&amp;#34;Flyt: {} ==&amp;gt; {}!&amp;#34;.format(f,t)) def moveVia(f,v,t): move(f,v) move(v,t) def hanoi(n,f,h,t): if n == 0: pass else: hanoi(n-1, f, t, h) move(f,t) hanoi(n-1, h, f ,t) Her er en anden gennemgang af towers of hanoi.</description>
     </item>
     
     <item>
@@ -113,10 +120,7 @@ Han skal som minimum bestå af:
       <pubDate>Mon, 11 Nov 2019 21:34:01 +0100</pubDate>
       
       <guid>https://getsrevel.github.io/tools/git/</guid>
-      <description>Git introduktion  Git and GitHub for Poets - tutorial (codingtrain)Klik for at redigere titlen
- Git installation vælg den der passer til dit operativ system. På mac er git sikkert allerede installeret. Bruger du linux, ved du formentlig selv hvordan du installerer pakker, der passer til din distribution.
- Git book
- About Version Control What is Git? Git in Visual Studio Code  How to use git in Visual Studio code</description>
+      <description>Git introduktion  Git and GitHub for Poets Codingtrain tutorial. Git installation. Vælg den der passer til dit operativ system. På mac er git sikkert allerede installeret. Bruger du linux, ved du formentlig selv hvordan du installerer pakker, der passer til din distribution. Git book  About Version Control What is Git? Git in Visual Studio Code  How to use git in Visual Studio code  Basal Arbejdsgang graph TD; EDIT(&#34;</description>
     </item>
     
     <item>

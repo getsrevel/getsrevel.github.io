@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>HTML Basics</title>
+      <link>https://getsrevel.github.io/project/html-basics/</link>
+      <pubDate>Mon, 11 Nov 2019 21:41:09 +0100</pubDate>
+      
+      <guid>https://getsrevel.github.io/project/html-basics/</guid>
+      <description>Opgave: Mig og min kageopskrift Lav et website i html der præsenterer dig selv og din yndlings kage:
+ Der skal være 2 sider  En beskrivelse af dig selv der navngives &amp;ldquo;profil.html&amp;rdquo; En anden side med en mad opskrift &amp;ldquo;opskrift.html&amp;rdquo;  Begge sider skal have en titel Der skal være links så man kan navigere mellem de to sider  På profil siden
+ Brug forskellige niveauer af overskrifter Lav mindst et afsnit med brødtekst (f.</description>
+    </item>
+    
+    <item>
       <title>Weather Station</title>
       <link>https://getsrevel.github.io/project/weather-station/</link>
       <pubDate>Tue, 17 Dec 2019 12:32:28 +0100</pubDate>
@@ -28,19 +39,6 @@
       
       <guid>https://getsrevel.github.io/project/asteroid/</guid>
       <description>Opgave: Lav et &amp;ldquo;Asteroids&amp;rdquo; spil  Opgaven skal laves i grupper. I skal lave en kravspecifikation I skal lave implementationen i p5js I skal bruge Trello til at styre jeres opgaver. &amp;ldquo;Oversæt&amp;rdquo; krav til jeres spil fra kravspecifikationen til opgaver på jeres trello board. Brug git og github til at samarbejde om koden.  Materiale  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5.</description>
-    </item>
-    
-    <item>
-      <title>Rekursion</title>
-      <link>https://getsrevel.github.io/project/recursion/</link>
-      <pubDate>Thu, 21 Nov 2019 13:07:12 +0100</pubDate>
-      
-      <guid>https://getsrevel.github.io/project/recursion/</guid>
-      <description>Intro Søg på recursion på google.
-Fibonacci serie  Fibonacci sequence - Wikipedia   Efficient solution:
- Binet&amp;rsquo;s Fibonacci number formula  Towers of Hanoi   Denne gennemgang viser hvordan man kan bruge rekursion til at løse &amp;ldquo;Towers of Hanoi&amp;rdquo; spillet.
-Her er python kode fra videoen.
-def move(f,t): print(&amp;#34;Flyt: {} ==&amp;gt; {}!&amp;#34;.format(f,t)) def moveVia(f,v,t): move(f,v) move(v,t) def hanoi(n,f,h,t): if n == 0: pass else: hanoi(n-1, f, t, h) move(f,t) hanoi(n-1, h, f ,t) Her er en anden gennemgang af towers of hanoi.</description>
     </item>
     
     <item>

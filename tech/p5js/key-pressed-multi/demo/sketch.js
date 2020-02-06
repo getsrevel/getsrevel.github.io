@@ -6,7 +6,7 @@ let state = {
   down: false,
   left: false,
   right: false,
-  engine: false
+  boost: false
 };
 
 function setup() {
@@ -17,22 +17,25 @@ function setup() {
 
 function draw() {
   background(220);
-  fill("gray");
+  fill(0);
+  noStroke();
   textSize(20);
   text(`Move using arrow keys and space`, 10, 30);
 
   // show
-  if (state.engine) {
-    fill("red");
+  if (state.boost) {
+    fill("orange");
+    stroke("red");
   } else {
     fill("gray");
+    stroke(0);
   }
 
   strokeWeight(5);
   circle(cx, cy, 50);
 
   // update position
-  const step = 1;
+  const step = state.boost ? 5 : 1;
   if (state.left) {
     cx -= step;
   }
@@ -49,7 +52,7 @@ function draw() {
 
 function keyPressed() {
   if (key === " ") {
-    state.engine = true;
+    state.boost = true;
   }
   if (keyCode === LEFT_ARROW) {
     state.left = true;
@@ -67,7 +70,7 @@ function keyPressed() {
 
 function keyReleased() {
   if (key === " ") {
-    state.engine = false;
+    state.boost = false;
   }
   if (keyCode === LEFT_ARROW) {
     state.left = false;

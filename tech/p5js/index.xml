@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>p5js on Getsrevel</title>
+    <title>p5.js on Getsrevel</title>
     <link>https://getsrevel.github.io/tech/p5js/</link>
-    <description>Recent content in p5js on Getsrevel</description>
+    <description>Recent content in p5.js on Getsrevel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 11 Nov 2019 21:40:44 +0100</lastBuildDate>
@@ -18,7 +18,7 @@
       
       <guid>https://getsrevel.github.io/tech/p5js/intro/</guid>
       <description>P5js introduktion  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5. Variabler i javascript bliver grundigt forklaret og bruger et metafor med en kasse, der måske kan hjælpe lidt på forståelsen. Variable scope forklaret ved et eksempel.  Tegn på skærmen Denne video forklarer de grundlæggende principper i computergrafik.
-   Dokumentation af alle tegne primitiver i p5.</description>
+  Tegneprimitiver  Dokumentation af alle tegneprimitiver i p5.</description>
     </item>
     
   </channel>

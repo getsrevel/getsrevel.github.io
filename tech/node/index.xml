@@ -11,5 +11,15 @@
 	<atom:link href="https://getsrevel.github.io/tech/node/index.xml" rel="self" type="application/rss+xml" />
     
     
+    <item>
+      <title>Intro</title>
+      <link>https://getsrevel.github.io/tech/node/intro/</link>
+      <pubDate>Tue, 21 Jan 2020 14:11:13 +0100</pubDate>
+      
+      <guid>https://getsrevel.github.io/tech/node/intro/</guid>
+      <description>Her er nogle links til at komme i gang med node.js.
+ Node.js Getting started guide Node guides npm - Node Package Manager Express web framework for node.js  </description>
+    </item>
+    
   </channel>
 </rss>
