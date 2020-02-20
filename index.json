@@ -1,5 +1,12 @@
 [
 {
+	"uri": "https://getsrevel.github.io/tech/node/intro/",
+	"title": "Intro",
+	"tags": [],
+	"description": "",
+	"content": "Her er nogle links til at komme i gang med node.js.\n Node.js Getting started guide Node guides npm - Node Package Manager Express web framework for node.js  Node gør det muligt at lave programmer der kan køres fra kommandolinien. Her er et simpelt eksempel.\nlet name;\rname = \u0026#34;Allan\u0026#34;;\rlet greeting = \u0026#34;Hej \u0026#34;;\rfor (let i = 0; i \u0026lt; 5; i++) {\rlet separator = \u0026#39;\u0026#39;;\rif(i \u0026lt; 3) {\rseparator = \u0026#39;, \u0026#39;;\r} else if( i \u0026lt; 4){\rseparator = \u0026#39; og \u0026#39;;\r}\rgreeting += name + separator;\r}\rconsole.log(greeting);\rlet a = 5;\rlet b = 3;\rlet result = a * b;\rconsole.log(a + \u0026#34; gange \u0026#34; + b + \u0026#34; giver \u0026#34; + result);\rif (result \u0026gt; 5) {\rconsole.log(\u0026#34;Det var et stort tal\u0026#34;);\r} else {\rconsole.log(\u0026#34;Ok tak\u0026#34;);\r}\rconsole.log(\u0026#34;Program afslutter\u0026#34;);\r// this is a comment\r/*\rThis\ris a multiline\rcomment\r*/  Hvis du gemmer koden i filen node-demo.js, kan du eksekvere programmet med denne kommando.\nnode node-demo.js Programmet burde så give følgende output i terminalen.\nHej Allan, Allan, Allan, Allan og Allan 5 gange 3 giver 15 Det var et stort tal Program afslutter "
+},
+{
 	"uri": "https://getsrevel.github.io/tech/p5js/intro/",
 	"title": "Intro",
 	"tags": [],
@@ -33,6 +40,27 @@
 	"tags": [],
 	"description": "",
 	"content": " Dette eksempel viser hvordan man opretter et lærred og tegner figurer på skærmen. Der benyttes variabler og musemarkørens position til at styre hvor på skærmen der tegnes.\nfunction setup() { createCanvas(600, 800); } function draw() { background(220); fill(255); // variable declaration  let x; // variable assignment  x = mouseX; // declaration and assignment in one line  let y = mouseY; circle(x, y, 150); // assign a new value to x  x = 200; ellipse(x, y, 80, 40); fill(255, 0, 0); circle(width, height, 120); let cx = width / 2; let cy = height / 2; circle(cx, cy, 50); }  Demo Prøv det kørende eksempel\nMateriale  setup() createCanvas() draw() background() fill() mouseX mouseY circle() ellipse()  "
+},
+{
+	"uri": "https://getsrevel.github.io/tech/node/serial-json-demo/",
+	"title": "Serial Json Demo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/_drafts/ball-bounce/",
+	"title": "Ball Bounce",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/_drafts/ball-bounce/demo/",
+	"title": "Ball Bounce demo",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "https://getsrevel.github.io/tech/chartjs/",
@@ -119,18 +147,11 @@
 	"content": " Her er en stump tekst som kunne være et eksempel på noget input, hvor vi gerne vil finde alle telefonnumre.\nHere is my number 123-456-7893. Should you not be able to reach me there you can contact me at work (223)456-4305, or call my wife at 234.343.4521. Opgaven med at finde telefonnumre kan i dette tilfælde løses ved at at bruge denne regular expression eller regex.\n[\\(]\\*\\d{3}[)-\\.]\\d{3}[\\.-]\\d{4} Her er eksempel på hvordan det kan benyttes i javascript.\nconst re = /\\(?\\d{3}[)-\\.]\\d{3}[\\.-]\\d{4}/g;\rconst txt = `Here is my number 123-456-7893.\rShould you not be able to reach me there you can contact me at work (223)456-4305, or call my wife at 234.343.4521.`;\rconst phoneNumbers = txt.match(re);\rconsole.log(phoneNumbers);  Materiale  Regular expressions chapter - The Modern JavaScript Tutorial MDN\u0026rsquo;s Regular Expressions Reference MDN\u0026rsquo;s String.replace() Coding train video series on Regular expressions  2.1: Introduction to Regular Expressions - Programming with Text   2.2: Regular Expressions: Meta-characters - Programming with Text   2.3: Regular Expressions: Character Classes - Programming with Text   2.4: Regular Expressions: Capturing Groups - Programming with Text   2.5: Regular Expressions: Back References - Programming with Text   "
 },
 {
-	"uri": "https://getsrevel.github.io/",
-	"title": "Getsrevel",
+	"uri": "https://getsrevel.github.io/tech/node/socket-io-demo/",
+	"title": "Socket IO",
 	"tags": [],
 	"description": "",
-	"content": " Getsrevel Velkommen til mit website der primært er løse noter om programmering og andet \u0026ldquo;work in progress\u0026rdquo;.\n"
-},
-{
-	"uri": "https://getsrevel.github.io/tech/node/intro/",
-	"title": "Intro",
-	"tags": [],
-	"description": "",
-	"content": "Her er nogle links til at komme i gang med node.js.\n Node.js Getting started guide Node guides npm - Node Package Manager Express web framework for node.js  "
+	"content": ""
 },
 {
 	"uri": "https://getsrevel.github.io/tech/node/web-scraping/",
@@ -138,6 +159,13 @@
 	"tags": [],
 	"description": "",
 	"content": " Dette er et eksempel på en scraper, der finder alle links på en side, og skriver deres URL ud i konsollen. Den benytter to pakker fra npm, så hele systemet ikke skal programmeres op fra grunden. Pakken axios benyttes i eksemplet til at arbejde med http requests, og cheerio bruges til at parse html strukturen, der returneres fra serveren, og uddrage de data man er interesseret i at arbejde videre med i programmet. Disse parkker skal installeres fra npm for at eksemplet kan eksekveres på din maskine.\nFørst skal der laves et projekt så node kan finde ud af at køre programmet, og har en package.json fil til at holde styr på projektet og afhængigheder af biblioteksmoduler.\nStart med at lave en mappe, som kan indeholde dit projekt. Kald den f.eks. web-scraping. I denne mappe skal du køre følgende kommando, for at oprette projekt filen package.json.\nnpm init -y Dernæst har du mulighed for at installere disse afhængigheder.\nnpm --save install axios\rnpm --save install cheerio Du burde nu have en package.json fil, der ser nogenlunde sådan ud:\n{ \u0026#34;name\u0026#34;: \u0026#34;web-scraping\u0026#34;, \u0026#34;version\u0026#34;: \u0026#34;1.0.0\u0026#34;, \u0026#34;description\u0026#34;: \u0026#34;\u0026#34;, \u0026#34;main\u0026#34;: \u0026#34;index.js\u0026#34;, \u0026#34;scripts\u0026#34;: { \u0026#34;test\u0026#34;: \u0026#34;echo \\\u0026#34;Error: no test specified\\\u0026#34; \u0026amp;\u0026amp; exit 1\u0026#34; }, \u0026#34;author\u0026#34;: \u0026#34;\u0026#34;, \u0026#34;license\u0026#34;: \u0026#34;ISC\u0026#34;, \u0026#34;dependencies\u0026#34;: { \u0026#34;axios\u0026#34;: \u0026#34;^0.19.1\u0026#34;, \u0026#34;cheerio\u0026#34;: \u0026#34;^1.0.0-rc.3\u0026#34;  } } Bemærk de to pakker der er listet under afhængigheder.\nDerefter skal du oprette filen simple-scraper.js med følgende indhold.\nconst cheerio = require(\u0026#34;cheerio\u0026#34;);\rconst axios = require(\u0026#34;axios\u0026#34;);\r// Swap this for the url you want to scrape\rconst url =\r\u0026#34;https://en.wikipedia.org/wiki/List_of_Presidents_of_the_United_States\u0026#34;;\raxios\r.get(url)\r.then(response =\u0026gt; {\rlet $ = cheerio.load(response.data);\r$(\u0026#34;a\u0026#34;).each(function(i, e) {\rlet links = $(e).attr(\u0026#34;href\u0026#34;);\rconsole.log(links);\r});\r})\r.catch(function(e) {\rconsole.log(e);\r});  Nu kan du køre eksemplet med denne kommando:\nnode simple-scraper.js Async / await version Her er et eksempel med samme funktionalitet, men hvor der bruges async / await syntaks i stedet for promise.then().\n// import the library modules you installed from npm\rconst cheerio = require(\u0026#34;cheerio\u0026#34;);\rconst axios = require(\u0026#34;axios\u0026#34;);\r// Define the scraping algorithm\rasync function runScraper(url) {\rtry {\rconst html = (await axios.get(url)).data;\rconst $ = cheerio.load(html);\r$(\u0026#34;a\u0026#34;).each(function(i, e) {\rconst url = $(e).attr(\u0026#34;href\u0026#34;);\rconsole.log(url);\r});\r} catch (error) {\rconsole.log(\u0026#34;error: \u0026#34; + error);\r}\r}\r// Swap this for the url you want to scrape\rconst url =\r\u0026#34;https://en.wikipedia.org/wiki/List_of_Presidents_of_the_United_States\u0026#34;;\r// run the scraper by calling the function\rrunScraper(url);  Materiale NPM pakker Her er en række pakker, der kan bruges til at lave scraping af websider.\n Axios request-promise Cheerio Puppeteer Puppeteer source  Javascript emner  Promise basics Async/await The Pitfalls of Async/Await in Array Loops Why Axios Is Better Than Node-Fetch  Tutorial Denne tutorial er et eksempel på hvordan man kan hente en side med links til amerikanske præsidenter fra wikipedia, og ved at følge disse links hente de enkelte præsidenters navne og fødselsdage.\n The Ultimate Guide to Web Scraping with Node.js  Websider der anvendes i eksemplet:\n List of presidents of the United States listen af præsidenter og deres links hentes fra denne side. George Washington er et eksempel på en side der beskriver en specifik præsident.  "
+},
+{
+	"uri": "https://getsrevel.github.io/",
+	"title": "Getsrevel",
+	"tags": [],
+	"description": "",
+	"content": " Getsrevel Velkommen til mit website der primært er løse noter om programmering og andet \u0026ldquo;work in progress\u0026rdquo;.\n"
 },
 {
 	"uri": "https://getsrevel.github.io/project/weather-station/",
@@ -481,6 +509,13 @@
 	"tags": [],
 	"description": "",
 	"content": "\rDocument\r\r\rDemo html page\r\r\r"
+},
+{
+	"uri": "https://getsrevel.github.io/tech/node/socket-io-demo/demo/public/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "\rSocket io demo\r\r\r\r\r\r\rbody {\rpadding: 20px;\r}\r\r\r\rSocket demo\r\r"
 },
 {
 	"uri": "https://getsrevel.github.io/categories/",

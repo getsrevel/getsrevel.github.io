@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://getsrevel.github.io/tech/node/intro/</loc>
+    <lastmod>2020-01-21T14:11:13+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://getsrevel.github.io/tech/p5js/intro/</loc>
     <lastmod>2019-12-04T12:44:31+01:00</lastmod>
   </url>
@@ -25,6 +30,21 @@
   <url>
     <loc>https://getsrevel.github.io/tech/p5js/canvas/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/node/serial-json-demo/</loc>
+    <lastmod>2020-02-19T16:35:31+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/_drafts/ball-bounce/</loc>
+    <lastmod>2020-02-17T14:48:30+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/_drafts/ball-bounce/demo/</loc>
+    <lastmod>2020-02-17T14:48:30+01:00</lastmod>
   </url>
   
   <url>
@@ -88,18 +108,18 @@
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/</loc>
-    <lastmod>2020-01-21T14:11:13+01:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://getsrevel.github.io/tech/node/intro/</loc>
-    <lastmod>2020-01-21T14:11:13+01:00</lastmod>
+    <loc>https://getsrevel.github.io/tech/node/socket-io-demo/</loc>
+    <lastmod>2020-01-21T14:15:10+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://getsrevel.github.io/tech/node/web-scraping/</loc>
     <lastmod>2020-01-15T22:34:12+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/</loc>
+    <lastmod>2019-12-17T12:32:28+01:00</lastmod>
   </url>
   
   <url>
@@ -344,6 +364,11 @@
   
   <url>
     <loc>https://getsrevel.github.io/tech/javascript/strings/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/node/socket-io-demo/demo/public/</loc>
     <priority>0</priority>
   </url>
   
