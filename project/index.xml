@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Project on Getsrevel</title>
@@ -18,7 +18,7 @@
       
       <guid>https://getsrevel.github.io/project/html-basics/</guid>
       <description>Opgave: Mig og min kageopskrift Lav et website i html der præsenterer dig selv og din yndlings kage:
- Der skal være 2 sider  En beskrivelse af dig selv der navngives &amp;ldquo;profil.html&amp;rdquo; En anden side med en mad opskrift &amp;ldquo;opskrift.html&amp;rdquo;  Begge sider skal have en titel Der skal være links så man kan navigere mellem de to sider  På profil siden
+ Der skal være 2 sider  En beskrivelse af dig selv der navngives &amp;ldquo;profil.html&amp;rdquo; En anden side med en mad opskrift &amp;ldquo;opskrift.html&amp;rdquo;   Begge sider skal have en titel Der skal være links så man kan navigere mellem de to sider  På profil siden
  Brug forskellige niveauer af overskrifter Lav mindst et afsnit med brødtekst (f.</description>
     </item>
     

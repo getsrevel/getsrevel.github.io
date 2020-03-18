@@ -1,33 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Javascript on Getsrevel</title>
-    <link>https://getsrevel.github.io/tech/javascript/</link>
-    <description>Recent content in Javascript on Getsrevel</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 22 Aug 2019 12:00:00 -0500</lastBuildDate>
-    
-	<atom:link href="https://getsrevel.github.io/tech/javascript/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title></title>
-      <link>https://getsrevel.github.io/tech/javascript/plain-js/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://getsrevel.github.io/tech/javascript/plain-js/</guid>
-      <description>DocumentDemo html pageLorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, impedit repudiandae, magnam sint porro quidem eveniet at adipisci assumenda rerum, consequuntur eos eligendi nihil mollitia inventore perferendis possimus. Error, similique.Laudantium, cumque architecto veritatis provident similique quia, ipsum aliquid mollitia beatae nam facilis unde quaerat autem tenetur neque natus doloremque incidunt, vel animi? Veniam eum odio ullam? Doloremque, possimus facere.Ipsam, corporis dignissimos perferendis adipisci fuga saepe labore doloremque dolor exercitationem soluta?</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://getsrevel.github.io/tech/javascript/strings/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://getsrevel.github.io/tech/javascript/strings/</guid>
-      <description>DocumentDemo html page</description>
-    </item>
-    
-  </channel>
-</rss>

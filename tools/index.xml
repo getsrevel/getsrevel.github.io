@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tools on Getsrevel</title>
@@ -17,7 +17,7 @@
       <pubDate>Mon, 11 Nov 2019 21:42:17 +0100</pubDate>
       
       <guid>https://getsrevel.github.io/tools/code-editor/</guid>
-      <description> For at kunne arbejde med HTML, CSS, javascript og andre tekst filer har vi brug for en god editor.
+      <description>For at kunne arbejde med HTML, CSS, javascript og andre tekst filer har vi brug for en god editor.
 Visual Studio Code  Visual studio code (kan bruges både på Windows og Mac)  Jetbrains produkter Der er mulighed for at bruge en lang række udviklingsmiljøer fra JetBrains i gratis &amp;ldquo;studenter versioner&amp;rdquo;.
  https://www.jetbrains.com/student/  </description>
     </item>
@@ -28,7 +28,7 @@ Visual Studio Code  Visual studio code (kan bruges både på Windows og Mac)  Je
       <pubDate>Mon, 11 Nov 2019 21:34:01 +0100</pubDate>
       
       <guid>https://getsrevel.github.io/tools/git/</guid>
-      <description>Git introduktion  Git and GitHub for Poets Codingtrain tutorial. Git installation. Vælg den der passer til dit operativ system. På mac er git sikkert allerede installeret. Bruger du linux, ved du formentlig selv hvordan du installerer pakker, der passer til din distribution. Git book  About Version Control What is Git? Git in Visual Studio Code  How to use git in Visual Studio code  Basal Arbejdsgang graph TD; EDIT(&#34;</description>
+      <description>Git introduktion  Git and GitHub for Poets Codingtrain tutorial. Git installation. Vælg den der passer til dit operativ system. På mac er git sikkert allerede installeret. Bruger du linux, ved du formentlig selv hvordan du installerer pakker, der passer til din distribution. Git book  About Version Control What is Git? Git in Visual Studio Code   How to use git in Visual Studio code  Basal Arbejdsgang graph TD; EDIT(&#34;</description>
     </item>
     
   </channel>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Getsrevel</title>
@@ -6,10 +6,33 @@
     <description>Recent content on Getsrevel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 17 Dec 2019 12:32:28 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 18 Mar 2020 08:37:19 +0100</lastBuildDate>
     
 	<atom:link href="https://getsrevel.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Components &#43; Data</title>
+      <link>https://getsrevel.github.io/tech/react/component-props/</link>
+      <pubDate>Tue, 17 Mar 2020 23:30:32 +0100</pubDate>
+      
+      <guid>https://getsrevel.github.io/tech/react/component-props/</guid>
+      <description>Her er et eksempel på hvordan man kan bruge properties på react komponenter til at vise udvalgte informationer, f.eks. fra en database eller et API.
+Eksemplet bygger videre på den app der blev oprettet i React intro.
+Input data For at have noget data at vise, oprettes følgende datastruktur oprettet i filen lib/fake_highscores.js.
+// Fake data - could come from a database or similarconst data = {userIdOne: {username: &amp;#34;jens&amp;#34;,firstName: &amp;#34;Jens&amp;#34;,lastName: &amp;#34;Hansen&amp;#34;,scores: [{ date: &amp;#34;2020-03-16T10:30:45&amp;#34;, score: 7 },{ date: &amp;#34;2020-03-16T12:30:45&amp;#34;, score: 15 },{ date: &amp;#34;2020-03-16T12:32:45&amp;#34;, score: 10 },]},userIdTwo: {username: &amp;#34;jj&amp;#34;,firstName: &amp;#34;Jørgen&amp;#34;,lastName: &amp;#34;Jyde&amp;#34;,scores: [{ date: &amp;#34;2020-03-16T11:30:42&amp;#34;, score: 120 },{ date: &amp;#34;2020-03-16T12:35:31&amp;#34;, score: 12 },{ date: &amp;#34;2020-03-16T12:37:20&amp;#34;, score: 23 },{ date: &amp;#34;2020-03-17T09:07:34&amp;#34;, score: 17 },{ date: &amp;#34;2020-03-17T09:31:10&amp;#34;, score: 25 },]},userIdThree: {username: &amp;#34;john&amp;#34;,firstName: &amp;#34;John&amp;#34;,lastName: &amp;#34;Doe&amp;#34;,scores: [{ date: &amp;#34;2020-03-16T10:57:45&amp;#34;, score: 11 },{ date: &amp;#34;2020-03-16T11:05:45&amp;#34;, score: 8 },{ date: &amp;#34;2020-03-16T11:21:12&amp;#34;, score: 13 },]}};export default data;  I en rigtig app kan vi forestille os at data er gemt i en database, i og ikke blot gemt i en statisk fil.</description>
+    </item>
+    
+    <item>
+      <title>React &#43; Firebase</title>
+      <link>https://getsrevel.github.io/tech/react/react-with-firebase/</link>
+      <pubDate>Wed, 18 Mar 2020 08:37:19 +0100</pubDate>
+      
+      <guid>https://getsrevel.github.io/tech/react/react-with-firebase/</guid>
+      <description>Dette eksempel viser hvordan man kan integrere Firebase Firestore i en react app. Det tager udgangspunkt i samme simple eksempel, som blev brugt i hotdog demoen. Dog vil vi her nøjes med at læse data fra Firestore.
+Eksemplet bygger videre på den app der blev oprettet i React intro, og udvidet i Components + Data.
+Installation af Firebase For at kunne benytte funktionaliteter fra firebase i vores react app, er det nødvendigt at installere firebase SDK.</description>
+    </item>
     
     <item>
       <title>Intro</title>
@@ -37,7 +60,7 @@
       
       <guid>https://getsrevel.github.io/project/html-basics/</guid>
       <description>Opgave: Mig og min kageopskrift Lav et website i html der præsenterer dig selv og din yndlings kage:
- Der skal være 2 sider  En beskrivelse af dig selv der navngives &amp;ldquo;profil.html&amp;rdquo; En anden side med en mad opskrift &amp;ldquo;opskrift.html&amp;rdquo;  Begge sider skal have en titel Der skal være links så man kan navigere mellem de to sider  På profil siden
+ Der skal være 2 sider  En beskrivelse af dig selv der navngives &amp;ldquo;profil.html&amp;rdquo; En anden side med en mad opskrift &amp;ldquo;opskrift.html&amp;rdquo;   Begge sider skal have en titel Der skal være links så man kan navigere mellem de to sider  På profil siden
  Brug forskellige niveauer af overskrifter Lav mindst et afsnit med brødtekst (f.</description>
     </item>
     
@@ -87,7 +110,7 @@
       <pubDate>Mon, 11 Nov 2019 21:42:17 +0100</pubDate>
       
       <guid>https://getsrevel.github.io/tools/code-editor/</guid>
-      <description> For at kunne arbejde med HTML, CSS, javascript og andre tekst filer har vi brug for en god editor.
+      <description>For at kunne arbejde med HTML, CSS, javascript og andre tekst filer har vi brug for en god editor.
 Visual Studio Code  Visual studio code (kan bruges både på Windows og Mac)  Jetbrains produkter Der er mulighed for at bruge en lang række udviklingsmiljøer fra JetBrains i gratis &amp;ldquo;studenter versioner&amp;rdquo;.
  https://www.jetbrains.com/student/  </description>
     </item>
@@ -110,34 +133,41 @@ Han skal som minimum bestå af:
       <pubDate>Mon, 11 Nov 2019 21:34:01 +0100</pubDate>
       
       <guid>https://getsrevel.github.io/tools/git/</guid>
-      <description>Git introduktion  Git and GitHub for Poets Codingtrain tutorial. Git installation. Vælg den der passer til dit operativ system. På mac er git sikkert allerede installeret. Bruger du linux, ved du formentlig selv hvordan du installerer pakker, der passer til din distribution. Git book  About Version Control What is Git? Git in Visual Studio Code  How to use git in Visual Studio code  Basal Arbejdsgang graph TD; EDIT(&#34;</description>
+      <description>Git introduktion  Git and GitHub for Poets Codingtrain tutorial. Git installation. Vælg den der passer til dit operativ system. På mac er git sikkert allerede installeret. Bruger du linux, ved du formentlig selv hvordan du installerer pakker, der passer til din distribution. Git book  About Version Control What is Git? Git in Visual Studio Code   How to use git in Visual Studio code  Basal Arbejdsgang graph TD; EDIT(&#34;</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://getsrevel.github.io/tech/javascript/plain-js/</link>
+      <link>https://getsrevel.github.io/tech/react/react-intro/my-app-npm/build/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://getsrevel.github.io/tech/javascript/plain-js/</guid>
-      <description>DocumentDemo html pageLorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, impedit repudiandae, magnam sint porro quidem eveniet at adipisci assumenda rerum, consequuntur eos eligendi nihil mollitia inventore perferendis possimus. Error, similique.Laudantium, cumque architecto veritatis provident similique quia, ipsum aliquid mollitia beatae nam facilis unde quaerat autem tenetur neque natus doloremque incidunt, vel animi? Veniam eum odio ullam? Doloremque, possimus facere.Ipsam, corporis dignissimos perferendis adipisci fuga saepe labore doloremque dolor exercitationem soluta?</description>
+      <guid>https://getsrevel.github.io/tech/react/react-intro/my-app-npm/build/</guid>
+      <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://getsrevel.github.io/tech/javascript/strings/</link>
+      <link>https://getsrevel.github.io/tech/react/react-intro/my-app-npm/public/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://getsrevel.github.io/tech/javascript/strings/</guid>
-      <description>DocumentDemo html page</description>
+      <guid>https://getsrevel.github.io/tech/react/react-intro/my-app-npm/public/</guid>
+      <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://getsrevel.github.io/tech/node/socket-io-demo/demo/public/</link>
+      <link>https://getsrevel.github.io/tech/react/react-intro/my-app-npm/readme/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://getsrevel.github.io/tech/node/socket-io-demo/demo/public/</guid>
-      <description>Socket io demobody {padding: 20px;}Socket demo</description>
+      <guid>https://getsrevel.github.io/tech/react/react-intro/my-app-npm/readme/</guid>
+      <description>This project was bootstrapped with Create React App.
+Available Scripts In the project directory, you can run:
+yarn start Runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
+The page will reload if you make edits.
+You will also see any lint errors in the console.
+yarn test Launches the test runner in the interactive watch mode.
+See the section about running tests for more information.</description>
     </item>
     
   </channel>
