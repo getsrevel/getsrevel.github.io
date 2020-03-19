@@ -12,20 +12,20 @@
     <title>React &#43; Firebase :: Getsrevel</title>
 
     
-    <link href="/css/nucleus.css?1584569884" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1584569884" rel="stylesheet">
-    <link href="/css/hybrid.css?1584569884" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1584569884" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1584569884" rel="stylesheet">
-    <link href="/css/auto-complete.css?1584569884" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1584569884" rel="stylesheet">
-    <link href="/css/theme.css?1584569884" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1584569884" rel="stylesheet">
+    <link href="/css/nucleus.css?1584613868" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1584613868" rel="stylesheet">
+    <link href="/css/hybrid.css?1584613868" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1584613868" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1584613868" rel="stylesheet">
+    <link href="/css/auto-complete.css?1584613868" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1584613868" rel="stylesheet">
+    <link href="/css/theme.css?1584613868" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1584613868" rel="stylesheet">
     
-      <link href="/css/theme-getsrevel.css?1584569884" rel="stylesheet">
+      <link href="/css/theme-getsrevel.css?1584613868" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1584569884"></script>
+    <script src="/js/jquery-3.3.1.min.js?1584613868"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -68,14 +68,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1584569884"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1584569884"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1584613868"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1584613868"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/getsrevel.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1584569884"></script>
+<script type="text/javascript" src="/js/search.js?1584613868"></script>
 
     
   </div>
@@ -1309,20 +1309,23 @@ Det er dog stadig nødvendigt at konfigurere firebase SDK til at kommunikere med
 
 <span style="color:#75715e">// Your web app&#39;s Firebase configuration
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">firebaseConfig</span> <span style="color:#f92672">=</span> {
-  <span style="color:#a6e22e">apiKey</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;AIzaSyAof7A2wpEylAFHsKWvqeJU8VkYN7G1VMI&#34;</span>,
-  <span style="color:#a6e22e">authDomain</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;coldhawaiiweather.firebaseapp.com&#34;</span>,
-  <span style="color:#a6e22e">databaseURL</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://coldhawaiiweather.firebaseio.com&#34;</span>,
-  <span style="color:#a6e22e">projectId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;coldhawaiiweather&#34;</span>,
-  <span style="color:#a6e22e">storageBucket</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;coldhawaiiweather.appspot.com&#34;</span>,
-  <span style="color:#a6e22e">messagingSenderId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;645018619046&#34;</span>,
-  <span style="color:#a6e22e">appId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;1:645018619046:web:2ae11bff4009e1e965f867&#34;</span>,
-  <span style="color:#a6e22e">measurementId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;G-61E1DX0Z3Q&#34;</span>
+  <span style="color:#a6e22e">apiKey</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;YOUR_API_KEY&#34;</span>,
+  <span style="color:#a6e22e">authDomain</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;YOUR_FIREBASE_APP_NAME.firebaseapp.com&#34;</span>,
+  <span style="color:#a6e22e">databaseURL</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://YOUR_FIREBASE_APP_NAME.firebaseio.com&#34;</span>,
+  <span style="color:#a6e22e">projectId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;YOUR_FIREBASE_APP_NAME&#34;</span>,
+  <span style="color:#a6e22e">storageBucket</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;YOUR_FIREBASE_APP_NAME.appspot.com&#34;</span>,
+  <span style="color:#a6e22e">messagingSenderId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;YOUR_SENDER_ID&#34;</span>,
+  <span style="color:#a6e22e">appId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;YOUR_APP_ID&#34;</span>,
+  <span style="color:#a6e22e">measurementId</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;YOUR_MEASUREMENT_ID&#34;</span>
 };
 
 <span style="color:#75715e">// Initialize Firebase
 </span><span style="color:#75715e"></span><span style="color:#a6e22e">firebase</span>.<span style="color:#a6e22e">initializeApp</span>(<span style="color:#a6e22e">firebaseConfig</span>);
 
 <span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">firebase</span>;</code></pre></div>
+<p>De konkrete settings, der skal bruges i dit projekt, finder du i firebase konsollen ved at gå ind i den app du vil bruge som backend.
+Åben derefter &ldquo;Settings&rdquo; og &ldquo;General&rdquo;. Måske skal der oprettes et web endpoint, hvis du ikke allerede har gjort det.
+For <a href="/tech/firebase/firestore-client/">yderligere forklaringer kan denne intro</a> sikkert bruges.</p>
 <!-- component using firebase -->
 <h2 id="læs-fra-firestore">Læs fra Firestore</h2>
 <p>Nu er fundament på plads, så det er tid til at lave en react komponent, der henter data fra Firestore.
@@ -2203,19 +2206,19 @@ Det gøres i filen <code>src/components/Hotdog.js</code>, og koden er som vist h
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1584569884"></script>
-    <script src="/js/perfect-scrollbar.min.js?1584569884"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1584569884"></script>
-    <script src="/js/jquery.sticky.js?1584569884"></script>
-    <script src="/js/featherlight.min.js?1584569884"></script>
-    <script src="/js/highlight.pack.js?1584569884"></script>
+    <script src="/js/clipboard.min.js?1584613868"></script>
+    <script src="/js/perfect-scrollbar.min.js?1584613868"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1584613868"></script>
+    <script src="/js/jquery.sticky.js?1584613868"></script>
+    <script src="/js/featherlight.min.js?1584613868"></script>
+    <script src="/js/highlight.pack.js?1584613868"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1584569884"></script>
-    <script src="/js/learn.js?1584569884"></script>
-    <script src="/js/hugo-learn.js?1584569884"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1584613868"></script>
+    <script src="/js/learn.js?1584613868"></script>
+    <script src="/js/hugo-learn.js?1584613868"></script>
 
-    <link href="/mermaid/mermaid.css?1584569884" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1584569884"></script>
+    <link href="/mermaid/mermaid.css?1584613868" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1584613868"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
