@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Stickman Objects :: Getsrevel</title>
+    <title>Serial Json :: Getsrevel</title>
 
     
     <link href="/css/nucleus.css?1585687276" rel="stylesheet">
@@ -48,7 +48,7 @@
 
 
   </head>
-  <body class="" data-url="/tech/p5js/stickman-demo/">
+  <body class="" data-url="/tech/node/serial-json/">
     <nav id="sidebar" class="">
 
 
@@ -554,7 +554,7 @@
   
     
     <li data-nav-id="/tech/node/" title="Node.js" class="dd-item 
-        
+        parent
         
         
         ">
@@ -609,8 +609,8 @@
   
     
     <li data-nav-id="/tech/node/serial-json/" title="Serial Json" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/tech/node/serial-json/">
@@ -670,7 +670,7 @@
   
     
     <li data-nav-id="/tech/p5js/" title="p5.js" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1048,8 +1048,8 @@
   
     
     <li data-nav-id="/tech/p5js/stickman-demo/" title="Stickman Objects" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/tech/p5js/stickman-demo/">
@@ -1411,7 +1411,7 @@
             
           
           
-            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/p5js/'>p5.js</a> > Stickman Objects
+            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/node/'>Node.js</a> > Serial Json
           
          
           
@@ -1428,7 +1428,6 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#demo">Demo</a></li>
     <li><a href="#materiale">Materiale</a></li>
   </ul>
 </nav>
@@ -1447,7 +1446,7 @@
           
             <h1>
               
-              Stickman Objects
+              Serial Json
             </h1>
           
 
@@ -1456,128 +1455,112 @@
 
 
 
-	<p>Denne demonstration er et eksempel på hvordan man kan bruge <em>klasser</em> og <em>objekter</em> til at strukturere koden.
-I eksemplet tegnes et par hoppende tændstikmænd med forskellige egenskaber.</p>
-<p>Filen <code>sketch.js</code> indeholder den sædvanlige struktur for et program skrevet i p5js.</p>
-<p>I <em>setup()</em> oprettes et lærred, og der oprettes to objekter af klassen stickman.
-Bemærk at det bliver initialiseret med forskellige egenskaber via deres constructor.</p>
-<p>I <em>draw()</em> kaldes metoderne <em>render()</em> og <em>update()</em> på begge de to StickMan objekter.</p>
-<p>Derudover er metoden <em>mouseClicked()</em> implementeret, og denne sørger for at kalde metoden jump på de to stickman objekter,
-med den effekt at de begge hopper når der klikkes med musen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">man</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">otherMan</span>;
+	<p>Dette eksempel viser hvordan man kan læse fra en serielport vha. node.js.
+For at kunne køre eksemplet på en meningsfuld måde, kræver det at der er tilsluttet en enhed til serielporten på computeren.
+Ydermere skal denne enhed sende beskeder afsted i json format, og porten skal være sat op med passende instillinger.</p>
+<p>Jeg har tidligere lavet et eksempel, der kan sende <a href="/tech/arduino/json-beacon/">json beskeder som output på serielporten på en Arduino</a>, og det er disse data der forventes at være input til dette eksempel.</p>
+<p>Først skal der laves et projekt så node kan finde ud af at køre programmet, og har en <code>package.json</code> fil til at holde styr på projektet og afhængigheder af biblioteksmoduler.</p>
+<p>Start med at lave en mappe, som kan indeholde dit projekt. Kald den f.eks. <code>serial-json</code>.
+I denne mappe skal du køre følgende kommando, for at oprette projekt filen <code>package.json</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm init -y</code></pre></div>
+<p>Dernæst har du mulighed for at installere disse afhængigheder.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">npm install serialport --save</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;serial-json-read&#34;</span>,
+  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;1.0.0&#34;</span>,
+  <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+  <span style="color:#f92672">&#34;main&#34;</span>: <span style="color:#e6db74">&#34;index.js&#34;</span>,
+  <span style="color:#f92672">&#34;scripts&#34;</span>: {
+    <span style="color:#f92672">&#34;test&#34;</span>: <span style="color:#e6db74">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>
+  },
+  <span style="color:#f92672">&#34;author&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+  <span style="color:#f92672">&#34;license&#34;</span>: <span style="color:#e6db74">&#34;ISC&#34;</span>,
+  <span style="color:#f92672">&#34;dependencies&#34;</span>: {
+<span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#f92672">&#34;serialport&#34;</span>: <span style="color:#e6db74">&#34;^8.0.7&#34;</span>
+</span>  }
+}</code></pre></div>
+<p>Bemærk de to pakker der er listet under afhængigheder.</p>
+<p>Derefter skal du oprette filen <code>serial-json-read.js</code> med følgende indhold.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">SerialPort</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;serialport&#34;</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Readline</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;@serialport/parser-readline&#34;</span>);
 
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
-  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
-  <span style="color:#a6e22e">man</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">StickMan</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">25</span>, <span style="color:#e6db74">&#34;red&#34;</span>);
-  <span style="color:#a6e22e">otherMan</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">StickMan</span>(<span style="color:#a6e22e">width</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">30</span>, <span style="color:#e6db74">&#34;green&#34;</span>);
-}
+<span style="color:#75715e">// Change the serial port to fit your serup
+</span><span style="color:#75715e">// on linux the device could look like this: &#34;/dev/tty-usbserial1&#34;
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">serialPortName</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;COM6&#34;</span>;
 
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
-  <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
-  <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">render</span>();
-  <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">update</span>();
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">portOptions</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">baudRate</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">115200</span>
+};
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">port</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">SerialPort</span>(<span style="color:#a6e22e">serialPortName</span>, <span style="color:#a6e22e">portOptions</span>);
 
-  <span style="color:#a6e22e">otherMan</span>.<span style="color:#a6e22e">render</span>();
-  <span style="color:#a6e22e">otherMan</span>.<span style="color:#a6e22e">update</span>();
-}
+<span style="color:#75715e">// Open errors will be emitted as an error event
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">port</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;error&#39;</span>, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>) {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Error: &#39;</span>, <span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">message</span>)
+});
 
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mouseClicked</span>() {
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;click&#34;</span>);
-  <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">jump</span>();
-  <span style="color:#a6e22e">otherMan</span>.<span style="color:#a6e22e">jump</span>();
-}
-</code></pre></div>
-<p>Herunder ses implementationen af stickman klassen, som er lavet separat i filen <code>stickman.js</code> for at gøre koden mere overskuelig.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">StickMan</span> {
-  <span style="color:#a6e22e">constructor</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">minHeight</span>, <span style="color:#a6e22e">jumpSpeed</span>, <span style="color:#a6e22e">color</span>) {
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span>;
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">jumpSpeed</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jumpSpeed</span>;
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">minHeight</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">minHeight</span>;
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">minHeight</span>;
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">color</span>;
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">height</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vy</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">gravity</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.5</span>;
-  }
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">parser</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">port</span>.<span style="color:#a6e22e">pipe</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Readline</span>({ <span style="color:#a6e22e">delimiter</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;\r\n&#34;</span> }));
 
-  <span style="color:#a6e22e">jump</span>() {
-    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">height</span>) {
-      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vy</span> <span style="color:#f92672">=</span> <span style="color:#f92672">-</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">jumpSpeed</span>;
-    }
-  }
+<span style="color:#a6e22e">parser</span>.<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#34;data&#34;</span>, <span style="color:#a6e22e">doSomethingWithData</span>);
 
-  <span style="color:#a6e22e">update</span>() {
-    <span style="color:#75715e">// fall down
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">+=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vy</span>;
-    <span style="color:#75715e">// increase fall speed due to gravity
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">vy</span> <span style="color:#f92672">+=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">gravity</span>;
-    <span style="color:#75715e">// stop at floor
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">constrain</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">y</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">3000</span>, <span style="color:#a6e22e">height</span>);
-    <span style="color:#75715e">// change the size
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">mouseX</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">width</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">minHeight</span>, <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">minHeight</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">6</span>);
-  }
+<span style="color:#75715e">// Callback function for processing the received data
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">doSomethingWithData</span>(<span style="color:#a6e22e">data</span>) {
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;--- Line received on serial port ------------&#34;</span>);
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Raw data: &#39;</span>, <span style="color:#a6e22e">data</span>);
 
-  <span style="color:#a6e22e">render</span>() {
-    <span style="color:#75715e">// compute the dimensions of the body parts
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">headDiameter</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.2</span>;
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">headRadius</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">headDiameter</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">bodyHeight</span> <span style="color:#f92672">=</span> (<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">headDiameter</span>) <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.4</span>;
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">legHeight</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">headDiameter</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">bodyHeight</span>;
+  <span style="color:#75715e">// parse json data
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">obj</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">data</span>);
 
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">legWidth</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">headDiameter</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.5</span>;
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">armWidth</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">headDiameter</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.75</span>;
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">armHeight</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">headDiameter</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1.8</span>;
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">neckLength</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">headDiameter</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.3</span>;
+  <span style="color:#75715e">// print object
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Parsed object:&#34;</span>);
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">obj</span>);
 
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">headX</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">x</span>;
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">headY</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">y</span> <span style="color:#f92672">-</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">height</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">headRadius</span>;
-
-    <span style="color:#75715e">// draw the stickman
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">push</span>();
-    <span style="color:#a6e22e">fill</span>(<span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">color</span>);
-    <span style="color:#a6e22e">strokeWeight</span>(<span style="color:#ae81ff">3</span>);
-    <span style="color:#75715e">// head
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">headX</span>, <span style="color:#a6e22e">headY</span>, <span style="color:#a6e22e">headDiameter</span>);
-    <span style="color:#75715e">// body
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">line</span>(<span style="color:#a6e22e">headX</span>, <span style="color:#a6e22e">headY</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">headRadius</span>, <span style="color:#a6e22e">headX</span>, <span style="color:#a6e22e">headY</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">headRadius</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">bodyHeight</span>);
-    <span style="color:#75715e">// arms
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">shoulderY</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">headY</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">headRadius</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">neckLength</span>;
-    <span style="color:#a6e22e">line</span>(<span style="color:#a6e22e">headX</span>, <span style="color:#a6e22e">shoulderY</span>, <span style="color:#a6e22e">headX</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">armWidth</span>, <span style="color:#a6e22e">shoulderY</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">armHeight</span>);
-    <span style="color:#a6e22e">line</span>(<span style="color:#a6e22e">headX</span>, <span style="color:#a6e22e">shoulderY</span>, <span style="color:#a6e22e">headX</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">armWidth</span>, <span style="color:#a6e22e">shoulderY</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">armHeight</span>);
-    <span style="color:#75715e">// legs
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">legY</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">headY</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">headRadius</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">bodyHeight</span>;
-    <span style="color:#a6e22e">line</span>(<span style="color:#a6e22e">headX</span>, <span style="color:#a6e22e">legY</span>, <span style="color:#a6e22e">headX</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">legWidth</span>, <span style="color:#a6e22e">legY</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legHeight</span>);
-    <span style="color:#a6e22e">line</span>(<span style="color:#a6e22e">headX</span>, <span style="color:#a6e22e">legY</span>, <span style="color:#a6e22e">headX</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legWidth</span>, <span style="color:#a6e22e">legY</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">legHeight</span>);
-    <span style="color:#a6e22e">pop</span>();
-  }
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Contents of object property:&#34;</span>);
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">tagId</span>);
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;--- data processing done -------------------&#34;</span>);
 }
 </code></pre></div>
-<p>Husk at begge filer skal inkluderes i html strukturen. Hvis de ligger i samme mappe som html filen kan det gøres således:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stickman.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sketch.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;</code></pre></div>
-<h2 id="demo">Demo</h2>
-<p>Prøv det <a href="demo/">kørende eksempel</a></p>
+<p><em>NB!</em> Du skal ændre navnet på serielporten, så det passer med den port din Arduino er tilsluttet til.</p>
+<p>Nu kan du køre eksemplet med denne kommando:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">node serial-json-read.js</code></pre></div>
+<p>For at få noget meningsfuldt ud af at køre eksemplet skal der, som nævnt ovenfor, være en Arduino tilkoblet til en serielporten på computeren, og denne Arduino skal sende beskeder i det forventede json format.
+Når dette ellers er opfyldt vil man se noget lignende dette output i terminalen.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">$ node .\serial-json-read.js
+--- Line received on serial port ------------
+Raw data:  {&#34;waitTime&#34;:2307,&#34;tagIdIndex&#34;:4,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 15 90 DB 2C&#34;}
+Parsed object:
+{ waitTime: 2307,
+  tagIdIndex: 4,
+  tagId: &#39;E2 00 00 1B 63 15 02 48 15 90 DB 2C&#39; }
+Contents of object property:
+E2 00 00 1B 63 15 02 48 15 90 DB 2C
+--- data processing done -------------------
+--- Line received on serial port ------------
+Raw data:  {&#34;waitTime&#34;:3073,&#34;tagIdIndex&#34;:3,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 17 20 DA F4&#34;}
+Parsed object:
+{ waitTime: 3073,
+  tagIdIndex: 3,
+  tagId: &#39;E2 00 00 1B 63 15 02 48 17 20 DA F4&#39; }
+Contents of object property:
+E2 00 00 1B 63 15 02 48 17 20 DA F4
+--- data processing done -------------------
+--- Line received on serial port ------------
+Raw data:  {&#34;waitTime&#34;:6930,&#34;tagIdIndex&#34;:2,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 17 00 DA F8&#34;}
+Parsed object:
+{ waitTime: 6930,
+  tagIdIndex: 2,
+  tagId: &#39;E2 00 00 1B 63 15 02 48 17 00 DA F8&#39; }
+Contents of object property:
+E2 00 00 1B 63 15 02 48 17 00 DA F8
+--- data processing done -------------------</code></pre></div>
 <h2 id="materiale">Materiale</h2>
 <ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">Classes</a> Mozilla Developer Network web documentation.</li>
-<li><a href="https://www.w3schools.com/js/js_whereto.asp">The &lt;script&gt; Tag</a> W3schools javascript tutorial.</li>
-<li><a href="https://p5js.org/reference/#/p5/setup">setup()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/createCanvas">createCanvas()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/width">width</a></li>
-<li><a href="https://p5js.org/reference/#/p5/height">height</a></li>
-<li><a href="https://p5js.org/reference/#/p5/draw">draw()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/background">background()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/constrain">constrain()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/push">push()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/pop">pop()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/fill">fill()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/strokeWeight">strokeWeight()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/circle">circle()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/ellipse">ellipse()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/line">line()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/mouseClicked">mouseClicked()</a></li>
+<li><a href="/tech/arduino/json-beacon/">JSON Beacon eksemplet til Arduino</a></li>
+<li><a href="https://serialport.io/">Node Serialport</a></li>
+<li><a href="https://serialport.io/docs/guide-usage">Node Serialport Documentation</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse">JSON.parse()</a></li>
 </ul>
+  
+
 
 
 
@@ -1897,72 +1880,6 @@ med den effekt at de begge hopper når der klikkes med musen.</p>
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -1998,20 +1915,67 @@ med den effekt at de begge hopper når der klikkes med musen.</p>
             
                 
                     
+                    
                 
                 
 
                     
                     
-                        
-                    
                     
 
                     
-                        
-            
             
         
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -2182,7 +2146,6 @@ med den effekt at de begge hopper når der klikkes med musen.</p>
             
                 
                     
-                    
                 
                 
 
@@ -2206,8 +2169,28 @@ med den effekt at de begge hopper når der klikkes med musen.</p>
             
                 
                     
+                
+                
+
+                    
+                    
                         
+                    
+                    
+
+                    
                         
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2388,10 +2371,10 @@ med den effekt at de begge hopper når der klikkes med musen.</p>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/tech/p5js/hsl-colors/" title="HSL Colors"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/tech/node/intro/" title="Intro"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/tech/p5js/sound/" title="Sound" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/tech/node/web-scraping/" title="Web Scraping" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
