@@ -12,20 +12,20 @@
     <title>Json Beacon :: Getsrevel</title>
 
     
-    <link href="/css/nucleus.css?1585672518" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1585672518" rel="stylesheet">
-    <link href="/css/hybrid.css?1585672518" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1585672518" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1585672518" rel="stylesheet">
-    <link href="/css/auto-complete.css?1585672518" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1585672518" rel="stylesheet">
-    <link href="/css/theme.css?1585672518" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1585672518" rel="stylesheet">
+    <link href="/css/nucleus.css?1585681818" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1585681818" rel="stylesheet">
+    <link href="/css/hybrid.css?1585681818" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1585681818" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1585681818" rel="stylesheet">
+    <link href="/css/auto-complete.css?1585681818" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1585681818" rel="stylesheet">
+    <link href="/css/theme.css?1585681818" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1585681818" rel="stylesheet">
     
-      <link href="/css/theme-getsrevel.css?1585672518" rel="stylesheet">
+      <link href="/css/theme-getsrevel.css?1585681818" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1585672518"></script>
+    <script src="/js/jquery-3.3.1.min.js?1585681818"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -68,14 +68,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1585672518"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1585672518"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1585681818"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1585681818"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/getsrevel.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1585672518"></script>
+<script type="text/javascript" src="/js/search.js?1585681818"></script>
 
     
   </div>
@@ -183,6 +183,8 @@
         <ul>
           
           
+            
+          
           
           
         
@@ -196,13 +198,18 @@
  
   
     
-      <li data-nav-id="/tech/arduino/json-beacon/" title="Json Beacon" class="dd-item active">
-        <a href="/tech/arduino/json-beacon/">
-        Json Beacon
+    <li data-nav-id="/tech/arduino/json-beacon/" title="Json Beacon" class="dd-item 
+        parent
+        active
         
-        </a>
+        ">
+      <a href="/tech/arduino/json-beacon/">
+          Json Beacon
+          
+      </a>
+      
+              
     </li>
-     
   
  
 
@@ -1395,7 +1402,6 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#koden">Koden</a></li>
     <li><a href="#eksempel-på-output">Eksempel på output</a></li>
     <li><a href="#materiale">Materiale</a></li>
   </ul>
@@ -1423,12 +1429,12 @@
 
 
 
-<p>Dette eksempel illustrerer hvordan man kan generere json output på seriel porten, og er tænkt som en en stub der kan bruges til at arbejde med seriel input på en en anden computer, f.eks. vha. node.js.</p>
-<h2 id="koden">Koden</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ArduinoJson.h&gt;</span><span style="color:#75715e">
+
+	<p>Dette eksempel illustrerer hvordan man kan generere json output på seriel porten, og er tænkt som en en stub der kan bruges til at arbejde med seriel input på en en anden computer, f.eks. vha. node.js.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ArduinoJson.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> WAIT_MS_MIN <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span>;
-<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> WAIT_MS_MAX <span style="color:#f92672">=</span> <span style="color:#ae81ff">300</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> WAIT_MS_MAX <span style="color:#f92672">=</span> <span style="color:#ae81ff">8000</span>;
 <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> TAG_COUNT <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
 
 <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> tagIds[TAG_COUNT] <span style="color:#f92672">=</span> {
@@ -1463,14 +1469,16 @@ Derfor er det nødvendigt at installere dette på udviklingsmaskinen, inden denn
 <h2 id="eksempel-på-output">Eksempel på output</h2>
 <p>Output på serielporten kommer til at se ca. sådan ud.
 Bemærk at det er kopieret fra Serial Monitor i Arduino IDE, og timestamps er slået til, derfor er der et tidsstempel på alle linier i output.
-Tidstempler, delay intervaller og rækkefølgen at tagIds vil være forskellig for hver kørsel, da de bliver genereret tilfældigt.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">17:26:48.793 -&gt; {&#34;waitTime&#34;:500,&#34;tagIdIndex&#34;:2,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 17 00 DA F8&#34;}
-17:26:49.302 -&gt; {&#34;waitTime&#34;:500,&#34;tagIdIndex&#34;:3,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 17 20 DA F4&#34;}
-17:26:49.777 -&gt; {&#34;waitTime&#34;:500,&#34;tagIdIndex&#34;:0,&#34;tagId&#34;:&#34;4B 61 73 70 65 72 36 37 38 39 3A 3B&#34;}
-17:26:50.290 -&gt; {&#34;waitTime&#34;:500,&#34;tagIdIndex&#34;:0,&#34;tagId&#34;:&#34;4B 61 73 70 65 72 36 37 38 39 3A 3B&#34;}
-17:26:50.804 -&gt; {&#34;waitTime&#34;:500,&#34;tagIdIndex&#34;:0,&#34;tagId&#34;:&#34;4B 61 73 70 65 72 36 37 38 39 3A 3B&#34;}
-17:26:51.280 -&gt; {&#34;waitTime&#34;:500,&#34;tagIdIndex&#34;:0,&#34;tagId&#34;:&#34;4B 61 73 70 65 72 36 37 38 39 3A 3B&#34;}
-17:26:51.791 -&gt; {&#34;waitTime&#34;:500,&#34;tagIdIndex&#34;:2,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 17 00 DA F8&#34;}</code></pre></div>
+Tidstempler, delay intervaller og rækkefølgen af tagId&rsquo;er vil være forskellig for hver kørsel, da de bliver genereret tilfældigt.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">21:00:56.034 -&gt; {&#34;waitTime&#34;:2492,&#34;tagIdIndex&#34;:2,&#34;tagId&#34;B 63 15 02 48 17 00 DA F8&#34;}
+21:00:56.034 -&gt; {&#34;waitTime&#34;:2307,&#34;tagIdIndex&#34;:4,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 15 90 DB 2C&#34;}
+21:00:58.350 -&gt; {&#34;waitTime&#34;:3073,&#34;tagIdIndex&#34;:3,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 17 20 DA F4&#34;}
+21:01:01.410 -&gt; {&#34;waitTime&#34;:6930,&#34;tagIdIndex&#34;:2,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 17 00 DA F8&#34;}
+21:01:08.346 -&gt; {&#34;waitTime&#34;:3044,&#34;tagIdIndex&#34;:3,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 17 20 DA F4&#34;}
+21:01:11.414 -&gt; {&#34;waitTime&#34;:5923,&#34;tagIdIndex&#34;:4,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 15 90 DB 2C&#34;}
+21:01:17.328 -&gt; {&#34;waitTime&#34;:4940,&#34;tagIdIndex&#34;:0,&#34;tagId&#34;:&#34;4B 61 73 70 65 72 36 37 38 39 3A 3B&#34;}
+21:01:22.256 -&gt; {&#34;waitTime&#34;:2492,&#34;tagIdIndex&#34;:2,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 17 00 DA F8&#34;}
+21:01:24.769 -&gt; {&#34;waitTime&#34;:5987,&#34;tagIdIndex&#34;:3,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 17 20 DA F4&#34;}</code></pre></div>
 <h2 id="materiale">Materiale</h2>
 <ul>
 <li><a href="https://www.arduino.cc/">Arduino</a>.</li>
@@ -1482,7 +1490,10 @@ Tidstempler, delay intervaller og rækkefølgen at tagIds vil være forskellig f
 </ul>
 
 
-<footer class="footline">
+
+
+
+<footer class=" footline" >
 	
 </footer>
 
@@ -1573,6 +1584,8 @@ Tidstempler, delay intervaller og rækkefølgen at tagIds vil være forskellig f
                 
 
                     
+                    
+                        
                     
                     
 
@@ -2279,19 +2292,19 @@ Tidstempler, delay intervaller og rækkefølgen at tagIds vil være forskellig f
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1585672518"></script>
-    <script src="/js/perfect-scrollbar.min.js?1585672518"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1585672518"></script>
-    <script src="/js/jquery.sticky.js?1585672518"></script>
-    <script src="/js/featherlight.min.js?1585672518"></script>
-    <script src="/js/highlight.pack.js?1585672518"></script>
+    <script src="/js/clipboard.min.js?1585681818"></script>
+    <script src="/js/perfect-scrollbar.min.js?1585681818"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1585681818"></script>
+    <script src="/js/jquery.sticky.js?1585681818"></script>
+    <script src="/js/featherlight.min.js?1585681818"></script>
+    <script src="/js/highlight.pack.js?1585681818"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1585672518"></script>
-    <script src="/js/learn.js?1585672518"></script>
-    <script src="/js/hugo-learn.js?1585672518"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1585681818"></script>
+    <script src="/js/learn.js?1585681818"></script>
+    <script src="/js/hugo-learn.js?1585681818"></script>
 
-    <link href="/mermaid/mermaid.css?1585672518" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1585672518"></script>
+    <link href="/mermaid/mermaid.css?1585681818" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1585681818"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
@@ -2309,4 +2322,3 @@ Tidstempler, delay intervaller og rækkefølgen at tagIds vil være forskellig f
 
   </body>
 </html>
-
