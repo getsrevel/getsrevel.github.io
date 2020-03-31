@@ -6,7 +6,7 @@
     <description>Recent content on Getsrevel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 18 Mar 2020 08:37:19 +0100</lastBuildDate>
+    <lastBuildDate>Tue, 31 Mar 2020 16:59:21 +0200</lastBuildDate>
     
 	<atom:link href="https://getsrevel.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -62,6 +62,16 @@ Installation af Firebase For at kunne benytte funktionaliteter fra firebase i vo
       <description>Opgave: Mig og min kageopskrift Lav et website i html der præsenterer dig selv og din yndlings kage:
  Der skal være 2 sider  En beskrivelse af dig selv der navngives &amp;ldquo;profil.html&amp;rdquo; En anden side med en mad opskrift &amp;ldquo;opskrift.html&amp;rdquo;   Begge sider skal have en titel Der skal være links så man kan navigere mellem de to sider  På profil siden
  Brug forskellige niveauer af overskrifter Lav mindst et afsnit med brødtekst (f.</description>
+    </item>
+    
+    <item>
+      <title>Json Beacon</title>
+      <link>https://getsrevel.github.io/tech/arduino/json-beacon/</link>
+      <pubDate>Tue, 31 Mar 2020 16:59:21 +0200</pubDate>
+      
+      <guid>https://getsrevel.github.io/tech/arduino/json-beacon/</guid>
+      <description>Dette eksempel illustrerer hvordan man kan generere json output på seriel porten, og er tænkt som en en stub der kan bruges til at arbejde med seriel input på en en anden computer, f.eks. vha. node.js.
+Koden #include &amp;lt;ArduinoJson.h&amp;gt; const int WAIT_MS_MIN = 500; const int WAIT_MS_MAX = 300; const unsigned char TAG_COUNT = 5; char* tagIds[TAG_COUNT] = { &amp;#34;4B 61 73 70 65 72 36 37 38 39 3A 3B&amp;#34;, &amp;#34;E2 00 00 1B 63 15 02 48 16 00 DB 24&amp;#34;, &amp;#34;E2 00 00 1B 63 15 02 48 17 00 DA F8&amp;#34;, &amp;#34;E2 00 00 1B 63 15 02 48 17 20 DA F4&amp;#34;, &amp;#34;E2 00 00 1B 63 15 02 48 15 90 DB 2C&amp;#34;, }; void setup() { Serial.</description>
     </item>
     
     <item>

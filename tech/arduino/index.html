@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>HSL Colors :: Getsrevel</title>
+    <title>Arduino :: Getsrevel</title>
 
     
     <link href="/css/nucleus.css?1585672519" rel="stylesheet">
@@ -48,7 +48,7 @@
 
 
   </head>
-  <body class="" data-url="/tech/p5js/hsl-colors/">
+  <body class="" data-url="/tech/arduino/">
     <nav id="sidebar" class="">
 
 
@@ -170,8 +170,8 @@
   
     
     <li data-nav-id="/tech/arduino/" title="Arduino" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/tech/arduino/">
@@ -637,7 +637,7 @@
   
     
     <li data-nav-id="/tech/p5js/" title="p5.js" class="dd-item 
-        parent
+        
         
         
         ">
@@ -974,8 +974,8 @@
   
     
     <li data-nav-id="/tech/p5js/hsl-colors/" title="HSL Colors" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/tech/p5js/hsl-colors/">
@@ -1358,8 +1358,6 @@
                         </a>
                     </span>
                   
-                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
-                  
                   <span class="links">
                  
                  
@@ -1374,13 +1372,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/p5js/'>p5.js</a> > HSL Colors
-          
-         
+            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > Arduino
           
          
           
@@ -1391,18 +1383,6 @@
                   </span>
                 </div>
                 
-                    <div class="progress">
-    <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#demo">Demo</a></li>
-    <li><a href="#materiale">Materiale</a></li>
-  </ul>
-</nav>
-    </div>
-</div>
-
-                
               </div>
             </div>
             
@@ -1410,12 +1390,9 @@
         
         </div>
         
+          <div id="chapter">
+        
         <div id="body-inner">
-          
-            <h1>
-              
-              HSL Colors
-            </h1>
           
 
         
@@ -1423,71 +1400,8 @@
 
 
 
-	<p>Et eksempel der viser hvordan HSL farver kan bruges i p5.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
-  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">600</span>, <span style="color:#ae81ff">600</span>);
-}
-
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
-  <span style="color:#a6e22e">translate</span>(<span style="color:#a6e22e">width</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">height</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>);
-
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y1</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">x2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mouseX</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">width</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">y2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mouseY</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">height</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
-
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">angle</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">atan2</span>(<span style="color:#a6e22e">y2</span>, <span style="color:#a6e22e">x2</span>);
-
-  <span style="color:#75715e">// d is the length of the line
-</span><span style="color:#75715e"></span>  <span style="color:#75715e">// the distance from point 1 to point 2.
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">d</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">int</span>(<span style="color:#a6e22e">dist</span>(<span style="color:#a6e22e">x1</span>, <span style="color:#a6e22e">y1</span>, <span style="color:#a6e22e">x2</span>, <span style="color:#a6e22e">y2</span>));
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">saturation</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">constrain</span>(<span style="color:#a6e22e">d</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>);
-
-  <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">200</span>);
-  <span style="color:#a6e22e">colorMode</span>(<span style="color:#a6e22e">HSB</span>, <span style="color:#ae81ff">255</span>);
-
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">hueVal</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">angle</span>, <span style="color:#f92672">-</span><span style="color:#a6e22e">PI</span>, <span style="color:#a6e22e">PI</span>, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">255</span>);
-
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">luminance</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">255</span>;
-
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">color</span>(<span style="color:#a6e22e">hueVal</span>, <span style="color:#a6e22e">saturation</span>, <span style="color:#ae81ff">255</span>);
-  <span style="color:#a6e22e">fill</span>(<span style="color:#a6e22e">c</span>);
-  <span style="color:#a6e22e">line</span>(<span style="color:#a6e22e">x1</span>, <span style="color:#a6e22e">y1</span>, <span style="color:#a6e22e">x2</span>, <span style="color:#a6e22e">y2</span>);
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">circleDiameter</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>;
-  <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">x1</span>, <span style="color:#a6e22e">y1</span>, <span style="color:#a6e22e">circleDiameter</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>);
-  <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">x2</span>, <span style="color:#a6e22e">y2</span>, <span style="color:#a6e22e">circleDiameter</span>);
-
-  <span style="color:#75715e">// Write values as text
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">msg</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`abs: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">d</span><span style="color:#e6db74">}</span><span style="color:#e6db74">, angle: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">nfc</span>(<span style="color:#a6e22e">angle</span>, <span style="color:#ae81ff">2</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">hsvMsg</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`hsv: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">nfc</span>(<span style="color:#a6e22e">hueVal</span>, <span style="color:#ae81ff">0</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">, sat: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">nfc</span>(<span style="color:#a6e22e">saturation</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
-
-  <span style="color:#a6e22e">push</span>();
-  <span style="color:#a6e22e">translate</span>(<span style="color:#a6e22e">x1</span>, <span style="color:#a6e22e">y1</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">circleDiameter</span>);
-  <span style="color:#a6e22e">fill</span>(<span style="color:#ae81ff">0</span>);
-  <span style="color:#a6e22e">stroke</span>(<span style="color:#ae81ff">0</span>);
-  <span style="color:#a6e22e">textSize</span>(<span style="color:#ae81ff">20</span>);
-  <span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">msg</span>, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>);
-  <span style="color:#a6e22e">text</span>(<span style="color:#a6e22e">hsvMsg</span>, <span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">30</span>);
-  <span style="color:#a6e22e">pop</span>();
-}
-</code></pre></div>
-<h2 id="demo">Demo</h2>
-<p>Prøv det <a href="demo/">kørende eksempel</a></p>
-<h2 id="materiale">Materiale</h2>
-<ul>
-<li><a href="https://p5js.org/reference/#/p5/atan2">atan2()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/constrain">constrain()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/dist">dist()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/colorMode">colorMode()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/map">map()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/translate">translate()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/nfc">nfc()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/text">text()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/textSize">textSize()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/push">push()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/pop">pop()</a></li>
-<li><a href="https://p5js.org/reference/#/p5/push">push()</a></li>
-</ul>
+	<h1 id="arduino">Arduino</h1>
+<p>Eksempler med <a href="https://www.arduino.cc/">Arduino</a>.</p>
 
 
 
@@ -1497,6 +1411,8 @@
 	
 </footer>
 
+        
+            </div> 
         
         </div> 
         
@@ -1579,6 +1495,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1586,6 +1503,82 @@
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -1660,79 +1653,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -1855,7 +1775,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -1871,9 +1790,6 @@
             
                 
                     
-                        
-                        
-                    
                 
                 
 
@@ -1881,29 +1797,6 @@
                     
                     
 
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-        
                     
             
         
@@ -2051,7 +1944,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -2075,8 +1967,28 @@
             
                 
                     
+                
+                
+
+                    
+                    
                         
+                    
+                    
+
+                    
                         
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2280,10 +2192,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/tech/p5js/tacospin/" title="Tacospin"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/tech/css/" title="Css"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/tech/p5js/stickman-demo/" title="Stickman Objects" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/tech/arduino/json-beacon/" title="Json Beacon" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
