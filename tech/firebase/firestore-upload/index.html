@@ -12,20 +12,20 @@
     <title>Firestore Node Upload :: Getsrevel</title>
 
     
-    <link href="/css/nucleus.css?1585828590" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1585828590" rel="stylesheet">
-    <link href="/css/hybrid.css?1585828590" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1585828590" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1585828590" rel="stylesheet">
-    <link href="/css/auto-complete.css?1585828590" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1585828590" rel="stylesheet">
-    <link href="/css/theme.css?1585828590" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1585828590" rel="stylesheet">
+    <link href="/css/nucleus.css?1585838001" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1585838001" rel="stylesheet">
+    <link href="/css/hybrid.css?1585838001" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1585838001" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1585838001" rel="stylesheet">
+    <link href="/css/auto-complete.css?1585838001" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1585838001" rel="stylesheet">
+    <link href="/css/theme.css?1585838001" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1585838001" rel="stylesheet">
     
-      <link href="/css/theme-getsrevel.css?1585828590" rel="stylesheet">
+      <link href="/css/theme-getsrevel.css?1585838001" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1585828590"></script>
+    <script src="/js/jquery-3.3.1.min.js?1585838001"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -68,14 +68,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1585828590"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1585828590"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1585838001"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1585838001"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/getsrevel.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1585828590"></script>
+<script type="text/javascript" src="/js/search.js?1585838001"></script>
 
     
   </div>
@@ -1523,7 +1523,10 @@ Dette kan gøres ved at oprette en mappe til projektet og køre denne kommando f
 }</code></pre></div>
 <p>For at kunne benytte <a href="https://firebase.google.com/docs/admin/setup#add-sdk">Firebase SDK</a> skal vi have dette installeret, hvilket kan klares med kommandoen.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install firebase-admin --save</code></pre></div>
-<p>Dette tilføjet Firebase som afhængighed og <code>package.json</code> ser nu nogenlunde således ud.</p>
+<p>Vi får også brug for at arbejde med formatering af dato og tidspunkter, så derfor vælger vi at bruge biblioteket <a href="https://momentjs.com/">Moment.js</a> for at lette arbejdet med disse.
+<a href="https://momentjs.com/">Moment.js</a> kan installeres med denne kommando.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install moment --save</code></pre></div>
+<p>Nu burde <a href="https://firebase.google.com/docs/admin/setup">Firebase SDK</a> og <a href="https://momentjs.com/">Moment.js</a> være installeret og tilføjet som afhængigheder og <code>package.json</code> ser nu nogenlunde således ud.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
   <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;firestore-demo&#34;</span>,
   <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;1.0.0&#34;</span>,
@@ -1536,42 +1539,67 @@ Dette kan gøres ved at oprette en mappe til projektet og køre denne kommando f
   <span style="color:#f92672">&#34;license&#34;</span>: <span style="color:#e6db74">&#34;ISC&#34;</span>,
   <span style="color:#f92672">&#34;dependencies&#34;</span>: {
 <span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#f92672">&#34;@google-cloud/firestore&#34;</span>: <span style="color:#e6db74">&#34;^3.4.1&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#f92672">&#34;firebase-admin&#34;</span>: <span style="color:#e6db74">&#34;^8.9.1&#34;</span>
+</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#f92672">&#34;firebase-admin&#34;</span>: <span style="color:#e6db74">&#34;^8.9.1&#34;</span>,
+</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#f92672">&#34;moment&#34;</span>: <span style="color:#e6db74">&#34;^2.24.0&#34;</span>
 </span>  }
 }</code></pre></div>
-<p>Som det ses er der nu tilføjet afhængigheder til firebase pakkerne.
+<p>Som det ses er der nu tilføjet afhængigheder til Firebase og moment pakkerne.
 De nærmere <a href="https://firebase.google.com/docs/admin/setup">detaljer kan findes i denne guide</a>.</p>
 <p>Dette er et eksempel på en hvordan man kan lave et lille program, der indsætter en stump data i firestore.</p>
 <h3 id="firestore-upload-eksempel">Firestore upload eksempel</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Add the Firebase Admin SDK to Your Server
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">admin</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;firebase-admin&#34;</span>);
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">firebase</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;firebase-admin&#34;</span>);
+<span style="color:#75715e">// Get the helper classes
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">FieldValue</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">firebase</span>.<span style="color:#a6e22e">firestore</span>.<span style="color:#a6e22e">FieldValue</span>;
+<span style="color:#a6e22e">Timestamp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">firebase</span>.<span style="color:#a6e22e">firestore</span>.<span style="color:#a6e22e">Timestamp</span>;
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">moment</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;moment&#34;</span>);
 
 <span style="color:#75715e">// Import crecential for the service account
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">serviceAccount</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;./serviceAccountKey.json&#34;</span>);
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">serviceAccount</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;./serviceAccountKey.json&#34;</span>);
 
 <span style="color:#75715e">// Initialize the default app
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">admin</span>.<span style="color:#a6e22e">initializeApp</span>({
-  <span style="color:#a6e22e">credential</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">admin</span>.<span style="color:#a6e22e">credential</span>.<span style="color:#a6e22e">cert</span>(<span style="color:#a6e22e">serviceAccount</span>),
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">firebase</span>.<span style="color:#a6e22e">initializeApp</span>({
+  <span style="color:#a6e22e">credential</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">firebase</span>.<span style="color:#a6e22e">credential</span>.<span style="color:#a6e22e">cert</span>(<span style="color:#a6e22e">serviceAccount</span>),
   <span style="color:#a6e22e">databaseURL</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://coldhawaiiweather.firebaseio.com&#34;</span>
 });
 
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">db</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">admin</span>.<span style="color:#a6e22e">firestore</span>();
-
-<span style="color:#75715e">// Generate some fake weather data
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">weatherData</span> <span style="color:#f92672">=</span> {
-  <span style="color:#a6e22e">time</span><span style="color:#f92672">:</span> Date.<span style="color:#a6e22e">now</span>(),
-  <span style="color:#a6e22e">windSpeed</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">getRandomInt</span>(<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">3</span>),
-  <span style="color:#a6e22e">windDir</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">getRandomInt</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">359</span>),
-};
-
-<span style="color:#75715e">// Add document to Firestore
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">addDoc</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">collection</span>(<span style="color:#e6db74">&#34;weather&#34;</span>).<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">weatherData</span>);
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">db</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">firebase</span>.<span style="color:#a6e22e">firestore</span>();
 
 <span style="color:#75715e">// Helper - Generates random integer values 
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getRandomInt</span>(<span style="color:#a6e22e">max</span>, <span style="color:#a6e22e">min</span>) {
   <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">diff</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">min</span>;
   <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> Math.<span style="color:#a6e22e">floor</span>(<span style="color:#a6e22e">diff</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">min</span>);
 }
+
+<span style="color:#a6e22e">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">storeData</span>() {
+
+  <span style="color:#75715e">// Set time of update
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">updateTime</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Timestamp</span>.<span style="color:#a6e22e">now</span>();
+
+  <span style="color:#75715e">// Generate some fake weather data
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">windData</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">time</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">updateTime</span>,
+    <span style="color:#a6e22e">windSpeed</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">getRandomInt</span>(<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">3</span>),
+    <span style="color:#a6e22e">windDir</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">getRandomInt</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">359</span>),
+  };
+
+  <span style="color:#75715e">// Document ID should be todays date
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">today</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">moment</span>(<span style="color:#a6e22e">updateTime</span>.<span style="color:#a6e22e">toDate</span>());
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">docPath</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`weather/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">today</span>.<span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#34;YYYY-MM-DD&#34;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">docRef</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">doc</span>(<span style="color:#a6e22e">docPath</span>);
+
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> {
+    <span style="color:#a6e22e">lastUpdate</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">updateTime</span>,
+    <span style="color:#a6e22e">windMeasurements</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">FieldValue</span>.<span style="color:#a6e22e">arrayUnion</span>(<span style="color:#a6e22e">windData</span>),
+  };
+  
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">options</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">merge</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> }
+  <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">docRef</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">options</span>);
+
+}
+
+<span style="color:#a6e22e">storeData</span>();
 </code></pre></div>
 <p>Der skal bruges en såkaldt <em>Service Account</em>, for at kunne forbindes fra node til firebase.
 Guiden forklarer, hvad du skal gøre for at <a href="https://firebase.google.com/docs/admin/setup#initialize-sdk">oprette en service account</a> til dit firebase projekt.
@@ -1593,7 +1621,13 @@ serviceAccountKey.json</code></pre></div>
 <li><a href="https://firebase.google.com/docs/admin/setup">Add the Firebase Admin SDK to Your Server</a> guide til at komme i gang med firebase på en server.</li>
 <li><a href="https://firebase.google.com/docs/firestore/quickstart">Cloud Firestore quickstart</a> guide til at komme i gang med firestore.</li>
 <li><a href="https://git-scm.com/docs/gitignore">gitignore</a> dokumentation.</li>
+<li><a href="https://momentjs.com/">Moment.js</a></li>
+<li><a href="https://firebase.google.com/docs/reference/js/firebase.firestore.Timestamp">firestore.TimeStamp</a></li>
+<li><a href="https://firebase.google.com/docs/reference/js/firebase.firestore.FieldValue">firestore.FieldValue</a></li>
+<li><a href="https://firebase.google.com/docs/reference/js/firebase.firestore.SetOptions">firestore.SetOptions</a></li>
 </ul>
+  
+
 
 
 
@@ -2440,19 +2474,19 @@ serviceAccountKey.json</code></pre></div>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1585828590"></script>
-    <script src="/js/perfect-scrollbar.min.js?1585828590"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1585828590"></script>
-    <script src="/js/jquery.sticky.js?1585828590"></script>
-    <script src="/js/featherlight.min.js?1585828590"></script>
-    <script src="/js/highlight.pack.js?1585828590"></script>
+    <script src="/js/clipboard.min.js?1585838001"></script>
+    <script src="/js/perfect-scrollbar.min.js?1585838001"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1585838001"></script>
+    <script src="/js/jquery.sticky.js?1585838001"></script>
+    <script src="/js/featherlight.min.js?1585838001"></script>
+    <script src="/js/highlight.pack.js?1585838001"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1585828590"></script>
-    <script src="/js/learn.js?1585828590"></script>
-    <script src="/js/hugo-learn.js?1585828590"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1585838001"></script>
+    <script src="/js/learn.js?1585838001"></script>
+    <script src="/js/hugo-learn.js?1585838001"></script>
 
-    <link href="/mermaid/mermaid.css?1585828590" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1585828590"></script>
+    <link href="/mermaid/mermaid.css?1585838001" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1585838001"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
