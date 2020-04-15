@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Git Intro :: Getsrevel</title>
+    <title>C# Intro :: Getsrevel</title>
 
     
     <link href="/css/nucleus.css?1586980849" rel="stylesheet">
@@ -48,7 +48,7 @@
 
 
   </head>
-  <body class="" data-url="/tools/git/">
+  <body class="" data-url="/tech/c-sharp/c-sharp-intro/">
     <nav id="sidebar" class="">
 
 
@@ -94,7 +94,7 @@
   
     
     <li data-nav-id="/tech/" title="Tech" class="dd-item 
-        
+        parent
         
         
         ">
@@ -234,7 +234,7 @@
   
     
     <li data-nav-id="/tech/c-sharp/" title="C#" class="dd-item 
-        
+        parent
         
         
         ">
@@ -263,8 +263,8 @@
   
     
     <li data-nav-id="/tech/c-sharp/c-sharp-intro/" title="C# Intro" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/tech/c-sharp/c-sharp-intro/">
@@ -1418,7 +1418,7 @@
   
     
     <li data-nav-id="/tools/" title="Tools" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1472,7 +1472,7 @@
  
   
     
-      <li data-nav-id="/tools/git/" title="Git Intro" class="dd-item active">
+      <li data-nav-id="/tools/git/" title="Git Intro" class="dd-item ">
         <a href="/tools/git/">
         Git Intro
         
@@ -1540,7 +1540,13 @@
             
           
           
-            <a href='/'>Getsrevel</a> > <a href='/tools/'>Tools</a> > Git Intro
+            
+            
+          
+          
+            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/c-sharp/'>C#</a> > C# Intro
+          
+         
           
          
           
@@ -1555,8 +1561,26 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#git-introduktion">Git introduktion</a></li>
-    <li><a href="#basal-arbejdsgang">Basal Arbejdsgang</a></li>
+    <li><a href="#setup">Setup</a>
+      <ul>
+        <li><a href="#code-editor">Code editor</a></li>
+        <li><a href="#compiler">Compiler</a></li>
+      </ul>
+    </li>
+    <li><a href="#opret-projekt">Opret projekt</a>
+      <ul>
+        <li><a href="#afvikling-fra-kommando-linjen">Afvikling fra kommando linjen</a></li>
+      </ul>
+    </li>
+    <li><a href="#arbejd-med-c-i-vs-code">Arbejd med C# i VS code</a>
+      <ul>
+        <li><a href="#c-extension">C# extension</a></li>
+        <li><a href="#kompilering--debug">Kompilering / Debug</a></li>
+        <li><a href="#håndtering-af-stdin--stdout">Håndtering af stdin / stdout</a></li>
+      </ul>
+    </li>
+    <li><a href="#gitignore">Gitignore</a></li>
+    <li><a href="#materiale">Materiale</a></li>
   </ul>
 </nav>
     </div>
@@ -1574,7 +1598,7 @@
           
             <h1>
               
-              Git Intro
+              C# Intro
             </h1>
           
 
@@ -1582,40 +1606,139 @@
 
 
 
-<h2 id="git-introduktion">Git introduktion</h2>
+
+	<h2 id="setup">Setup</h2>
+<p>For at kunne arbejde med C# kildekoden har vi brug for en god editor.
+Envidere får er der brug for en kompiler, så vi kan oversætte kildeteksten til et program der kan eksekveres på maskinen.</p>
+<h3 id="code-editor">Code editor</h3>
+<p>Der er flere muligheder at vælge mellem når man skal arbejde med C# kode.
+For ikke at bruge en masse tid på at lære et nyt miljø at kende, vælger vi at bruge <a href="https://code.visualstudio.com/">Visual Studio Code</a>, da den kan bruges både på Windows og Mac, og det er den samme editor vi har brugt til at arbjede med javascript.</p>
+<p>Efter du har <a href="/tools/code-editor/#visual-studio-code">installeret Visual Studio Code</a> vil det være en fordel at installere en udvidelse, der gør det nemmere at arbejde med C# filer, kopilering, og debugging af disse.</p>
+<p>For at installere udvidelsen vælges plugin i menuen, og søg efter <code>C#</code>, på listen skulle du gerne kunne finde <a href="https://github.com/OmniSharp/omnisharp-vscode">dette C# plugin fra microsoft</a>.</p>
+<h3 id="compiler">Compiler</h3>
+<p>C# adskiller sig fra javascript bl.a. ved, at det er nødvendigt at oversætte kildeteksten til et eksekverbart program, inden det kan afvikles på computeren.
+Derfor har vi brug for en kompiler.</p>
+<p>Derfor skal vi hente og installere <a href="https://dotnet.microsoft.com/download">.NET Core</a>.</p>
+<p>Efter installationen er færdig kan du åbne en terminal f.eks. Powershell og verificere din version af <a href="https://dotnet.microsoft.com/">.NET Core</a> med kommandoen <code>dotnet --version</code>.
+På min maskine giver den dette output.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ dotnet --version
+3.1.200</code></pre></div>
+<p>Hvilket vil sige at jeg har version 3.1.200 installeret.</p>
+<h2 id="opret-projekt">Opret projekt</h2>
+<p>Den nemmeste måde at starte et nyt .NET Core projekt er vha. terminalen.
+Start med at åbne en terminal i den mappe du ønsker at arbejde i.</p>
+<p>For at oprette et nyt projekt skal du åbne en terminal og køre kommandoen.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">dotnet new console -o my-console-app</code></pre></div>
+<p>Dette laver en ny console app med navnet <code>my-console-app</code>, og opretter det en undermappe med samme navn.</p>
+<h3 id="afvikling-fra-kommando-linjen">Afvikling fra kommando linjen</h3>
+<p>For at sikre at det virker efter hensigten, starter vi med at oversætte og køre programmet fra kommando linjen.</p>
+<p>Skift til det netop oprettede projekt med kommandoen:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd my-console-app</code></pre></div>
+<p>Du står nu i mappen med projektet, og kan nu oversætte (compile) og køre (run) det med kommandoen <code>dotnet run</code>.
+På min maskine giver det dette output.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">my-console-app $ dotnet run
+Hello World!</code></pre></div>
+<p>Hvis du kan få et lignede resultat er det lykkedes at kompilere og oversætte programmet.</p>
+<h2 id="arbejd-med-c-i-vs-code">Arbejd med C# i VS code</h2>
+<p>Nu er det vist tid til at rette lidt i koden, åben derfor mappen med projektet i VS code.</p>
+<p>Åben filen <code>Program.cs</code> i projektet. Indholdet burde se således ud:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cs" data-lang="cs"><span style="color:#66d9ef">using</span> System;
+
+<span style="color:#66d9ef">namespace</span> hmm_demo
+{
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Program</span>
+    {
+        <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args)
+        {
+<span style="display:block;width:100%;background-color:#3c3d38">            Console.WriteLine(<span style="color:#e6db74">&#34;Hello World!&#34;</span>);
+</span>        }
+    }
+}
+</code></pre></div>
+<p>Prøv nu at rette den fremhævede linje, så den skriver <em>Hej Programmering!</em> i stedet for <em>Hello World!</em>.
+Husk at gemme filen.</p>
+<h3 id="c-extension">C# extension</h3>
+<p>For at gøre det nemmere at arbejde med C# i VS Code skal vi have installeret en program udvidelse.
+Søg efter c# i extensions i VS code og tryk på install.</p>
+<figure>
+    <img src="vs-code-c-sharp-extension.png"/> <figcaption>
+            <h4>Screenshot af VS code hvor der er søgt efter C# udvidelsen.</h4>
+        </figcaption>
+</figure>
+
+<h3 id="kompilering--debug">Kompilering / Debug</h3>
+<p>Med den nye extension er det muligt at oversætte, køre og fejlsøge i C# programmer vha. knapper i VS Code.</p>
+<p>For at køre programmet skal du vælge <em>run -&gt; debug</em> i menuen, eller trykke på f5.</p>
+<p>Måske kommer der en boks frem der beder dig vælge det udviklingsmiljø du vil bruge. Her skal du vælge <em>.NET Core</em>.
+Dette genererer instillinger i  mappen <code>.vscode</code>, som bruges af C# udvidelsen når koden skal oversættes og køres.</p>
+<p>Når programmet kører får jeg på min maskine dette output:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">-------------------------------------------------------------------
+You may only use the Microsoft .NET Core Debugger <span style="color:#f92672">(</span>vsdbg<span style="color:#f92672">)</span> with
+Visual Studio Code, Visual Studio or Visual Studio <span style="color:#66d9ef">for</span> Mac software
+to help you develop and test your applications.
+-------------------------------------------------------------------
+Loaded <span style="color:#e6db74">&#39;C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.2\System.Private.CoreLib.dll&#39;</span>. Skipped loading symbols. Module is optimized and the debugger option <span style="color:#e6db74">&#39;Just My Code&#39;</span> is enabled.
+Loaded <span style="color:#e6db74">&#39;C:\code\c-sharp\hmm\my-console-app\bin\Debug\netcoreapp3.1\my-console-app.dll&#39;</span>. Symbols loaded.
+Loaded <span style="color:#e6db74">&#39;C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.2\System.Runtime.dll&#39;</span>. Skipped loading symbols. Module is optimized and the debugger option <span style="color:#e6db74">&#39;Just My Code&#39;</span> is enabled.
+Loaded <span style="color:#e6db74">&#39;C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.2\System.Console.dll&#39;</span>. Skipped loading symbols. Module is optimized and the debugger option <span style="color:#e6db74">&#39;Just My Code&#39;</span> is enabled.
+Loaded <span style="color:#e6db74">&#39;C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.2\System.Threading.dll&#39;</span>. Skipped loading symbols. Module is optimized and the debugger option <span style="color:#e6db74">&#39;Just My Code&#39;</span> is enabled.
+Loaded <span style="color:#e6db74">&#39;C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.2\System.Runtime.Extensions.dll&#39;</span>. Skipped loading symbols. Module is optimized and the debugger option <span style="color:#e6db74">&#39;Just My Code&#39;</span> is enabled.
+Loaded <span style="color:#e6db74">&#39;C:\Program Files\dotnet\shared\Microsoft.NETCore.App\3.1.2\System.Text.Encoding.Extensions.dll&#39;</span>. Skipped loading symbols. Module is optimized and the debugger option <span style="color:#e6db74">&#39;Just My Code&#39;</span> is enabled.
+Hej Programmering!
+The program <span style="color:#e6db74">&#39;[243920] my-console-app.dll&#39;</span> has exited with code <span style="color:#ae81ff">0</span> <span style="color:#f92672">(</span>0x0<span style="color:#f92672">)</span>.</code></pre></div>
+<p>Det meste er beskeder fra compiler og runtime miljøet, men der kommer også det forventede output fra koden jeg selv har skrevet, på den fremhævede linje.</p>
+<h3 id="håndtering-af-stdin--stdout">Håndtering af stdin / stdout</h3>
+<p>Afhængig af typen af det program du laver, kan det være hensigtsmæssigt at ændre måden det eksekveres i fra VS Code på.</p>
+<p>Der er 3 muligheder, som vælges ved at ændre i instillingerne i <code>.vscode/launch.json</code>.
+Prøv at ændre i parameteren <em>console</em> til en af disse værdier, og vælg den der passer bedst til dit brugsscenarie.</p>
 <ul>
-<li><a href="https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV">Git and GitHub for Poets</a> Codingtrain tutorial.</li>
-<li><a href="https://git-scm.com">Git installation</a>. Vælg den der passer til dit operativ system. På mac er git sikkert allerede installeret. Bruger du linux, ved du formentlig selv hvordan du installerer pakker, der passer til din distribution.</li>
-<li><a href="https://git-scm.com/book">Git book</a>
-<ul>
-<li><a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control">About Version Control</a></li>
-<li><a href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F">What is Git?</a></li>
-<li><a href="https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Visual-Studio-Code">Git in Visual Studio Code</a></li>
+<li><code>&quot;console&quot;: &quot;internalConsole&quot;</code></li>
+<li><code>&quot;console&quot;: &quot;integratedTerminal&quot;</code></li>
+<li><code>&quot;console&quot;: &quot;externalTerminal&quot;</code></li>
 </ul>
+<p>Hvis jeg vælger indstillingen <code>externalTerminal</code>, vises output fra mit program fra tidligere på denne måde på min windows 10 maskine.</p>
+<figure>
+    <img src="external-terminal-run.png"/> <figcaption>
+            <h4>Screenshot af terminal output.</h4>
+        </figcaption>
+</figure>
+
+<h2 id="gitignore">Gitignore</h2>
+<p>Når .NET Core projektet bygges, bliver der genereret en række objektfiler og binære biblioteker osv. af kompileren. Disse er nødvendige for at programmet kan afvikles, men hvis de andre der arbejder selv har en kompiler installeret, kan disse nemt gendannes.
+Derfor kan det være nyttigt at undlade at tilføje genererede filer til versionsstyringssystemet.</p>
+<p>Hvis man f.eks. benytter git kan man lave en liste af filer og mapper der skal ignoreres af git.
+Dette kan klares ved at oprette en fil med navnet <code>.gitignore</code>, i roden af projektet.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># files and folders to be ignored by git</span>
+
+<span style="color:#75715e"># ignore build artifacts</span>
+bin/
+obj/</code></pre></div>
+<p>Med dette indhold bliver indholdet af mapperne <code>bin</code> og <code>obj</code> ignoreret af git.</p>
+<p>Man kan nemt justere i hvilke filer og mapper der skal ignoreres ved at ændre i <code>.gitignore</code> filen.
+Se også <a href="https://git-scm.com/docs/gitignore">dokumentationen af gitignore</a>.</p>
+  
+
+<h2 id="materiale">Materiale</h2>
+<ul>
+<li>
+<p><a href="https://code.visualstudio.com/">Visual Studio Code</a></p>
 </li>
-<li><a href="https://code.visualstudio.com/docs/editor/versioncontrol">How to use git in Visual Studio code</a></li>
+<li>
+<p><a href="https://dotnet.microsoft.com/download">.NET Core</a></p>
+</li>
+<li>
+<p><a href="https://channel9.msdn.com/Blogs/dotnet/Get-started-VSCode-Csharp-NET-Core-Windows">Get started with VS Code using C# and .NET Core on Windows</a></p>
+</li>
+<li>
+<p><a href="https://git-scm.com/docs/gitignore">Git ignore</a></p>
+</li>
 </ul>
-<h2 id="basal-arbejdsgang">Basal Arbejdsgang</h2>
-
-<div class="mermaid" align="left">
-graph TD;
-EDIT("opret/rediger/slet fil(er)") --> STAGE("udvælg ændringer")
-STAGE --> COMMIT("Commit i lokalt depot")
-COMMIT --> DO_PUSH{Klar til offentliggørelse?}
-DO_PUSH -->|Nej| EDIT
-DO_PUSH -->|Ja| PUSH("Skub ændriger til 'remote'")
-PUSH --> EDIT
-</div>
-
-  
-
-  
-
-  
 
 
 
-<footer class="footline">
+
+
+<footer class=" footline" >
 	
 </footer>
 
@@ -1650,8 +1773,6 @@ PUSH --> EDIT
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1667,6 +1788,9 @@ PUSH --> EDIT
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1734,6 +1858,7 @@ PUSH --> EDIT
             
                 
                     
+                    
                 
                 
 
@@ -1748,6 +1873,7 @@ PUSH --> EDIT
             
             
                 
+                    
                     
                 
                 
@@ -1768,94 +1894,8 @@ PUSH --> EDIT
             
                 
                     
-                
-                
-
-                    
-                    
                         
-                    
-                    
-
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -1889,104 +1929,6 @@ PUSH --> EDIT
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
                     
                         
             
@@ -2064,6 +2006,96 @@ PUSH --> EDIT
 
                     
                     
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                     
 
                     
@@ -2088,7 +2120,81 @@ PUSH --> EDIT
                         
             
             
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
         
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
                     
             
         
@@ -2323,6 +2429,29 @@ PUSH --> EDIT
             
         
                     
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
             
         
                     
@@ -2432,7 +2561,6 @@ PUSH --> EDIT
             
                 
                     
-                    
                 
                 
 
@@ -2447,9 +2575,6 @@ PUSH --> EDIT
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2466,7 +2591,6 @@ PUSH --> EDIT
             
             
                 
-                    
                     
                 
                 
@@ -2491,10 +2615,10 @@ PUSH --> EDIT
 	 
 	 
 		
-			<a class="nav nav-prev" href="/tools/code-editor/" title="Code Editors and IDE&#39;s"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/tech/c-sharp/" title="C#"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/tools/code-editor/" title="Code Editors and IDE&#39;s" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/tech/react/" title="React" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2534,4 +2658,3 @@ PUSH --> EDIT
 
   </body>
 </html>
-
