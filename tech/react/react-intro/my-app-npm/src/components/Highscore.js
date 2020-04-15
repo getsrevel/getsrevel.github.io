@@ -32,7 +32,7 @@ const User = props => {
 
         <tbody>
           {props.user.scores.map((item, i) => (
-            <tr>
+            <tr key={i}>
               <td>{item.date}</td>
               <td>{item.score}</td>
             </tr>

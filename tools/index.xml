@@ -12,17 +12,6 @@
     
     
     <item>
-      <title>Code Editors and IDE&#39;s</title>
-      <link>https://getsrevel.github.io/tools/code-editor/</link>
-      <pubDate>Mon, 11 Nov 2019 21:42:17 +0100</pubDate>
-      
-      <guid>https://getsrevel.github.io/tools/code-editor/</guid>
-      <description>For at kunne arbejde med HTML, CSS, javascript og andre tekst filer har vi brug for en god editor.
-Visual Studio Code  Visual studio code (kan bruges både på Windows og Mac)  Jetbrains produkter Der er mulighed for at bruge en lang række udviklingsmiljøer fra JetBrains i gratis &amp;ldquo;studenter versioner&amp;rdquo;.
- https://www.jetbrains.com/student/  </description>
-    </item>
-    
-    <item>
       <title>Git Intro</title>
       <link>https://getsrevel.github.io/tools/git/</link>
       <pubDate>Mon, 11 Nov 2019 21:34:01 +0100</pubDate>

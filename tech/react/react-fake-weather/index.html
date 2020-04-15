@@ -9,23 +9,23 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Firestore Node Upload :: Getsrevel</title>
+    <title>React Fake Weather :: Getsrevel</title>
 
     
-    <link href="/css/nucleus.css?1586947600" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1586947600" rel="stylesheet">
-    <link href="/css/hybrid.css?1586947600" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1586947600" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1586947600" rel="stylesheet">
-    <link href="/css/auto-complete.css?1586947600" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1586947600" rel="stylesheet">
-    <link href="/css/theme.css?1586947600" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1586947600" rel="stylesheet">
+    <link href="/css/nucleus.css?1586947599" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1586947599" rel="stylesheet">
+    <link href="/css/hybrid.css?1586947599" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1586947599" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1586947599" rel="stylesheet">
+    <link href="/css/auto-complete.css?1586947599" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1586947599" rel="stylesheet">
+    <link href="/css/theme.css?1586947599" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1586947599" rel="stylesheet">
     
-      <link href="/css/theme-getsrevel.css?1586947600" rel="stylesheet">
+      <link href="/css/theme-getsrevel.css?1586947599" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1586947600"></script>
+    <script src="/js/jquery-3.3.1.min.js?1586947599"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -48,7 +48,7 @@
 
 
   </head>
-  <body class="" data-url="/tech/firebase/firestore-upload/">
+  <body class="" data-url="/tech/react/react-fake-weather/">
     <nav id="sidebar" class="">
 
 
@@ -68,14 +68,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1586947600"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1586947600"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1586947599"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1586947599"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/getsrevel.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1586947600"></script>
+<script type="text/javascript" src="/js/search.js?1586947599"></script>
 
     
   </div>
@@ -234,7 +234,7 @@
   
     
     <li data-nav-id="/tech/react/" title="React" class="dd-item 
-        
+        parent
         
         
         ">
@@ -345,7 +345,7 @@
  
   
     
-      <li data-nav-id="/tech/react/react-fake-weather/" title="React Fake Weather" class="dd-item ">
+      <li data-nav-id="/tech/react/react-fake-weather/" title="React Fake Weather" class="dd-item active">
         <a href="/tech/react/react-fake-weather/">
         React Fake Weather
         
@@ -376,7 +376,7 @@
   
     
     <li data-nav-id="/tech/firebase/" title="Firebase" class="dd-item 
-        parent
+        
         
         
         ">
@@ -446,8 +446,8 @@
   
     
     <li data-nav-id="/tech/firebase/firestore-upload/" title="Firestore Node Upload" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/tech/firebase/firestore-upload/">
@@ -1480,7 +1480,7 @@
             
           
           
-            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/firebase/'>Firebase</a> > Firestore Node Upload
+            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/react/'>React</a> > React Fake Weather
           
          
           
@@ -1497,13 +1497,9 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#opsætning-af-node-projekt">Opsætning af Node projekt</a></li>
-        <li><a href="#firestore-upload-eksempel">Firestore upload eksempel</a></li>
-        <li><a href="#håndtering-af-private-nøgler">Håndtering af private nøgler</a></li>
-      </ul>
-    </li>
+    <li><a href="#statisk-data-visning">Statisk data visning</a></li>
+    <li><a href="#firestore-itegration">Firestore itegration</a></li>
+    <li><a href="#app-demo">App Demo</a></li>
     <li><a href="#materiale">Materiale</a></li>
   </ul>
 </nav>
@@ -1522,7 +1518,7 @@
           
             <h1>
               
-              Firestore Node Upload
+              React Fake Weather
             </h1>
           
 
@@ -1530,138 +1526,242 @@
 
 
 
+<p>Dette eksempel bygger videre på <a href="../react-with-firebase/">react eksemplet med firebase</a>, og demonstrationen  af hvordan man kan <a href="/tech/firebase/firestore-upload/">uploade data med node.js</a>.</p>
+<h2 id="statisk-data-visning">Statisk data visning</h2>
+<p>Først laves en fil med samme struktur som forventes at være i firestore databasen, når upload scriptet har kørt nogle gange.
+Data strukturen laves i filen <code>src/lib/fake_weather.js</code>, med dette indhold.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">firebase</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;../lib/Firebase&#34;</span>;
 
-	<p>I dette eksempel forbindes der til <a href="https://firebase.google.com/docs/firestore">Firestore</a> via Node.js. Dvs. koden der skal afvikles på serveren kan skrives i javascript,
-og vi kan derfor bruge viden om syntaks fra arbejdet med p5js.</p>
-<h3 id="opsætning-af-node-projekt">Opsætning af Node projekt</h3>
-<p>For at kunne arbejde med firestore fra node.js, skal der laves en pakke / projekt at arbejde i.
-Dette kan gøres ved at oprette en mappe til projektet og køre denne kommando for at generere en <code>package.json</code> fil.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm init</code></pre></div>
-<p>Man bliver så bedt om at svare på en række spørgsmål, og ender med en struktur der ser nogenlunde sådan ud:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;firestore-demo&#34;</span>,
-  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;1.0.0&#34;</span>,
-  <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-  <span style="color:#f92672">&#34;main&#34;</span>: <span style="color:#e6db74">&#34;index.js&#34;</span>,
-  <span style="color:#f92672">&#34;scripts&#34;</span>: {
-    <span style="color:#f92672">&#34;test&#34;</span>: <span style="color:#e6db74">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">Timestamp</span> <span style="color:#f92672">=</span>  <span style="color:#a6e22e">firebase</span>.<span style="color:#a6e22e">firestore</span>.<span style="color:#a6e22e">Timestamp</span>;
+
+<span style="color:#75715e">// helper for generating firestore timestamps
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">t</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">timeString</span> =&gt; <span style="color:#a6e22e">Timestamp</span>.<span style="color:#a6e22e">fromDate</span>(<span style="color:#66d9ef">new</span> Date(<span style="color:#a6e22e">timeString</span>));
+
+<span style="color:#75715e">// Fake data - could come from a database or similar
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> [
+  {
+    <span style="color:#a6e22e">lastUpdate</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#39;2020-03-13T11:30:42&#39;</span>),
+    <span style="color:#a6e22e">key</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;dataIdOne&#34;</span>,
+    <span style="color:#a6e22e">windMeasurements</span><span style="color:#f92672">:</span> [
+      { <span style="color:#a6e22e">time</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#39;2020-03-13T10:20:42&#39;</span>), <span style="color:#a6e22e">windSpeed</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">12</span>, <span style="color:#a6e22e">windDir</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">277</span> },
+      { <span style="color:#a6e22e">time</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#39;2020-03-13T11:30:42&#39;</span>), <span style="color:#a6e22e">windSpeed</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">7</span>, <span style="color:#a6e22e">windDir</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">270</span> },
+    ]
   },
-  <span style="color:#f92672">&#34;author&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-  <span style="color:#f92672">&#34;license&#34;</span>: <span style="color:#e6db74">&#34;ISC&#34;</span>
-}</code></pre></div>
-<p>For at kunne benytte <a href="https://firebase.google.com/docs/admin/setup#add-sdk">Firebase SDK</a> skal vi have dette installeret, hvilket kan klares med kommandoen.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install firebase-admin --save</code></pre></div>
-<p>Vi får også brug for at arbejde med formatering af dato og tidspunkter, så derfor vælger vi at bruge biblioteket <a href="https://momentjs.com/">Moment.js</a> for at lette arbejdet med disse.
-<a href="https://momentjs.com/">Moment.js</a> kan installeres med denne kommando.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm install moment --save</code></pre></div>
-<p>Nu burde <a href="https://firebase.google.com/docs/admin/setup">Firebase SDK</a> og <a href="https://momentjs.com/">Moment.js</a> være installeret og tilføjet som afhængigheder og <code>package.json</code> ser nu nogenlunde således ud.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;firestore-demo&#34;</span>,
-  <span style="color:#f92672">&#34;version&#34;</span>: <span style="color:#e6db74">&#34;1.0.0&#34;</span>,
-  <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-  <span style="color:#f92672">&#34;main&#34;</span>: <span style="color:#e6db74">&#34;index.js&#34;</span>,
-  <span style="color:#f92672">&#34;scripts&#34;</span>: {
-    <span style="color:#f92672">&#34;test&#34;</span>: <span style="color:#e6db74">&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>
+  {
+    <span style="color:#a6e22e">lastUpdate</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#34;2020-03-14T09:31:10&#34;</span>),
+    <span style="color:#a6e22e">key</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;dataIdTwo&#34;</span>,
+    <span style="color:#a6e22e">windMeasurements</span><span style="color:#f92672">:</span> [
+      { <span style="color:#a6e22e">time</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#34;2020-03-14T09:07:34&#34;</span>), <span style="color:#a6e22e">windSpeed</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">17</span>, <span style="color:#a6e22e">windDir</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">179</span> },
+      { <span style="color:#a6e22e">time</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#34;2020-03-14T09:31:10&#34;</span>), <span style="color:#a6e22e">windSpeed</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">25</span>, <span style="color:#a6e22e">windDir</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">183</span> },
+      { <span style="color:#a6e22e">time</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#34;2020-03-14T11:30:42&#34;</span>), <span style="color:#a6e22e">windSpeed</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">12</span>, <span style="color:#a6e22e">windDir</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">180</span> },
+      { <span style="color:#a6e22e">time</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">t</span>(<span style="color:#e6db74">&#34;2020-03-14T12:37:20&#34;</span>), <span style="color:#a6e22e">windSpeed</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">23</span>, <span style="color:#a6e22e">windDir</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">171</span> },
+    ]
   },
-  <span style="color:#f92672">&#34;author&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
-  <span style="color:#f92672">&#34;license&#34;</span>: <span style="color:#e6db74">&#34;ISC&#34;</span>,
-  <span style="color:#f92672">&#34;dependencies&#34;</span>: {
-<span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#f92672">&#34;@google-cloud/firestore&#34;</span>: <span style="color:#e6db74">&#34;^3.4.1&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#f92672">&#34;firebase-admin&#34;</span>: <span style="color:#e6db74">&#34;^8.9.1&#34;</span>,
-</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#f92672">&#34;moment&#34;</span>: <span style="color:#e6db74">&#34;^2.24.0&#34;</span>
-</span>  }
-}</code></pre></div>
-<p>Som det ses er der nu tilføjet afhængigheder til Firebase og moment pakkerne.
-De nærmere <a href="https://firebase.google.com/docs/admin/setup">detaljer kan findes i denne guide</a>.</p>
-<p>Dette er et eksempel på en hvordan man kan lave et lille program, der indsætter en stump data i firestore.</p>
-<h3 id="firestore-upload-eksempel">Firestore upload eksempel</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// Add the Firebase Admin SDK to Your Server
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">firebase</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;firebase-admin&#34;</span>);
-<span style="color:#75715e">// Get the helper classes
-</span><span style="color:#75715e"></span><span style="color:#a6e22e">FieldValue</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">firebase</span>.<span style="color:#a6e22e">firestore</span>.<span style="color:#a6e22e">FieldValue</span>;
-<span style="color:#a6e22e">Timestamp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">firebase</span>.<span style="color:#a6e22e">firestore</span>.<span style="color:#a6e22e">Timestamp</span>;
+];
 
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">moment</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;moment&#34;</span>);
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">data</span>;</code></pre></div>
+<p>Derefter laves en ny react komponent i <code>src/components/Weather.js</code>, som viser indholdet i browseren.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span>, { <span style="color:#a6e22e">useEffect</span>, <span style="color:#a6e22e">useState</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
 
-<span style="color:#75715e">// Import crecential for the service account
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">serviceAccount</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;./serviceAccountKey.json&#34;</span>);
-
-<span style="color:#75715e">// Initialize the default app
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">app</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">firebase</span>.<span style="color:#a6e22e">initializeApp</span>({
-  <span style="color:#a6e22e">credential</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">firebase</span>.<span style="color:#a6e22e">credential</span>.<span style="color:#a6e22e">cert</span>(<span style="color:#a6e22e">serviceAccount</span>),
-  <span style="color:#a6e22e">databaseURL</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://coldhawaiiweather.firebaseio.com&#34;</span>
-});
-
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">db</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">firebase</span>.<span style="color:#a6e22e">firestore</span>();
-
-<span style="color:#75715e">// Helper - Generates random integer values 
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getRandomInt</span>(<span style="color:#a6e22e">max</span>, <span style="color:#a6e22e">min</span>) {
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">diff</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">max</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">min</span>;
-  <span style="color:#66d9ef">return</span> Math.<span style="color:#a6e22e">floor</span>(Math.<span style="color:#a6e22e">random</span>() <span style="color:#f92672">*</span> Math.<span style="color:#a6e22e">floor</span>(<span style="color:#a6e22e">diff</span>) <span style="color:#f92672">+</span> <span style="color:#a6e22e">min</span>);
+<span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">fakeWeatherData</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;../lib/fake_weather&#39;</span>;
+</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Weather</span>() {
+  <span style="color:#66d9ef">return</span> (
+    &lt;<span style="color:#f92672">div</span>&gt;
+      &lt;<span style="color:#f92672">h1</span>&gt;<span style="color:#a6e22e">Fake</span> <span style="color:#a6e22e">Weather</span> <span style="color:#a6e22e">data</span> (<span style="color:#a6e22e">from</span> <span style="color:#a6e22e">file</span>)&lt;/<span style="color:#f92672">h1</span>&gt;
+<span style="display:block;width:100%;background-color:#3c3d38">      &lt;<span style="color:#f92672">MeasurementList</span> <span style="color:#a6e22e">weatherData</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">fakeWeatherData</span>} /&gt;
+</span>    &lt;/<span style="color:#f92672">div</span>&gt;
+  );
 }
 
-<span style="color:#a6e22e">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">storeData</span>() {
-
-  <span style="color:#75715e">// Set time of update
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">updateTime</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">Timestamp</span>.<span style="color:#a6e22e">now</span>();
-
-  <span style="color:#75715e">// Generate some fake weather data
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">windData</span> <span style="color:#f92672">=</span> {
-    <span style="color:#a6e22e">time</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">updateTime</span>,
-    <span style="color:#a6e22e">windSpeed</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">getRandomInt</span>(<span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">3</span>),
-    <span style="color:#a6e22e">windDir</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">getRandomInt</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">359</span>),
-  };
-
-  <span style="color:#75715e">// Document ID should be todays date
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">today</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">moment</span>(<span style="color:#a6e22e">updateTime</span>.<span style="color:#a6e22e">toDate</span>());
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">docPath</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`weather/</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">today</span>.<span style="color:#a6e22e">format</span>(<span style="color:#e6db74">&#34;YYYY-MM-DD&#34;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">docRef</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">doc</span>(<span style="color:#a6e22e">docPath</span>);
-
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">data</span> <span style="color:#f92672">=</span> {
-    <span style="color:#a6e22e">lastUpdate</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">updateTime</span>,
-    <span style="color:#a6e22e">windMeasurements</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">FieldValue</span>.<span style="color:#a6e22e">arrayUnion</span>(<span style="color:#a6e22e">windData</span>),
-  };
-  
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">options</span> <span style="color:#f92672">=</span> { <span style="color:#a6e22e">merge</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span> }
-  <span style="color:#a6e22e">await</span> <span style="color:#a6e22e">docRef</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">options</span>);
-
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">MeasurementList</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">props</span> =&gt; {
+  <span style="color:#66d9ef">return</span> (
+    &lt;<span style="color:#f92672">div</span>&gt;
+<span style="display:block;width:100%;background-color:#3c3d38">      {
+</span><span style="display:block;width:100%;background-color:#3c3d38">        <span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">weatherData</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">it</span> =&gt; (
+</span><span style="display:block;width:100%;background-color:#3c3d38">          &lt;<span style="color:#f92672">MeasurementDay</span> <span style="color:#a6e22e">key</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">it</span>.<span style="color:#a6e22e">key</span>} <span style="color:#a6e22e">item</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">it</span>} /&gt;
+</span><span style="display:block;width:100%;background-color:#3c3d38">        ))
+</span><span style="display:block;width:100%;background-color:#3c3d38">      }
+</span>    &lt;/<span style="color:#f92672">div</span>&gt;
+  )
 }
 
-<span style="color:#a6e22e">storeData</span>();
-</code></pre></div>
-<p>Der skal bruges en såkaldt <em>Service Account</em>, for at kunne forbindes fra node til firebase.
-Guiden forklarer, hvad du skal gøre for at <a href="https://firebase.google.com/docs/admin/setup#initialize-sdk">oprette en service account</a> til dit firebase projekt.
-Disse oplysninger er private, så vær opmærksom på ikke at holde dem for dig selv.
-For eksemplet virker skal oplysningerne om din <em>Service Account</em> oprettes i file <code>serviceAccountKey.json</code>.</p>
-<h3 id="håndtering-af-private-nøgler">Håndtering af private nøgler</h3>
-<p>For at undgå at sprede disse oplysninger er det en god ide at tilføje denne fil til listen over <a href="https://git-scm.com/docs/gitignore">filer der skal ignoreres af git</a>.
-Dvs. at din <code>.gitignore</code> fil kunne se således ud.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># ignore packages downloaded from npm</span>
-node_modules/
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">MeasurementDay</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">props</span> =&gt; {
+  <span style="color:#66d9ef">return</span> (
+    &lt;<span style="color:#f92672">div</span>&gt;
+      &lt;<span style="color:#f92672">h2</span>&gt;<span style="color:#a6e22e">Fake</span> <span style="color:#a6e22e">wind</span> <span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">Updated</span><span style="color:#f92672">:</span> {<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">lastUpdate</span>.<span style="color:#a6e22e">toDate</span>().<span style="color:#a6e22e">toLocaleString</span>()}&lt;/<span style="color:#f92672">h2</span>&gt;
+      &lt;<span style="color:#f92672">table</span>&gt;
+        &lt;<span style="color:#f92672">thead</span>&gt;
+          &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;<span style="color:#a6e22e">Time</span>&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;<span style="color:#a6e22e">Wind</span> <span style="color:#a6e22e">speed</span>&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;<span style="color:#a6e22e">Wind</span> <span style="color:#a6e22e">direction</span>&lt;/<span style="color:#f92672">th</span>&gt;
+          &lt;/<span style="color:#f92672">tr</span>&gt;
+        &lt;/<span style="color:#f92672">thead</span>&gt;
 
-<span style="color:#75715e"># avoid storing firebase login credentials</span>
-serviceAccountKey.json</code></pre></div>
-<p>Hvis javascript eksemplet gemmes i en fil med navnet  <code>firebase-upload-demo.js</code>, kan programmet køres med kommandoen</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">node firebase-upload-demo.js</code></pre></div>
+        &lt;<span style="color:#f92672">tbody</span>&gt;
+<span style="display:block;width:100%;background-color:#3c3d38">          {
+</span><span style="display:block;width:100%;background-color:#3c3d38">            <span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">windMeasurements</span>.<span style="color:#a6e22e">map</span>((<span style="color:#a6e22e">it</span>, <span style="color:#a6e22e">i</span>) =&gt; (
+</span><span style="display:block;width:100%;background-color:#3c3d38">              &lt;<span style="color:#f92672">tr</span> <span style="color:#a6e22e">key</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">i</span>}&gt;
+</span><span style="display:block;width:100%;background-color:#3c3d38">                &lt;<span style="color:#f92672">td</span>&gt;{<span style="color:#a6e22e">it</span>.<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">toDate</span>().<span style="color:#a6e22e">toISOString</span>()}&lt;/<span style="color:#f92672">td</span>&gt;
+</span><span style="display:block;width:100%;background-color:#3c3d38">                &lt;<span style="color:#f92672">td</span>&gt;{<span style="color:#a6e22e">it</span>.<span style="color:#a6e22e">windSpeed</span>}&lt;/<span style="color:#f92672">td</span>&gt;
+</span><span style="display:block;width:100%;background-color:#3c3d38">                &lt;<span style="color:#f92672">td</span>&gt;{<span style="color:#a6e22e">it</span>.<span style="color:#a6e22e">windDir</span>}&lt;/<span style="color:#f92672">td</span>&gt;
+</span><span style="display:block;width:100%;background-color:#3c3d38">              &lt;/<span style="color:#f92672">tr</span>&gt;
+</span><span style="display:block;width:100%;background-color:#3c3d38">            ))
+</span><span style="display:block;width:100%;background-color:#3c3d38">          }
+</span>        &lt;/<span style="color:#f92672">tbody</span>&gt;
+      &lt;/<span style="color:#f92672">table</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  );
+};
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">Weather</span>;</code></pre></div>
+<p>Bemærk hvordan vi først importeret datastrukturen fra filen <code>src/lib/fake_weather.js</code>, sender den ind i <em>MeasurementList</em> komponenten og itererer over indholdet af data i <em>MeasurementList</em> og <em>MeasurementBody</em> komponenterner.</p>
+<p><em>Weather</em> komponenten indsættes i <code>src/App.js</code>, således:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;react&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;./App.css&#39;</span>;
+
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Clock</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./components/Clock&#39;</span>
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Highscore</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./components/Highscore&#39;</span>;
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Hotdog</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./components/Hotdog&#39;</span>;
+<span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">Weather</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./components/Weather&#39;</span>;
+</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">App</span>() {
+  <span style="color:#66d9ef">return</span> (
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">className</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;App&#34;</span>&gt;
+      &lt;<span style="color:#f92672">Clock</span> /&gt;
+      &lt;<span style="color:#f92672">Hotdog</span> /&gt;
+<span style="display:block;width:100%;background-color:#3c3d38">      &lt;<span style="color:#f92672">Weather</span> /&gt;
+</span>      &lt;<span style="color:#f92672">Highscore</span> /&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  );
+}
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">App</span>;</code></pre></div>
+<h2 id="firestore-itegration">Firestore itegration</h2>
+<p>For at hente data ud fra firestore skal der tilføjes mere kode i <em>Weather</em> komponenten.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-jsx" data-lang="jsx"><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">React</span>, { <span style="color:#a6e22e">useEffect</span>, <span style="color:#a6e22e">useState</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;react&#34;</span>;
+
+<span style="color:#66d9ef">import</span> <span style="color:#a6e22e">fakeWeatherData</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;../lib/fake_weather&#39;</span>;
+
+<span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#75715e">// import the firebase configuration settings
+</span></span><span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#75715e"></span><span style="color:#66d9ef">import</span> <span style="color:#a6e22e">firebase</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#34;../lib/Firebase&#34;</span>;
+</span><span style="display:block;width:100%;background-color:#3c3d38">
+</span><span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#75715e">// initialize firestore
+</span></span><span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">firestore</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">firebase</span>.<span style="color:#a6e22e">firestore</span>();
+</span>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">Weather</span>() {
+
+<span style="display:block;width:100%;background-color:#3c3d38">  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">handleData</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">snapshot</span> =&gt; {
+</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">snapshot</span>.<span style="color:#a6e22e">empty</span>) {
+</span><span style="display:block;width:100%;background-color:#3c3d38">      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;No matching documents&#34;</span>);
+</span><span style="display:block;width:100%;background-color:#3c3d38">      <span style="color:#66d9ef">return</span>;
+</span><span style="display:block;width:100%;background-color:#3c3d38">    }
+</span><span style="display:block;width:100%;background-color:#3c3d38">
+</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">weatherDataArray</span> <span style="color:#f92672">=</span> [];
+</span><span style="display:block;width:100%;background-color:#3c3d38">
+</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#a6e22e">snapshot</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">doc</span> =&gt; {
+</span><span style="display:block;width:100%;background-color:#3c3d38">      <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">myData</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">doc</span>.<span style="color:#a6e22e">data</span>();
+</span><span style="display:block;width:100%;background-color:#3c3d38">      <span style="color:#a6e22e">myData</span>[<span style="color:#e6db74">&#34;key&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">doc</span>.<span style="color:#a6e22e">id</span>;
+</span><span style="display:block;width:100%;background-color:#3c3d38">      <span style="color:#a6e22e">weatherDataArray</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">myData</span>);
+</span><span style="display:block;width:100%;background-color:#3c3d38">    })
+</span><span style="display:block;width:100%;background-color:#3c3d38">
+</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#a6e22e">setWeatherData</span>(<span style="color:#a6e22e">weatherDataArray</span>);
+</span><span style="display:block;width:100%;background-color:#3c3d38">  };
+</span><span style="display:block;width:100%;background-color:#3c3d38">
+</span><span style="display:block;width:100%;background-color:#3c3d38">  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">subscribeToRealtimeUpdates</span> <span style="color:#f92672">=</span> () =&gt; {
+</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">query</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">firestore</span>.<span style="color:#a6e22e">collection</span>(<span style="color:#e6db74">&#34;weather&#34;</span>)
+</span><span style="display:block;width:100%;background-color:#3c3d38">      .<span style="color:#a6e22e">orderBy</span>(<span style="color:#e6db74">&#39;lastUpdate&#39;</span>, <span style="color:#e6db74">&#39;desc&#39;</span>)
+</span><span style="display:block;width:100%;background-color:#3c3d38">      .<span style="color:#a6e22e">limit</span>(<span style="color:#ae81ff">3</span>);
+</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#a6e22e">query</span>.<span style="color:#a6e22e">onSnapshot</span>(<span style="color:#a6e22e">handleData</span>);
+</span><span style="display:block;width:100%;background-color:#3c3d38">  };
+</span><span style="display:block;width:100%;background-color:#3c3d38">
+</span><span style="display:block;width:100%;background-color:#3c3d38">  <span style="color:#a6e22e">useEffect</span>(
+</span><span style="display:block;width:100%;background-color:#3c3d38">    () =&gt; {
+</span><span style="display:block;width:100%;background-color:#3c3d38">      <span style="color:#a6e22e">subscribeToRealtimeUpdates</span>();
+</span><span style="display:block;width:100%;background-color:#3c3d38">    },
+</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#75715e">// provide empty array to avoid infinite loop
+</span></span><span style="display:block;width:100%;background-color:#3c3d38"><span style="color:#75715e"></span>    []
+</span><span style="display:block;width:100%;background-color:#3c3d38">  );
+</span><span style="display:block;width:100%;background-color:#3c3d38">
+</span><span style="display:block;width:100%;background-color:#3c3d38">  <span style="color:#66d9ef">const</span> [<span style="color:#a6e22e">weatherData</span>, <span style="color:#a6e22e">setWeatherData</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">useState</span>([]);
+</span>
+  <span style="color:#66d9ef">return</span> (
+    &lt;<span style="color:#f92672">div</span>&gt;
+<span style="display:block;width:100%;background-color:#3c3d38">      &lt;<span style="color:#f92672">h1</span>&gt;<span style="color:#a6e22e">Fake</span> <span style="color:#a6e22e">Weather</span> <span style="color:#a6e22e">data</span> <span style="color:#a6e22e">from</span> <span style="color:#a6e22e">firebase</span>&lt;/<span style="color:#f92672">h1</span>&gt;
+</span><span style="display:block;width:100%;background-color:#3c3d38">      &lt;<span style="color:#f92672">MeasurementList</span> <span style="color:#a6e22e">weatherData</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">weatherData</span>} /&gt;
+</span>
+      &lt;<span style="color:#f92672">h1</span>&gt;<span style="color:#a6e22e">Fake</span> <span style="color:#a6e22e">Weather</span> <span style="color:#a6e22e">data</span> (<span style="color:#a6e22e">from</span> <span style="color:#a6e22e">file</span>)&lt;/<span style="color:#f92672">h1</span>&gt;
+      &lt;<span style="color:#f92672">MeasurementList</span> <span style="color:#a6e22e">weatherData</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">fakeWeatherData</span>} /&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  );
+}
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">MeasurementList</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">props</span> =&gt; {
+  <span style="color:#66d9ef">return</span> (
+    &lt;<span style="color:#f92672">div</span>&gt;
+      {
+        <span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">weatherData</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">it</span> =&gt; (
+          &lt;<span style="color:#f92672">MeasurementDay</span> <span style="color:#a6e22e">key</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">it</span>.<span style="color:#a6e22e">key</span>} <span style="color:#a6e22e">item</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">it</span>} /&gt;
+        ))
+      }
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  )
+}
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">MeasurementDay</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">props</span> =&gt; {
+  <span style="color:#66d9ef">return</span> (
+    &lt;<span style="color:#f92672">div</span>&gt;
+      &lt;<span style="color:#f92672">h2</span>&gt;<span style="color:#a6e22e">Fake</span> <span style="color:#a6e22e">wind</span> <span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">Updated</span><span style="color:#f92672">:</span> {<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">lastUpdate</span>.<span style="color:#a6e22e">toDate</span>().<span style="color:#a6e22e">toLocaleString</span>()}&lt;/<span style="color:#f92672">h2</span>&gt;
+      &lt;<span style="color:#f92672">table</span>&gt;
+        &lt;<span style="color:#f92672">thead</span>&gt;
+          &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;<span style="color:#a6e22e">Time</span>&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;<span style="color:#a6e22e">Wind</span> <span style="color:#a6e22e">speed</span>&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;<span style="color:#a6e22e">Wind</span> <span style="color:#a6e22e">direction</span>&lt;/<span style="color:#f92672">th</span>&gt;
+          &lt;/<span style="color:#f92672">tr</span>&gt;
+        &lt;/<span style="color:#f92672">thead</span>&gt;
+
+        &lt;<span style="color:#f92672">tbody</span>&gt;
+          {
+            <span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">windMeasurements</span>.<span style="color:#a6e22e">map</span>((<span style="color:#a6e22e">it</span>, <span style="color:#a6e22e">i</span>) =&gt; (
+              &lt;<span style="color:#f92672">tr</span> <span style="color:#a6e22e">key</span><span style="color:#f92672">=</span>{<span style="color:#a6e22e">i</span>}&gt;
+                &lt;<span style="color:#f92672">td</span>&gt;{<span style="color:#a6e22e">it</span>.<span style="color:#a6e22e">time</span>.<span style="color:#a6e22e">toDate</span>().<span style="color:#a6e22e">toISOString</span>()}&lt;/<span style="color:#f92672">td</span>&gt;
+                &lt;<span style="color:#f92672">td</span>&gt;{<span style="color:#a6e22e">it</span>.<span style="color:#a6e22e">windSpeed</span>}&lt;/<span style="color:#f92672">td</span>&gt;
+                &lt;<span style="color:#f92672">td</span>&gt;{<span style="color:#a6e22e">it</span>.<span style="color:#a6e22e">windDir</span>}&lt;/<span style="color:#f92672">td</span>&gt;
+              &lt;/<span style="color:#f92672">tr</span>&gt;
+            ))
+          }
+        &lt;/<span style="color:#f92672">tbody</span>&gt;
+      &lt;/<span style="color:#f92672">table</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+  );
+};
+
+<span style="color:#66d9ef">export</span> <span style="color:#66d9ef">default</span> <span style="color:#a6e22e">Weather</span>;</code></pre></div>
+<p>Først importeres firebase konfigurationen, og firebase initialiseres.</p>
+<p>Derefter bruges oprettes forbindelse til firebase og der abbonneres på databaseopdateringer.</p>
+<p>Endelig tilføjes en enstra <em>MeasurementList</em> komponent, så indholdet vises på skærmen.</p>
+<p>Hvis appen startes, vi der nu automatisk opdateres med nye målinger i tabellerne, når de tilføjes til firestore databasen med <a href="/tech/firebase/firestore-upload/">upload scriptet</a>.</p>
+<h2 id="app-demo">App Demo</h2>
+<p>Denne demo viser <a href="../react-intro/my-app-npm/build/">resultatet af anstrengelserne</a> og skulle gerne minde om det du kan se på figuren herunder.</p>
+<p>Når du åbner siden burde du se noget i stil med det der er vist på figuren herunder.</p>
+<p>Bemærk: For at kunne tilføje data til databasen, kræver det at du selv laver det på din egen maskine.</p>
+<figure>
+    <img src="../react-intro/running-app-screenshot-w-weather.png"/> <figcaption>
+            <h4>Screenshot af den kørende react app.</h4>
+        </figcaption>
+</figure>
+
 <h2 id="materiale">Materiale</h2>
 <ul>
-<li><a href="https://firebase.google.com/docs/firestore">Clouc Firestore</a> dokumentation.</li>
-<li><a href="https://firebase.google.com/docs/admin/setup">Add the Firebase Admin SDK to Your Server</a> guide til at komme i gang med firebase på en server.</li>
-<li><a href="https://firebase.google.com/docs/firestore/quickstart">Cloud Firestore quickstart</a> guide til at komme i gang med firestore.</li>
-<li><a href="https://git-scm.com/docs/gitignore">gitignore</a> dokumentation.</li>
-<li><a href="https://momentjs.com/">Moment.js</a></li>
-<li><a href="https://firebase.google.com/docs/reference/js/firebase.firestore.Timestamp">firestore.TimeStamp</a></li>
-<li><a href="https://firebase.google.com/docs/reference/js/firebase.firestore.FieldValue">firestore.FieldValue</a></li>
-<li><a href="https://firebase.google.com/docs/reference/js/firebase.firestore.SetOptions">firestore.SetOptions</a></li>
+<li><a href="/tech/firebase/firestore-upload/">Firestore upload eksempel</a></li>
+<li><a href="https://firebase.google.com/docs/reference/js/firebase.firestore.Timestamp">firebase.firestore.Timestamp</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">javascript Date object - MDN Documentation</a></li>
 </ul>
-  
 
 
-
-
-
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -1781,6 +1881,103 @@ serviceAccountKey.json</code></pre></div>
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
                 
                 
 
@@ -1830,19 +2027,6 @@ serviceAccountKey.json</code></pre></div>
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
             
         
                     
@@ -1850,90 +2034,6 @@ serviceAccountKey.json</code></pre></div>
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -2507,10 +2607,10 @@ serviceAccountKey.json</code></pre></div>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/tech/firebase/firestore-client/" title="Firestore Client"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/tech/react/react-with-firebase/" title="React &#43; Firebase"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/tech/regex/" title="Regex" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/tech/firebase/" title="Firebase" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2520,19 +2620,19 @@ serviceAccountKey.json</code></pre></div>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1586947600"></script>
-    <script src="/js/perfect-scrollbar.min.js?1586947600"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1586947600"></script>
-    <script src="/js/jquery.sticky.js?1586947600"></script>
-    <script src="/js/featherlight.min.js?1586947600"></script>
-    <script src="/js/highlight.pack.js?1586947600"></script>
+    <script src="/js/clipboard.min.js?1586947599"></script>
+    <script src="/js/perfect-scrollbar.min.js?1586947599"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1586947599"></script>
+    <script src="/js/jquery.sticky.js?1586947599"></script>
+    <script src="/js/featherlight.min.js?1586947599"></script>
+    <script src="/js/highlight.pack.js?1586947599"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1586947600"></script>
-    <script src="/js/learn.js?1586947600"></script>
-    <script src="/js/hugo-learn.js?1586947600"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1586947599"></script>
+    <script src="/js/learn.js?1586947599"></script>
+    <script src="/js/hugo-learn.js?1586947599"></script>
 
-    <link href="/mermaid/mermaid.css?1586947600" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1586947600"></script>
+    <link href="/mermaid/mermaid.css?1586947599" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1586947599"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
@@ -2550,3 +2650,4 @@ serviceAccountKey.json</code></pre></div>
 
   </body>
 </html>
+

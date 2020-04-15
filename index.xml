@@ -6,7 +6,7 @@
     <description>Recent content on Getsrevel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Mar 2020 21:22:31 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2020 08:32:39 +0200</lastBuildDate>
     
 	<atom:link href="https://getsrevel.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -65,6 +65,17 @@ Installation af Firebase For at kunne benytte funktionaliteter fra firebase i vo
     </item>
     
     <item>
+      <title>React Fake Weather</title>
+      <link>https://getsrevel.github.io/tech/react/react-fake-weather/</link>
+      <pubDate>Wed, 15 Apr 2020 08:32:39 +0200</pubDate>
+      
+      <guid>https://getsrevel.github.io/tech/react/react-fake-weather/</guid>
+      <description>Dette eksempel bygger videre på react eksemplet med firebase, og demonstrationen af hvordan man kan uploade data med node.js.
+Statisk data visning Først laves en fil med samme struktur som forventes at være i firestore databasen, når upload scriptet har kørt nogle gange. Data strukturen laves i filen src/lib/fake_weather.js, med dette indhold.
+import firebase from &amp;#34;../lib/Firebase&amp;#34;;const Timestamp = firebase.firestore.Timestamp;// helper for generating firestore timestampsconst t = timeString =&amp;gt; Timestamp.</description>
+    </item>
+    
+    <item>
       <title>Weather Station</title>
       <link>https://getsrevel.github.io/project/weather-station/</link>
       <pubDate>Tue, 17 Dec 2019 12:32:28 +0100</pubDate>
@@ -102,17 +113,6 @@ Installation af Firebase For at kunne benytte funktionaliteter fra firebase i vo
       
       <guid>https://getsrevel.github.io/tech/development-model/</guid>
       <description>graph LR; IDEA(&#34;Idé&#34;) -- PLANNING((&#34;Planlægning&#34;)) PLANNING -- IMPLEMENTATION((&#34;Udarbejdelse&#34;)) IMPLEMENTATION -- TEST((Evaluering / Test)) TEST -- PLANNING TEST -- RELEASE(Frigivelse af færdigt system) </description>
-    </item>
-    
-    <item>
-      <title>Code Editors and IDE&#39;s</title>
-      <link>https://getsrevel.github.io/tools/code-editor/</link>
-      <pubDate>Mon, 11 Nov 2019 21:42:17 +0100</pubDate>
-      
-      <guid>https://getsrevel.github.io/tools/code-editor/</guid>
-      <description>For at kunne arbejde med HTML, CSS, javascript og andre tekst filer har vi brug for en god editor.
-Visual Studio Code  Visual studio code (kan bruges både på Windows og Mac)  Jetbrains produkter Der er mulighed for at bruge en lang række udviklingsmiljøer fra JetBrains i gratis &amp;ldquo;studenter versioner&amp;rdquo;.
- https://www.jetbrains.com/student/  </description>
     </item>
     
     <item>
