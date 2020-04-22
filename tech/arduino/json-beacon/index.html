@@ -12,20 +12,20 @@
     <title>Json Beacon :: Getsrevel</title>
 
     
-    <link href="/css/nucleus.css?1586980849" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1586980849" rel="stylesheet">
-    <link href="/css/hybrid.css?1586980849" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1586980849" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1586980849" rel="stylesheet">
-    <link href="/css/auto-complete.css?1586980849" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1586980849" rel="stylesheet">
-    <link href="/css/theme.css?1586980849" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1586980849" rel="stylesheet">
+    <link href="/css/nucleus.css?1587552384" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1587552384" rel="stylesheet">
+    <link href="/css/hybrid.css?1587552384" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1587552384" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1587552384" rel="stylesheet">
+    <link href="/css/auto-complete.css?1587552384" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1587552384" rel="stylesheet">
+    <link href="/css/theme.css?1587552384" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1587552384" rel="stylesheet">
     
-      <link href="/css/theme-getsrevel.css?1586980849" rel="stylesheet">
+      <link href="/css/theme-getsrevel.css?1587552384" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1586980849"></script>
+    <script src="/js/jquery-3.3.1.min.js?1587552384"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -68,14 +68,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1586980849"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1586980849"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1587552384"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1587552384"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/getsrevel.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1586980849"></script>
+<script type="text/javascript" src="/js/search.js?1587552384"></script>
 
     
   </div>
@@ -1604,24 +1604,49 @@
   <span style="color:#e6db74">&#34;E2 00 00 1B 63 15 02 48 15 90 DB 2C&#34;</span>,
 };
 
+<span style="color:#66d9ef">int</span> pinOne <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+<span style="color:#66d9ef">int</span> pinTwo <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
   Serial.begin(<span style="color:#ae81ff">115200</span>);
+
+   pinMode(pinOne, INPUT_PULLUP);
+   pinMode(pinTwo, INPUT_PULLUP);
 }
 
 <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
   <span style="color:#66d9ef">int</span> waitTime <span style="color:#f92672">=</span> random(WAIT_MS_MIN, WAIT_MS_MAX);
   <span style="color:#66d9ef">int</span> tagIdIndex <span style="color:#f92672">=</span> random(<span style="color:#ae81ff">0</span>, TAG_COUNT);
 
+  <span style="color:#66d9ef">bool</span> isRandom <span style="color:#f92672">=</span> true;
+
+  <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>digitalRead(pinOne)){
+    tagIdIndex <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    isRandom <span style="color:#f92672">=</span> false;
+    waitTime <span style="color:#f92672">=</span> <span style="color:#ae81ff">300</span>;
+  }
+
+  <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>digitalRead(pinTwo)){
+    tagIdIndex <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+    isRandom <span style="color:#f92672">=</span> false;
+    waitTime <span style="color:#f92672">=</span> <span style="color:#ae81ff">150</span>;
+  }
+
   DynamicJsonDocument doc(<span style="color:#ae81ff">1024</span>);
+  <span style="color:#75715e">// Insert some debugging information
+</span><span style="color:#75715e"></span>  doc[<span style="color:#e6db74">&#34;isRandom&#34;</span>] <span style="color:#f92672">=</span> isRandom;
   doc[<span style="color:#e6db74">&#34;waitTime&#34;</span>] <span style="color:#f92672">=</span> waitTime;
   doc[<span style="color:#e6db74">&#34;tagIdIndex&#34;</span>] <span style="color:#f92672">=</span> tagIdIndex;
-  doc[<span style="color:#e6db74">&#34;tagId&#34;</span>] <span style="color:#f92672">=</span> tagIds[tagIdIndex];
+  <span style="color:#75715e">// Insert the selected tag ID
+</span><span style="color:#75715e"></span>  doc[<span style="color:#e6db74">&#34;tagId&#34;</span>] <span style="color:#f92672">=</span> tagIds[tagIdIndex];
+  
   serializeJson(doc, Serial);
 
   Serial.println();
   delay(waitTime);
 }</code></pre></div>
 <p>Der vælges en tilfældig værdi i <code>tagIds</code> arrayet, som så serialiseres som json sammen med oplysning om index og delay tiden, og udskrives på serielporten med tilfældige tidsintervaller.</p>
+<p>Det er også mulighed for at vælge 2 bestemte tags ved at trække input pin 2 eller 3 lav, ved fysisk at forbinde til GND.</p>
 <p><em>NB!</em> Serielporten er sat til at køre 115200 Baud.</p>
 <p>For nemt at kunne arbejde med JSON i Arduino koden benyttes biblioteket <a href="https://arduinojson.org/">Arduino JSON</a>.
 Derfor er det nødvendigt at installere dette på udviklingsmaskinen, inden denne sketch kan kompileres, det klares via. Arduino Library Manager, se <a href="https://arduinojson.org/v6/doc/installation/">hvordan du installerer det her</a>.</p>
@@ -1646,6 +1671,8 @@ Tidstempler, delay intervaller og rækkefølgen af tagId&rsquo;er vil være fors
 <li><a href="https://www.arduino.cc/reference/en/language/functions/communication/serial/begin/">Serial.begin()</a></li>
 <li><a href="https://www.arduino.cc/reference/en/language/functions/random-numbers/random/">random()</a></li>
 <li><a href="https://www.arduino.cc/reference/en/language/functions/time/delay/">delay()</a></li>
+<li><a href="https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/">pinMode()</a></li>
+<li><a href="https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/">digitalRead()</a></li>
 </ul>
 
 
@@ -2542,19 +2569,19 @@ Tidstempler, delay intervaller og rækkefølgen af tagId&rsquo;er vil være fors
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1586980849"></script>
-    <script src="/js/perfect-scrollbar.min.js?1586980849"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1586980849"></script>
-    <script src="/js/jquery.sticky.js?1586980849"></script>
-    <script src="/js/featherlight.min.js?1586980849"></script>
-    <script src="/js/highlight.pack.js?1586980849"></script>
+    <script src="/js/clipboard.min.js?1587552384"></script>
+    <script src="/js/perfect-scrollbar.min.js?1587552384"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1587552384"></script>
+    <script src="/js/jquery.sticky.js?1587552384"></script>
+    <script src="/js/featherlight.min.js?1587552384"></script>
+    <script src="/js/highlight.pack.js?1587552384"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1586980849"></script>
-    <script src="/js/learn.js?1586980849"></script>
-    <script src="/js/hugo-learn.js?1586980849"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1587552384"></script>
+    <script src="/js/learn.js?1587552384"></script>
+    <script src="/js/hugo-learn.js?1587552384"></script>
 
-    <link href="/mermaid/mermaid.css?1586980849" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1586980849"></script>
+    <link href="/mermaid/mermaid.css?1587552384" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1587552384"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

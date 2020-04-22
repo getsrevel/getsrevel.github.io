@@ -12,18 +12,42 @@ char* tagIds[TAG_COUNT] = {
   "E2 00 00 1B 63 15 02 48 15 90 DB 2C",
 };
 
+int pinOne = 2;
+int pinTwo = 3;
+
 void setup() {
   Serial.begin(115200);
+
+   pinMode(pinOne, INPUT_PULLUP);
+   pinMode(pinTwo, INPUT_PULLUP);
 }
 
 void loop() {
   int waitTime = random(WAIT_MS_MIN, WAIT_MS_MAX);
   int tagIdIndex = random(0, TAG_COUNT);
 
+  bool isRandom = true;
+
+  if(!digitalRead(pinOne)){
+    tagIdIndex = 0;
+    isRandom = false;
+    waitTime = 300;
+  }
+
+  if(!digitalRead(pinTwo)){
+    tagIdIndex = 1;
+    isRandom = false;
+    waitTime = 150;
+  }
+
   DynamicJsonDocument doc(1024);
+  // Insert some debugging information
+  doc["isRandom"] = isRandom;
   doc["waitTime"] = waitTime;
   doc["tagIdIndex"] = tagIdIndex;
+  // Insert the selected tag ID
   doc["tagId"] = tagIds[tagIdIndex];
+  
   serializeJson(doc, Serial);
 
   Serial.println();
