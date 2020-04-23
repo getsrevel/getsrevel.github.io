@@ -5,7 +5,7 @@ char outputBuffer[3];
 
 // Helper function for converting byte value to 2-digit hex string
 void byte2HexStr(byte val, char* outputBuffer){
-  const char HEX_DIGITS[15] = "0123456789ABCDEF";
+  const char HEX_DIGITS[16] = "0123456789ABCDEF";
 
   byte upper_nibble_index = (val & 0xf0) >> 4;
   byte lower_nibble_index = val & 0xf;
