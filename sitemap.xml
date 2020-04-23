@@ -183,12 +183,22 @@
   </url>
   
   <url>
+    <loc>https://getsrevel.github.io/tech/p5js/fullscreen-toggle/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://getsrevel.github.io/tech/p5js/multitouch/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
   <url>
     <loc>https://getsrevel.github.io/tech/p5js/canvas/demo/</loc>
+    <lastmod>2019-12-04T12:46:20+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/p5js/fullscreen-toggle/demo/</loc>
     <lastmod>2019-12-04T12:46:20+01:00</lastmod>
   </url>
   
