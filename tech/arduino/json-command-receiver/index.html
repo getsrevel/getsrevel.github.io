@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Json Beacon :: Getsrevel</title>
+    <title>Json Command Receiver :: Getsrevel</title>
 
     
     <link href="/css/nucleus.css?1588080883" rel="stylesheet">
@@ -48,7 +48,7 @@
 
 
   </head>
-  <body class="" data-url="/tech/arduino/json-beacon/">
+  <body class="" data-url="/tech/arduino/json-command-receiver/">
     <nav id="sidebar" class="">
 
 
@@ -225,8 +225,8 @@
   
     
     <li data-nav-id="/tech/arduino/json-command-receiver/" title="Json Command Receiver" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/tech/arduino/json-command-receiver/">
@@ -251,8 +251,8 @@
   
     
     <li data-nav-id="/tech/arduino/json-beacon/" title="Json Beacon" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/tech/arduino/json-beacon/">
@@ -1637,7 +1637,7 @@
             
           
           
-            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/arduino/'>Arduino</a> > Json Beacon
+            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/arduino/'>Arduino</a> > Json Command Receiver
           
          
           
@@ -1654,7 +1654,6 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#eksempel-på-output">Eksempel på output</a></li>
     <li><a href="#materiale">Materiale</a></li>
   </ul>
 </nav>
@@ -1673,7 +1672,7 @@
           
             <h1>
               
-              Json Beacon
+              Json Command Receiver
             </h1>
           
 
@@ -1682,90 +1681,138 @@
 
 
 
-	<p>Dette eksempel illustrerer hvordan man kan generere json output på seriel porten, og er tænkt som en en stub der kan bruges til at arbejde med seriel input på en en anden computer, f.eks. vha. node.js.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ArduinoJson.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> WAIT_MS_MIN <span style="color:#f92672">=</span> <span style="color:#ae81ff">500</span>;
-<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> WAIT_MS_MAX <span style="color:#f92672">=</span> <span style="color:#ae81ff">8000</span>;
-<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">char</span> TAG_COUNT <span style="color:#f92672">=</span> <span style="color:#ae81ff">5</span>;
-
-<span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> tagIds[TAG_COUNT] <span style="color:#f92672">=</span> {
-  <span style="color:#e6db74">&#34;4B 61 73 70 65 72 36 37 38 39 3A 3B&#34;</span>,
-  <span style="color:#e6db74">&#34;E2 00 00 1B 63 15 02 48 16 00 DB 24&#34;</span>,
-  <span style="color:#e6db74">&#34;E2 00 00 1B 63 15 02 48 17 00 DA F8&#34;</span>,
-  <span style="color:#e6db74">&#34;E2 00 00 1B 63 15 02 48 17 20 DA F4&#34;</span>,
-  <span style="color:#e6db74">&#34;E2 00 00 1B 63 15 02 48 15 90 DB 2C&#34;</span>,
-};
-
-<span style="color:#66d9ef">int</span> pinOne <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
-<span style="color:#66d9ef">int</span> pinTwo <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
-  Serial.begin(<span style="color:#ae81ff">115200</span>);
-
-   pinMode(pinOne, INPUT_PULLUP);
-   pinMode(pinTwo, INPUT_PULLUP);
-}
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
-  <span style="color:#66d9ef">int</span> waitTime <span style="color:#f92672">=</span> random(WAIT_MS_MIN, WAIT_MS_MAX);
-  <span style="color:#66d9ef">int</span> tagIdIndex <span style="color:#f92672">=</span> random(<span style="color:#ae81ff">0</span>, TAG_COUNT);
-
-  <span style="color:#66d9ef">bool</span> isRandom <span style="color:#f92672">=</span> true;
-
-  <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>digitalRead(pinOne)){
-    tagIdIndex <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-    isRandom <span style="color:#f92672">=</span> false;
-    waitTime <span style="color:#f92672">=</span> <span style="color:#ae81ff">300</span>;
-  }
-
-  <span style="color:#66d9ef">if</span>(<span style="color:#f92672">!</span>digitalRead(pinTwo)){
-    tagIdIndex <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-    isRandom <span style="color:#f92672">=</span> false;
-    waitTime <span style="color:#f92672">=</span> <span style="color:#ae81ff">150</span>;
-  }
-
-  DynamicJsonDocument doc(<span style="color:#ae81ff">1024</span>);
-  <span style="color:#75715e">// Insert some debugging information
-</span><span style="color:#75715e"></span>  doc[<span style="color:#e6db74">&#34;isRandom&#34;</span>] <span style="color:#f92672">=</span> isRandom;
-  doc[<span style="color:#e6db74">&#34;waitTime&#34;</span>] <span style="color:#f92672">=</span> waitTime;
-  doc[<span style="color:#e6db74">&#34;tagIdIndex&#34;</span>] <span style="color:#f92672">=</span> tagIdIndex;
-  <span style="color:#75715e">// Insert the selected tag ID
-</span><span style="color:#75715e"></span>  doc[<span style="color:#e6db74">&#34;tagId&#34;</span>] <span style="color:#f92672">=</span> tagIds[tagIdIndex];
-  
-  serializeJson(doc, Serial);
-
-  Serial.println();
-  delay(waitTime);
-}</code></pre></div>
-<p>Der vælges en tilfældig værdi i <code>tagIds</code> arrayet, som så serialiseres som json sammen med oplysning om index og delay tiden, og udskrives på serielporten med tilfældige tidsintervaller.</p>
-<p>Det er også mulighed for at vælge 2 bestemte tags ved at trække input pin 2 eller 3 lav, ved fysisk at forbinde til GND.</p>
-<p><em>NB!</em> Serielporten er sat til at køre 115200 Baud.</p>
+	<p>Dette eksempel viser hvordan man kan bruge <a href="https://en.wikipedia.org/wiki/JSON">JSON</a> data formatet til at udveksle information med en arduino og sende kommandoer via seriel porten.</p>
+<p>Ved at sende en passende kommando kan man ændre på hastighed og duty cycle for en blinkende LED.</p>
 <p>For nemt at kunne arbejde med JSON i Arduino koden benyttes biblioteket <a href="https://arduinojson.org/">Arduino JSON</a>.
 Derfor er det nødvendigt at installere dette på udviklingsmaskinen, inden denne sketch kan kompileres, det klares via. Arduino Library Manager, se <a href="https://arduinojson.org/v6/doc/installation/">hvordan du installerer det her</a>.</p>
-<h2 id="eksempel-på-output">Eksempel på output</h2>
-<p>Output på serielporten kommer til at se ca. sådan ud.
-Bemærk at det er kopieret fra Serial Monitor i Arduino IDE, og timestamps er slået til, derfor er der et tidsstempel på alle linier i output.
-Tidstempler, delay intervaller og rækkefølgen af tagId&rsquo;er vil være forskellig for hver kørsel, da de bliver genereret tilfældigt.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">21:00:56.034 -&gt; {&#34;waitTime&#34;:2492,&#34;tagIdIndex&#34;:2,&#34;tagId&#34;B 63 15 02 48 17 00 DA F8&#34;}
-21:00:56.034 -&gt; {&#34;waitTime&#34;:2307,&#34;tagIdIndex&#34;:4,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 15 90 DB 2C&#34;}
-21:00:58.350 -&gt; {&#34;waitTime&#34;:3073,&#34;tagIdIndex&#34;:3,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 17 20 DA F4&#34;}
-21:01:01.410 -&gt; {&#34;waitTime&#34;:6930,&#34;tagIdIndex&#34;:2,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 17 00 DA F8&#34;}
-21:01:08.346 -&gt; {&#34;waitTime&#34;:3044,&#34;tagIdIndex&#34;:3,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 17 20 DA F4&#34;}
-21:01:11.414 -&gt; {&#34;waitTime&#34;:5923,&#34;tagIdIndex&#34;:4,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 15 90 DB 2C&#34;}
-21:01:17.328 -&gt; {&#34;waitTime&#34;:4940,&#34;tagIdIndex&#34;:0,&#34;tagId&#34;:&#34;4B 61 73 70 65 72 36 37 38 39 3A 3B&#34;}
-21:01:22.256 -&gt; {&#34;waitTime&#34;:2492,&#34;tagIdIndex&#34;:2,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 17 00 DA F8&#34;}
-21:01:24.769 -&gt; {&#34;waitTime&#34;:5987,&#34;tagIdIndex&#34;:3,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 17 20 DA F4&#34;}</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ArduinoJson.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// Allocate the JSON document
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e">// Inside the brackets, 200 is the capacity of the memory pool in bytes.
+</span><span style="color:#75715e">// Don&#39;t forget to change this value to match your JSON document.
+</span><span style="color:#75715e">// Use arduinojson.org/v6/assistant to compute the capacity.
+</span><span style="color:#75715e">//  StaticJsonDocument&lt;200&gt; doc;
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// StaticJsonDocument&lt;N&gt; allocates memory on the stack, it can be
+</span><span style="color:#75715e">// replaced by DynamicJsonDocument which allocates in the heap.
+</span><span style="color:#75715e">//
+</span><span style="color:#75715e"></span>DynamicJsonDocument <span style="color:#a6e22e">doc</span>(<span style="color:#ae81ff">200</span>);
+
+<span style="color:#66d9ef">int</span> periodMs <span style="color:#f92672">=</span> <span style="color:#ae81ff">2000</span>;
+<span style="color:#66d9ef">int</span> dutyPct <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>;
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>()
+{
+  <span style="color:#75715e">// initialize digital pin LED_BUILTIN as an output.
+</span><span style="color:#75715e"></span>  pinMode(LED_BUILTIN, OUTPUT);
+
+  Serial.begin(<span style="color:#ae81ff">115200</span>);
+  <span style="color:#75715e">// wait for serial port to connect. Needed for native USB
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">while</span> (<span style="color:#f92672">!</span>Serial)
+  {
+    <span style="color:#66d9ef">continue</span>;
+  }
+  Serial.println(<span style="color:#e6db74">&#34;Ready for commands&#34;</span>);
+}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>()
+{
+  myLedControl();
+  parseCommands();
+}
+
+
+<span style="color:#75715e">// Example of test input json
+</span><span style="color:#75715e"></span><span style="color:#75715e">/* 
+</span><span style="color:#75715e">{&#34;ts&#34;: 1000, &#34;duty&#34;: 10 }
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">parseCommands</span>()
+{
+  <span style="color:#75715e">// reply only when you receive data:
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (Serial.available() <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>)
+  {
+
+    <span style="color:#75715e">// Deserialize the JSON document
+</span><span style="color:#75715e"></span>    DeserializationError error <span style="color:#f92672">=</span> deserializeJson(doc, Serial);
+
+    Serial.println(<span style="color:#e6db74">&#34;Received:&#34;</span>);
+    serializeJson(doc, Serial);
+    Serial.println();
+
+    <span style="color:#75715e">// Test if parsing succeeds.
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (error)
+    {
+      Serial.print(F(<span style="color:#e6db74">&#34;deserializeJson() failed: &#34;</span>));
+      Serial.println(error.c_str());
+      <span style="color:#66d9ef">return</span>;
+    }
+
+    <span style="color:#66d9ef">if</span> (doc[<span style="color:#e6db74">&#34;ts&#34;</span>])
+    {
+      <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> ts <span style="color:#f92672">=</span> doc[<span style="color:#e6db74">&#34;ts&#34;</span>];
+      Serial.print(<span style="color:#e6db74">&#34;got ts: &#34;</span>);
+      Serial.println(ts);
+      periodMs <span style="color:#f92672">=</span> ts;
+    }
+
+    <span style="color:#66d9ef">if</span> (doc[<span style="color:#e6db74">&#34;duty&#34;</span>])
+    {
+      <span style="color:#66d9ef">int</span> duty <span style="color:#f92672">=</span> doc[<span style="color:#e6db74">&#34;duty&#34;</span>];
+      Serial.print(<span style="color:#e6db74">&#34;got duty: &#34;</span>);
+      Serial.println(duty);
+      duty <span style="color:#f92672">=</span> constrain(duty, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">100</span>);
+      Serial.print(<span style="color:#e6db74">&#34;constrained duty to [0, 100], using: &#34;</span>);
+      Serial.println(duty);
+      dutyPct <span style="color:#f92672">=</span> duty;
+    }
+
+  }
+}
+
+<span style="color:#75715e">// toggle the builtin LED state
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">myLedControl</span>()
+{
+  <span style="color:#75715e">//map(value, fromLow, fromHigh, toLow, toHigh)
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> highDelayMs <span style="color:#f92672">=</span> map(dutyPct, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">0</span>, periodMs);
+  <span style="color:#66d9ef">int</span> lowDelayMs <span style="color:#f92672">=</span> periodMs <span style="color:#f92672">-</span> highDelayMs;
+  
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(highDelayMs);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(lowDelayMs);
+}</code></pre></div>
+<p><em>NB!</em> Serielporten er sat til at køre 115200 Baud.</p>
+<p>Prøv at sende nogle kommandoer vha. serial monitor, og læg mærke til hvordan blinkrate og duty cycle ændres for den inbyggede LED på Arduino.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">{&#34;ts&#34;: 1000, &#34;duty&#34;: 10 }</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">{&#34;ts&#34;: 500, &#34;duty&#34;: 80 }</code></pre></div>
+<p>Når eksemplet køres på en Arduino og de to ovenstående kommandoer sendes en ad gangen, kommer der dette output fra Arduino på seriel porten.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Ready for commands
+Received:
+{&#34;ts&#34;:1000,&#34;duty&#34;:10}
+got ts: 1000
+got duty: 10
+constrained duty to [0, 100], using: 10
+Received:
+{&#34;ts&#34;:500,&#34;duty&#34;:80}
+got ts: 500
+got duty: 80
+constrained duty to [0, 100], using: 80</code></pre></div>
 <h2 id="materiale">Materiale</h2>
 <ul>
 <li><a href="https://www.arduino.cc/">Arduino</a>.</li>
 <li><a href="https://arduinojson.org/">Arduino JSON</a></li>
 <li><a href="https://arduinojson.org/v6/doc/installation/">Arduino JSON installation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/JSON">JSON</a></li>
 <li><a href="https://www.arduino.cc/reference/en/language/functions/communication/serial/begin/">Serial.begin()</a></li>
-<li><a href="https://www.arduino.cc/reference/en/language/functions/random-numbers/random/">random()</a></li>
+<li><a href="https://www.arduino.cc/reference/en/language/functions/communication/serial/print/">Serial.print()</a></li>
+<li><a href="https://www.arduino.cc/reference/en/language/functions/communication/serial/println/">Serial.println()</a></li>
+<li><a href="https://www.arduino.cc/reference/en/language/functions/communication/serial/available/">Serial.available()</a></li>
+<li><a href="https://www.arduino.cc/reference/en/language/functions/math/constrain/">constrain()</a></li>
+<li><a href="https://www.arduino.cc/reference/en/language/functions/math/map/">map()</a></li>
 <li><a href="https://www.arduino.cc/reference/en/language/functions/time/delay/">delay()</a></li>
 <li><a href="https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/">pinMode()</a></li>
-<li><a href="https://www.arduino.cc/reference/en/language/functions/digital-io/digitalread/">digitalRead()</a></li>
+<li><a href="https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/">digitalWrite()</a></li>
 </ul>
 
 
@@ -1893,22 +1940,6 @@ Tidstempler, delay intervaller og rækkefølgen af tagId&rsquo;er vil være fors
             
                 
                     
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -1921,9 +1952,6 @@ Tidstempler, delay intervaller og rækkefølgen af tagId&rsquo;er vil være fors
             
         
                     
-            
-        
-                    
                         
             
             
@@ -1931,6 +1959,25 @@ Tidstempler, delay intervaller og rækkefølgen af tagId&rsquo;er vil være fors
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2707,10 +2754,10 @@ Tidstempler, delay intervaller og rækkefølgen af tagId&rsquo;er vil være fors
 	 
 	 
 		
-			<a class="nav nav-prev" href="/tech/arduino/json-command-receiver/" title="Json Command Receiver"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/tech/arduino/hex-string/" title="Hex String"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/tech/c-sharp/" title="C#" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/tech/arduino/json-beacon/" title="Json Beacon" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
