@@ -133,7 +133,7 @@ Han skal som minimum bestå af:
       <pubDate>Mon, 11 Nov 2019 21:34:01 +0100</pubDate>
       
       <guid>https://getsrevel.github.io/tools/git/</guid>
-      <description>Git introduktion  Git and GitHub for Poets Codingtrain tutorial. Git installation. Vælg den der passer til dit operativ system. På mac er git sikkert allerede installeret. Bruger du linux, ved du formentlig selv hvordan du installerer pakker, der passer til din distribution. Git book  About Version Control What is Git? Git in Visual Studio Code   How to use git in Visual Studio code  Basal Arbejdsgang graph TD; EDIT(&#34;</description>
+      <description>Git introduktion  Git and GitHub for Poets Codingtrain tutorial. Git installation. Vælg den der passer til dit operativ system. På mac er git sikkert allerede installeret. Bruger du linux, ved du formentlig selv hvordan du installerer pakker, der passer til din distribution. Git book  About Version Control What is Git? Ignoring Files chapter Git in Visual Studio Code   How to use git in Visual Studio code  Basal Arbejdsgang graph TD; EDIT(&#34;</description>
     </item>
     
     <item>
