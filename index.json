@@ -70,6 +70,13 @@
 	"content": "Getsrevel Velkommen til mit website der primært er løse noter om programmering og andet \u0026ldquo;work in progress\u0026rdquo;.\n"
 },
 {
+	"uri": "https://getsrevel.github.io/tech/node/readline-stdin/",
+	"title": "Readline on Stdin",
+	"tags": [],
+	"description": "",
+	"content": "Dette eksempel viser en måde at tage imod input fra kommandolinien.\nOpret filen readline-demo.js med følgende indhold.\nconst readline = require(\u0026#39;readline\u0026#39;);\rconst rl = readline.createInterface({ input: process.stdin, output: process.stdout });\rconst getLine = (function () {\rconst getLineGen = (async function* () {\rfor await (const line of rl) {\ryield line;\r}\r})();\rreturn async () =\u0026gt; ((await getLineGen.next()).value);\r})();\rconst main = async () =\u0026gt; {\rconsole.log(\u0026#39;Type value for a\u0026#39;);\rlet a = Number(await getLine());\rconsole.log(`Got a: ${a}`);\rconsole.log(\u0026#39;Type value for b\u0026#39;);\rlet b = Number(await getLine());\rconsole.log(`Got b: ${b}`);\rconsole.log(\u0026#39;Result of a+b\u0026#39;);\rconsole.log(a + b);\rprocess.exit(0);\r};\rmain();  Nu kan du køre eksemplet med denne kommando:\nnode readline-demo.js Når eksemplet kører bliver der bedt om først en værdi for variablen a, dernæst for variablen b.\nHvis eksemplet køres og værdierne 42 og 31 indtastes, giver programmet dette output.\nreadline-stdin$ node .\\readline-demo.js Type value for a 42 Got a: 42 Type value for b 31 Got b: 31 Result of a+b 73 readline-stdin$ Input via pipe Hvis du er på windows og bruger powershell kan du også give input til stdin direkte på kommandolinien.\necho \u0026#34;42`n31\u0026#34; | node readline-demo.js Bemærk powershell har en række escape sekvenser der bruges til at insætte special tegn, `n bruges at indsætte et linieskift i en streng.\nBruger du mac eller linux kan du opnå samme resultat med denne kommando.\nprintf \u0026#34;42\\n31\\n\u0026#34; | node readline-demo.js Materiale  Readline node.js documentation. Async/await function* generator function in javascript. Echo newline to powershell console  "
+},
+{
 	"uri": "https://getsrevel.github.io/tech/arduino/hex-string/",
 	"title": "Hex String",
 	"tags": [],
