@@ -12,20 +12,20 @@
     <title>Git Intro :: Getsrevel</title>
 
     
-    <link href="/css/nucleus.css?1599124885" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1599124885" rel="stylesheet">
-    <link href="/css/hybrid.css?1599124885" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1599124885" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1599124885" rel="stylesheet">
-    <link href="/css/auto-complete.css?1599124885" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1599124885" rel="stylesheet">
-    <link href="/css/theme.css?1599124885" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1599124885" rel="stylesheet">
+    <link href="/css/nucleus.css?1599126855" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1599126855" rel="stylesheet">
+    <link href="/css/hybrid.css?1599126855" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1599126855" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1599126855" rel="stylesheet">
+    <link href="/css/auto-complete.css?1599126855" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1599126855" rel="stylesheet">
+    <link href="/css/theme.css?1599126855" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1599126855" rel="stylesheet">
     
-      <link href="/css/theme-getsrevel.css?1599124885" rel="stylesheet">
+      <link href="/css/theme-getsrevel.css?1599126855" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1599124885"></script>
+    <script src="/js/jquery-3.3.1.min.js?1599126855"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -68,14 +68,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1599124885"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1599124885"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1599126855"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1599126855"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/getsrevel.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1599124885"></script>
+<script type="text/javascript" src="/js/search.js?1599126855"></script>
 
     
   </div>
@@ -1682,7 +1682,6 @@
     <li><a href="#git-introduktion">Git introduktion</a></li>
     <li><a href="#basal-arbejdsgang">Basal Arbejdsgang</a></li>
     <li><a href="#samarbejde-via-github">Samarbejde via github</a></li>
-    <li><a href="#konfliktløsning">Konfliktløsning</a></li>
   </ul>
 </nav>
     </div>
@@ -1751,105 +1750,10 @@ PUSH --> EDIT
 <li>Samarbejdspartnere skal acceptere invitationen (typisk via et link i en email)</li>
 <li>Efter accept af samabejdsinvitation kan de inviterede brugere skubbe kode ind i projektet.</li>
 </ul>
-<p>Her er en visualisering af opsætningen med to samarbejdende udviklere.</p>
-
-<div class="mermaid" align="center">
-graph TB
-remote_repo(remote repo)
-your_repo(you local repo)
-friend_repo(friend local repo)
-your_wd
-friend_wd
-
-    your_repo --> |push| remote_repo
-    remote_repo --> |pull| your_repo
-
-    friend_repo --> |push| remote_repo
-    remote_repo --> |pull| friend_repo
-
-    subgraph you
-        your_wd -->|commit| your_repo
-    end
-
-    subgraph friend
-        friend_wd --> |commit| friend_repo
-    end
-
-    subgraph github
-        remote_repo
-    end
-</div>
-
-<h2 id="konfliktløsning">Konfliktløsning</h2>
-<p>Når man er flere der samarbejder om samme kode kompleks opstår der uungåeligt det at man på et tidspunkt kommer til at ændre i en fil , der allerede er blevet ændret af en anden person.
-Derfor er det nødvendigt at vide hvordan man løser disse konflikter i git, så man kan komme videre med arbejdet.</p>
-<p>Konfliktløsningsscenariet kan illustreres med et eksempel i et sekvensdiagram.</p>
-
-<div class="mermaid" align="center">
-sequenceDiagram
-%%Bob: asdfas fasfd
-Note over Alice,Bob: Succesful interaction
-
-    Bob ->> Bob : commit
-
-    Bob ->>+ github	: push
-    github -->>- Bob	: success
-    Bob ->>+ Alice : "Please pull the latest code"
-    Alice ->>+ github : pull
-    github -->>- Alice	: latest code
-    Alice -->>- Bob : "OK, done"
-
-    Alice ->> Alice : commit
-
-    Alice ->>+ github	: push
-    github -->>- Alice	: success
-    Alice ->>+ Bob : "I pushed some changes"
-    Bob ->>+ github : pull
-    github -->>- Bob	: latest code
-    Bob -->>- Alice : "OK, done"
-
-    Note over Alice,Bob: Handling merge conflicts
-
-    Bob ->> Bob : commit
-    Alice ->> Alice : commit
-    Alice ->>+ github	: push
-    github -->>- Alice	: success
-
-    Alice ->>+ Bob : "I pushed some changes"
-
-        Bob ->>+ github	: push
-        github -->>- Bob	: error, not on latest commit
-
-        activate Bob
-        Bob ->>+ github : pull
-        github -->>- Bob	: latest code
-
-
-        Bob ->> Alice : "Oh no, lots of conflicts!"
-
-        Bob ->> Bob : resolve conflicts locally
-        Bob ->>+ github	: push
-        github -->>- Bob	: success
-
-        Bob ->>+ Alice : "Managed to resolve the conflicts, please review"
-
-
-        deactivate Bob
-
-        Alice -->>- Bob : "OK, sorry!"
-
-    Alice ->>+ github : pull
-    github -->>- Alice	: latest code
-
-    Alice -->>+ Bob : "pulled the code, no issues!"
-    Bob ->>- Alice : "OK, great"
-
-%% Bob -->>- Alice : "I hope it merges cleanly"
-
-</div>
+<p>  
 
   
-
+</p>
   
 
 
@@ -2817,33 +2721,25 @@ Note over Alice,Bob: Succesful interaction
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1599124885"></script>
-    <script src="/js/perfect-scrollbar.min.js?1599124885"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1599124885"></script>
-    <script src="/js/jquery.sticky.js?1599124885"></script>
-    <script src="/js/featherlight.min.js?1599124885"></script>
-    <script src="/js/highlight.pack.js?1599124885"></script>
+    <script src="/js/clipboard.min.js?1599126856"></script>
+    <script src="/js/perfect-scrollbar.min.js?1599126856"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1599126856"></script>
+    <script src="/js/jquery.sticky.js?1599126856"></script>
+    <script src="/js/featherlight.min.js?1599126856"></script>
+    <script src="/js/highlight.pack.js?1599126856"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1599124885"></script>
-    <script src="/js/learn.js?1599124885"></script>
-    <script src="/js/hugo-learn.js?1599124885"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1599126856"></script>
+    <script src="/js/learn.js?1599126856"></script>
+    <script src="/js/hugo-learn.js?1599126856"></script>
 
-    <link href="/mermaid/mermaid.css?1599124885" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1599124885"></script>
+    <link href="/mermaid/mermaid.css?1599126856" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1599126856"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
     
 
-<script>
-  mermaid.initialize({
-    startOnLoad: true,
-    sequenceDiagram: {
-      mirrorActors: false,
-      bottomMarginAdj: 200
-    }
-  });
-</script>
+
 
   </body>
 </html>
