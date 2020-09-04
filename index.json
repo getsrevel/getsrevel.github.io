@@ -63,6 +63,13 @@
 	"content": "Dette eksempel viser hvordan man opretter et lærred og tegner figurer på skærmen. Der benyttes variabler og musemarkørens position til at styre hvor på skærmen der tegnes.\nfunction setup() { createCanvas(600, 800); } function draw() { background(220); fill(255); // variable declaration  let x; // variable assignment  x = mouseX; // declaration and assignment in one line  let y = mouseY; circle(x, y, 150); // assign a new value to x  x = 200; ellipse(x, y, 80, 40); fill(255, 0, 0); circle(width, height, 120); let cx = width / 2; let cy = height / 2; circle(cx, cy, 50); }  Demo Prøv det kørende eksempel\nMateriale  setup() createCanvas() draw() background() fill() mouseX mouseY circle() ellipse()  "
 },
 {
+	"uri": "https://getsrevel.github.io/project/code-lock/",
+	"title": "Code Lock",
+	"tags": [],
+	"description": "",
+	"content": "Dette projekt går ud på at lave en kodelås til en automatisk bom ved at programmere Lego Mindstorms.\nHardware setup Start med at bygge en konstruktion af din automatiske bom med kodelæser. Du skal også bruge et antal farver, der kan scannes når du tester programmet.\n  Forbindelser til EV3 brikken    Modul Port     Stor motor C   color sensor 2   trykknap 4    Opgave Lav en kodelås der styrer en automatisk bom.\n Man skal kunne låse den op ved hjælp af indlæsning af farver i en bestemt sekvens. Indlæsningen af hver farve bekræftes med et tryk på den tilsluttede knap. Man skal kunne ændre på farverne og længden af sekvensen uden at lave en større modifikation af programmet (Hint: Benyt f.eks et array).  Forslag til kodestruktur Denne struktur kan bruges som skabelon til at løse opgaven.\nlet code: number[] = [] let isCorrect = false function openGate() { // TODO Scan code and determine if it matches correct } sensors.color2.setMode(ColorSensorMode.Color) motors.largeC.setBrake(true) code = [ColorSensorColor.Red, ColorSensorColor.Green, ColorSensorColor.Blue, ColorSensorColor.Brown] forever(function () { // Indicate program is running  brick.showImage(images.eyesBlackEye) isCorrect = true // TODO Scan code and determine if it matches correct sequence  if (isCorrect) { openGate() } else { // TODO indicate wrong code  } })  "
+},
+{
 	"uri": "https://getsrevel.github.io/",
 	"title": "Getsrevel",
 	"tags": [],

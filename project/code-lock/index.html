@@ -9,23 +9,23 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Git Intro :: Getsrevel</title>
+    <title>Code Lock :: Getsrevel</title>
 
     
-    <link href="/css/nucleus.css?1599209193" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1599209193" rel="stylesheet">
-    <link href="/css/hybrid.css?1599209193" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1599209193" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1599209193" rel="stylesheet">
-    <link href="/css/auto-complete.css?1599209193" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1599209193" rel="stylesheet">
-    <link href="/css/theme.css?1599209193" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1599209193" rel="stylesheet">
+    <link href="/css/nucleus.css?1599209192" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1599209192" rel="stylesheet">
+    <link href="/css/hybrid.css?1599209192" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1599209192" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1599209192" rel="stylesheet">
+    <link href="/css/auto-complete.css?1599209192" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1599209192" rel="stylesheet">
+    <link href="/css/theme.css?1599209192" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1599209192" rel="stylesheet">
     
-      <link href="/css/theme-getsrevel.css?1599209193" rel="stylesheet">
+      <link href="/css/theme-getsrevel.css?1599209192" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1599209193"></script>
+    <script src="/js/jquery-3.3.1.min.js?1599209192"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -48,7 +48,7 @@
 
 
   </head>
-  <body class="" data-url="/tools/git/">
+  <body class="" data-url="/project/code-lock/">
     <nav id="sidebar" class="">
 
 
@@ -68,14 +68,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1599209193"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1599209193"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1599209192"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1599209192"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/getsrevel.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1599209193"></script>
+<script type="text/javascript" src="/js/search.js?1599209192"></script>
 
     
   </div>
@@ -1391,7 +1391,7 @@
   
     
     <li data-nav-id="/project/" title="Project" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1441,8 +1441,8 @@
   
     
     <li data-nav-id="/project/code-lock/" title="Code Lock" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/project/code-lock/">
@@ -1563,7 +1563,7 @@
   
     
     <li data-nav-id="/tools/" title="Tools" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1618,8 +1618,8 @@
   
     
     <li data-nav-id="/tools/git/" title="Git Intro" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/tools/git/">
@@ -1690,7 +1690,7 @@
             
           
           
-            <a href='/'>Getsrevel</a> > <a href='/tools/'>Tools</a> > Git Intro
+            <a href='/'>Getsrevel</a> > <a href='/project/'>Project</a> > Code Lock
           
          
           
@@ -1705,9 +1705,16 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#git-introduktion">Git introduktion</a></li>
-    <li><a href="#basal-arbejdsgang">Basal Arbejdsgang</a></li>
-    <li><a href="#samarbejde-via-github">Samarbejde via github</a></li>
+    <li><a href="#hardware-setup">Hardware setup</a>
+      <ul>
+        <li><a href="#forbindelser-til-ev3-brikken">Forbindelser til EV3 brikken</a></li>
+      </ul>
+    </li>
+    <li><a href="#opgave">Opgave</a>
+      <ul>
+        <li><a href="#forslag-til-kodestruktur">Forslag til kodestruktur</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </div>
@@ -1725,7 +1732,7 @@
           
             <h1>
               
-              Git Intro
+              Code Lock
             </h1>
           
 
@@ -1734,52 +1741,71 @@
 
 
 
-	<h2 id="git-introduktion">Git introduktion</h2>
-<ul>
-<li><a href="https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV">Git and GitHub for Poets</a> Codingtrain tutorial.</li>
-<li><a href="https://git-scm.com">Git installation</a>. Vælg den der passer til dit operativ system. På mac er git sikkert allerede installeret. Bruger du linux, ved du formentlig selv hvordan du installerer pakker, der passer til din distribution.</li>
-<li><a href="https://git-scm.com/book">Git book</a>
-<ul>
-<li><a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control">About Version Control</a></li>
-<li><a href="https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F">What is Git?</a></li>
-<li><a href="https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#_ignoring">Ignoring Files chapter</a></li>
-<li><a href="https://git-scm.com/book/en/v2/Appendix-A%3A-Git-in-Other-Environments-Git-in-Visual-Studio-Code">Git in Visual Studio Code</a></li>
-</ul>
-</li>
-<li><a href="https://code.visualstudio.com/docs/editor/versioncontrol">How to use git in Visual Studio code</a></li>
-<li><a href="https://guides.github.com/activities/hello-world/">GitHub guides - Hello World</a></li>
-</ul>
-<h2 id="basal-arbejdsgang">Basal Arbejdsgang</h2>
-
-<div class="mermaid" align="left">
-graph TD;
-EDIT("opret/rediger/slet fil(er)") --> STAGE("udvælg ændringer")
-STAGE --> COMMIT("Commit i lokalt depot")
-COMMIT --> DO_PUSH{Klar til offentliggørelse?}
-DO_PUSH -->|Nej| EDIT
-DO_PUSH -->|Ja| PUSH("Skub ændriger til 'remote'")
-PUSH --> EDIT
-</div>
-
-<p>Den følgende illustration viser hvordan forskellige kommandoer påvirker komponenterne i git systemet.</p>
+	<p>Dette projekt går ud på at lave en kodelås til en automatisk bom ved at <a href="../../tech/mindstorms/">programmere Lego Mindstorms</a>.</p>
+<h2 id="hardware-setup">Hardware setup</h2>
+<p>Start med at bygge en konstruktion af din automatiske bom med kodelæser.
+Du skal også bruge et antal farver, der kan scannes når du tester programmet.</p>
 <figure>
-    <img src="git-components.png"/> 
+    <img src="code-lock-hw.jpg"/> 
 </figure>
 
-<h2 id="samarbejde-via-github">Samarbejde via github</h2>
-<p>For at kunne samarbejde om den samme kodebase er det nødvendigt med en smule setup for at komme igang.</p>
-<p>Hvis vi tager udgangspunkt i et nyt projekt kræves denne opsætning.</p>
+<h3 id="forbindelser-til-ev3-brikken">Forbindelser til EV3 brikken</h3>
+<table>
+<thead>
+<tr>
+<th>Modul</th>
+<th>Port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stor motor</td>
+<td>C</td>
+</tr>
+<tr>
+<td>color sensor</td>
+<td>2</td>
+</tr>
+<tr>
+<td>trykknap</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<h2 id="opgave">Opgave</h2>
+<p>Lav en kodelås der styrer en automatisk bom.</p>
 <ul>
-<li>opret et repository i github</li>
-<li>lave en klon på den/de computere der skal deltage.</li>
-<li>Ejeren af &ldquo;repository&rdquo; skal tilføje de andre bruger som samarbejdspartnere (Collaborators)</li>
-<li>Samarbejdspartnere skal acceptere invitationen (typisk via et link i en email)</li>
-<li>Efter accept af samabejdsinvitation kan de inviterede brugere skubbe kode ind i projektet.</li>
+<li>Man skal kunne låse den op ved hjælp af indlæsning af farver i en bestemt sekvens.</li>
+<li>Indlæsningen af hver farve bekræftes med et tryk på den tilsluttede knap.</li>
+<li>Man skal kunne ændre på farverne og længden af sekvensen uden at lave en større modifikation af programmet (Hint: Benyt f.eks et array).</li>
 </ul>
-<p>  
+<h3 id="forslag-til-kodestruktur">Forslag til kodestruktur</h3>
+<p>Denne struktur kan bruges som <em>skabelon</em> til at løse opgaven.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">code</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">number</span>[] <span style="color:#f92672">=</span> []
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">isCorrect</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>
 
-  
-</p>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">openGate</span>() {
+    <span style="color:#75715e">// TODO Scan code and determine if it matches correct
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#a6e22e">sensors</span>.<span style="color:#a6e22e">color2</span>.<span style="color:#a6e22e">setMode</span>(<span style="color:#a6e22e">ColorSensorMode</span>.<span style="color:#a6e22e">Color</span>)
+<span style="color:#a6e22e">motors</span>.<span style="color:#a6e22e">largeC</span>.<span style="color:#a6e22e">setBrake</span>(<span style="color:#66d9ef">true</span>)
+
+<span style="color:#a6e22e">code</span> <span style="color:#f92672">=</span> [<span style="color:#a6e22e">ColorSensorColor</span>.<span style="color:#a6e22e">Red</span>, <span style="color:#a6e22e">ColorSensorColor</span>.<span style="color:#a6e22e">Green</span>, <span style="color:#a6e22e">ColorSensorColor</span>.<span style="color:#a6e22e">Blue</span>, <span style="color:#a6e22e">ColorSensorColor</span>.<span style="color:#a6e22e">Brown</span>]
+<span style="color:#a6e22e">forever</span>(<span style="color:#66d9ef">function</span> () {
+    <span style="color:#75715e">// Indicate program is running
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">brick</span>.<span style="color:#a6e22e">showImage</span>(<span style="color:#a6e22e">images</span>.<span style="color:#a6e22e">eyesBlackEye</span>)
+    <span style="color:#a6e22e">isCorrect</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>
+
+    <span style="color:#75715e">// TODO Scan code and determine if it matches correct sequence
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isCorrect</span>) {
+        <span style="color:#a6e22e">openGate</span>()
+    } <span style="color:#66d9ef">else</span> {
+        <span style="color:#75715e">// TODO indicate wrong code
+</span><span style="color:#75715e"></span>    }
+})
+</code></pre></div>
   
 
 
@@ -2577,6 +2603,7 @@ PUSH --> EDIT
             
                 
                     
+                    
                 
                 
 
@@ -2591,6 +2618,45 @@ PUSH --> EDIT
             
             
                 
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -2651,6 +2717,24 @@ PUSH --> EDIT
             
         
                     
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
                         
             
             
@@ -2671,61 +2755,6 @@ PUSH --> EDIT
             
             
                 
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                     
                 
                 
@@ -2750,10 +2779,10 @@ PUSH --> EDIT
 	 
 	 
 		
-			<a class="nav nav-prev" href="/tools/code-editor/" title="Code Editors and IDE&#39;s"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/project/html-basics/" title="HTML Basics"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/tools/code-editor/" title="Code Editors and IDE&#39;s" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/project/weather-station/" title="Weather Station" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2763,19 +2792,19 @@ PUSH --> EDIT
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1599209193"></script>
-    <script src="/js/perfect-scrollbar.min.js?1599209193"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1599209193"></script>
-    <script src="/js/jquery.sticky.js?1599209193"></script>
-    <script src="/js/featherlight.min.js?1599209193"></script>
-    <script src="/js/highlight.pack.js?1599209193"></script>
+    <script src="/js/clipboard.min.js?1599209192"></script>
+    <script src="/js/perfect-scrollbar.min.js?1599209192"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1599209192"></script>
+    <script src="/js/jquery.sticky.js?1599209192"></script>
+    <script src="/js/featherlight.min.js?1599209192"></script>
+    <script src="/js/highlight.pack.js?1599209192"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1599209193"></script>
-    <script src="/js/learn.js?1599209193"></script>
-    <script src="/js/hugo-learn.js?1599209193"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1599209192"></script>
+    <script src="/js/learn.js?1599209192"></script>
+    <script src="/js/hugo-learn.js?1599209192"></script>
 
-    <link href="/mermaid/mermaid.css?1599209193" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1599209193"></script>
+    <link href="/mermaid/mermaid.css?1599209192" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1599209192"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
