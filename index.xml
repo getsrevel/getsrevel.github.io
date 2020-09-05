@@ -6,7 +6,7 @@
     <description>Recent content on Getsrevel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 02 Sep 2020 11:31:27 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2020 12:21:05 +0200</lastBuildDate>
     
 	<atom:link href="https://getsrevel.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -125,6 +125,15 @@ import firebase from &amp;#34;../lib/Firebase&amp;#34;;const Timestamp = fireba
 Han skal som minimum bestå af:
  hoved mund øjne krop arme ben  Ekstra: til den &amp;ldquo;kvikke elev&amp;rdquo;; få din tændstikmand til at ændre udseende dynamisk f.eks. vha. museinput, knaptryk
  hovedets størrelse blinke med øjnene ændre farver  Vær kreativ :-)</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://getsrevel.github.io/tech/node/socket-io-demo/demo/public/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://getsrevel.github.io/tech/node/socket-io-demo/demo/public/</guid>
+      <description></description>
     </item>
     
     <item>

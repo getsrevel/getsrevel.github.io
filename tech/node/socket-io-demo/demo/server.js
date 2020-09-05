@@ -16,13 +16,13 @@ const io = socket(server);
 
 io.sockets.on('connection', newConnection);
 
-function newConnection(socket){
+function newConnection(socket) {
     console.log(`New connection ${socket.id}`);
 
     socket.on('mouse', mouseMsg);
 
-    function mouseMsg(data){
-        socket.broadcast.emit('mouse',data);
+    function mouseMsg(data) {
+        socket.broadcast.emit('mouse', data);
         // NB! send to all listeners (including source of incomming event)
         // io.emit('some event, theDataToSend)
         console.log(data);

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Json Command Receiver :: Getsrevel</title>
+    <title>Neopixel :: Getsrevel</title>
 
     
     <link href="/css/nucleus.css?1599338622" rel="stylesheet">
@@ -48,7 +48,7 @@
 
 
   </head>
-  <body class="" data-url="/tech/arduino/json-command-receiver/">
+  <body class="" data-url="/tech/arduino/neopixel/">
     <nav id="sidebar" class="">
 
 
@@ -397,8 +397,8 @@
   
     
     <li data-nav-id="/tech/arduino/neopixel/" title="Neopixel" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/tech/arduino/neopixel/">
@@ -449,8 +449,8 @@
   
     
     <li data-nav-id="/tech/arduino/json-command-receiver/" title="Json Command Receiver" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/tech/arduino/json-command-receiver/">
@@ -1803,7 +1803,7 @@
             
           
           
-            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/arduino/'>Arduino</a> > Json Command Receiver
+            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/arduino/'>Arduino</a> > Neopixel
           
          
           
@@ -1820,6 +1820,12 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
+    <li><a href="#hardware-setup">Hardware setup</a></li>
+    <li><a href="#arduino--neopixel">Arduino &amp; NeoPixel</a>
+      <ul>
+        <li><a href="#kode-eksempel">Kode eksempel</a></li>
+      </ul>
+    </li>
     <li><a href="#materiale">Materiale</a></li>
   </ul>
 </nav>
@@ -1838,7 +1844,7 @@
           
             <h1>
               
-              Json Command Receiver
+              Neopixel
             </h1>
           
 
@@ -1847,138 +1853,82 @@
 
 
 
-	<p>Dette eksempel viser hvordan man kan bruge <a href="https://en.wikipedia.org/wiki/JSON">JSON</a> data formatet til at udveksle information med en arduino og sende kommandoer via seriel porten.</p>
-<p>Ved at sende en passende kommando kan man ændre på hastighed og duty cycle for en blinkende LED.</p>
-<p>For nemt at kunne arbejde med JSON i Arduino koden benyttes biblioteket <a href="https://arduinojson.org/">Arduino JSON</a>.
-Derfor er det nødvendigt at installere dette på udviklingsmaskinen, inden denne sketch kan kompileres, det klares via. Arduino Library Manager, se <a href="https://arduinojson.org/v6/doc/installation/">hvordan du installerer det her</a>.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;ArduinoJson.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e">// Allocate the JSON document
-</span><span style="color:#75715e">//
-</span><span style="color:#75715e">// Inside the brackets, 200 is the capacity of the memory pool in bytes.
-</span><span style="color:#75715e">// Don&#39;t forget to change this value to match your JSON document.
-</span><span style="color:#75715e">// Use arduinojson.org/v6/assistant to compute the capacity.
-</span><span style="color:#75715e">//  StaticJsonDocument&lt;200&gt; doc;
-</span><span style="color:#75715e"></span>
-<span style="color:#75715e">// StaticJsonDocument&lt;N&gt; allocates memory on the stack, it can be
-</span><span style="color:#75715e">// replaced by DynamicJsonDocument which allocates in the heap.
-</span><span style="color:#75715e">//
-</span><span style="color:#75715e"></span>DynamicJsonDocument <span style="color:#a6e22e">doc</span>(<span style="color:#ae81ff">200</span>);
+	<p>Dette eksempel laver et &ldquo;løbelys&rdquo; med blå farver.</p>
+<h2 id="hardware-setup">Hardware setup</h2>
+<figure>
+    <img src="neopixel-array-hw.jpg"
+         alt="Arduino og Neopixel LED array"/> <figcaption>
+            <h4>Arduino og LED array hardware</h4>
+        </figcaption>
+</figure>
 
-<span style="color:#66d9ef">int</span> periodMs <span style="color:#f92672">=</span> <span style="color:#ae81ff">2000</span>;
-<span style="color:#66d9ef">int</span> dutyPct <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>;
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>()
-{
-  <span style="color:#75715e">// initialize digital pin LED_BUILTIN as an output.
-</span><span style="color:#75715e"></span>  pinMode(LED_BUILTIN, OUTPUT);
-
-  Serial.begin(<span style="color:#ae81ff">115200</span>);
-  <span style="color:#75715e">// wait for serial port to connect. Needed for native USB
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">while</span> (<span style="color:#f92672">!</span>Serial)
-  {
-    <span style="color:#66d9ef">continue</span>;
-  }
-  Serial.println(<span style="color:#e6db74">&#34;Ready for commands&#34;</span>);
-}
-
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>()
-{
-  myLedControl();
-  parseCommands();
-}
-
-
-<span style="color:#75715e">// Example of test input json
-</span><span style="color:#75715e"></span><span style="color:#75715e">/* 
-</span><span style="color:#75715e">{&#34;ts&#34;: 1000, &#34;duty&#34;: 10 }
-</span><span style="color:#75715e"> */</span>
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">parseCommands</span>()
-{
-  <span style="color:#75715e">// reply only when you receive data:
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (Serial.available() <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>)
-  {
-
-    <span style="color:#75715e">// Deserialize the JSON document
-</span><span style="color:#75715e"></span>    DeserializationError error <span style="color:#f92672">=</span> deserializeJson(doc, Serial);
-
-    Serial.println(<span style="color:#e6db74">&#34;Received:&#34;</span>);
-    serializeJson(doc, Serial);
-    Serial.println();
-
-    <span style="color:#75715e">// Test if parsing succeeds.
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (error)
-    {
-      Serial.print(F(<span style="color:#e6db74">&#34;deserializeJson() failed: &#34;</span>));
-      Serial.println(error.c_str());
-      <span style="color:#66d9ef">return</span>;
-    }
-
-    <span style="color:#66d9ef">if</span> (doc[<span style="color:#e6db74">&#34;ts&#34;</span>])
-    {
-      <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">int</span> ts <span style="color:#f92672">=</span> doc[<span style="color:#e6db74">&#34;ts&#34;</span>];
-      Serial.print(<span style="color:#e6db74">&#34;got ts: &#34;</span>);
-      Serial.println(ts);
-      periodMs <span style="color:#f92672">=</span> ts;
-    }
-
-    <span style="color:#66d9ef">if</span> (doc[<span style="color:#e6db74">&#34;duty&#34;</span>])
-    {
-      <span style="color:#66d9ef">int</span> duty <span style="color:#f92672">=</span> doc[<span style="color:#e6db74">&#34;duty&#34;</span>];
-      Serial.print(<span style="color:#e6db74">&#34;got duty: &#34;</span>);
-      Serial.println(duty);
-      duty <span style="color:#f92672">=</span> constrain(duty, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">100</span>);
-      Serial.print(<span style="color:#e6db74">&#34;constrained duty to [0, 100], using: &#34;</span>);
-      Serial.println(duty);
-      dutyPct <span style="color:#f92672">=</span> duty;
-    }
-
-  }
-}
-
-<span style="color:#75715e">// toggle the builtin LED state
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">myLedControl</span>()
-{
-  <span style="color:#75715e">//map(value, fromLow, fromHigh, toLow, toHigh)
-</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> highDelayMs <span style="color:#f92672">=</span> map(dutyPct, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">0</span>, periodMs);
-  <span style="color:#66d9ef">int</span> lowDelayMs <span style="color:#f92672">=</span> periodMs <span style="color:#f92672">-</span> highDelayMs;
+<p>LED modulerne er forbunde i en kæde, så data signalets output er forbundet til input på næste LED modul.
+Alle modulerne forsynes med 5V fra arduino.
+Der er monteret en kondensator for at udjævne spændingen.
+Datasignalet tages fra pin 6 på Arduino.</p>
   
-  digitalWrite(LED_BUILTIN, HIGH);
-  delay(highDelayMs);
-  digitalWrite(LED_BUILTIN, LOW);
-  delay(lowDelayMs);
+
+<h2 id="arduino--neopixel">Arduino &amp; NeoPixel</h2>
+<p>For at kunne styre arrayet af NeoPixel LED&rsquo;er kan du benytte softwarebiblioteket Adafruit Neopixel.</p>
+<p>Det kan tilføjes til din <a href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a> installation ved at bruge udvidelsesværkttøjet (Værktøjer &ndash;&gt; Manage libraries&hellip;), som vist på dette skærmbillede.</p>
+<figure>
+    <img src="neopixel-library-manager.png"
+         alt="Arduino Library manager"/> <figcaption>
+            <h4>Søg efter neopixel i Arduino Library manager</h4>
+        </figcaption>
+</figure>
+
+<p>Der følger en del eksempelkode med i til Neopixel biblioteket til Arduino.
+Denne guide beskriver hvordan man <a href="https://www.arduino.cc/en/Tutorial/LibraryExamples">bruger eksempler i Arduino</a>.</p>
+<p>Prøv f.eks. det der hedder <em>simple</em>, i Adafruit Neopixel biblioteket.
+Husk at ændre antallet af LED&rsquo;er i koden, så det passer til hardwaren.
+Bemærk også, at du skal bruge samme output pin i koden, som du har forbundet med ledninger.</p>
+<h3 id="kode-eksempel">Kode eksempel</h3>
+<p>Her er en sketch, der laver et &ldquo;løbelys&rdquo; med blå farver.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;Adafruit_NeoPixel.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// Which pin on the Arduino is connected to the NeoPixels?
+</span><span style="color:#75715e"></span><span style="color:#75715e">#define PIN        6 </span><span style="color:#75715e">// On Trinket or Gemma, suggest changing this to 1
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// How many NeoPixels are attached to the Arduino?
+</span><span style="color:#75715e"></span><span style="color:#75715e">#define NUMPIXELS 10
+</span><span style="color:#75715e"></span>
+Adafruit_NeoPixel <span style="color:#a6e22e">pixels</span>(NUMPIXELS, PIN, NEO_GRB <span style="color:#f92672">+</span> NEO_KHZ800);
+
+<span style="color:#75715e">// Time (in milliseconds) to pause between pixels
+</span><span style="color:#75715e"></span><span style="color:#75715e">#define DELAYVAL 500
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
+  <span style="color:#75715e">// INITIALIZE NeoPixel strip object (REQUIRED)
+</span><span style="color:#75715e"></span>  pixels.begin();
+}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+  pixels.clear(); <span style="color:#75715e">// Set all pixel colors to &#39;off&#39;
+</span><span style="color:#75715e"></span>
+  <span style="color:#75715e">// The first NeoPixel in a strand is #0, second is 1, all the way up
+</span><span style="color:#75715e"></span>  <span style="color:#75715e">// to the count of pixels minus one.
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>; i<span style="color:#f92672">&lt;</span>NUMPIXELS; i<span style="color:#f92672">++</span>) { <span style="color:#75715e">// For each pixel...
+</span><span style="color:#75715e"></span>
+    <span style="color:#75715e">// pixels.Color() takes RGB values, from 0,0,0 up to 255,255,255
+</span><span style="color:#75715e"></span>    pixels.setPixelColor(i, pixels.Color(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">20</span>, <span style="color:#ae81ff">150</span>));
+
+    <span style="color:#75715e">// Send the updated pixel colors to the hardware.
+</span><span style="color:#75715e"></span>    pixels.show();
+
+    <span style="color:#75715e">// Pause before next pass through loop
+</span><span style="color:#75715e"></span>    delay(DELAYVAL);
+  }
 }</code></pre></div>
-<p><em>NB!</em> Serielporten er sat til at køre 115200 Baud.</p>
-<p>Prøv at sende nogle kommandoer vha. serial monitor, og læg mærke til hvordan blinkrate og duty cycle ændres for den inbyggede LED på Arduino.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">{&#34;ts&#34;: 1000, &#34;duty&#34;: 10 }</code></pre></div>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">{&#34;ts&#34;: 500, &#34;duty&#34;: 80 }</code></pre></div>
-<p>Når eksemplet køres på en Arduino og de to ovenstående kommandoer sendes en ad gangen, kommer der dette output fra Arduino på seriel porten.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-txt" data-lang="txt">Ready for commands
-Received:
-{&#34;ts&#34;:1000,&#34;duty&#34;:10}
-got ts: 1000
-got duty: 10
-constrained duty to [0, 100], using: 10
-Received:
-{&#34;ts&#34;:500,&#34;duty&#34;:80}
-got ts: 500
-got duty: 80
-constrained duty to [0, 100], using: 80</code></pre></div>
 <h2 id="materiale">Materiale</h2>
 <ul>
-<li><a href="https://www.arduino.cc/">Arduino</a>.</li>
-<li><a href="https://arduinojson.org/">Arduino JSON</a></li>
-<li><a href="https://arduinojson.org/v6/doc/installation/">Arduino JSON installation</a></li>
-<li><a href="https://en.wikipedia.org/wiki/JSON">JSON</a></li>
-<li><a href="https://www.arduino.cc/reference/en/language/functions/communication/serial/begin/">Serial.begin()</a></li>
-<li><a href="https://www.arduino.cc/reference/en/language/functions/communication/serial/print/">Serial.print()</a></li>
-<li><a href="https://www.arduino.cc/reference/en/language/functions/communication/serial/println/">Serial.println()</a></li>
-<li><a href="https://www.arduino.cc/reference/en/language/functions/communication/serial/available/">Serial.available()</a></li>
-<li><a href="https://www.arduino.cc/reference/en/language/functions/math/constrain/">constrain()</a></li>
-<li><a href="https://www.arduino.cc/reference/en/language/functions/math/map/">map()</a></li>
-<li><a href="https://www.arduino.cc/reference/en/language/functions/time/delay/">delay()</a></li>
-<li><a href="https://www.arduino.cc/reference/en/language/functions/digital-io/pinmode/">pinMode()</a></li>
-<li><a href="https://www.arduino.cc/reference/en/language/functions/digital-io/digitalwrite/">digitalWrite()</a></li>
+<li><a href="https://www.arduino.cc/">Arduino</a></li>
+<li><a href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a></li>
+<li><a href="https://www.arduino.cc/reference/en/">Arduino programming reference</a></li>
+<li><a href="https://www.arduino.cc/en/guide/libraries">Installing arduino libraries</a></li>
+<li><a href="https://www.arduino.cc/en/Tutorial/LibraryExamples">Eksempler fra Arduino biblioteker</a></li>
+<li><a href="https://github.com/adafruit/Adafruit_NeoPixel">Adafruit NeoPixel</a></li>
+<li><a href="https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use">Adafruit NeoPixel Überguide</a></li>
 </ul>
 
 
@@ -2220,6 +2170,23 @@ constrained duty to [0, 100], using: 80</code></pre></div>
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                         
                         
                     
@@ -2254,26 +2221,6 @@ constrained duty to [0, 100], using: 80</code></pre></div>
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -3019,10 +2966,10 @@ constrained duty to [0, 100], using: 80</code></pre></div>
 	 
 	 
 		
-			<a class="nav nav-prev" href="/tech/arduino/hex-string/" title="Hex String"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/tech/arduino/" title="Arduino"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/tech/arduino/json-beacon/" title="Json Beacon" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/tech/arduino/hex-string/" title="Hex String" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

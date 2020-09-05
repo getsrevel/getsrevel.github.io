@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Sound :: Getsrevel</title>
+    <title>Styring af LED via web interface :: Getsrevel</title>
 
     
     <link href="/css/nucleus.css?1599338622" rel="stylesheet">
@@ -48,7 +48,7 @@
 
 
   </head>
-  <body class="" data-url="/tech/p5js/sound/">
+  <body class="" data-url="/project/server-controlled-leds/">
     <nav id="sidebar" class="">
 
 
@@ -94,7 +94,7 @@
   
     
     <li data-nav-id="/project/" title="Project" class="dd-item 
-        
+        parent
         
         
         ">
@@ -170,8 +170,8 @@
   
     
     <li data-nav-id="/project/server-controlled-leds/" title="Styring af LED via web interface" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/project/server-controlled-leds/">
@@ -292,7 +292,7 @@
   
     
     <li data-nav-id="/tech/" title="Tech" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1114,7 +1114,7 @@
   
     
     <li data-nav-id="/tech/p5js/" title="p5.js" class="dd-item 
-        parent
+        
         
         
         ">
@@ -1615,8 +1615,8 @@
   
     
     <li data-nav-id="/tech/p5js/sound/" title="Sound" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/tech/p5js/sound/">
@@ -1799,13 +1799,7 @@
             
           
           
-            
-            
-          
-          
-            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/p5js/'>p5.js</a> > Sound
-          
-         
+            <a href='/'>Getsrevel</a> > <a href='/project/'>Project</a> > Styring af LED via web interface
           
          
           
@@ -1820,10 +1814,11 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#demo">Demo</a></li>
+    <li><a href="#opgaven">Opgaven</a></li>
+    <li><a href="#kode-eksempler">Kode eksempler</a></li>
     <li><a href="#materiale">Materiale</a>
       <ul>
-        <li><a href="#175-adding-sound-effects---p5js-sound-tutorialhttpswwwyoutubecomwatchv40me1-yattclistplrqwx-v7uu6afcvjldakkgiixw70s7jpw"><a href="https://www.youtube.com/watch?v=40Me1-yAtTc&amp;list=PLRqwX-V7Uu6aFcVjlDAkkGIixw70s7jpW">17.5: Adding Sound Effects - p5.js Sound Tutorial</a></a></li>
+        <li></li>
       </ul>
     </li>
   </ul>
@@ -1843,7 +1838,7 @@
           
             <h1>
               
-              Sound
+              Styring af LED via web interface
             </h1>
           
 
@@ -1852,76 +1847,56 @@
 
 
 
-	<p>Her er et eksempel på hvordan man kan arbejde med lyd i p5.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">flickSound</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">whistleSound</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">whistleShortSound</span>
+	<figure>
+    <img src="/tech/arduino/neopixel/neopixel-array-hw.jpg"
+         alt="Arduino og Neopixel LED array"/> <figcaption>
+            <h4>LED array hardware</h4>
+        </figcaption>
+</figure>
 
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">preload</span>() {
-  <span style="color:#a6e22e">flickSound</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadSound</span>(<span style="color:#e6db74">&#39;flick.mp3&#39;</span>);
-  <span style="color:#a6e22e">whistleSound</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadSound</span>(<span style="color:#e6db74">&#39;whistle.mp3&#39;</span>, <span style="color:#a6e22e">doneLoadingWhistleSound</span>);
-  <span style="color:#a6e22e">whistleShortSound</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">loadSound</span>(<span style="color:#e6db74">&#39;whistle-short.mp3&#39;</span>, () =&gt; { 
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;short ready&#39;</span>);
-  });
-}
-
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
-  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
-}
-
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">doneLoadingWhistleSound</span>(){
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;doneLoadingWhistleSound&#34;</span>);
-}
-
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
-  <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
-  <span style="color:#a6e22e">fill</span>(<span style="color:#e6db74">&#34;blue&#34;</span>);
-  <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">width</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>, <span style="color:#a6e22e">height</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">50</span>);
-  <span style="color:#a6e22e">textSize</span>(<span style="color:#ae81ff">20</span>);
-  <span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;Tryk på: SPACE, K, L, W&#34;</span>, <span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">50</span>);
-  <span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;eller klik med musen&#34;</span>, <span style="color:#ae81ff">50</span>,<span style="color:#ae81ff">80</span>);
-
-}
-
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mouseClicked</span>(){
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;flick started by mouse&#34;</span>);
-  <span style="color:#a6e22e">flickSound</span>.<span style="color:#a6e22e">play</span>();
-}
-
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">keyPressed</span>(){
-  <span style="color:#66d9ef">if</span>(<span style="color:#e6db74">&#39; &#39;</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">key</span>){
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;flick started by keyboad&#34;</span>);
-    <span style="color:#a6e22e">flickSound</span>.<span style="color:#a6e22e">play</span>();
-  }
-
-  <span style="color:#66d9ef">if</span>(<span style="color:#e6db74">&#39;l&#39;</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">key</span>){
-    <span style="color:#a6e22e">whistleSound</span>.<span style="color:#a6e22e">setLoop</span>(<span style="color:#66d9ef">true</span>);
-    <span style="color:#a6e22e">whistleSound</span>.<span style="color:#a6e22e">play</span>();
-  }
-  <span style="color:#66d9ef">if</span>(<span style="color:#e6db74">&#39;k&#39;</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">key</span>){
-    <span style="color:#a6e22e">whistleSound</span>.<span style="color:#a6e22e">setLoop</span>(<span style="color:#66d9ef">false</span>);
-  }
-
-  <span style="color:#66d9ef">if</span>(<span style="color:#e6db74">&#39;w&#39;</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">key</span>) {
-    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;short whistle&#34;</span>);
-    <span style="color:#a6e22e">whistleShortSound</span>.<span style="color:#a6e22e">play</span>();
-  }
-}
-</code></pre></div>
-<h2 id="demo">Demo</h2>
-<p>Prøv det <a href="demo/">kørende eksempel</a>.</p>
-<h2 id="materiale">Materiale</h2>
+<p>I dette projekt handler det om at styre lyset i en række multifarvede LED&rsquo;er, som vist på billedet.</p>
+<p>Tanken er at bygge videre på tre kode eksempler, så enkeltdelene kan bruges til at lave et system der kan styre lyset i LED arrayet fra en browser, f.eks. i en mobiltelefon.</p>
+<h2 id="opgaven">Opgaven</h2>
+<p>Lav et system, der kan styre en række Neopixel LED&rsquo;er fra et webinterface i en browser.</p>
+<p>Systemet tænkes at bestå af følgende komponenter:</p>
 <ul>
-<li><a href="https://p5js.org/reference/#/p5.SoundFile">p5.SoundFile</a> dokumentation.</li>
-<li><a href="https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aFcVjlDAkkGIixw70s7jpW">p5js Sound Tutorial</a> er en playliste der gennemgår en række anvendelser af lyd i p5.</li>
-<li><a href="https://www.youtube.com/watch?v=Pn1g1wjxl_0">17.1: Loading and Playing - p5.js Sound Tutorial</a></li>
-<li><a href="https://www.youtube.com/watch?v=40Me1-yAtTc&amp;list=PLRqwX-V7Uu6aFcVjlDAkkGIixw70s7jpW">17.5: Adding Sound Effects - p5.js Sound Tutorial</a></li>
+<li>En Arduino med tilsluttet array af NeoPixel LEDs.</li>
+<li>En server lavet i node.js, der håndterer kommandoer fra brugerens browser.</li>
+<li>Et simpelt node modul der kan håndtere kommunikation med Arduino via serielporten.</li>
+<li>Brugerinterface baseret på HTML, CSS og Javascript, der via websockets sender beskeder til serveren om styring af LED lys.</li>
 </ul>
-<h3 id="175-adding-sound-effects---p5js-sound-tutorialhttpswwwyoutubecomwatchv40me1-yattclistplrqwx-v7uu6afcvjldakkgiixw70s7jpw"><a href="https://www.youtube.com/watch?v=40Me1-yAtTc&amp;list=PLRqwX-V7Uu6aFcVjlDAkkGIixw70s7jpW">17.5: Adding Sound Effects - p5.js Sound Tutorial</a></h3>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/40Me1-yAtTc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+<h2 id="kode-eksempler">Kode eksempler</h2>
+<ul>
+<li><a href="/tech/arduino/neopixel/">Styring af neopixel LED array med arduino</a> - Dette indeholder også beskrivelse af hardware.</li>
+<li><a href="/tech/node/socket-io-demo/">Klient / server kommunikation</a>. Dette eksempel viser hvordan man kan kommunikere mellem klienter via Socket.io, ved at lave en server i node.js.</li>
+<li><a href="/tech/arduino/json-command-receiver/">Arduino JSON commands</a>. Viser hvordan man kan håndtere udveksling af beskeder mellem computer og Arduino.</li>
+<li><a href="/tech/node/serial-json/">Serial Port Kommunikation</a>.
+Dette eksempel viser hvordan man kan sende og modtage json beskeder via seriel porten, ved hjælp af et script i node.js.
+Teknikken kan bruges til kommunikation mellem computer og Arduino ved hjælp af simple kommandoer.</li>
+</ul>
+<h2 id="materiale">Materiale</h2>
+<h4 id="arduino">Arduino</h4>
+<ul>
+<li><a href="https://www.arduino.cc/">Arduino</a></li>
+<li><a href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a></li>
+<li><a href="https://www.arduino.cc/reference/en/">Arduino programming reference</a></li>
+<li><a href="https://www.arduino.cc/en/guide/libraries">Installing arduino libraries</a></li>
+<li><a href="https://www.arduino.cc/en/Tutorial/LibraryExamples">Eksempler fra Arduino biblioteker</a></li>
+</ul>
+<h4 id="styring-af-leder">Styring af LED&rsquo;er</h4>
+<ul>
+<li><a href="https://github.com/adafruit/Adafruit_NeoPixel">Adafruit NeoPixel</a></li>
+<li><a href="https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use">Adafruit NeoPixel Überguide</a></li>
+</ul>
+<h4 id="command-parsing-json-on-the-arduino">Command parsing (JSON) on the Arduino</h4>
+<ul>
+<li><a href="https://arduinojson.org/">ArduinoJson</a></li>
+</ul>
+<h4 id="nodejs-serial-port-kommunikation">Node.js Serial port kommunikation</h4>
+<ul>
+<li><a href="https://serialport.io/">Node Serialport</a> Serial port kommunikation vha. node.js</li>
+</ul>
+  
 
 
 
@@ -1963,8 +1938,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1980,6 +1953,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2013,6 +1989,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2028,6 +2005,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2095,7 +2075,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -2112,9 +2091,6 @@
             
                 
                     
-                        
-                        
-                    
                 
                 
 
@@ -2587,7 +2563,6 @@
             
                 
                     
-                    
                 
                 
 
@@ -2602,9 +2577,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2874,7 +2846,6 @@
             
             
                 
-                    
                     
                 
                 
@@ -2904,9 +2875,6 @@
             
             
                 
-                    
-                        
-                        
                     
                 
                 
@@ -2962,10 +2930,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/tech/p5js/stickman-demo/" title="Stickman Objects"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/project/code-lock/" title="Code Lock"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/tools/" title="Tools" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/project/weather-station/" title="Weather Station" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

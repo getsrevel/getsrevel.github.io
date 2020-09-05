@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://getsrevel.github.io/project/</loc>
+    <lastmod>2019-11-11T21:38:34+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://getsrevel.github.io/tech/react/component-props/</loc>
     <lastmod>2020-03-17T23:30:32+01:00</lastmod>
   </url>
@@ -48,12 +53,17 @@
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/project/code-lock/</loc>
-    <lastmod>2020-09-02T11:31:27+02:00</lastmod>
+    <loc>https://getsrevel.github.io/</loc>
+    <lastmod>2020-09-05T12:21:05+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/</loc>
+    <loc>https://getsrevel.github.io/tech/arduino/neopixel/</loc>
+    <lastmod>2020-09-05T12:21:05+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/project/code-lock/</loc>
     <lastmod>2020-09-02T11:31:27+02:00</lastmod>
   </url>
   
@@ -165,6 +175,16 @@
   <url>
     <loc>https://getsrevel.github.io/tech/regex/</loc>
     <lastmod>2020-01-21T22:24:07+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/node/socket-io-demo/</loc>
+    <lastmod>2020-01-21T14:15:10+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/project/server-controlled-leds/</loc>
+    <lastmod>2020-01-21T14:15:10+01:00</lastmod>
   </url>
   
   <url>
@@ -283,11 +303,6 @@
   </url>
   
   <url>
-    <loc>https://getsrevel.github.io/project/</loc>
-    <lastmod>2019-11-11T21:38:34+01:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://getsrevel.github.io/tools/</loc>
     <lastmod>2019-11-11T21:38:34+01:00</lastmod>
   </url>
@@ -325,6 +340,10 @@
   <url>
     <loc>https://getsrevel.github.io/tech/p5js/sound/</loc>
     <lastmod>2019-01-31T12:35:50+01:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/node/socket-io-demo/demo/public/</loc>
   </url>
   
   <url>
