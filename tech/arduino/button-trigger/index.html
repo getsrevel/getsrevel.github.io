@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Asteroids Game :: Getsrevel</title>
+    <title>Button Trigger :: Getsrevel</title>
 
     
     <link href="/css/nucleus.css?1599567361" rel="stylesheet">
@@ -48,7 +48,7 @@
 
 
   </head>
-  <body class="" data-url="/project/asteroid/">
+  <body class="" data-url="/tech/arduino/button-trigger/">
     <nav id="sidebar" class="">
 
 
@@ -94,7 +94,7 @@
   
     
     <li data-nav-id="/project/" title="Project" class="dd-item 
-        parent
+        
         
         
         ">
@@ -216,7 +216,7 @@
  
   
     
-      <li data-nav-id="/project/asteroid/" title="Asteroids Game" class="dd-item active">
+      <li data-nav-id="/project/asteroid/" title="Asteroids Game" class="dd-item ">
         <a href="/project/asteroid/">
         Asteroids Game
         
@@ -292,7 +292,7 @@
   
     
     <li data-nav-id="/tech/" title="Tech" class="dd-item 
-        
+        parent
         
         
         ">
@@ -368,7 +368,7 @@
   
     
     <li data-nav-id="/tech/arduino/" title="Arduino" class="dd-item 
-        
+        parent
         
         
         ">
@@ -397,8 +397,8 @@
   
     
     <li data-nav-id="/tech/arduino/button-trigger/" title="Button Trigger" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/tech/arduino/button-trigger/">
@@ -1825,7 +1825,13 @@
             
           
           
-            <a href='/'>Getsrevel</a> > <a href='/project/'>Project</a> > Asteroids Game
+            
+            
+          
+          
+            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/arduino/'>Arduino</a> > Button Trigger
+          
+         
           
          
           
@@ -1838,24 +1844,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#opgave-lav-et-asteroids-spil">Opgave: Lav et &ldquo;Asteroids&rdquo; spil</a></li>
-    <li><a href="#materiale">Materiale</a>
-      <ul>
-        <li><a href="#javascript-emner">Javascript emner</a></li>
-        <li><a href="#coding-challenge-461-asteroids-with-p5js---part-1httpswwwyoutubecomwatchvhaczu523fym"><a href="https://www.youtube.com/watch?v=hacZU523FyM">Coding Challenge #46.1: Asteroids with p5.js - Part 1</a></a></li>
-        <li><a href="#coding-challenge-462-asteroids-with-p5js---part-2httpswwwyoutubecomwatchvxttuih7p0c0"><a href="https://www.youtube.com/watch?v=xTTuih7P0c0">Coding Challenge #46.2: Asteroids with p5.js - Part 2</a></a></li>
-        <li><a href="#32-trigonometry-and-polar-coordinates---the-nature-of-codehttpswwwyoutubecomwatchvznobmortz_m"><a href="https://www.youtube.com/watch?v=znOBmOrtz_M">3.2: Trigonometry and Polar Coordinates - The Nature of Code</a></a></li>
-      </ul>
-    </li>
-    <li><a href="#lyd-effekter">Lyd effekter</a>
-      <ul>
-        <li><a href="#175-adding-sound-effects---p5js-sound-tutorialhttpswwwyoutubecomwatchv40me1-yattclistplrqwx-v7uu6afcvjldakkgiixw70s7jpw"><a href="https://www.youtube.com/watch?v=40Me1-yAtTc&amp;list=PLRqwX-V7Uu6aFcVjlDAkkGIixw70s7jpW">17.5: Adding Sound Effects - p5.js Sound Tutorial</a></a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -1871,7 +1860,7 @@
           
             <h1>
               
-              Asteroids Game
+              Button Trigger
             </h1>
           
 
@@ -1879,67 +1868,62 @@
 
 
 
-<h2 id="opgave-lav-et-asteroids-spil">Opgave: Lav et &ldquo;Asteroids&rdquo; spil</h2>
-<ul>
-<li>Opgaven skal laves i grupper.</li>
-<li>I skal lave en kravspecifikation</li>
-<li>I skal lave implementationen i p5js</li>
-<li>I skal bruge <a href="http://trello.com">Trello</a> til at styre jeres opgaver. &ldquo;Oversæt&rdquo; krav til jeres spil fra kravspecifikationen til opgaver på jeres trello board.</li>
-<li>Brug git og github til at samarbejde om koden.</li>
-</ul>
-<h2 id="materiale">Materiale</h2>
-<ul>
-<li><a href="https://p5js.org/">p5js</a></li>
-<li><a href="https://editor.p5js.org/">p5 code editor</a> browserbaseret editor der ikke kræver installation.</li>
-<li><a href="https://p5js.org/reference/">p5 reference</a> er dokumentation af de mange funktioner i p5.</li>
-<li><a href="/tools/git">Git</a></li>
-</ul>
-<h3 id="javascript-emner">Javascript emner</h3>
-<p>For at kunne lave spillet bliver det formentlig nyttigt at kende til disse koncepter</p>
-<ul>
-<li><a href="https://javascript.info/ifelse">Betingelser</a></li>
-<li><a href="https://javascript.info/logical-operators">Logiske operatorer</a></li>
-<li><a href="https://javascript.info/while-for">Løkker</a></li>
-<li><a href="https://javascript.info/function-basics">Funktioner</a></li>
-<li><a href="https://javascript.info/object-basics">Objekter</a></li>
-<li><a href="https://javascript.info/array">Arrays</a></li>
-</ul>
-<h3 id="coding-challenge-461-asteroids-with-p5js---part-1httpswwwyoutubecomwatchvhaczu523fym"><a href="https://www.youtube.com/watch?v=hacZU523FyM">Coding Challenge #46.1: Asteroids with p5.js - Part 1</a></h3>
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/hacZU523FyM" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+	<p>Eksempel der viser hvordan man kan måle tiden mellem to knaptryk.</p>
+<p>Start er på pin 2, og stop er pin 3.</p>
+<p>Den indbyggede LED er tændt, mens timeren er startet.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> startPin <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> gatePin <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">int</span> ledPin <span style="color:#f92672">=</span>  <span style="color:#ae81ff">13</span>;
 
-<h3 id="coding-challenge-462-asteroids-with-p5js---part-2httpswwwyoutubecomwatchvxttuih7p0c0"><a href="https://www.youtube.com/watch?v=xTTuih7P0c0">Coding Challenge #46.2: Asteroids with p5.js - Part 2</a></h3>
+<span style="color:#66d9ef">int</span> isStarted <span style="color:#f92672">=</span> false;
+<span style="color:#66d9ef">int</span> hasTriggeredGate <span style="color:#f92672">=</span> false;
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/xTTuih7P0c0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> startTime <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> gateTime <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
 
-<h3 id="32-trigonometry-and-polar-coordinates---the-nature-of-codehttpswwwyoutubecomwatchvznobmortz_m"><a href="https://www.youtube.com/watch?v=znOBmOrtz_M">3.2: Trigonometry and Polar Coordinates - The Nature of Code</a></h3>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setup</span>() {
+  pinMode(ledPin, OUTPUT);
+  pinMode(startPin, INPUT_PULLUP);
+  pinMode(gatePin, INPUT_PULLUP);
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/znOBmOrtz_M" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+  Serial.begin(<span style="color:#ae81ff">9600</span>);
+  Serial.println(<span style="color:#e6db74">&#34;Ready...&#34;</span>);
+}
 
-<h2 id="lyd-effekter">Lyd effekter</h2>
-<p>Her er lidt inspiration til hvordan der kan lægges lydeffekter på spillet.</p>
-<ul>
-<li><a href="https://www.youtube.com/playlist?list=PLRqwX-V7Uu6aFcVjlDAkkGIixw70s7jpW">p5js Sound Tutorial</a></li>
-<li><a href="https://www.youtube.com/watch?v=Pn1g1wjxl_0">17.1: Loading and Playing - p5.js Sound Tutorial</a></li>
-<li><a href="https://www.youtube.com/watch?v=40Me1-yAtTc&amp;list=PLRqwX-V7Uu6aFcVjlDAkkGIixw70s7jpW">17.5: Adding Sound Effects - p5.js Sound Tutorial</a></li>
-</ul>
-<h3 id="175-adding-sound-effects---p5js-sound-tutorialhttpswwwyoutubecomwatchv40me1-yattclistplrqwx-v7uu6afcvjldakkgiixw70s7jpw"><a href="https://www.youtube.com/watch?v=40Me1-yAtTc&amp;list=PLRqwX-V7Uu6aFcVjlDAkkGIixw70s7jpW">17.5: Adding Sound Effects - p5.js Sound Tutorial</a></h3>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">loop</span>() {
+  <span style="color:#66d9ef">int</span> startState <span style="color:#f92672">=</span> digitalRead(startPin);
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/40Me1-yAtTc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+  <span style="color:#75715e">// Turn on LED while measurement is running
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> measRunning <span style="color:#f92672">=</span> isStarted <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>hasTriggeredGate;
+  digitalWrite(ledPin, measRunning);
 
-  
+  <span style="color:#75715e">// Handle start trigger
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (HIGH <span style="color:#f92672">==</span> startState <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>isStarted) {
+    startTime <span style="color:#f92672">=</span> millis();
+    isStarted <span style="color:#f92672">=</span> true;
+    Serial.print(<span style="color:#e6db74">&#34;Start time 1: &#34;</span>);
+    Serial.println(startTime);
+  }
+
+  <span style="color:#75715e">// Handle gate trigger
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">int</span> gateState <span style="color:#f92672">=</span> digitalRead(gatePin);
+  <span style="color:#66d9ef">if</span> (LOW <span style="color:#f92672">==</span> gateState <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>hasTriggeredGate) {
+    gateTime <span style="color:#f92672">=</span> millis();
+    hasTriggeredGate <span style="color:#f92672">=</span> true;
+    Serial.print(<span style="color:#e6db74">&#34;Gate time: &#34;</span>);
+    Serial.println(gateTime);
+    Serial.print(<span style="color:#e6db74">&#34;Time diff: &#34;</span>);
+    <span style="color:#66d9ef">unsigned</span> <span style="color:#66d9ef">long</span> timeDiff <span style="color:#f92672">=</span> gateTime <span style="color:#f92672">-</span> startTime; 
+    Serial.println(timeDiff);
+  }  
+}</code></pre></div>
 
 
 
-<footer class="footline">
+
+
+<footer class=" footline" >
 	
 </footer>
 
@@ -1974,6 +1958,8 @@
             
                 
                     
+                        
+                        
                     
                 
                 
@@ -1990,8 +1976,37 @@
             
                 
                     
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
                         
+            
+            
+                
                     
                 
                 
@@ -2057,42 +2072,6 @@
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
                 
                 
 
@@ -2112,6 +2091,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2126,6 +2106,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2159,6 +2142,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2173,6 +2157,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -2189,6 +2174,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2982,10 +2970,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/project/weather-station/" title="Weather Station"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/tech/arduino/" title="Arduino"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/project/recursion/" title="Rekursion" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/tech/arduino/neopixel/" title="Neopixel" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3017,4 +3005,3 @@
 
   </body>
 </html>
-

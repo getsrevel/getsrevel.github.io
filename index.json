@@ -70,6 +70,13 @@
 	"content": "Dette eksempel viser hvordan man opretter et lærred og tegner figurer på skærmen. Der benyttes variabler og musemarkørens position til at styre hvor på skærmen der tegnes.\nfunction setup() { createCanvas(600, 800); } function draw() { background(220); fill(255); // variable declaration  let x; // variable assignment  x = mouseX; // declaration and assignment in one line  let y = mouseY; circle(x, y, 150); // assign a new value to x  x = 200; ellipse(x, y, 80, 40); fill(255, 0, 0); circle(width, height, 120); let cx = width / 2; let cy = height / 2; circle(cx, cy, 50); }  Demo Prøv det kørende eksempel\nMateriale  setup() createCanvas() draw() background() fill() mouseX mouseY circle() ellipse()  "
 },
 {
+	"uri": "https://getsrevel.github.io/tech/arduino/button-trigger/",
+	"title": "Button Trigger",
+	"tags": [],
+	"description": "",
+	"content": "Eksempel der viser hvordan man kan måle tiden mellem to knaptryk.\nStart er på pin 2, og stop er pin 3.\nDen indbyggede LED er tændt, mens timeren er startet.\nconst int startPin = 2;\rconst int gatePin = 3;\rconst int ledPin = 13;\rint isStarted = false;\rint hasTriggeredGate = false;\runsigned long startTime = 0;\runsigned long gateTime = 0;\rvoid setup() {\rpinMode(ledPin, OUTPUT);\rpinMode(startPin, INPUT_PULLUP);\rpinMode(gatePin, INPUT_PULLUP);\rSerial.begin(9600);\rSerial.println(\u0026#34;Ready...\u0026#34;);\r}\rvoid loop() {\rint startState = digitalRead(startPin);\r// Turn on LED while measurement is running\r int measRunning = isStarted \u0026amp;\u0026amp; !hasTriggeredGate;\rdigitalWrite(ledPin, measRunning);\r// Handle start trigger\r if (HIGH == startState \u0026amp;\u0026amp; !isStarted) {\rstartTime = millis();\risStarted = true;\rSerial.print(\u0026#34;Start time 1: \u0026#34;);\rSerial.println(startTime);\r}\r// Handle gate trigger\r int gateState = digitalRead(gatePin);\rif (LOW == gateState \u0026amp;\u0026amp; !hasTriggeredGate) {\rgateTime = millis();\rhasTriggeredGate = true;\rSerial.print(\u0026#34;Gate time: \u0026#34;);\rSerial.println(gateTime);\rSerial.print(\u0026#34;Time diff: \u0026#34;);\runsigned long timeDiff = gateTime - startTime; Serial.println(timeDiff);\r} } "
+},
+{
 	"uri": "https://getsrevel.github.io/",
 	"title": "Getsrevel",
 	"tags": [],
