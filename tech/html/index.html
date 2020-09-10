@@ -12,20 +12,20 @@
     <title>Html :: Getsrevel</title>
 
     
-    <link href="/css/nucleus.css?1599572191" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1599572191" rel="stylesheet">
-    <link href="/css/hybrid.css?1599572191" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1599572191" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1599572191" rel="stylesheet">
-    <link href="/css/auto-complete.css?1599572191" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1599572191" rel="stylesheet">
-    <link href="/css/theme.css?1599572191" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1599572191" rel="stylesheet">
+    <link href="/css/nucleus.css?1599732766" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1599732766" rel="stylesheet">
+    <link href="/css/hybrid.css?1599732766" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1599732766" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1599732766" rel="stylesheet">
+    <link href="/css/auto-complete.css?1599732766" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1599732766" rel="stylesheet">
+    <link href="/css/theme.css?1599732766" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1599732766" rel="stylesheet">
     
-      <link href="/css/theme-getsrevel.css?1599572191" rel="stylesheet">
+      <link href="/css/theme-getsrevel.css?1599732766" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1599572191"></script>
+    <script src="/js/jquery-3.3.1.min.js?1599732766"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -68,14 +68,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1599572191"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1599572191"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1599732766"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1599732766"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/getsrevel.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1599572191"></script>
+<script type="text/javascript" src="/js/search.js?1599732766"></script>
 
     
   </div>
@@ -320,13 +320,49 @@
  
   
     
-      <li data-nav-id="/tech/html/" title="Html" class="dd-item active">
-        <a href="/tech/html/">
-        Html
+    <li data-nav-id="/tech/html/" title="Html" class="dd-item 
+        parent
+        active
+        
+        ">
+      <a href="/tech/html/">
+          Html
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/tech/html/demo/" title="" class="dd-item ">
+        <a href="/tech/html/demo/">
+        
         
         </a>
     </li>
      
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
   
  
 
@@ -1840,8 +1876,17 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#html-introduktion">HTML introduktion</a>
+    <li>
       <ul>
+        <li><a href="#html-elementer">HTML elementer</a></li>
+        <li><a href="#indlejrede-elementer">Indlejrede elementer</a></li>
+        <li><a href="#ikke-afsluttede-tags">Ikke afsluttede tags</a></li>
+      </ul>
+    </li>
+    <li><a href="#demo-dokument">Demo dokument</a></li>
+    <li><a href="#materiale">Materiale</a>
+      <ul>
+        <li><a href="#html-introduktion">HTML introduktion</a></li>
         <li><a href="#video-kursus-på-dansk">Video kursus (På dansk)</a></li>
         <li><a href="#quiz">Quiz</a></li>
       </ul>
@@ -1871,14 +1916,91 @@
 
 
 
-  
 
-<h2 id="html-introduktion">HTML introduktion</h2>
+	<p>HTML er et opmærkningssprog derbruges til at kommunikere strukturen af indholdet i et dokument til en browser.</p>
+<p>Her er et eksempel på en html struktur.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+  &lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span> /&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span> /&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;Titlen på dokumentet&lt;/<span style="color:#f92672">title</span>&gt;
+  &lt;/<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">body</span>&gt;
+    Indhold på siden
+  &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<h3 id="html-elementer">HTML elementer</h3>
+<p>Når du skriver dit indhold benyttes en række forskellige tags, til at angive hvordan de forskellige dele (HTML elementer) af dokumentet skal fortolkes.</p>
+<p>Grundlæggende er html elementer opbygget således.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">TAG_NAVN</span> <span style="color:#a6e22e">ATTRIBUT_NAVN</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ATTRIBUT_VÆRDI&#34;</span>&gt;INDHOLD_AF_HTML_ELEMENT&lt;/<span style="color:#f92672">TAG_NAVN</span>&gt;</code></pre></div>
+<p>Et html element består alså af disse elementer</p>
 <ul>
-<li><a href="https://www.w3schools.com/html/default.asp">HTML5 Tutorial</a></li>
+<li>et start tag <code>&lt;TAG_NAVN&gt;</code></li>
+<li>et slut tag der matcher start tag men med en skråstreg: <code>&lt;/TAG_NAVN&gt;</code></li>
+<li>en eller flere attributter, bestående af et navn og en værdi.</li>
+</ul>
+<p>Her er et par eksempler på HTML tags.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">h1</span>&gt;Overskrift&lt;/<span style="color:#f92672">h1</span>&gt;
+&lt;<span style="color:#f92672">p</span>&gt;Dette er et afsnit med noget tekst.&lt;/<span style="color:#f92672">p</span>&gt;</code></pre></div>
+<h3 id="indlejrede-elementer">Indlejrede elementer</h3>
+<p>Nogle html elementer er beregnet til at indeholde andre html elementer, et eksempel er når man laver en <a href="https://www.w3schools.com/html/html_lists.asp">opremsning med en liste</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;punkt 1&lt;/<span style="color:#f92672">li</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;punkt 2&lt;/<span style="color:#f92672">li</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;punkt 3&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ul</span>&gt;</code></pre></div>
+<p>Typisk ender et dokument med at bestå af en række HTML elemementer, hver med et eller flere indlejrede dokumenter indeni.</p>
+<h3 id="ikke-afsluttede-tags">Ikke afsluttede tags</h3>
+<p>Det er ikke alle HTML elementer, hvor det semantisk giver mening at de har indhold. Derfor kan de også bestå af et tag der slutter sig selv.
+Et eksempel er <code>hr</code> (<a href="https://www.w3schools.com/tags/tag_hr.asp">Horizontal rule</a>)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">hr</span> /&gt;</code></pre></div>
+<p>Et andet eksempel er når der <a href="https://www.w3schools.com/html/html_images.asp">indsættes et billede</a>. Her angives en URL til hvor billedets kilde kan findes som en attribut.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;path/to/image/file.jpg&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;En beskrivende title&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Beskrivelse af billedet i fald det ikke kan vises&#34;</span> /&gt;</code></pre></div>
+<p>Alle de mange tags og hvordan de bruges kan du læse mere om i denne <a href="https://www.w3schools.com/html/default.asp">HTML Tutorial</a>.</p>
+<h2 id="demo-dokument">Demo dokument</h2>
+<p>Her er et lidt mere fyldigt eksempel.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+  &lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span> /&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span> /&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;Titlen på dokumentet&lt;/<span style="color:#f92672">title</span>&gt;
+  &lt;/<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">body</span>&gt;
+
+    &lt;<span style="color:#f92672">h1</span>&gt;Eksempel på HTML dokument&lt;/<span style="color:#f92672">h1</span>&gt;
+    &lt;<span style="color:#f92672">p</span>&gt;Dette er et afsnit med noget tekst. Bemærk at jeg har sat et billede ind herunder&lt;/<span style="color:#f92672">p</span>&gt;
+
+    &lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;IMG_9747.jpg&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;kameleon i skovbunden&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Hovedet skiftede fra rødt til grønt mens jeg fandt kameraet frem&#34;</span> /&gt;
+
+    &lt;<span style="color:#f92672">hr</span> /&gt;
+
+    &lt;<span style="color:#f92672">p</span>&gt;Her følger en liste med et par HTML elementer.&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">ul</span>&gt;
+      &lt;<span style="color:#f92672">li</span>&gt;punkt 1&lt;/<span style="color:#f92672">li</span>&gt;
+      &lt;<span style="color:#f92672">li</span>&gt;punkt 2&lt;/<span style="color:#f92672">li</span>&gt;
+      &lt;<span style="color:#f92672">li</span>&gt;punkt 3&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;/<span style="color:#f92672">ul</span>&gt;
+
+    &lt;<span style="color:#f92672">p</span>&gt;Man kan nemt ændre det til en ordnet liste.&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;<span style="color:#f92672">ol</span>&gt;
+      &lt;<span style="color:#f92672">li</span>&gt;punkt 1&lt;/<span style="color:#f92672">li</span>&gt;
+      &lt;<span style="color:#f92672">li</span>&gt;punkt 2&lt;/<span style="color:#f92672">li</span>&gt;
+      &lt;<span style="color:#f92672">li</span>&gt;punkt 3&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;/<span style="color:#f92672">ol</span>&gt;
+
+  &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;</code></pre></div>
+<p>På denne side kan du se <a href="demo/">resultatet i din browser</a>.</p>
+<h2 id="materiale">Materiale</h2>
+<h3 id="html-introduktion">HTML introduktion</h3>
+<ul>
+<li><a href="https://www.w3schools.com/html/default.asp">HTML Tutorial</a></li>
 <li><a href="https://www.w3schools.com/html/html_headings.asp">Headings</a></li>
 <li><a href="https://www.w3schools.com/html/html_paragraphs.asp">Paragraphs</a></li>
 <li><a href="https://www.w3schools.com/html/html_lists.asp">Lists</a></li>
+<li><a href="https://www.w3schools.com/html/html_links.asp">Links</a></li>
 <li><a href="https://www.w3schools.com/html/html_images.asp">Images</a></li>
 <li><a href="https://www.w3schools.com/tags/tag_figure.asp">figure</a></li>
 <li><a href="https://www.w3schools.com/tags/tag_figcaption.asp">figcaption</a></li>
@@ -1893,7 +2015,10 @@
 </ul>
 
 
-<footer class="footline">
+
+
+
+<footer class=" footline" >
 	
 </footer>
 
@@ -2086,9 +2211,6 @@
                     
 
                     
-            
-        
-                    
                         
             
             
@@ -2096,6 +2218,25 @@
                     
                         
                         
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
                     
                 
                 
@@ -2939,7 +3080,7 @@
 			<a class="nav nav-prev" href="/tech/" title="Tech"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/tech/css/" title="Css" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/tech/html/demo/" title="" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -2949,19 +3090,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1599572191"></script>
-    <script src="/js/perfect-scrollbar.min.js?1599572191"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1599572191"></script>
-    <script src="/js/jquery.sticky.js?1599572191"></script>
-    <script src="/js/featherlight.min.js?1599572191"></script>
-    <script src="/js/highlight.pack.js?1599572191"></script>
+    <script src="/js/clipboard.min.js?1599732766"></script>
+    <script src="/js/perfect-scrollbar.min.js?1599732766"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1599732766"></script>
+    <script src="/js/jquery.sticky.js?1599732766"></script>
+    <script src="/js/featherlight.min.js?1599732766"></script>
+    <script src="/js/highlight.pack.js?1599732766"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1599572191"></script>
-    <script src="/js/learn.js?1599572191"></script>
-    <script src="/js/hugo-learn.js?1599572191"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1599732766"></script>
+    <script src="/js/learn.js?1599732766"></script>
+    <script src="/js/hugo-learn.js?1599732766"></script>
 
-    <link href="/mermaid/mermaid.css?1599572191" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1599572191"></script>
+    <link href="/mermaid/mermaid.css?1599732766" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1599732766"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
@@ -2971,4 +3112,3 @@
 
   </body>
 </html>
-
