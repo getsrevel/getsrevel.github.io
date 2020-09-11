@@ -22,6 +22,7 @@ header {
 body {
   margin: 0;
 }
+
 footer {
   background-color: gray;
   padding: .2em 3em;
@@ -34,7 +35,7 @@ h3 {
 }
 
 main {
-  margin: 0 5em;
+  margin: 0 2em;
 }
 
 div {
@@ -53,8 +54,8 @@ div {
 #my-custom-id {
   background-color: lightpink;
   border-color: darkred;
-  margin-left: 5em;
-  margin-right: 5em;
+  margin-left: 2em;
+  margin-right: 2em;
   border-radius: .5em;
   border-width: 5px;
 }

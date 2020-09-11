@@ -12,20 +12,20 @@
     <title>Css :: Getsrevel</title>
 
     
-    <link href="/css/nucleus.css?1599821926" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1599821926" rel="stylesheet">
-    <link href="/css/hybrid.css?1599821926" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1599821926" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1599821926" rel="stylesheet">
-    <link href="/css/auto-complete.css?1599821926" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1599821926" rel="stylesheet">
-    <link href="/css/theme.css?1599821926" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1599821926" rel="stylesheet">
+    <link href="/css/nucleus.css?1599856272" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1599856272" rel="stylesheet">
+    <link href="/css/hybrid.css?1599856272" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1599856272" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1599856272" rel="stylesheet">
+    <link href="/css/auto-complete.css?1599856272" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1599856272" rel="stylesheet">
+    <link href="/css/theme.css?1599856272" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1599856272" rel="stylesheet">
     
-      <link href="/css/theme-getsrevel.css?1599821926" rel="stylesheet">
+      <link href="/css/theme-getsrevel.css?1599856272" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1599821926"></script>
+    <script src="/js/jquery-3.3.1.min.js?1599856272"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -68,14 +68,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1599821926"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1599821926"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1599856272"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1599856272"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/getsrevel.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1599821926"></script>
+<script type="text/javascript" src="/js/search.js?1599856272"></script>
 
     
   </div>
@@ -1929,13 +1929,13 @@ Dette har ikke nogen direkte kobling til det visuelle udtryk.</p>
     <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">blue</span>;
 }</code></pre></div>
 <h2 id="samspil-med-html">Samspil med HTML</h2>
-<p>Der er 3 måder at insætte css i en html struktur</p>
+<p>Der er 3 måder at insætte css i en html struktur.</p>
 <ul>
 <li>Definition i ekstern fil</li>
-<li>Definition i intern i html strukturen</li>
+<li>Definition i internt i html strukturen</li>
 <li>Inline i html elementerne som værdi i attribut</li>
 </ul>
-<p>Der er mange for forskellige må at lave en selector der udvælger bestemte html elementer.
+<p>Der er mange forskellige måder at lave en selector, der udvælger bestemte html elementer.
 De mest almindelige er</p>
 <ul>
 <li>Direkte vha. navn på elementet</li>
@@ -1944,8 +1944,9 @@ De mest almindelige er</p>
 </ul>
 <h2 id="kodeeksempel">Kodeeksempel</h2>
 <p>De forskellige måder at bruge styles og udvælge elementer er <a href="css-3-methods/">illustreret i dette eksempel</a>.</p>
-<p>Formålet er ikke at lave en webside der er visuelt pæn, men blot at illustrere et udvalg af hvordan styles og selectors kan bruges.</p>
-<p>Her er html strukturen i <code>demo.html</code>. <em>Bemærk</em> hvordan det eksterne stylesheet er inkluderet, definition af style internt i dokument, samt brug af inline style.</p>
+<p>Formålet med eksemplet er ikke at lave en webside, der er visuelt pæn, men blot at illustrere et udvalg af hvordan styles og selectors kan bruges.</p>
+<p>Her er html strukturen i <code>demo.html</code>.
+Bemærk hvordan det eksterne stylesheet er inkluderet, definition af style internt i dokument, samt brug af inline style.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
 &lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
 &lt;<span style="color:#f92672">head</span>&gt;
@@ -1961,17 +1962,17 @@ De mest almindelige er</p>
 &lt;/<span style="color:#f92672">head</span>&gt;
 &lt;<span style="color:#f92672">body</span>&gt;
   &lt;<span style="color:#f92672">header</span>&gt;
-    &lt;<span style="color:#f92672">h2</span>&gt;Under udarbejdelse: Ekstern Definition&lt;/<span style="color:#f92672">h2</span>&gt;
+    &lt;<span style="color:#f92672">h2</span>&gt;Ekstern Definition&lt;/<span style="color:#f92672">h2</span>&gt;
     &lt;<span style="color:#f92672">p</span>&gt;Udseendet af denne sektion er defineret i en ekstern css fil.&lt;/<span style="color:#f92672">p</span>&gt;
     &lt;<span style="color:#f92672">p</span>&gt;Selector er lavet vha. af elementets navn.&lt;/<span style="color:#f92672">p</span>&gt;
   &lt;/<span style="color:#f92672">header</span>&gt;
   
   &lt;<span style="color:#f92672">main</span>&gt;
-    &lt;<span style="color:#f92672">h1</span>&gt;Tre måder at bruge CSS&lt;/<span style="color:#f92672">h1</span>&gt;
+    &lt;<span style="color:#f92672">h1</span>&gt;Tre måder at bruge CSS i HTML&lt;/<span style="color:#f92672">h1</span>&gt;
     &lt;<span style="color:#f92672">ul</span>&gt;
-      &lt;<span style="color:#f92672">li</span>&gt;Ekstern CSS Fil&lt;/<span style="color:#f92672">li</span>&gt;
-      &lt;<span style="color:#f92672">li</span>&gt;Internt styling i dokument&lt;/<span style="color:#f92672">li</span>&gt;
-      &lt;<span style="color:#f92672">li</span>&gt;Inline definition i style attribut&lt;/<span style="color:#f92672">li</span>&gt;
+      &lt;<span style="color:#f92672">li</span>&gt;Ekstern CSS Fil.&lt;/<span style="color:#f92672">li</span>&gt;
+      &lt;<span style="color:#f92672">li</span>&gt;Intern CSS i dokument.&lt;/<span style="color:#f92672">li</span>&gt;
+      &lt;<span style="color:#f92672">li</span>&gt;Inline CSS definition i style attribut.&lt;/<span style="color:#f92672">li</span>&gt;
     &lt;/<span style="color:#f92672">ul</span>&gt;
 
     &lt;<span style="color:#f92672">h3</span>&gt;Intern definition&lt;/<span style="color:#f92672">h3</span>&gt;
@@ -1980,9 +1981,9 @@ De mest almindelige er</p>
     &lt;<span style="color:#f92672">h2</span>&gt;Selectors&lt;/<span style="color:#f92672">h2</span>&gt;
     &lt;<span style="color:#f92672">p</span>&gt;Der er flere måde at udvælge elementer vha. selectors. De mest almindelige er:&lt;/<span style="color:#f92672">p</span>&gt;
     &lt;<span style="color:#f92672">ul</span>&gt;
-      &lt;<span style="color:#f92672">li</span>&gt;Direkte vha. navn på elementet&lt;/<span style="color:#f92672">li</span>&gt;
-      &lt;<span style="color:#f92672">li</span>&gt;Ved brug af en klasse&lt;/<span style="color:#f92672">li</span>&gt;
-      &lt;<span style="color:#f92672">li</span>&gt;Ved brug af et ID&lt;/<span style="color:#f92672">li</span>&gt;
+      &lt;<span style="color:#f92672">li</span>&gt;Direkte ved hjælp af navn på elementet.&lt;/<span style="color:#f92672">li</span>&gt;
+      &lt;<span style="color:#f92672">li</span>&gt;Ved brug af en klasse.&lt;/<span style="color:#f92672">li</span>&gt;
+      &lt;<span style="color:#f92672">li</span>&gt;Ved brug af et ID.&lt;/<span style="color:#f92672">li</span>&gt;
     &lt;/<span style="color:#f92672">ul</span>&gt;
 
     &lt;<span style="color:#f92672">div</span>&gt;
@@ -2008,8 +2009,6 @@ De mest almindelige er</p>
       &lt;<span style="color:#f92672">h3</span>&gt;Klasser fortsat&lt;/<span style="color:#f92672">h3</span>&gt;
       &lt;<span style="color:#f92672">p</span>&gt;Man kan bruge Samme klasse flere steder i sit dokument.&lt;/<span style="color:#f92672">p</span>&gt;
     &lt;/<span style="color:#f92672">div</span>&gt;
-
-
   &lt;/<span style="color:#f92672">main</span>&gt;
 
   &lt;<span style="color:#f92672">footer</span>&gt;
@@ -2043,6 +2042,7 @@ De mest almindelige er</p>
 <span style="color:#f92672">body</span> {
   <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span>;
 }
+
 <span style="color:#f92672">footer</span> {
   <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">gray</span>;
   <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">.2</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">3</span><span style="color:#66d9ef">em</span>;
@@ -2055,7 +2055,7 @@ De mest almindelige er</p>
 }
 
 <span style="color:#f92672">main</span> {
-  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">5</span><span style="color:#66d9ef">em</span>;
+  <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span>;
 }
 
 <span style="color:#f92672">div</span> {
@@ -2074,42 +2074,30 @@ De mest almindelige er</p>
 #my-custom-id {
   <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">lightpink</span>;
   <span style="color:#66d9ef">border-color</span>: <span style="color:#66d9ef">darkred</span>;
-  <span style="color:#66d9ef">margin-left</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">em</span>;
-  <span style="color:#66d9ef">margin-right</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">em</span>;
+  <span style="color:#66d9ef">margin-left</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span>;
+  <span style="color:#66d9ef">margin-right</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">em</span>;
   <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">.5</span><span style="color:#66d9ef">em</span>;
   <span style="color:#66d9ef">border-width</span>: <span style="color:#ae81ff">5</span><span style="color:#66d9ef">px</span>;
 }</code></pre></div>
-  
-
+<h2 id="demo">Demo</h2>
+<p>Prøv det <a href="css-3-methods/">kørende eksempel</a>.</p>
 <h2 id="materiale">Materiale</h2>
 <ul>
 <li><a href="https://www.w3schools.com/css/default.asp">CSS Tutorial</a></li>
-<li><a href="https://www.w3schools.com/css/demo_default.htm">Same Page Different Stylesheets</a></li>
 <li><a href="https://www.w3schools.com/css/css_syntax.asp">CSS Syntax and Selectors</a></li>
 <li><a href="https://www.w3schools.com/css/css_howto.asp">Three Ways to Insert CSS</a></li>
+<li><a href="https://www.w3schools.com/css/demo_default.htm">Same Page Different Stylesheets</a></li>
 <li><a href="https://www.w3schools.com/css/css_boxmodel.asp">CSS Box Model</a></li>
-<li><a href="https://www.w3schools.com/css/css_grid.asp">CSS Grid Layout Module</a></li>
-</ul>
-<h3 id="quiz">Quiz</h3>
-<ul>
-<li><a href="https://www.w3schools.com/quiztest/quiztest.asp?qtest=CSS">CSS quiz</a></li>
-</ul>
-<h3 id="css-flexbox">CSS Flexbox</h3>
-<ul>
-<li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A guide to flexbox</a></li>
-</ul>
-<h3 id="spil">Spil</h3>
-<ul>
-<li><a href="https://cssgridgarden.com/">CSS Grid Garden</a></li>
-<li><a href="http://flexboxfroggy.com">Flexbox froggy</a></li>
 </ul>
 <h3 id="eksempler">Eksempler</h3>
 <ul>
 <li><a href="https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro">zebra stripes on a table</a></li>
 <li><a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_table_fancy">Fancy table</a></li>
 </ul>
-  
-
+<h3 id="quiz">Quiz</h3>
+<ul>
+<li><a href="https://www.w3schools.com/quiztest/quiztest.asp?qtest=CSS">CSS quiz</a></li>
+</ul>
 
 
 
@@ -3197,19 +3185,19 @@ De mest almindelige er</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1599821926"></script>
-    <script src="/js/perfect-scrollbar.min.js?1599821926"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1599821926"></script>
-    <script src="/js/jquery.sticky.js?1599821926"></script>
-    <script src="/js/featherlight.min.js?1599821926"></script>
-    <script src="/js/highlight.pack.js?1599821926"></script>
+    <script src="/js/clipboard.min.js?1599856272"></script>
+    <script src="/js/perfect-scrollbar.min.js?1599856272"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1599856272"></script>
+    <script src="/js/jquery.sticky.js?1599856272"></script>
+    <script src="/js/featherlight.min.js?1599856272"></script>
+    <script src="/js/highlight.pack.js?1599856272"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1599821926"></script>
-    <script src="/js/learn.js?1599821926"></script>
-    <script src="/js/hugo-learn.js?1599821926"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1599856272"></script>
+    <script src="/js/learn.js?1599856272"></script>
+    <script src="/js/hugo-learn.js?1599856272"></script>
 
-    <link href="/mermaid/mermaid.css?1599821926" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1599821926"></script>
+    <link href="/mermaid/mermaid.css?1599856272" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1599856272"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
