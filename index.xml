@@ -50,9 +50,9 @@ Installation af Firebase For at kunne benytte funktionaliteter fra firebase i vo
       <pubDate>Mon, 11 Nov 2019 21:41:09 +0100</pubDate>
       
       <guid>https://getsrevel.github.io/project/html-basics/</guid>
-      <description>Du har sikkert brug for en kort introduktion til HTML.
+      <description>For at kunne løse opgaven har du sikkert brug for en kort introduktion til HTML.
 Opgave: Mig og min kageopskrift Lav et website i html der præsenterer dig selv og din yndlings kage:
- Der skal være 2 sider  En beskrivelse af dig selv der navngives &amp;ldquo;profil.html&amp;rdquo; En anden side med en mad opskrift &amp;ldquo;opskrift.html&amp;rdquo;   Begge sider skal have en titel Der skal være links så man kan navigere mellem de to sider  På profil siden</description>
+ Der skal være 2 sider.  En beskrivelse af dig selv der navngives &amp;ldquo;profil.html&amp;rdquo;. En anden side med en mad opskrift &amp;ldquo;opskrift.html&amp;rdquo;.   Begge sider skal have en titel. Der skal være links så man kan navigere mellem de to sider.</description>
     </item>
     
     <item>
@@ -116,6 +116,15 @@ import firebase from &amp;#34;../lib/Firebase&amp;#34;;const Timestamp = fireba
 Han skal som minimum bestå af:
  hoved mund øjne krop arme ben  Ekstra: til den &amp;ldquo;kvikke elev&amp;rdquo;; få din tændstikmand til at ændre udseende dynamisk f.eks. vha. museinput, knaptryk
  hovedets størrelse blinke med øjnene ændre farver  Vær kreativ :-)</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://getsrevel.github.io/tech/css/css-3-methods/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://getsrevel.github.io/tech/css/css-3-methods/</guid>
+      <description></description>
     </item>
     
     <item>

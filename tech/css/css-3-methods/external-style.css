@@ -1,0 +1,60 @@
+/* Man kan indsætte kommentarer i CSS på denne måde */
+
+/*
+Kommentarer
+kan sprede sig
+over flere 
+linjer
+*/
+
+header {
+  display: inline-flexbox;
+  justify-content: flex-end;
+  margin: 1em 1em;
+  padding: 1em;
+  background-color: yellow;
+  border-radius: .5em;
+  -webkit-box-shadow: 8px 13px 16px 0px rgba(0, 0, 0, 0.85);
+  -moz-box-shadow: 8px 13px 16px 0px rgba(0, 0, 0, 0.85);
+  box-shadow: 8px 13px 16px 0px rgba(0, 0, 0, 0.85);
+}
+
+body {
+  margin: 0;
+}
+footer {
+  background-color: gray;
+  padding: .2em 3em;
+  margin: 0;
+}
+
+h3 {
+  color: brown;
+  font-style: italic;
+}
+
+main {
+  margin: 0 5em;
+}
+
+div {
+  background-color: lightgrey;
+  margin-bottom: 1em;
+  padding: .1em 1em;
+  border: 2px solid gray;
+}
+
+.my-custom-class {
+  color: rgb(0, 92, 0);
+  background-color: rgb(136, 207, 136);
+  border-color: green;
+}
+
+#my-custom-id {
+  background-color: lightpink;
+  border-color: darkred;
+  margin-left: 5em;
+  margin-right: 5em;
+  border-radius: .5em;
+  border-width: 5px;
+}
