@@ -70,11 +70,11 @@
 	"content": "Dette eksempel viser hvordan man opretter et lærred og tegner figurer på skærmen. Der benyttes variabler og musemarkørens position til at styre hvor på skærmen der tegnes.\nfunction setup() { createCanvas(600, 800); } function draw() { background(220); fill(255); // variable declaration  let x; // variable assignment  x = mouseX; // declaration and assignment in one line  let y = mouseY; circle(x, y, 150); // assign a new value to x  x = 200; ellipse(x, y, 80, 40); fill(255, 0, 0); circle(width, height, 120); let cx = width / 2; let cy = height / 2; circle(cx, cy, 50); }  Demo Prøv det kørende eksempel\nMateriale  setup() createCanvas() draw() background() fill() mouseX mouseY circle() ellipse()  "
 },
 {
-	"uri": "https://getsrevel.github.io/tech/css/css-3-methods/",
-	"title": "Css 3 Methods demo",
+	"uri": "https://getsrevel.github.io/tech/node/socket-io-demo/demo/",
+	"title": "Demo",
 	"tags": [],
 	"description": "",
-	"content": "\r\rCSS på 3 måder\r\rh3 {\rfont-style: italic;\r}\r\r\r\r\rEkstern Definition\rUdseendet af denne sektion er defineret i en ekstern css fil.\nSelector er lavet vha. af elementets navn.\n\r\rTre måder at bruge CSS i HTML\r\rEkstern CSS Fil.\rIntern CSS i dokument.\rInline CSS definition i style attribut.\r\rIntern definition\rSom eksempel er der lavet en intern definition, der ændrer skriften til kursiv for h3 elementer.\nSelectors\rDer er flere måde at udvælge elementer vha. selectors. De mest almindelige er:\n\rDirekte ved hjælp af navn på elementet.\rVed brug af en klasse.\rVed brug af et ID.\r\r\rElement\rMan kan bruge html elementer direkte som selector, så vil alle elementer der matches bruge samme stil.\nDette er lavet som eksempel i dette dokument, med div elementer Der bliver vist som indrammede kasser.\n\rKlasse\rMan kan bruge selectors til at vælge bestemte html elementer vha. deres navn. Dette er lavet som eksempel i dette dokument, med div elementer Der bliver vist som indrammede kasser.\nMan kan bruge html elementer direkte som selector, så vil alle elementer der matches bruge samme stil.\n\rSelector med ID\rMan kan vælge at tildele et ID som en attribut til et element, og bruge det til styling.\nFor denne blok er stilen lavet med et ID\nBemærk: at et id skal være unikt indefor et dokument.\n\rKlasser fortsat\rMan kan bruge Samme klasse flere steder i sit dokument.\n\r\r\rDemonstration af css\rHer er et eksempel på en inline style\n\r\r "
+	"content": ""
 },
 {
 	"uri": "https://getsrevel.github.io/",
@@ -82,6 +82,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Getsrevel Velkommen til mit website der primært er løse noter om programmering og andet \u0026ldquo;work in progress\u0026rdquo;.\n"
+},
+{
+	"uri": "https://getsrevel.github.io/tech/css/css-3-methods/",
+	"title": "Css 3 Methods demo",
+	"tags": [],
+	"description": "",
+	"content": "\r\rCSS på 3 måder\r\rh3 {\rfont-style: italic;\r}\r\r\r\r\rEkstern Definition\rUdseendet af denne sektion er defineret i en ekstern css fil.\nSelector er lavet vha. af elementets navn.\n\r\rTre måder at bruge CSS i HTML\r\rEkstern CSS Fil.\rIntern CSS i dokument.\rInline CSS definition i style attribut.\r\rIntern definition\rSom eksempel er der lavet en intern definition, der ændrer skriften til kursiv for h3 elementer.\nSelectors\rDer er flere måde at udvælge elementer vha. selectors. De mest almindelige er:\n\rDirekte ved hjælp af navn på elementet.\rVed brug af en klasse.\rVed brug af et ID.\r\r\rElement\rMan kan bruge html elementer direkte som selector, så vil alle elementer der matches bruge samme stil.\nDette er lavet som eksempel i dette dokument, med div elementer Der bliver vist som indrammede kasser.\n\rKlasse\rMan kan bruge selectors til at vælge bestemte html elementer vha. deres navn. Dette er lavet som eksempel i dette dokument, med div elementer Der bliver vist som indrammede kasser.\nMan kan bruge html elementer direkte som selector, så vil alle elementer der matches bruge samme stil.\n\rSelector med ID\rMan kan vælge at tildele et ID som en attribut til et element, og bruge det til styling.\nFor denne blok er stilen lavet med et ID\nBemærk: at et id skal være unikt indefor et dokument.\n\rKlasser fortsat\rMan kan bruge Samme klasse flere steder i sit dokument.\n\r\r\rDemonstration af css\rHer er et eksempel på en inline style\n\r\r "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/arduino/button-trigger/",
