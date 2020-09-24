@@ -6,7 +6,7 @@
     <description>Recent content on Getsrevel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Sep 2020 22:58:42 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 23 Sep 2020 14:20:23 +0200</lastBuildDate>
     
 	<atom:link href="https://getsrevel.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -124,6 +124,15 @@ Han skal som minimum bestå af:
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://getsrevel.github.io/tech/css/css-3-methods/demo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://getsrevel.github.io/tech/css/flexbox-layout/demo/demo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://getsrevel.github.io/tech/css/flexbox-layout/demo/demo/</guid>
       <description></description>
     </item>
     

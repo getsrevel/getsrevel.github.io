@@ -70,11 +70,11 @@
 	"content": "Dette eksempel viser hvordan man opretter et lærred og tegner figurer på skærmen. Der benyttes variabler og musemarkørens position til at styre hvor på skærmen der tegnes.\nfunction setup() { createCanvas(600, 800); } function draw() { background(220); fill(255); // variable declaration  let x; // variable assignment  x = mouseX; // declaration and assignment in one line  let y = mouseY; circle(x, y, 150); // assign a new value to x  x = 200; ellipse(x, y, 80, 40); fill(255, 0, 0); circle(width, height, 120); let cx = width / 2; let cy = height / 2; circle(cx, cy, 50); }  Demo Prøv det kørende eksempel\nMateriale  setup() createCanvas() draw() background() fill() mouseX mouseY circle() ellipse()  "
 },
 {
-	"uri": "https://getsrevel.github.io/tech/node/socket-io-demo/demo/",
-	"title": "Demo",
+	"uri": "https://getsrevel.github.io/tech/css/flexbox-layout/demo/",
+	"title": "Flexbox Layout demo",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "\r\r\rPage Title\r\r\rlogo\rMain Title\r\r\rpkt L1\rpkt L2\rpkt L3\rpkt L4\r\r\rpkt R1\rpkt R2\r\r\r1\r2\r3\r4\r5\r6\r7\r8\r9\r\r1\r2\r3\r\r\r\r\r"
 },
 {
 	"uri": "https://getsrevel.github.io/",
@@ -82,6 +82,13 @@
 	"tags": [],
 	"description": "",
 	"content": "Getsrevel Velkommen til mit website der primært er løse noter om programmering og andet \u0026ldquo;work in progress\u0026rdquo;.\n"
+},
+{
+	"uri": "https://getsrevel.github.io/tech/node/socket-io-demo/demo/",
+	"title": "Demo",
+	"tags": [],
+	"description": "",
+	"content": ""
 },
 {
 	"uri": "https://getsrevel.github.io/tech/css/flexbox-layout/",
@@ -326,7 +333,7 @@
 	"title": "Asteroids Game",
 	"tags": [],
 	"description": "",
-	"content": "Opgave: Lav et \u0026ldquo;Asteroids\u0026rdquo; spil  Opgaven skal laves i grupper. I skal lave en kravspecifikation I skal lave implementationen i p5js I skal bruge Trello til at styre jeres opgaver. \u0026ldquo;Oversæt\u0026rdquo; krav til jeres spil fra kravspecifikationen til opgaver på jeres trello board. Brug git og github til at samarbejde om koden.  Materiale  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5. Git  Javascript emner For at kunne lave spillet bliver det formentlig nyttigt at kende til disse koncepter\n Betingelser Logiske operatorer Løkker Funktioner Objekter Arrays  Coding Challenge #46.1: Asteroids with p5.js - Part 1   Coding Challenge #46.2: Asteroids with p5.js - Part 2   3.2: Trigonometry and Polar Coordinates - The Nature of Code   Lyd effekter Her er lidt inspiration til hvordan der kan lægges lydeffekter på spillet.\n p5js Sound Tutorial 17.1: Loading and Playing - p5.js Sound Tutorial 17.5: Adding Sound Effects - p5.js Sound Tutorial  17.5: Adding Sound Effects - p5.js Sound Tutorial   "
+	"content": " Opgave: Lav et \u0026ldquo;Asteroids\u0026rdquo; spil  Opgaven skal laves i grupper. I skal lave en kravspecifikation I skal lave implementationen i p5js I skal bruge Trello til at styre jeres opgaver. \u0026ldquo;Oversæt\u0026rdquo; krav til jeres spil fra kravspecifikationen til opgaver på jeres trello board. Brug git og github til at samarbejde om koden.  Materiale  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5. Git  Javascript emner For at kunne lave spillet bliver det formentlig nyttigt at kende til disse koncepter\n Betingelser Logiske operatorer Løkker Funktioner Objekter Arrays  Coding Challenge #46.1: Asteroids with p5.js - Part 1   Coding Challenge #46.2: Asteroids with p5.js - Part 2   3.2: Trigonometry and Polar Coordinates - The Nature of Code   Lyd effekter Her er lidt inspiration til hvordan der kan lægges lydeffekter på spillet.\n p5js Sound Tutorial 17.1: Loading and Playing - p5.js Sound Tutorial 17.5: Adding Sound Effects - p5.js Sound Tutorial  17.5: Adding Sound Effects - p5.js Sound Tutorial   "
 },
 {
 	"uri": "https://getsrevel.github.io/tech/p5js/key-is-pressed/",
@@ -512,6 +519,13 @@
 },
 {
 	"uri": "https://getsrevel.github.io/tech/css/css-3-methods/demo/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://getsrevel.github.io/tech/css/flexbox-layout/demo/demo/",
 	"title": "",
 	"tags": [],
 	"description": "",
