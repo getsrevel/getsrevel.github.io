@@ -83,6 +83,11 @@
   </url>
   
   <url>
+    <loc>https://getsrevel.github.io/tech/css/grid-layout/grid-demo/</loc>
+    <lastmod>2020-09-11T12:27:34+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://getsrevel.github.io/tech/arduino/button-trigger/</loc>
     <lastmod>2020-09-08T14:10:00+02:00</lastmod>
   </url>
@@ -378,6 +383,10 @@
   
   <url>
     <loc>https://getsrevel.github.io/tech/css/flexbox-layout/demo/demo/</loc>
+  </url>
+  
+  <url>
+    <loc>https://getsrevel.github.io/tech/css/grid-layout/grid-demo/demo/</loc>
   </url>
   
   <url>
