@@ -36,7 +36,7 @@ function draw() {
   circle(x, y, d);
 
   // hvis x er større end bredden af lærredet
-  // så ændre xSpeed til -xSpeed
+  // så sæt xSpeed til -xSpeed
   if (x > width - d / 2) {
     changeColor();
     xSpeed = -xSpeed;
