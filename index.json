@@ -133,6 +133,20 @@
 	"content": "Dette eksempel laver et \u0026ldquo;løbelys\u0026rdquo; med blå farver.\nHardware setup   Arduino og LED array hardware   LED modulerne er forbunde i en kæde, så data signalets output er forbundet til input på næste LED modul. Alle modulerne forsynes med 5V fra arduino. Der er monteret en kondensator for at udjævne spændingen. Datasignalet tages fra pin 6 på Arduino.\nArduino \u0026amp; NeoPixel For at kunne styre arrayet af NeoPixel LED\u0026rsquo;er kan du benytte softwarebiblioteket Adafruit Neopixel.\nDet kan tilføjes til din Arduino IDE installation ved at bruge udvidelsesværkttøjet (Værktøjer \u0026ndash;\u0026gt; Manage libraries\u0026hellip;), som vist på dette skærmbillede.\n  Søg efter neopixel i Arduino Library manager   Der følger en del eksempelkode med i til Neopixel biblioteket til Arduino. Denne guide beskriver hvordan man bruger eksempler i Arduino.\nPrøv f.eks. det der hedder simple, i Adafruit Neopixel biblioteket. Husk at ændre antallet af LED\u0026rsquo;er i koden, så det passer til hardwaren. Bemærk også, at du skal bruge samme output pin i koden, som du har forbundet med ledninger.\nKode eksempel Her er en sketch, der laver et \u0026ldquo;løbelys\u0026rdquo; med blå farver.\n#include \u0026lt;Adafruit_NeoPixel.h\u0026gt;\r\r// Which pin on the Arduino is connected to the NeoPixels?\r#define PIN 6 // On Trinket or Gemma, suggest changing this to 1\r\r// How many NeoPixels are attached to the Arduino?\r#define NUMPIXELS 10\r\rAdafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);\r// Time (in milliseconds) to pause between pixels\r#define DELAYVAL 500\r\rvoid setup() {\r// INITIALIZE NeoPixel strip object (REQUIRED)\r pixels.begin();\r}\rvoid loop() {\rpixels.clear(); // Set all pixel colors to \u0026#39;off\u0026#39;\r\r// The first NeoPixel in a strand is #0, second is 1, all the way up\r // to the count of pixels minus one.\r for(int i=0; i\u0026lt;NUMPIXELS; i++) { // For each pixel...\r\r// pixels.Color() takes RGB values, from 0,0,0 up to 255,255,255\r pixels.setPixelColor(i, pixels.Color(0, 20, 150));\r// Send the updated pixel colors to the hardware.\r pixels.show();\r// Pause before next pass through loop\r delay(DELAYVAL);\r}\r} Materiale  Arduino Arduino IDE Arduino programming reference Installing arduino libraries Eksempler fra Arduino biblioteker Adafruit NeoPixel Adafruit NeoPixel Überguide  "
 },
 {
+	"uri": "https://getsrevel.github.io/tech/unity/unity-basics/",
+	"title": "Unity Basics",
+	"tags": [],
+	"description": "",
+	"content": " Unity Install unity  How to make a Video Game in Unity Denne samling af videoer giver en introduktion til at komme igang med at lave et computerspil i Unity.\n Getting Started Basics (Episode 1) Programming (Episode 2) Movement (Episode 3) Camera follow (Episode 4) Collision (Episode 5) Gameplay (Episode 6) Score \u0026amp; ui (Episode 7) Game over (Episode 8) Winning levels (Episode 9) Finishing up (Episode 10)  How to MAKE YOUR GAME LOOK GOOD! - Brakeys   "
+},
+{
+	"uri": "https://getsrevel.github.io/tech/unity/",
+	"title": "Unity",
+	"tags": [],
+	"description": "",
+	"content": "Unity Noter og eksempler med Unity.\n"
+},
+{
 	"uri": "https://getsrevel.github.io/project/code-lock/",
 	"title": "Code Lock",
 	"tags": [],
@@ -200,7 +214,7 @@
 	"title": "C#",
 	"tags": [],
 	"description": "",
-	"content": "C# Eksempler med C#.\n"
+	"content": "C# Noter og eksempler med C#.\n"
 },
 {
 	"uri": "https://getsrevel.github.io/tech/react/react-intro/my-app-npm/",
