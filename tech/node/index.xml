@@ -6,10 +6,6 @@
     <description>Recent content in Node.js on Getsrevel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 11 Nov 2019 21:40:44 +0100</lastBuildDate>
-    
-	<atom:link href="https://getsrevel.github.io/tech/node/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 11 Nov 2019 21:40:44 +0100</lastBuildDate><atom:link href="https://getsrevel.github.io/tech/node/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

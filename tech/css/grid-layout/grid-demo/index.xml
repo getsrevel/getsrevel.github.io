@@ -6,19 +6,6 @@
     <description>Recent content in Grid Layout demo on Getsrevel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Sep 2020 12:27:34 +0200</lastBuildDate>
-    
-	<atom:link href="https://getsrevel.github.io/tech/css/grid-layout/grid-demo/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title></title>
-      <link>https://getsrevel.github.io/tech/css/grid-layout/grid-demo/demo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://getsrevel.github.io/tech/css/grid-layout/grid-demo/demo/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Fri, 11 Sep 2020 12:27:34 +0200</lastBuildDate><atom:link href="https://getsrevel.github.io/tech/css/grid-layout/grid-demo/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

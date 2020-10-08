@@ -6,10 +6,6 @@
     <description>Recent content in Firestore Client on Getsrevel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 29 Jan 2020 10:46:51 +0100</lastBuildDate>
-    
-	<atom:link href="https://getsrevel.github.io/tech/firebase/firestore-client/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 29 Jan 2020 10:46:51 +0100</lastBuildDate><atom:link href="https://getsrevel.github.io/tech/firebase/firestore-client/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

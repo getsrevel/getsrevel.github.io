@@ -6,19 +6,6 @@
     <description>Recent content in Demo on Getsrevel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Sep 2020 22:58:42 +0200</lastBuildDate>
-    
-	<atom:link href="https://getsrevel.github.io/tech/node/socket-io-demo/demo/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title></title>
-      <link>https://getsrevel.github.io/tech/node/socket-io-demo/demo/public/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://getsrevel.github.io/tech/node/socket-io-demo/demo/public/</guid>
-      <description></description>
-    </item>
-    
+    <lastBuildDate>Fri, 11 Sep 2020 22:58:42 +0200</lastBuildDate><atom:link href="https://getsrevel.github.io/tech/node/socket-io-demo/demo/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

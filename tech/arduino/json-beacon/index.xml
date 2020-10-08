@@ -6,10 +6,6 @@
     <description>Recent content in Json Beacon on Getsrevel</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Mar 2020 16:59:21 +0200</lastBuildDate>
-    
-	<atom:link href="https://getsrevel.github.io/tech/arduino/json-beacon/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 31 Mar 2020 16:59:21 +0200</lastBuildDate><atom:link href="https://getsrevel.github.io/tech/arduino/json-beacon/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
