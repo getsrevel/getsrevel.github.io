@@ -70,18 +70,32 @@
 	"content": "Dette eksempel viser hvordan man opretter et lærred og tegner figurer på skærmen. Der benyttes variabler og musemarkørens position til at styre hvor på skærmen der tegnes.\nfunction setup() { createCanvas(600, 800); } function draw() { background(220); fill(255); // variable declaration  let x; // variable assignment  x = mouseX; // declaration and assignment in one line  let y = mouseY; circle(x, y, 150); // assign a new value to x  x = 200; ellipse(x, y, 80, 40); fill(255, 0, 0); circle(width, height, 120); let cx = width / 2; let cy = height / 2; circle(cx, cy, 50); }  Demo Prøv det kørende eksempel\nMateriale  setup() createCanvas() draw() background() fill() mouseX mouseY circle() ellipse()  "
 },
 {
-	"uri": "https://getsrevel.github.io/tech/css/flexbox-layout/demo/",
-	"title": "Flexbox Layout demo",
-	"tags": [],
-	"description": "",
-	"content": "\r\r\rPage Title\r\r\rlogo\rMain Title\r\r\rpkt L1\rpkt L2\rpkt L3\rpkt L4\r\r\rpkt R1\rpkt R2\r\r\r1\r2\r3\r4\r5\r6\r7\r8\r9\r\r1\r2\r3\r\r\r\r\r"
-},
-{
 	"uri": "https://getsrevel.github.io/",
 	"title": "Getsrevel",
 	"tags": [],
 	"description": "",
 	"content": "Getsrevel Velkommen til mit website der primært er løse noter om programmering og andet \u0026ldquo;work in progress\u0026rdquo;.\n"
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/logic-operators/demo/",
+	"title": "Logical operators demo",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "https://getsrevel.github.io/tech/p5js/logic-operators/",
+	"title": "Logical Operators",
+	"tags": [],
+	"description": "",
+	"content": "Dette eksempel viser hvordan man kan benytte de forkellige logiske operatorer: NOT, OR, AND, XOR.\nfunction setup() { createCanvas(400, 400); rectMode(CENTER); } function draw() { background(220) const size = 60 let w = size let h = size const x = mouseX const y = mouseY const xLimit = width / 2 const yLimit = height / 2 // Boolean expression  const xIsSmall = x \u0026lt; xLimit const yIsSmall = y \u0026lt; yLimit // NOT operator  const xIsLarge = !xIsSmall const yIsLarge = !yIsSmall // defaults  let c = color(220) let lineWidth = 2 // BRANCH on condition  if (xIsSmall) { w = w / 2; } if (yIsSmall) { h = h / 2 } // OR operator  if (xIsSmall || yIsSmall) { c = color(\u0026#34;red\u0026#34;); } // AND operator  if (xIsLarge \u0026amp;\u0026amp; yIsLarge) { lineWidth = lineWidth * 3; } // XOR  const showAsRectangle = xIsLarge \u0026amp;\u0026amp; !yIsLarge || !xIsLarge \u0026amp;\u0026amp; yIsLarge; // Draw moving shape  fill(c); strokeWeight(lineWidth); if (showAsRectangle) { rect(x, y, w, h) } else { ellipse(x, y, w, h); } // Draw limits  line(xLimit, 0, xLimit, height) line(0, yLimit, width, yLimit) }  Demo Prøv det kørende eksempel\nMateriale  Logical operators - Javascript tutorial Conditional branching: if, \u0026lsquo;?' - Javascript tutorial XOR gate setup() createCanvas() draw() background() fill() mouseX mouseY rect() rectMode() ellipse()  "
+},
+{
+	"uri": "https://getsrevel.github.io/tech/css/flexbox-layout/demo/",
+	"title": "Flexbox Layout demo",
+	"tags": [],
+	"description": "",
+	"content": "\r\r\rPage Title\r\r\rlogo\rMain Title\r\r\rpkt L1\rpkt L2\rpkt L3\rpkt L4\r\r\rpkt R1\rpkt R2\r\r\r1\r2\r3\r4\r5\r6\r7\r8\r9\r\r1\r2\r3\r\r\r\r\r"
 },
 {
 	"uri": "https://getsrevel.github.io/tech/node/socket-io-demo/demo/",

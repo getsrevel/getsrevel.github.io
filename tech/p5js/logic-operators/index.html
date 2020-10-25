@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>p5.js :: Getsrevel</title>
+    <title>Logical Operators :: Getsrevel</title>
 
     
     <link href="/css/nucleus.css?1603617406" rel="stylesheet">
@@ -49,7 +49,7 @@
 
 
   </head>
-  <body class="" data-url="/tech/p5js/">
+  <body class="" data-url="/tech/p5js/logic-operators/">
     <nav id="sidebar" class="">
 
 
@@ -1285,7 +1285,7 @@
     
     <li data-nav-id="/tech/p5js/" title="p5.js" class="dd-item 
         parent
-        active
+        
         
         ">
       <a href="/tech/p5js/">
@@ -1375,8 +1375,8 @@
   
     
     <li data-nav-id="/tech/p5js/logic-operators/" title="Logical Operators" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/tech/p5js/logic-operators/">
@@ -1994,6 +1994,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -2008,7 +2010,13 @@
             
           
           
-            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > p5.js
+            
+            
+          
+          
+            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/p5js/'>p5.js</a> > Logical Operators
+          
+        
           
         
           
@@ -2019,6 +2027,18 @@
                   </span>
                 </div>
                 
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#demo">Demo</a></li>
+    <li><a href="#materiale">Materiale</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
               </div>
             </div>
             
@@ -2026,17 +2046,99 @@
         
         </div>
         
-          <div id="chapter">
-        
         <div id="body-inner">
+          
+            <h1>
+              
+              Logical Operators
+            </h1>
           
 
         
 
 
 
-	<h1 id="p5js">P5js</h1>
-<p>Eksempler med <a href="https://p5js.org/">p5.js</a>.</p>
+	<p>Dette eksempel viser hvordan man kan benytte de forkellige logiske operatorer: NOT, OR, AND, XOR.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
+  <span style="color:#a6e22e">rectMode</span>(<span style="color:#a6e22e">CENTER</span>);
+}
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+  <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>)
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">size</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">60</span>
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">w</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">size</span>
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">h</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">size</span>
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mouseX</span>
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">mouseY</span>
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">xLimit</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">width</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">yLimit</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">height</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
+
+  <span style="color:#75715e">// Boolean expression
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">xIsSmall</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">xLimit</span>
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">yIsSmall</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">yLimit</span>
+
+  <span style="color:#75715e">// NOT operator
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">xIsLarge</span> <span style="color:#f92672">=</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">xIsSmall</span>
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">yIsLarge</span> <span style="color:#f92672">=</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">yIsSmall</span>
+
+  <span style="color:#75715e">// defaults
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">color</span>(<span style="color:#ae81ff">220</span>)
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">lineWidth</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+
+  <span style="color:#75715e">// BRANCH on condition
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">xIsSmall</span>) {
+    <span style="color:#a6e22e">w</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">w</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+  }
+
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">yIsSmall</span>) {
+    <span style="color:#a6e22e">h</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">h</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>
+  }
+
+  <span style="color:#75715e">// OR operator
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">xIsSmall</span> <span style="color:#f92672">||</span> <span style="color:#a6e22e">yIsSmall</span>) {
+    <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">color</span>(<span style="color:#e6db74">&#34;red&#34;</span>);
+  }
+  <span style="color:#75715e">// AND operator
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">xIsLarge</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">yIsLarge</span>) {
+    <span style="color:#a6e22e">lineWidth</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">lineWidth</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">3</span>;
+  }
+
+  <span style="color:#75715e">// XOR
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">showAsRectangle</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">xIsLarge</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">yIsLarge</span> <span style="color:#f92672">||</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">xIsLarge</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">yIsLarge</span>;
+
+  <span style="color:#75715e">// Draw moving shape
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">fill</span>(<span style="color:#a6e22e">c</span>);
+  <span style="color:#a6e22e">strokeWeight</span>(<span style="color:#a6e22e">lineWidth</span>);
+  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">showAsRectangle</span>) {
+    <span style="color:#a6e22e">rect</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">w</span>, <span style="color:#a6e22e">h</span>)
+  } <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">ellipse</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">w</span>, <span style="color:#a6e22e">h</span>);
+  }
+
+  <span style="color:#75715e">// Draw limits
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">line</span>(<span style="color:#a6e22e">xLimit</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">xLimit</span>, <span style="color:#a6e22e">height</span>)
+  <span style="color:#a6e22e">line</span>(<span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">yLimit</span>, <span style="color:#a6e22e">width</span>, <span style="color:#a6e22e">yLimit</span>)
+}
+</code></pre></div>
+<h2 id="demo">Demo</h2>
+<p>Prøv det <a href="demo/">kørende eksempel</a></p>
+<h2 id="materiale">Materiale</h2>
+<ul>
+<li><a href="https://javascript.info/logical-operators">Logical operators</a> - Javascript tutorial</li>
+<li><a href="https://javascript.info/ifelse">Conditional branching: if, &lsquo;?'</a> - Javascript tutorial</li>
+<li><a href="https://en.wikipedia.org/wiki/XOR_gate">XOR gate</a></li>
+<li><a href="https://p5js.org/reference/#/p5/setup">setup()</a></li>
+<li><a href="https://p5js.org/reference/#/p5/createCanvas">createCanvas()</a></li>
+<li><a href="https://p5js.org/reference/#/p5/draw">draw()</a></li>
+<li><a href="https://p5js.org/reference/#/p5/background">background()</a></li>
+<li><a href="https://p5js.org/reference/#/p5/fill">fill()</a></li>
+<li><a href="https://p5js.org/reference/#/p5/mouseX">mouseX</a></li>
+<li><a href="https://p5js.org/reference/#/p5/mouseY">mouseY</a></li>
+<li><a href="https://p5js.org/reference/#/p5/rect">rect()</a></li>
+<li><a href="https://p5js.org/reference/#/p5/rectMode">rectMode()</a></li>
+<li><a href="https://p5js.org/reference/#/p5/ellipse">ellipse()</a></li>
+</ul>
 
 
 
@@ -2046,8 +2148,6 @@
 	
 </footer>
 
-        
-            </div> 
         
         </div>
         
@@ -2853,6 +2953,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2875,6 +2976,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -3189,10 +3293,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/tech/node/web-scraping/" title="Web Scraping"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/tech/p5js/canvas/" title="Canvas"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/tech/p5js/intro/" title="Intro" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/tech/p5js/ball-bounce/" title="Ball Bounce" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3202,19 +3306,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1603617406"></script>
-    <script src="/js/perfect-scrollbar.min.js?1603617406"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1603617406"></script>
-    <script src="/js/jquery.sticky.js?1603617406"></script>
-    <script src="/js/featherlight.min.js?1603617406"></script>
-    <script src="/js/highlight.pack.js?1603617406"></script>
+    <script src="/js/clipboard.min.js?1603617407"></script>
+    <script src="/js/perfect-scrollbar.min.js?1603617407"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1603617407"></script>
+    <script src="/js/jquery.sticky.js?1603617407"></script>
+    <script src="/js/featherlight.min.js?1603617407"></script>
+    <script src="/js/highlight.pack.js?1603617407"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1603617406"></script>
-    <script src="/js/learn.js?1603617406"></script>
-    <script src="/js/hugo-learn.js?1603617406"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1603617407"></script>
+    <script src="/js/learn.js?1603617407"></script>
+    <script src="/js/hugo-learn.js?1603617407"></script>
     
         
-            <script src="/mermaid/mermaid.js?1603617406"></script>
+            <script src="/mermaid/mermaid.js?1603617407"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
