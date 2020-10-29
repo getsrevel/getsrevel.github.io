@@ -1,11 +1,11 @@
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
   rectMode(CENTER);
 }
 
 function draw() {
   background(220)
-  const size = 60
+  const size = windowHeight/8
   let w = size
   let h = size
   const x = mouseX

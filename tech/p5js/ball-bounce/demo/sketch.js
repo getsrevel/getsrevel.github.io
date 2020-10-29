@@ -20,7 +20,10 @@ function changeColor() {
 }
 
 function setup() {
-  createCanvas(600, 400);
+  createCanvas(windowWidth, windowHeight);
+  const speedScale = 128
+  xSpeed = windowWidth / speedScale
+  ySpeed = windowHeight / speedScale
   changeColor();
 }
 

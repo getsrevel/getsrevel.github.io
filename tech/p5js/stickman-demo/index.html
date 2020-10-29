@@ -12,21 +12,21 @@
     <title>Stickman Objects :: Getsrevel</title>
 
     
-    <link href="/css/nucleus.css?1604000610" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1604000610" rel="stylesheet">
-    <link href="/css/hybrid.css?1604000610" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1604000610" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1604000610" rel="stylesheet">
-    <link href="/css/auto-complete.css?1604000610" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1604000610" rel="stylesheet">
-    <link href="/css/theme.css?1604000610" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1604000610" rel="stylesheet">
+    <link href="/css/nucleus.css?1604008334" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1604008334" rel="stylesheet">
+    <link href="/css/hybrid.css?1604008334" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1604008334" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1604008334" rel="stylesheet">
+    <link href="/css/auto-complete.css?1604008334" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1604008334" rel="stylesheet">
+    <link href="/css/theme.css?1604008334" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1604008334" rel="stylesheet">
     
-    <link href="/css/theme-getsrevel.css?1604000610" rel="stylesheet">
+    <link href="/css/theme-getsrevel.css?1604008334" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1604000610"></script>
+    <script src="/js/jquery-3.3.1.min.js?1604008334"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1604000610"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1604000610"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1604008334"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1604008334"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/getsrevel.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1604000610"></script>
+<script type="text/javascript" src="/js/search.js?1604008334"></script>
 
     
   </div>
@@ -2111,35 +2111,42 @@
 
 
 	<p>Denne demonstration er et eksempel på hvordan man kan bruge <em>klasser</em> og <em>objekter</em> til at strukturere koden.
-I eksemplet tegnes et par hoppende tændstikmænd med forskellige egenskaber.</p>
+I eksemplet tegnes nogle hoppende tændstikmænd med forskellige egenskaber.</p>
 <p>Filen <code>sketch.js</code> indeholder den sædvanlige struktur for et program skrevet i p5js.</p>
-<p>I <em>setup()</em> oprettes et lærred, og der oprettes to objekter af klassen stickman.
-Bemærk at det bliver initialiseret med forskellige egenskaber via deres constructor.</p>
+<p>I <em>setup()</em> oprettes et lærred, og der oprettes tre objekter af klassen stickman.
+Bemærk at de bliver initialiseret med forskellige egenskaber via deres constructor.</p>
 <p>I <em>draw()</em> kaldes metoderne <em>render()</em> og <em>update()</em> på begge de to StickMan objekter.</p>
 <p>Derudover er metoden <em>mouseClicked()</em> implementeret, og denne sørger for at kalde metoden jump på de to stickman objekter,
 med den effekt at de begge hopper når der klikkes med musen.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">man</span>;
-<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">otherMan</span>;
+<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">child</span>;
 
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
-  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#ae81ff">400</span>, <span style="color:#ae81ff">400</span>);
-  <span style="color:#a6e22e">man</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">StickMan</span>(<span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">25</span>, <span style="color:#e6db74">&#34;red&#34;</span>);
-  <span style="color:#a6e22e">otherMan</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">StickMan</span>(<span style="color:#a6e22e">width</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">100</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">30</span>, <span style="color:#e6db74">&#34;green&#34;</span>);
+  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#a6e22e">windowWidth</span>, <span style="color:#a6e22e">windowHeight</span>);
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">halfWidth</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">/</span><span style="color:#ae81ff">2</span>;
+  <span style="color:#a6e22e">man</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">StickMan</span>(<span style="color:#a6e22e">halfWidth</span> <span style="color:#f92672">+</span><span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">25</span>, <span style="color:#e6db74">&#34;blue&#34;</span>);
+  <span style="color:#a6e22e">woman</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">StickMan</span>(<span style="color:#a6e22e">halfWidth</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">150</span>, <span style="color:#ae81ff">60</span>, <span style="color:#ae81ff">15</span>, <span style="color:#e6db74">&#34;red&#34;</span>);
+  <span style="color:#a6e22e">child</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">StickMan</span>(<span style="color:#a6e22e">halfWidth</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">45</span>, <span style="color:#e6db74">&#34;greenyellow&#34;</span>);
 }
 
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
   <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">220</span>);
+  <span style="color:#a6e22e">textSize</span>(<span style="color:#ae81ff">20</span>)
+  <span style="color:#a6e22e">text</span>(<span style="color:#e6db74">&#34;Klik med musen for at hoppe&#34;</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">40</span>)
   <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">render</span>();
   <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">update</span>();
 
-  <span style="color:#a6e22e">otherMan</span>.<span style="color:#a6e22e">render</span>();
-  <span style="color:#a6e22e">otherMan</span>.<span style="color:#a6e22e">update</span>();
+  <span style="color:#a6e22e">woman</span>.<span style="color:#a6e22e">render</span>();
+  <span style="color:#a6e22e">woman</span>.<span style="color:#a6e22e">update</span>();
+
+  <span style="color:#a6e22e">child</span>.<span style="color:#a6e22e">render</span>();
+  <span style="color:#a6e22e">child</span>.<span style="color:#a6e22e">update</span>();
 }
 
 <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">mouseClicked</span>() {
-  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;click&#34;</span>);
   <span style="color:#a6e22e">man</span>.<span style="color:#a6e22e">jump</span>();
-  <span style="color:#a6e22e">otherMan</span>.<span style="color:#a6e22e">jump</span>();
+  <span style="color:#a6e22e">woman</span>.<span style="color:#a6e22e">jump</span>();
+  <span style="color:#a6e22e">child</span>.<span style="color:#a6e22e">jump</span>();
 }
 </code></pre></div>
 <p>Herunder ses implementationen af stickman klassen, som er lavet separat i filen <code>stickman.js</code> for at gøre koden mere overskuelig.</p>
@@ -3431,19 +3438,19 @@ med den effekt at de begge hopper når der klikkes med musen.</p>
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1604000610"></script>
-    <script src="/js/perfect-scrollbar.min.js?1604000610"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1604000610"></script>
-    <script src="/js/jquery.sticky.js?1604000610"></script>
-    <script src="/js/featherlight.min.js?1604000610"></script>
-    <script src="/js/highlight.pack.js?1604000610"></script>
+    <script src="/js/clipboard.min.js?1604008334"></script>
+    <script src="/js/perfect-scrollbar.min.js?1604008334"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1604008334"></script>
+    <script src="/js/jquery.sticky.js?1604008334"></script>
+    <script src="/js/featherlight.min.js?1604008334"></script>
+    <script src="/js/highlight.pack.js?1604008334"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1604000610"></script>
-    <script src="/js/learn.js?1604000610"></script>
-    <script src="/js/hugo-learn.js?1604000610"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1604008334"></script>
+    <script src="/js/learn.js?1604008334"></script>
+    <script src="/js/hugo-learn.js?1604008334"></script>
     
         
-            <script src="/mermaid/mermaid.js?1604000610"></script>
+            <script src="/mermaid/mermaid.js?1604008334"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

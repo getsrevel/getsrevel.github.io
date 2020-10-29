@@ -1,23 +1,30 @@
 let man;
-let otherMan;
+let child;
 
 function setup() {
-  createCanvas(400, 400);
-  man = new StickMan(100, 50, 25, "red");
-  otherMan = new StickMan(width - 100, 30, 30, "green");
+  createCanvas(windowWidth, windowHeight);
+  const halfWidth = width/2;
+  man = new StickMan(halfWidth +150, 70, 25, "blue");
+  woman = new StickMan(halfWidth - 150, 60, 15, "red");
+  child = new StickMan(halfWidth, 30, 45, "greenyellow");
 }
 
 function draw() {
   background(220);
+  textSize(20)
+  text("Klik med musen for at hoppe", 30, 40)
   man.render();
   man.update();
 
-  otherMan.render();
-  otherMan.update();
+  woman.render();
+  woman.update();
+
+  child.render();
+  child.update();
 }
 
 function mouseClicked() {
-  console.log("click");
   man.jump();
-  otherMan.jump();
+  woman.jump();
+  child.jump();
 }

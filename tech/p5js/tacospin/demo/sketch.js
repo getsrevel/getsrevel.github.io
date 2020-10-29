@@ -5,7 +5,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(600, 800);
+  createCanvas(windowWidth, windowHeight);
 }
 
 let angle = 0;

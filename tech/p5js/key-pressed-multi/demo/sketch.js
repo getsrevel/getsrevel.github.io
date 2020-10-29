@@ -10,7 +10,7 @@ let state = {
 };
 
 function setup() {
-  createCanvas(400, 600);
+  createCanvas(windowWidth, windowHeight);
   cx = width / 2;
   cy = height / 2;
 }

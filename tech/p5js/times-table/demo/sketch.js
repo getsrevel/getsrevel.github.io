@@ -4,7 +4,8 @@ let total = 0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  r = height / 2 - 16;
+  const maxSize = min(width, height);
+  r = maxSize / 2 - 16;
 }
 
 function getVector(index, total) {
