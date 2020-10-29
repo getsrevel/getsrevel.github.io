@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Sun, 25 Oct 2020 09:57:37 +0100</lastBuildDate><atom:link href="https://getsrevel.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Unity Basics</title>
+      <link>https://getsrevel.github.io/tech/unity/unity-basics/</link>
+      <pubDate>Sat, 05 Sep 2020 11:31:55 +0200</pubDate>
+      
+      <guid>https://getsrevel.github.io/tech/unity/unity-basics/</guid>
+      <description>Unity Install unity  How to make a Video Game in Unity Denne samling af videoer giver en introduktion til at komme igang med at lave et computerspil i Unity.
+ Getting Started Basics (Episode 1) Programming (Episode 2) Movement (Episode 3) Camera follow (Episode 4) Collision (Episode 5) Gameplay (Episode 6) Score &amp;amp; ui (Episode 7) Game over (Episode 8) Winning levels (Episode 9) Finishing up (Episode 10)  How to MAKE YOUR GAME LOOK GOOD!</description>
+    </item>
+    
+    <item>
       <title>Components &#43; Data</title>
       <link>https://getsrevel.github.io/tech/react/component-props/</link>
       <pubDate>Tue, 17 Mar 2020 23:30:32 +0100</pubDate>
@@ -49,16 +59,6 @@ Installation af Firebase For at kunne benytte funktionaliteter fra firebase i vo
       <description>For at kunne løse opgaven har du sikkert brug for en kort introduktion til HTML.
 Opgave: Mig og min kageopskrift Lav et website i html der præsenterer dig selv og din yndlings kage:
  Der skal være 2 sider.  En beskrivelse af dig selv der navngives &amp;ldquo;profil.html&amp;rdquo;. En anden side med en mad opskrift &amp;ldquo;opskrift.html&amp;rdquo;.   Begge sider skal have en titel. Der skal være links så man kan navigere mellem de to sider.</description>
-    </item>
-    
-    <item>
-      <title>Unity Basics</title>
-      <link>https://getsrevel.github.io/tech/unity/unity-basics/</link>
-      <pubDate>Sat, 05 Sep 2020 11:31:55 +0200</pubDate>
-      
-      <guid>https://getsrevel.github.io/tech/unity/unity-basics/</guid>
-      <description>Unity Install unity  How to make a Video Game in Unity Denne samling af videoer giver en introduktion til at komme igang med at lave et computerspil i Unity.
- Getting Started Basics (Episode 1) Programming (Episode 2) Movement (Episode 3) Camera follow (Episode 4) Collision (Episode 5) Gameplay (Episode 6) Score &amp;amp; ui (Episode 7) Game over (Episode 8) Winning levels (Episode 9) Finishing up (Episode 10)  How to MAKE YOUR GAME LOOK GOOD!</description>
     </item>
     
     <item>
@@ -105,10 +105,10 @@ import firebase from &amp;#34;../lib/Firebase&amp;#34;; const Timestamp = fireba
     
     <item>
       <title>Iterativ udvikling</title>
-      <link>https://getsrevel.github.io/tech/development-model/</link>
+      <link>https://getsrevel.github.io/tools/development-model/</link>
       <pubDate>Mon, 11 Nov 2019 21:58:28 +0100</pubDate>
       
-      <guid>https://getsrevel.github.io/tech/development-model/</guid>
+      <guid>https://getsrevel.github.io/tools/development-model/</guid>
       <description>graph LR; IDEA(&#34;Idé&#34;) -- PLANNING((&#34;Planlægning&#34;)) PLANNING -- IMPLEMENTATION((&#34;Udarbejdelse&#34;)) IMPLEMENTATION -- TEST((Evaluering / Test)) TEST -- PLANNING TEST -- RELEASE(Frigivelse af færdigt system) </description>
     </item>
     
