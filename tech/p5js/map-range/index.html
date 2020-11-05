@@ -9,24 +9,24 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Styring af LED via web interface :: Getsrevel</title>
+    <title>Map Range :: Getsrevel</title>
 
     
-    <link href="/css/nucleus.css?1604593665" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1604593665" rel="stylesheet">
-    <link href="/css/hybrid.css?1604593665" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1604593665" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1604593665" rel="stylesheet">
-    <link href="/css/auto-complete.css?1604593665" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1604593665" rel="stylesheet">
-    <link href="/css/theme.css?1604593665" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1604593665" rel="stylesheet">
+    <link href="/css/nucleus.css?1604593667" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1604593667" rel="stylesheet">
+    <link href="/css/hybrid.css?1604593667" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1604593667" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1604593667" rel="stylesheet">
+    <link href="/css/auto-complete.css?1604593667" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1604593667" rel="stylesheet">
+    <link href="/css/theme.css?1604593667" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1604593667" rel="stylesheet">
     
-    <link href="/css/theme-getsrevel.css?1604593665" rel="stylesheet">
+    <link href="/css/theme-getsrevel.css?1604593667" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1604593665"></script>
+    <script src="/js/jquery-3.3.1.min.js?1604593667"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -49,7 +49,7 @@
 
 
   </head>
-  <body class="" data-url="/project/server-controlled-leds/">
+  <body class="" data-url="/tech/p5js/map-range/">
     <nav id="sidebar" class="">
 
 
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1604593665"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1604593665"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1604593667"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1604593667"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/getsrevel.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1604593665"></script>
+<script type="text/javascript" src="/js/search.js?1604593667"></script>
 
     
   </div>
@@ -95,7 +95,7 @@
   
     
     <li data-nav-id="/project/" title="Project" class="dd-item 
-        parent
+        
         
         
         ">
@@ -171,8 +171,8 @@
   
     
     <li data-nav-id="/project/server-controlled-leds/" title="Styring af LED via web interface" class="dd-item 
-        parent
-        active
+        
+        
         
         ">
       <a href="/project/server-controlled-leds/">
@@ -293,7 +293,7 @@
   
     
     <li data-nav-id="/tech/" title="Tech" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1315,7 +1315,7 @@
   
     
     <li data-nav-id="/tech/p5js/" title="p5.js" class="dd-item 
-        
+        parent
         
         
         ">
@@ -1406,8 +1406,8 @@
   
     
     <li data-nav-id="/tech/p5js/map-range/" title="Map Range" class="dd-item 
-        
-        
+        parent
+        active
         
         ">
       <a href="/tech/p5js/map-range/">
@@ -2103,7 +2103,13 @@
             
           
           
-            <a href='/'>Getsrevel</a> > <a href='/project/'>Project</a> > Styring af LED via web interface
+            
+            
+          
+          
+            <a href='/'>Getsrevel</a> > <a href='/tech/'>Tech</a> > <a href='/tech/p5js/'>p5.js</a> > Map Range
+          
+        
           
         
           
@@ -2118,13 +2124,8 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#opgaven">Opgaven</a></li>
-    <li><a href="#kode-eksempler">Kode eksempler</a></li>
-    <li><a href="#materiale">Materiale</a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+    <li><a href="#demo">Demo</a></li>
+    <li><a href="#materiale">Materiale</a></li>
   </ul>
 </nav>
     </div>
@@ -2142,7 +2143,7 @@
           
             <h1>
               
-              Styring af LED via web interface
+              Map Range
             </h1>
           
 
@@ -2150,57 +2151,61 @@
 
 
 
-	<figure>
-    <img src="/tech/arduino/neopixel/neopixel-array-hw.jpg"
-         alt="Arduino og Neopixel LED array"/> <figcaption>
-            <h4>LED array hardware</h4>
-        </figcaption>
-</figure>
+	<p>Dette eksempel viser hvordan man kan benytte funktionen <code>map()</code>, til at lave lineær interpolation.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setup</span>() {
+  <span style="color:#a6e22e">createCanvas</span>(<span style="color:#a6e22e">windowWidth</span>, <span style="color:#a6e22e">windowHeight</span>);
+  <span style="color:#a6e22e">fill</span>(<span style="color:#ae81ff">133</span>, <span style="color:#ae81ff">18</span>, <span style="color:#ae81ff">9</span>);
+  <span style="color:#a6e22e">stroke</span>(<span style="color:#ae81ff">209</span>, <span style="color:#ae81ff">52</span>, <span style="color:#ae81ff">40</span>)
+  <span style="color:#a6e22e">strokeWeight</span>(<span style="color:#ae81ff">3</span>)
+}
 
-<p>I dette projekt handler det om at styre lyset i en række multifarvede LED&rsquo;er, som vist på billedet.</p>
-<p>Tanken er at bygge videre på tre kode eksempler, så enkeltdelene kan bruges til at lave et system der kan styre lyset i LED arrayet fra en browser, f.eks. i en mobiltelefon.</p>
-<h2 id="opgaven">Opgaven</h2>
-<p>Lav et system, der kan styre en række Neopixel LED&rsquo;er fra et webinterface i en browser.</p>
-<p>Systemet tænkes at bestå af følgende komponenter:</p>
-<ul>
-<li>En Arduino med tilsluttet array af NeoPixel LEDs.</li>
-<li>En server lavet i node.js, der håndterer kommandoer fra brugerens browser.</li>
-<li>Et simpelt node modul der kan håndtere kommunikation med Arduino via serielporten.</li>
-<li>Brugerinterface baseret på HTML, CSS og Javascript, der via websockets sender beskeder til serveren om styring af LED lys.</li>
-</ul>
-<h2 id="kode-eksempler">Kode eksempler</h2>
-<ul>
-<li><a href="/tech/arduino/neopixel/">Styring af neopixel LED array med arduino</a> - Dette indeholder også beskrivelse af hardware.</li>
-<li><a href="/tech/node/socket-io-demo/">Klient / server kommunikation</a>. Dette eksempel viser hvordan man kan kommunikere mellem klienter via Socket.io, ved at lave en server i node.js.</li>
-<li><a href="/tech/arduino/json-command-receiver/">Arduino JSON commands</a>. Viser hvordan man kan håndtere udveksling af beskeder mellem computer og Arduino.</li>
-<li><a href="/tech/node/serial-json/">Serial Port Kommunikation</a>.
-Dette eksempel viser hvordan man kan sende og modtage json beskeder via seriel porten, ved hjælp af et script i node.js.
-Teknikken kan bruges til kommunikation mellem computer og Arduino ved hjælp af simple kommandoer.</li>
-</ul>
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">draw</span>() {
+  <span style="color:#a6e22e">background</span>(<span style="color:#ae81ff">70</span>);
+
+  <span style="color:#75715e">// Define tilt based on mouse horizontal position
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">yRange</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">height</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">4</span>
+<span style="display:block;width:100%;background-color:#3c3d38">  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">deltaY</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">mouseX</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">width</span>, <span style="color:#f92672">-</span><span style="color:#a6e22e">yRange</span>, <span style="color:#a6e22e">yRange</span>, <span style="color:#66d9ef">true</span>)
+</span>  
+  <span style="color:#75715e">// Define control points
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ax</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ay</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">height</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">deltaY</span>
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">bx</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">width</span> <span style="color:#f92672">-</span> <span style="color:#a6e22e">ax</span>
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">by</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">height</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">deltaY</span>
+
+  <span style="color:#75715e">// Draw large cirles at control poins
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">diameter</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>
+  <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">ax</span>, <span style="color:#a6e22e">ay</span>, <span style="color:#a6e22e">diameter</span>)
+  <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">bx</span>, <span style="color:#a6e22e">by</span>, <span style="color:#a6e22e">diameter</span>)
+
+  <span style="color:#75715e">// Define number of circles based on mouse vertical position
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">mouseY</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">height</span>, <span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">2</span>, <span style="color:#66d9ef">true</span>)
+  <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">ceil</span>(<span style="color:#a6e22e">n</span>)
+
+  <span style="color:#75715e">// Draw circles using a loop
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">let</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;=</span> <span style="color:#a6e22e">n</span>; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+<span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">x</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">i</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">ax</span>, <span style="color:#a6e22e">bx</span>)
+</span><span style="display:block;width:100%;background-color:#3c3d38">    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">y</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">i</span>, <span style="color:#ae81ff">0</span>, <span style="color:#a6e22e">n</span>, <span style="color:#a6e22e">ay</span>, <span style="color:#a6e22e">by</span>)
+</span>    <span style="color:#a6e22e">circle</span>(<span style="color:#a6e22e">x</span>, <span style="color:#a6e22e">y</span>, <span style="color:#a6e22e">diameter</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)
+  }
+}
+</code></pre></div>
+<h2 id="demo">Demo</h2>
+<p>Prøv det <a href="demo/">kørende eksempel</a></p>
 <h2 id="materiale">Materiale</h2>
-<h4 id="arduino">Arduino</h4>
 <ul>
-<li><a href="https://www.arduino.cc/">Arduino</a></li>
-<li><a href="https://www.arduino.cc/en/Main/Software">Arduino IDE</a></li>
-<li><a href="https://www.arduino.cc/reference/en/">Arduino programming reference</a></li>
-<li><a href="https://www.arduino.cc/en/guide/libraries">Installing arduino libraries</a></li>
-<li><a href="https://www.arduino.cc/en/Tutorial/LibraryExamples">Eksempler fra Arduino biblioteker</a></li>
+<li><a href="https://javascript.info/while-for">Loops: while and for</a> - Javascript tutorial</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for">for</a> - MDN docs</li>
+<li><a href="https://p5js.org/reference/#/p5/setup">setup()</a></li>
+<li><a href="https://p5js.org/reference/#/p5/createCanvas">createCanvas()</a></li>
+<li><a href="https://p5js.org/reference/#/p5/draw">draw()</a></li>
+<li><a href="https://p5js.org/reference/#/p5/fill">fill()</a></li>
+<li><a href="https://p5js.org/reference/#/p5/stroke">stroke()</a></li>
+<li><a href="https://p5js.org/reference/#/p5/strokeWeight">strokeWeight()</a></li>
+<li><a href="https://p5js.org/reference/#/p5/background">background()</a></li>
+<li><a href="https://p5js.org/reference/#/p5/map">map()</a></li>
+<li><a href="https://p5js.org/reference/#/p5/line">line()</a></li>
+<li><a href="https://p5js.org/reference/#/p5/circle">circle()</a></li>
 </ul>
-<h4 id="styring-af-leder">Styring af LED&rsquo;er</h4>
-<ul>
-<li><a href="https://github.com/adafruit/Adafruit_NeoPixel">Adafruit NeoPixel</a></li>
-<li><a href="https://learn.adafruit.com/adafruit-neopixel-uberguide/arduino-library-use">Adafruit NeoPixel Überguide</a></li>
-</ul>
-<h4 id="command-parsing-json-on-the-arduino">Command parsing (JSON) on the Arduino</h4>
-<ul>
-<li><a href="https://arduinojson.org/">ArduinoJson</a></li>
-</ul>
-<h4 id="nodejs-serial-port-kommunikation">Node.js Serial port kommunikation</h4>
-<ul>
-<li><a href="https://serialport.io/">Node Serialport</a> Serial port kommunikation vha. node.js</li>
-</ul>
-  
-
 
 
 
@@ -2241,275 +2246,8 @@ Teknikken kan bruges til kommunikation mellem computer og Arduino ved hjælp af 
             
                 
                     
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
                         
                         
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-        
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2617,24 +2355,6 @@ Teknikken kan bruges til kommunikation mellem computer og Arduino ved hjælp af 
             
         
                     
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
                         
             
             
@@ -2659,20 +2379,6 @@ Teknikken kan bruges til kommunikation mellem computer og Arduino ved hjælp af 
             
                 
                     
-                
-                
-
-                    
-                    
-                        
-                    
-                    
-
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2687,66 +2393,10 @@ Teknikken kan bruges til kommunikation mellem computer og Arduino ved hjælp af 
                         
             
             
-        
-                    
-            
-        
+                
                     
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
                         
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-            
-        
-                    
-                        
-            
-            
-                
                     
                 
                 
@@ -2800,6 +2450,11 @@ Teknikken kan bruges til kommunikation mellem computer og Arduino ved hjælp af 
                         
             
             
+        
+                    
+                        
+            
+            
                 
                     
                 
@@ -2807,8 +2462,15 @@ Teknikken kan bruges til kommunikation mellem computer og Arduino ved hjælp af 
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+        
                     
             
         
@@ -2829,9 +2491,6 @@ Teknikken kan bruges til kommunikation mellem computer og Arduino ved hjælp af 
                     
 
                     
-            
-        
-                    
                         
             
             
@@ -2847,19 +2506,6 @@ Teknikken kan bruges til kommunikation mellem computer og Arduino ved hjælp af 
                     
             
         
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
                     
             
         
@@ -2937,6 +2583,211 @@ Teknikken kan bruges til kommunikation mellem computer og Arduino ved hjælp af 
 
                     
                     
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                         
                     
                     
@@ -2979,10 +2830,90 @@ Teknikken kan bruges til kommunikation mellem computer og Arduino ved hjælp af 
 
                     
                     
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                         
                     
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
                         
             
@@ -3033,6 +2964,60 @@ Teknikken kan bruges til kommunikation mellem computer og Arduino ved hjælp af 
 
                     
                     
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
                         
                     
                     
@@ -3050,6 +3035,33 @@ Teknikken kan bruges til kommunikation mellem computer og Arduino ved hjælp af 
             
             
                 
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
                     
                 
                 
@@ -3403,10 +3415,10 @@ Teknikken kan bruges til kommunikation mellem computer og Arduino ved hjælp af 
 	 
 	 
 		
-			<a class="nav nav-prev" href="/project/code-lock/" title="Code Lock"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/tech/p5js/canvas/" title="Canvas"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/project/weather-station/" title="Weather Station" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/tech/p5js/logical-operators/" title="Logical Operators" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -3416,19 +3428,19 @@ Teknikken kan bruges til kommunikation mellem computer og Arduino ved hjælp af 
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1604593665"></script>
-    <script src="/js/perfect-scrollbar.min.js?1604593665"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1604593665"></script>
-    <script src="/js/jquery.sticky.js?1604593665"></script>
-    <script src="/js/featherlight.min.js?1604593665"></script>
-    <script src="/js/highlight.pack.js?1604593665"></script>
+    <script src="/js/clipboard.min.js?1604593667"></script>
+    <script src="/js/perfect-scrollbar.min.js?1604593667"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1604593667"></script>
+    <script src="/js/jquery.sticky.js?1604593667"></script>
+    <script src="/js/featherlight.min.js?1604593667"></script>
+    <script src="/js/highlight.pack.js?1604593667"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1604593665"></script>
-    <script src="/js/learn.js?1604593665"></script>
-    <script src="/js/hugo-learn.js?1604593665"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1604593667"></script>
+    <script src="/js/learn.js?1604593667"></script>
+    <script src="/js/hugo-learn.js?1604593667"></script>
     
         
-            <script src="/mermaid/mermaid.js?1604593665"></script>
+            <script src="/mermaid/mermaid.js?1604593667"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });
