@@ -104,3 +104,10 @@ a:hover {
 #sidebar hr {
     border-color: var(--MENU-SECTION-HR-color);
 }
+
+@media only print {
+    #top-bar-sticky-wrapper, #navigation > .nav {
+        display: none;
+    }
+
+}

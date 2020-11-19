@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Firestore Node Upload on Getsrevel</title>
-    <link>https://getsrevel.github.io/tech/firebase/firestore-upload/</link>
-    <description>Recent content in Firestore Node Upload on Getsrevel</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 28 Jan 2020 10:46:51 +0100</lastBuildDate><atom:link href="https://getsrevel.github.io/tech/firebase/firestore-upload/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Firestore Node Upload on Getsrevel</title><link>https://getsrevel.github.io/tech/firebase/firestore-upload/</link><description>Recent content in Firestore Node Upload on Getsrevel</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 28 Jan 2020 10:46:51 +0100</lastBuildDate><atom:link href="https://getsrevel.github.io/tech/firebase/firestore-upload/index.xml" rel="self" type="application/rss+xml"/></channel></rss>

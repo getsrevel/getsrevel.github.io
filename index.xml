@@ -1,144 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Getsrevel</title>
-    <link>https://getsrevel.github.io/</link>
-    <description>Recent content on Getsrevel</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 05 Nov 2020 17:07:57 +0100</lastBuildDate><atom:link href="https://getsrevel.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Unity Basics</title>
-      <link>https://getsrevel.github.io/tech/unity/unity-basics/</link>
-      <pubDate>Sat, 05 Sep 2020 11:31:55 +0200</pubDate>
-      
-      <guid>https://getsrevel.github.io/tech/unity/unity-basics/</guid>
-      <description>Unity Install unity  How to make a Video Game in Unity Denne samling af videoer giver en introduktion til at komme igang med at lave et computerspil i Unity.
- Getting Started Basics (Episode 1) Programming (Episode 2) Movement (Episode 3) Camera follow (Episode 4) Collision (Episode 5) Gameplay (Episode 6) Score &amp;amp; ui (Episode 7) Game over (Episode 8) Winning levels (Episode 9) Finishing up (Episode 10)  How to MAKE YOUR GAME LOOK GOOD!</description>
-    </item>
-    
-    <item>
-      <title>Components &#43; Data</title>
-      <link>https://getsrevel.github.io/tech/react/component-props/</link>
-      <pubDate>Tue, 17 Mar 2020 23:30:32 +0100</pubDate>
-      
-      <guid>https://getsrevel.github.io/tech/react/component-props/</guid>
-      <description>Her er et eksempel på hvordan man kan bruge properties på react komponenter til at vise udvalgte informationer, f.eks. fra en database eller et API.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Getsrevel</title><link>https://getsrevel.github.io/</link><description>Recent content on Getsrevel</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 05 Nov 2020 17:07:57 +0100</lastBuildDate><atom:link href="https://getsrevel.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Unity Basics</title><link>https://getsrevel.github.io/tech/unity/unity-basics/</link><pubDate>Sat, 05 Sep 2020 11:31:55 +0200</pubDate><guid>https://getsrevel.github.io/tech/unity/unity-basics/</guid><description>Unity Install unity How to make a Video Game in Unity Denne samling af videoer giver en introduktion til at komme igang med at lave et computerspil i Unity.
+Getting Started Basics (Episode 1) Programming (Episode 2) Movement (Episode 3) Camera follow (Episode 4) Collision (Episode 5) Gameplay (Episode 6) Score &amp;amp; ui (Episode 7) Game over (Episode 8) Winning levels (Episode 9) Finishing up (Episode 10) How to MAKE YOUR GAME LOOK GOOD!</description></item><item><title>Components + Data</title><link>https://getsrevel.github.io/tech/react/component-props/</link><pubDate>Tue, 17 Mar 2020 23:30:32 +0100</pubDate><guid>https://getsrevel.github.io/tech/react/component-props/</guid><description>Her er et eksempel på hvordan man kan bruge properties på react komponenter til at vise udvalgte informationer, f.eks. fra en database eller et API.
 Eksemplet bygger videre på den app der blev oprettet i React intro.
 Input data For at have noget data at vise, oprettes følgende datastruktur oprettet i filen src/lib/fake_highscores.js.
-// Fake data - could come from a database or similar const data = { userIdOne: { username: &amp;#34;jens&amp;#34;, firstName: &amp;#34;Jens&amp;#34;, lastName: &amp;#34;Hansen&amp;#34;, scores: [ { date: &amp;#34;2020-03-16T10:30:45&amp;#34;, score: 7 }, { date: &amp;#34;2020-03-16T12:30:45&amp;#34;, score: 15 }, { date: &amp;#34;2020-03-16T12:32:45&amp;#34;, score: 10 }, ] }, userIdTwo: { username: &amp;#34;jj&amp;#34;, firstName: &amp;#34;Jørgen&amp;#34;, lastName: &amp;#34;Jyde&amp;#34;, scores: [ { date: &amp;#34;2020-03-16T11:30:42&amp;#34;, score: 120 }, { date: &amp;#34;2020-03-16T12:35:31&amp;#34;, score: 12 }, { date: &amp;#34;2020-03-16T12:37:20&amp;#34;, score: 23 }, { date: &amp;#34;2020-03-17T09:07:34&amp;#34;, score: 17 }, { date: &amp;#34;2020-03-17T09:31:10&amp;#34;, score: 25 }, ] }, userIdThree: { username: &amp;#34;john&amp;#34;, firstName: &amp;#34;John&amp;#34;, lastName: &amp;#34;Doe&amp;#34;, scores: [ { date: &amp;#34;2020-03-16T10:57:45&amp;#34;, score: 11 }, { date: &amp;#34;2020-03-16T11:05:45&amp;#34;, score: 8 }, { date: &amp;#34;2020-03-16T11:21:12&amp;#34;, score: 13 }, ] } }; export default data;  I en rigtig app kan vi forestille os at data er gemt i en database, i og ikke blot gemt i en statisk fil.</description>
-    </item>
-    
-    <item>
-      <title>React &#43; Firebase</title>
-      <link>https://getsrevel.github.io/tech/react/react-with-firebase/</link>
-      <pubDate>Wed, 18 Mar 2020 08:37:19 +0100</pubDate>
-      
-      <guid>https://getsrevel.github.io/tech/react/react-with-firebase/</guid>
-      <description>Dette eksempel viser hvordan man kan integrere Firebase Firestore i en react app. Det tager udgangspunkt i samme simple eksempel, som blev brugt i hotdog demoen. Dog vil vi her nøjes med at læse data fra Firestore.
+// Fake data - could come from a database or similar const data = { userIdOne: { username: &amp;#34;jens&amp;#34;, firstName: &amp;#34;Jens&amp;#34;, lastName: &amp;#34;Hansen&amp;#34;, scores: [ { date: &amp;#34;2020-03-16T10:30:45&amp;#34;, score: 7 }, { date: &amp;#34;2020-03-16T12:30:45&amp;#34;, score: 15 }, { date: &amp;#34;2020-03-16T12:32:45&amp;#34;, score: 10 }, ] }, userIdTwo: { username: &amp;#34;jj&amp;#34;, firstName: &amp;#34;Jørgen&amp;#34;, lastName: &amp;#34;Jyde&amp;#34;, scores: [ { date: &amp;#34;2020-03-16T11:30:42&amp;#34;, score: 120 }, { date: &amp;#34;2020-03-16T12:35:31&amp;#34;, score: 12 }, { date: &amp;#34;2020-03-16T12:37:20&amp;#34;, score: 23 }, { date: &amp;#34;2020-03-17T09:07:34&amp;#34;, score: 17 }, { date: &amp;#34;2020-03-17T09:31:10&amp;#34;, score: 25 }, ] }, userIdThree: { username: &amp;#34;john&amp;#34;, firstName: &amp;#34;John&amp;#34;, lastName: &amp;#34;Doe&amp;#34;, scores: [ { date: &amp;#34;2020-03-16T10:57:45&amp;#34;, score: 11 }, { date: &amp;#34;2020-03-16T11:05:45&amp;#34;, score: 8 }, { date: &amp;#34;2020-03-16T11:21:12&amp;#34;, score: 13 }, ] } }; export default data; I en rigtig app kan vi forestille os at data er gemt i en database, i og ikke blot gemt i en statisk fil.</description></item><item><title>React + Firebase</title><link>https://getsrevel.github.io/tech/react/react-with-firebase/</link><pubDate>Wed, 18 Mar 2020 08:37:19 +0100</pubDate><guid>https://getsrevel.github.io/tech/react/react-with-firebase/</guid><description>Dette eksempel viser hvordan man kan integrere Firebase Firestore i en react app. Det tager udgangspunkt i samme simple eksempel, som blev brugt i hotdog demoen. Dog vil vi her nøjes med at læse data fra Firestore.
 Eksemplet bygger videre på den app der blev oprettet i React intro, og udvidet i Components + Data.
-Installation af Firebase For at kunne benytte funktionaliteter fra firebase i vores react app, er det nødvendigt at installere firebase SDK.</description>
-    </item>
-    
-    <item>
-      <title>Intro</title>
-      <link>https://getsrevel.github.io/tech/p5js/intro/</link>
-      <pubDate>Wed, 04 Dec 2019 12:44:31 +0100</pubDate>
-      
-      <guid>https://getsrevel.github.io/tech/p5js/intro/</guid>
-      <description>P5js introduktion  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5. Variabler i javascript bliver grundigt forklaret og bruger et metafor med en kasse, der måske kan hjælpe lidt på forståelsen. Variable scope forklaret ved et eksempel.  Tegn på skærmen Denne video forklarer de grundlæggende principper i computergrafik.
-  Tegneprimitiver  Dokumentation af alle tegneprimitiver i p5.</description>
-    </item>
-    
-    <item>
-      <title>HTML Basics</title>
-      <link>https://getsrevel.github.io/project/html-basics/</link>
-      <pubDate>Mon, 11 Nov 2019 21:41:09 +0100</pubDate>
-      
-      <guid>https://getsrevel.github.io/project/html-basics/</guid>
-      <description>For at kunne løse opgaven har du sikkert brug for en kort introduktion til HTML.
+Installation af Firebase For at kunne benytte funktionaliteter fra firebase i vores react app, er det nødvendigt at installere firebase SDK.</description></item><item><title>Intro</title><link>https://getsrevel.github.io/tech/p5js/intro/</link><pubDate>Wed, 04 Dec 2019 12:44:31 +0100</pubDate><guid>https://getsrevel.github.io/tech/p5js/intro/</guid><description>P5js introduktion p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5. Variabler i javascript bliver grundigt forklaret og bruger et metafor med en kasse, der måske kan hjælpe lidt på forståelsen. Variable scope forklaret ved et eksempel. Tegn på skærmen Denne video forklarer de grundlæggende principper i computergrafik.
+Tegneprimitiver Dokumentation af alle tegneprimitiver i p5.</description></item><item><title>HTML Basics</title><link>https://getsrevel.github.io/project/html-basics/</link><pubDate>Mon, 11 Nov 2019 21:41:09 +0100</pubDate><guid>https://getsrevel.github.io/project/html-basics/</guid><description>For at kunne løse opgaven har du sikkert brug for en kort introduktion til HTML.
 Opgave: Mig og min kageopskrift Lav et website i html der præsenterer dig selv og din yndlings kage:
- Der skal være 2 sider.  En beskrivelse af dig selv der navngives &amp;ldquo;profil.html&amp;rdquo;. En anden side med en mad opskrift &amp;ldquo;opskrift.html&amp;rdquo;.   Begge sider skal have en titel. Der skal være links så man kan navigere mellem de to sider.</description>
-    </item>
-    
-    <item>
-      <title>React &#43; Firestore Fake Weather</title>
-      <link>https://getsrevel.github.io/tech/react/react-fake-weather/</link>
-      <pubDate>Wed, 15 Apr 2020 08:32:39 +0200</pubDate>
-      
-      <guid>https://getsrevel.github.io/tech/react/react-fake-weather/</guid>
-      <description>Dette eksempel bygger videre på react eksemplet med firestore, og demonstrationen af hvordan man kan uploade data med node.js.
+Der skal være 2 sider. En beskrivelse af dig selv der navngives &amp;ldquo;profil.html&amp;rdquo;. En anden side med en mad opskrift &amp;ldquo;opskrift.html&amp;rdquo;. Begge sider skal have en titel. Der skal være links så man kan navigere mellem de to sider.</description></item><item><title>React + Firestore Fake Weather</title><link>https://getsrevel.github.io/tech/react/react-fake-weather/</link><pubDate>Wed, 15 Apr 2020 08:32:39 +0200</pubDate><guid>https://getsrevel.github.io/tech/react/react-fake-weather/</guid><description>Dette eksempel bygger videre på react eksemplet med firestore, og demonstrationen af hvordan man kan uploade data med node.js.
 Statisk data visning Først laves en fil med samme struktur som forventes at være i firestore databasen, når upload scriptet har kørt nogle gange. Data strukturen laves i filen src/lib/fake_weather.js, med dette indhold.
-import firebase from &amp;#34;../lib/Firebase&amp;#34;; const Timestamp = firebase.firestore.Timestamp; // helper for generating firestore timestamps const t = timeString =&amp;gt; Timestamp.</description>
-    </item>
-    
-    <item>
-      <title>Weather Station</title>
-      <link>https://getsrevel.github.io/project/weather-station/</link>
-      <pubDate>Tue, 17 Dec 2019 12:32:28 +0100</pubDate>
-      
-      <guid>https://getsrevel.github.io/project/weather-station/</guid>
-      <description>Opgave: Mobil vejrstation Lav et it system der gør det muligt at se data fra en vejrstatation på en nem og overskuelig måde. Løsningen skal virke på mobil, tablet og computeren.
- Opgaven løses i grupper. Der skal laves en kravspecifikation. I skal bruge et projetstyrings værktøj til at styre jeres opgaver, f.eks. Trello eller Milanote. &amp;ldquo;Oversæt&amp;rdquo; krav fra kravspecifikationen til konkrete opgaver på jeres trello board. Løsningen skal designes så den ikke belaster vejrstationen unødigt når den bruges samtidig af mange brugere, f.</description>
-    </item>
-    
-    <item>
-      <title>Asteroids Game</title>
-      <link>https://getsrevel.github.io/project/asteroid/</link>
-      <pubDate>Thu, 05 Dec 2019 10:35:53 +0100</pubDate>
-      
-      <guid>https://getsrevel.github.io/project/asteroid/</guid>
-      <description>Opgave: Lav et &amp;ldquo;Asteroids&amp;rdquo; spil  Opgaven skal laves i grupper. I skal lave en kravspecifikation I skal lave implementationen i p5js I skal bruge Trello til at styre jeres opgaver. &amp;ldquo;Oversæt&amp;rdquo; krav til jeres spil fra kravspecifikationen til opgaver på jeres trello board. Brug git og github til at samarbejde om koden.  Materiale  p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5.</description>
-    </item>
-    
-    <item>
-      <title>Hugo Static Site Generator</title>
-      <link>https://getsrevel.github.io/tech/hugo/</link>
-      <pubDate>Tue, 12 Nov 2019 12:51:42 +0100</pubDate>
-      
-      <guid>https://getsrevel.github.io/tech/hugo/</guid>
-      <description>Kom igang med Hugo  Hugo Hugo Quickstart  Tilføj indhold Indholdet skrives ved hjælp af markdown, som bliver oversat til html.
- Markdown - John Gruber Markdown Markdown syntax explained Markdown usage with grav theme Hugo shortcodes  Diagrammer med Mermaid.js Læs dokumentation af mermaid.js for mange flere detaljer.
-Her er et eksempel på hvordan man kan lave et flowchart.
-{{&amp;lt; mermaid &amp;gt;}} graph TD; EDIT(&amp;quot;opret/rediger/slet fil(er)&amp;quot;) --&amp;gt; STAGE(&amp;quot;udvælg ændringer&amp;quot;) STAGE --&amp;gt; COMMIT(&amp;quot;Commit i lokalt depot&amp;quot;) COMMIT --&amp;gt; DO_PUSH{Klar til offentliggørelse?</description>
-    </item>
-    
-    <item>
-      <title>Iterativ udvikling</title>
-      <link>https://getsrevel.github.io/tools/development-model/</link>
-      <pubDate>Mon, 11 Nov 2019 21:58:28 +0100</pubDate>
-      
-      <guid>https://getsrevel.github.io/tools/development-model/</guid>
-      <description>graph LR; IDEA(&#34;Idé&#34;) -- PLANNING((&#34;Planlægning&#34;)) PLANNING -- IMPLEMENTATION((&#34;Udarbejdelse&#34;)) IMPLEMENTATION -- TEST((Evaluering / Test)) TEST -- PLANNING TEST -- RELEASE(Frigivelse af færdigt system) </description>
-    </item>
-    
-    <item>
-      <title>Stickman</title>
-      <link>https://getsrevel.github.io/project/stickman/</link>
-      <pubDate>Mon, 11 Nov 2019 21:35:57 +0100</pubDate>
-      
-      <guid>https://getsrevel.github.io/project/stickman/</guid>
-      <description>Opgave: Lav en tændstikmand Opgaven går ud på at eksperimentere med computergrafik. Ved hjælp af p5js skal du lave et program der benytter forskellige tegne funktioner, til at generere en &amp;ldquo;tændstikmand&amp;rdquo;.
+import firebase from &amp;#34;../lib/Firebase&amp;#34;; const Timestamp = firebase.firestore.Timestamp; // helper for generating firestore timestamps const t = timeString =&amp;gt; Timestamp.</description></item><item><title>Weather Station</title><link>https://getsrevel.github.io/project/weather-station/</link><pubDate>Tue, 17 Dec 2019 12:32:28 +0100</pubDate><guid>https://getsrevel.github.io/project/weather-station/</guid><description>Opgave: Mobil vejrstation Lav et it system der gør det muligt at se data fra en vejrstatation på en nem og overskuelig måde. Løsningen skal virke på mobil, tablet og computeren.
+Opgaven løses i grupper. Der skal laves en kravspecifikation. I skal bruge et projetstyrings værktøj til at styre jeres opgaver, f.eks. Trello eller Milanote. &amp;ldquo;Oversæt&amp;rdquo; krav fra kravspecifikationen til konkrete opgaver på jeres trello board. Løsningen skal designes så den ikke belaster vejrstationen unødigt når den bruges samtidig af mange brugere, f.</description></item><item><title>Asteroids Game</title><link>https://getsrevel.github.io/project/asteroid/</link><pubDate>Thu, 05 Dec 2019 10:35:53 +0100</pubDate><guid>https://getsrevel.github.io/project/asteroid/</guid><description>Opgave: Lav et &amp;ldquo;Asteroids&amp;rdquo; spil Opgaven skal laves i grupper. I skal lave en kravspecifikation I skal lave implementationen i p5js I skal bruge Trello til at styre jeres opgaver. &amp;ldquo;Oversæt&amp;rdquo; krav til jeres spil fra kravspecifikationen til opgaver på jeres trello board. Brug git og github til at samarbejde om koden. Materiale p5js p5 code editor browserbaseret editor der ikke kræver installation. p5 reference er dokumentation af de mange funktioner i p5.</description></item><item><title>Hugo Static Site Generator</title><link>https://getsrevel.github.io/tech/hugo/</link><pubDate>Tue, 12 Nov 2019 12:51:42 +0100</pubDate><guid>https://getsrevel.github.io/tech/hugo/</guid><description>Kom igang med Hugo Hugo Hugo Quickstart Tilføj indhold Indholdet skrives ved hjælp af markdown, som bliver oversat til html.
+Markdown - John Gruber Markdown Markdown syntax explained Markdown usage with grav theme Hugo shortcodes Diagrammer med Mermaid.js Læs dokumentation af mermaid.js for mange flere detaljer.
+Her er et eksempel på hvordan man kan lave et flowchart.
+{{&amp;lt; mermaid &amp;gt;}} graph TD; EDIT(&amp;quot;opret/rediger/slet fil(er)&amp;quot;) --&amp;gt; STAGE(&amp;quot;udvælg ændringer&amp;quot;) STAGE --&amp;gt; COMMIT(&amp;quot;Commit i lokalt depot&amp;quot;) COMMIT --&amp;gt; DO_PUSH{Klar til offentliggørelse?</description></item><item><title>Iterativ udvikling</title><link>https://getsrevel.github.io/tools/development-model/</link><pubDate>Mon, 11 Nov 2019 21:58:28 +0100</pubDate><guid>https://getsrevel.github.io/tools/development-model/</guid><description>
+graph LR; IDEA("Idé") -- PLANNING(("Planlægning")) PLANNING -- IMPLEMENTATION(("Udarbejdelse")) IMPLEMENTATION -- TEST((Evaluering / Test)) TEST -- PLANNING TEST -- RELEASE(Frigivelse af færdigt system)</description></item><item><title>Stickman</title><link>https://getsrevel.github.io/project/stickman/</link><pubDate>Mon, 11 Nov 2019 21:35:57 +0100</pubDate><guid>https://getsrevel.github.io/project/stickman/</guid><description>Opgave: Lav en tændstikmand Opgaven går ud på at eksperimentere med computergrafik. Ved hjælp af p5js skal du lave et program der benytter forskellige tegne funktioner, til at generere en &amp;ldquo;tændstikmand&amp;rdquo;.
 Han skal som minimum bestå af:
- hoved mund øjne krop arme ben  Ekstra: til den &amp;ldquo;kvikke elev&amp;rdquo;; få din tændstikmand til at ændre udseende dynamisk f.eks. vha. museinput, knaptryk
- hovedets størrelse blinke med øjnene ændre farver  Vær kreativ :-)</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://getsrevel.github.io/tech/react/react-intro/my-app-npm/readme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://getsrevel.github.io/tech/react/react-intro/my-app-npm/readme/</guid>
-      <description>This project was bootstrapped with Create React App.
+hoved mund øjne krop arme ben Ekstra: til den &amp;ldquo;kvikke elev&amp;rdquo;; få din tændstikmand til at ændre udseende dynamisk f.eks. vha. museinput, knaptryk
+hovedets størrelse blinke med øjnene ændre farver Vær kreativ :-)</description></item><item><title/><link>https://getsrevel.github.io/tech/react/react-intro/my-app-npm/readme/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://getsrevel.github.io/tech/react/react-intro/my-app-npm/readme/</guid><description>This project was bootstrapped with Create React App.
 Available Scripts In the project directory, you can run:
 yarn start Runs the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
 The page will reload if you make edits.
 You will also see any lint errors in the console.
 yarn test Launches the test runner in the interactive watch mode.
-See the section about running tests for more information.</description>
-    </item>
-    
-  </channel>
-</rss>
+See the section about running tests for more information.</description></item></channel></rss>

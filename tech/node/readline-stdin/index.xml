@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Readline on Stdin on Getsrevel</title>
-    <link>https://getsrevel.github.io/tech/node/readline-stdin/</link>
-    <description>Recent content in Readline on Stdin on Getsrevel</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Thu, 07 May 2020 14:31:13 +0200</lastBuildDate><atom:link href="https://getsrevel.github.io/tech/node/readline-stdin/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Readline on Stdin on Getsrevel</title><link>https://getsrevel.github.io/tech/node/readline-stdin/</link><description>Recent content in Readline on Stdin on Getsrevel</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 07 May 2020 14:31:13 +0200</lastBuildDate><atom:link href="https://getsrevel.github.io/tech/node/readline-stdin/index.xml" rel="self" type="application/rss+xml"/></channel></rss>

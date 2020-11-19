@@ -1,11 +1,1 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Demo on Getsrevel</title>
-    <link>https://getsrevel.github.io/tech/node/socket-io-demo/demo/</link>
-    <description>Recent content in Demo on Getsrevel</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 11 Sep 2020 22:58:42 +0200</lastBuildDate><atom:link href="https://getsrevel.github.io/tech/node/socket-io-demo/demo/index.xml" rel="self" type="application/rss+xml" />
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Demo on Getsrevel</title><link>https://getsrevel.github.io/tech/node/socket-io-demo/demo/</link><description>Recent content in Demo on Getsrevel</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Fri, 11 Sep 2020 22:58:42 +0200</lastBuildDate><atom:link href="https://getsrevel.github.io/tech/node/socket-io-demo/demo/index.xml" rel="self" type="application/rss+xml"/></channel></rss>
