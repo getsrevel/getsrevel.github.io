@@ -1,0 +1,14 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+video {
+  width: 400px;
+  height: 400px;
+  background-color: black;
+}

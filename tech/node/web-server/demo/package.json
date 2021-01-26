@@ -1,0 +1,14 @@
+{
+  "name": "web-server-demo",
+  "version": "1.0.0",
+  "description": "Demo web server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -7,7 +7,7 @@ const port = process.env.PORT || 3000;
 // Set up the server
 // process.env.PORT is related to deploying on heroku
 const server = app.listen(port);
-app.use(express.static('public'));
+app.use(express.static(__dirname +'/public'));
 console.log(`Server is running on http://localhost:${port}`);
 
 
