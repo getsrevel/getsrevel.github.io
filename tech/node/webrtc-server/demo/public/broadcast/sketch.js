@@ -1,7 +1,4 @@
-let videoElement;
 let stream;
-
-let camCapture;
 
 function setup() {
   // Capture the canvas content as a stream
@@ -14,10 +11,8 @@ function setup() {
 
 function draw() {
   background(220);
-  // Draws a red circle at the position of the mouse
+  // Draw a red circle at the position of the mouse
   fill('red');
   strokeWeight(5);
   circle(mouseX, mouseY, 50);
 }
-
-
