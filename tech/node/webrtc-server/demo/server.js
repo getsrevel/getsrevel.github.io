@@ -11,6 +11,7 @@ const io = require("socket.io")(server);
 app.use(express.static(__dirname + "/public"));
 
 io.on("error", e => console.log(e));
+
 io.on("connection", socket => {
   socket.on("broadcaster", () => {
     broadcaster = socket.id;
@@ -38,4 +39,5 @@ io.on("connection", socket => {
     socket.to(broadcaster).emit("disconnectPeer", socket.id);
   });
 });
+
 server.listen(port, () => console.log(`Server is running on port ${port}`));
