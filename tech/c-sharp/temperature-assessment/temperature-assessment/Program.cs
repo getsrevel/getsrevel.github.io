@@ -7,15 +7,22 @@ namespace temperature_assessment
     static void Main(string[] args)
     {
       Console.WriteLine("Temperatur vurdering");
+
+      InputHandler inputHandler = new InputHandler();
+      TemperatureAssessor temperatureAssessor = new TemperatureAssessor();
+
       do
       {
-        double temperature = PromptForNumber("Hvad er temperaturen i grader celsius?");
-        string result = EvaluateTemperature(temperature);
+        double temperature = inputHandler.PromptForNumber("Hvad er temperaturen i grader celsius?");
+        string result = temperatureAssessor.EvaluateTemperature(temperature);
         Console.WriteLine(result);
-      } while (Confirm("Vil du prøve igen?"));
+      } while (inputHandler.Confirm("Vil du prøve igen?"));
     }
+  }
 
-    static public string EvaluateTemperature(double temperature)
+  class TemperatureAssessor
+  {
+    public string EvaluateTemperature(double temperature)
     {
       if (temperature <= 10) return "For koldt til at stå op - bliv i sengen";
       if (temperature <= 15) return "For koldt til at arbejde - bliv hjemme";
@@ -23,15 +30,17 @@ namespace temperature_assessment
       if (temperature <= 22) return "Perfekt pausetemperatur";
       return "For varmt til at arbejde - tag til stranden";
     }
+  }
 
-    static double PromptForNumber(string message)
+  class InputHandler
+  {
+    public double PromptForNumber(string message)
     {
       double value;
       bool isSuccess;
       do
       {
-        Console.Write($"{message} ");
-        string line = Console.ReadLine();
+        string line = Prompt($"{message} ");
         isSuccess = Double.TryParse(line, out value);
         if (!isSuccess)
         {
@@ -42,7 +51,7 @@ namespace temperature_assessment
       return value;
     }
 
-    static bool Confirm(string question)
+    public bool Confirm(string question)
     {
       string confirm = "ja";
       string reject = "nej";
@@ -50,8 +59,7 @@ namespace temperature_assessment
       bool isValidResponse;
       do
       {
-        Console.Write($"{question} [{confirm}/{reject}] ");
-        response = Console.ReadLine();
+        response = Prompt($"{question} [{confirm}/{reject}] ");
         isValidResponse = response.Equals(reject) || response.Equals(confirm);
         if (!isValidResponse)
         {
@@ -62,11 +70,10 @@ namespace temperature_assessment
       return response.Equals(confirm);
     }
 
-    static string Prompt(string message)
+    string Prompt(string message)
     {
       Console.Write($"{message} ");
       return Console.ReadLine();
     }
-
   }
 }
