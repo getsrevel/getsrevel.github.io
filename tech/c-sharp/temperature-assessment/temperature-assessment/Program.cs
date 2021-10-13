@@ -4,19 +4,34 @@ namespace temperature_assessment
 {
   class Program
   {
-    static void Main(string[] args)
+    private InputHandler inputHandler;
+    private TemperatureAssessor temperatureAssessor;
+
+    public Program(InputHandler ih, TemperatureAssessor ta)
     {
-      Console.WriteLine("Temperatur vurdering");
+      this.inputHandler = ih;
+      this.temperatureAssessor = ta;
+    }
 
-      InputHandler inputHandler = new InputHandler();
-      TemperatureAssessor temperatureAssessor = new TemperatureAssessor();
-
+    public void Run()
+    {
       do
       {
         double temperature = inputHandler.PromptForNumber("Hvad er temperaturen i grader celsius?");
         string result = temperatureAssessor.EvaluateTemperature(temperature);
         Console.WriteLine(result);
       } while (inputHandler.Confirm("Vil du prøve igen?"));
+    }
+
+    static void Main(string[] args)
+    {
+      Console.WriteLine("Temperatur vurdering");
+
+      InputHandler inputHandler = new InputHandler();
+      TemperatureAssessor temperatureAssessor = new TemperatureAssessor();
+      Program myProgram = new Program(inputHandler, temperatureAssessor);
+
+      myProgram.Run();
     }
   }
 
