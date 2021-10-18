@@ -2,10 +2,10 @@ let cx;
 let cy;
 
 let state = {
-  up: false,
-  down: false,
-  left: false,
-  right: false,
+  north: false,
+  south: false,
+  west: false,
+  east: false,
   boost: false
 };
 
@@ -36,52 +36,56 @@ function draw() {
 
   // update position
   const step = state.boost ? 5 : 1;
-  if (state.left) {
+  if (state.west) {
     cx -= step;
   }
-  if (state.right) {
+  if (state.east) {
     cx += step;
   }
-  if (state.up) {
+  if (state.north) {
     cy -= step;
   }
-  if (state.down) {
+  if (state.south) {
     cy += step;
   }
 }
 
 function keyPressed() {
+  console.log("Pressed:", key, keyCode)
   if (key === " ") {
     state.boost = true;
   }
   if (keyCode === LEFT_ARROW) {
-    state.left = true;
+    state.west = true;
   }
   if (keyCode === RIGHT_ARROW) {
-    state.right = true;
+    state.east = true;
   }
   if (keyCode === UP_ARROW) {
-    state.up = true;
+    state.north = true;
   }
   if (keyCode === DOWN_ARROW) {
-    state.down = true;
+    state.south = true;
   }
+  return true
 }
 
 function keyReleased() {
+  console.log("Released:", key, keyCode)
   if (key === " ") {
     state.boost = false;
   }
   if (keyCode === LEFT_ARROW) {
-    state.left = false;
+    state.west = false;
   }
   if (keyCode === RIGHT_ARROW) {
-    state.right = false;
+    state.east = false;
   }
   if (keyCode === UP_ARROW) {
-    state.up = false;
+    state.north = false;
   }
   if (keyCode === DOWN_ARROW) {
-    state.down = false;
+    state.south = false;
   }
+  return true
 }
