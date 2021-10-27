@@ -5,24 +5,24 @@
 <meta name=generator content="Hugo 0.88.1">
 <meta name=description content>
 <link rel=icon href=/images/favicon.png type=image/png>
-<title>Serial Json :: Getsrevel</title>
-<link href=/css/nucleus.css?1635369111 rel=stylesheet>
-<link href=/css/fontawesome-all.min.css?1635369111 rel=stylesheet>
-<link href=/css/hybrid.css?1635369111 rel=stylesheet>
-<link href=/css/featherlight.min.css?1635369111 rel=stylesheet>
-<link href=/css/perfect-scrollbar.min.css?1635369111 rel=stylesheet>
-<link href=/css/auto-complete.css?1635369111 rel=stylesheet>
-<link href=/css/atom-one-dark-reasonable.css?1635369111 rel=stylesheet>
-<link href=/css/theme.css?1635369111 rel=stylesheet>
-<link href=/css/tabs.css?1635369111 rel=stylesheet>
-<link href=/css/hugo-theme.css?1635369111 rel=stylesheet>
-<link href=/css/theme-getsrevel.css?1635369111 rel=stylesheet>
-<script src=/js/jquery-3.3.1.min.js?1635369111></script>
+<title>Command Line Interface Arguments :: Getsrevel</title>
+<link href=/css/nucleus.css?1635369110 rel=stylesheet>
+<link href=/css/fontawesome-all.min.css?1635369110 rel=stylesheet>
+<link href=/css/hybrid.css?1635369110 rel=stylesheet>
+<link href=/css/featherlight.min.css?1635369110 rel=stylesheet>
+<link href=/css/perfect-scrollbar.min.css?1635369110 rel=stylesheet>
+<link href=/css/auto-complete.css?1635369110 rel=stylesheet>
+<link href=/css/atom-one-dark-reasonable.css?1635369110 rel=stylesheet>
+<link href=/css/theme.css?1635369110 rel=stylesheet>
+<link href=/css/tabs.css?1635369110 rel=stylesheet>
+<link href=/css/hugo-theme.css?1635369110 rel=stylesheet>
+<link href=/css/theme-getsrevel.css?1635369110 rel=stylesheet>
+<script src=/js/jquery-3.3.1.min.js?1635369110></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158806272-1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-158806272-1')</script>
 </head>
-<body data-url=/tech/node/serial-json/>
+<body data-url=/tech/node/cli-args/>
 <nav id=sidebar>
 <div id=header-wrapper>
 <div id=header>
@@ -34,10 +34,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/js/lunr.min.js?1635369111></script>
-<script type=text/javascript src=/js/auto-complete.js?1635369111></script>
+<script type=text/javascript src=/js/lunr.min.js?1635369110></script>
+<script type=text/javascript src=/js/auto-complete.js?1635369110></script>
 <script type=text/javascript>var baseurl="https://getsrevel.github.io/"</script>
-<script type=text/javascript src=/js/search.js?1635369111></script>
+<script type=text/javascript src=/js/search.js?1635369110></script>
 </div>
 <div class=highlightable>
 <ul class=topics>
@@ -287,7 +287,9 @@ Node.js
 Intro
 </a>
 </li>
-<li data-nav-id=/tech/node/cli-args/ title="Command Line Interface Arguments" class=dd-item>
+<li data-nav-id=/tech/node/cli-args/ title="Command Line Interface Arguments" class="dd-item
+parent
+active">
 <a href=/tech/node/cli-args/>
 CLI arguments
 </a>
@@ -312,9 +314,7 @@ Webrtc Server
 Readline on Stdin
 </a>
 </li>
-<li data-nav-id=/tech/node/serial-json/ title="Serial Json" class="dd-item
-parent
-active">
+<li data-nav-id=/tech/node/serial-json/ title="Serial Json" class=dd-item>
 <a href=/tech/node/serial-json/>
 Serial Json
 </a>
@@ -496,13 +496,16 @@ Git Intro
 </span>
 <span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <span class=links>
-<a href=/>Getsrevel</a> > <a href=/tech/>Tech</a> > <a href=/tech/node/>Node.js</a> > Serial Json
+<a href=/>Getsrevel</a> > <a href=/tech/>Tech</a> > <a href=/tech/node/>Node.js</a> > Command Line Interface Arguments
 </span>
 </div>
 <div class=progress>
 <div class=wrapper>
 <nav id=TableOfContents>
 <ul>
+<li><a href=#simpel-brug-af-cli-argumenter>Simpel brug af CLI argumenter</a></li>
+<li><a href=#minimist-pakken>Minimist pakken</a></li>
+<li><a href=#yargs-pakken>Yargs pakken</a></li>
 <li><a href=#materiale>Materiale</a></li>
 </ul>
 </nav>
@@ -514,118 +517,163 @@ Git Intro
 </div>
 <div id=body-inner>
 <h1>
-Serial Json
+Command Line Interface Arguments
 </h1>
-<p>Dette eksempel viser hvordan man kan læse fra en serielport vha. node.js.
-For at kunne køre eksemplet på en meningsfuld måde, kræver det at der er tilsluttet en enhed til serielporten på computeren.
-Ydermere skal denne enhed sende beskeder afsted i json format, og porten skal være sat op med passende instillinger.</p>
-<p>Jeg har tidligere lavet et eksempel, der kan sende <a href=/tech/arduino/json-beacon/>json beskeder som output på serielporten på en Arduino</a>, og det er disse data der forventes at være input til dette eksempel.</p>
-<p>Først skal der laves et projekt så node kan finde ud af at køre programmet, og har en <code>package.json</code> fil til at holde styr på projektet og afhængigheder af biblioteksmoduler.</p>
-<p>Start med at lave en mappe, som kan indeholde dit projekt. Kald den f.eks. <code>serial-json</code>.
-I denne mappe skal du køre følgende kommando, for at oprette projekt filen <code>package.json</code>.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>npm init -y</code></pre></div>
-<p>Dernæst har du mulighed for at installere disse afhængigheder.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>npm install serialport --save</code></pre></div>
+<h2 id=simpel-brug-af-cli-argumenter>Simpel brug af CLI argumenter</h2>
+<p>Kommandolinje argumenter kan f.eks. benyttes således
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>args</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>process</span>.<span style=color:#a6e22e>argv</span>.<span style=color:#a6e22e>slice</span>(<span style=color:#ae81ff>2</span>)
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>args</span>)
+
+<span style=color:#66d9ef>if</span>(<span style=color:#ae81ff>1</span> <span style=color:#f92672>==</span> <span style=color:#a6e22e>args</span>.<span style=color:#a6e22e>length</span>){
+  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>args</span>[<span style=color:#ae81ff>0</span>]
+  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>`Hello, </span><span style=color:#e6db74>${</span><span style=color:#a6e22e>name</span><span style=color:#e6db74>}</span><span style=color:#e6db74>!`</span>)
+} <span style=color:#66d9ef>else</span> {
+  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;Hello, world!&#34;</span>)  
+}</code></pre></div></p>
+<p>Programmet giver dette output ved afvikling af med forskellig input argumenter.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-txt data-lang=txt>$ node cli-args-demo.js
+[]
+Hello, world!
+$ node cli-args-demo.js Bjarne
+[ &#39;Bjarne&#39; ]
+Hello, Bjarne!
+$ node cli-args-demo.js Finn, Find og Bjarne
+[ &#39;Finn&#39;, &#39;Find&#39;, &#39;og&#39;, &#39;Bjarne&#39; ]
+Hello, world!</code></pre></div>
+<h2 id=minimist-pakken>Minimist pakken</h2>
+<p>Det kan være fordelagtigt at benytte npm pakken <a href=https://www.npmjs.com/package/minimist>minimist</a>, hvis der er brug for mere end de aller simpleste argumenter.
+Det gør det langt nemmere at parse indholdet in i variabler, der kan benyttes i programmet.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>args</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#39;minimist&#39;</span>)(<span style=color:#a6e22e>process</span>.<span style=color:#a6e22e>argv</span>.<span style=color:#a6e22e>slice</span>(<span style=color:#ae81ff>2</span>))
+<span style=color:#a6e22e>args</span>[<span style=color:#e6db74>&#39;name&#39;</span>]
+
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>args</span>)
+
+<span style=color:#66d9ef>if</span>(<span style=color:#a6e22e>args</span>.<span style=color:#a6e22e>name</span> <span style=color:#f92672>!==</span> <span style=color:#66d9ef>undefined</span>){
+  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>`Hello, </span><span style=color:#e6db74>${</span><span style=color:#a6e22e>args</span>.<span style=color:#a6e22e>name</span><span style=color:#e6db74>}</span><span style=color:#e6db74>!`</span>)
+} <span style=color:#66d9ef>else</span> {
+  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;Hello, world!&#34;</span>)  
+}</code></pre></div>
+<p>Her er et eksempel på output fra programmet.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-txt data-lang=txt>$ node cli-minimist-demo.js
+{ _: [] }
+Hello, world!
+$ node cli-minimist-demo.js Bjarne
+{ _: [ &#39;Bjarne&#39; ] }
+Hello, world!
+$ node cli-minimist-demo.js Finn, Find og Bjarne
+{ _: [ &#39;Finn&#39;, &#39;Find&#39;, &#39;og&#39;, &#39;Bjarne&#39; ] }
+Hello, world!
+$ node cli-minimist-demo.js Find --name=Bjarne og Finn
+{ _: [ &#39;Find&#39;, &#39;og&#39;, &#39;Finn&#39; ], name: &#39;Bjarne&#39; }
+Hello, Bjarne!</code></pre></div>
+<p>Husk at installere minimist inden eksemplet køres, med kommandoen <code>nmp install minimist</code></p>
+<h2 id=yargs-pakken>Yargs pakken</h2>
+<p>Er der brug for mere avanceret håndtering af argumenter på kommandolinjen, kan man benytte npm pakken <a href=https://www.npmjs.com/package/yargs>yargs</a>.
+Det giver blandt andet mulighed for at tilknytte beskrivelser, typer og aliaser for de forskellige argumenter.</p>
+<p>Her er et eksempel på håndtering af mere indviklede argumenter på kommandolinjen.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>yargs</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#39;yargs&#39;</span>);
+
+<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>argv</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>yargs</span>
+  .<span style=color:#a6e22e>command</span>(<span style=color:#e6db74>&#39;lyr&#39;</span>, <span style=color:#e6db74>&#39;Tells whether an year is leap year or not&#39;</span>, {
+    <span style=color:#a6e22e>year</span><span style=color:#f92672>:</span> {
+      <span style=color:#a6e22e>description</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;the year to check for&#39;</span>,
+      <span style=color:#a6e22e>alias</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;y&#39;</span>,
+      <span style=color:#a6e22e>type</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;number&#39;</span>,
+    }
+  })
+  .<span style=color:#a6e22e>option</span>(<span style=color:#e6db74>&#39;time&#39;</span>, {
+    <span style=color:#a6e22e>alias</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;t&#39;</span>,
+    <span style=color:#a6e22e>description</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;Tell the present Time&#39;</span>,
+    <span style=color:#a6e22e>type</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#39;boolean&#39;</span>,
+  })
+  .<span style=color:#a6e22e>help</span>()
+  .<span style=color:#a6e22e>alias</span>(<span style=color:#e6db74>&#39;help&#39;</span>, <span style=color:#e6db74>&#39;h&#39;</span>)
+  .<span style=color:#a6e22e>argv</span>;
+
+<span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>argv</span>.<span style=color:#a6e22e>time</span>) {
+  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;The current time is: &#39;</span>, <span style=color:#66d9ef>new</span> Date().<span style=color:#a6e22e>toLocaleTimeString</span>());
+}
+
+<span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>argv</span>.<span style=color:#ae81ff>_</span>.<span style=color:#a6e22e>includes</span>(<span style=color:#e6db74>&#39;lyr&#39;</span>)) {
+  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>year</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>argv</span>.<span style=color:#a6e22e>year</span> <span style=color:#f92672>||</span> <span style=color:#66d9ef>new</span> Date().<span style=color:#a6e22e>getFullYear</span>();
+  <span style=color:#66d9ef>if</span> (((<span style=color:#a6e22e>year</span> <span style=color:#f92672>%</span> <span style=color:#ae81ff>4</span> <span style=color:#f92672>==</span> <span style=color:#ae81ff>0</span>) <span style=color:#f92672>&amp;&amp;</span> (<span style=color:#a6e22e>year</span> <span style=color:#f92672>%</span> <span style=color:#ae81ff>100</span> <span style=color:#f92672>!=</span> <span style=color:#ae81ff>0</span>)) <span style=color:#f92672>||</span> (<span style=color:#a6e22e>year</span> <span style=color:#f92672>%</span> <span style=color:#ae81ff>400</span> <span style=color:#f92672>==</span> <span style=color:#ae81ff>0</span>)) {
+    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>`</span><span style=color:#e6db74>${</span><span style=color:#a6e22e>year</span><span style=color:#e6db74>}</span><span style=color:#e6db74> is a Leap Year`</span>);
+  } <span style=color:#66d9ef>else</span> {
+    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>`</span><span style=color:#e6db74>${</span><span style=color:#a6e22e>year</span><span style=color:#e6db74>}</span><span style=color:#e6db74> is NOT a Leap Year`</span>);
+  }
+}
+
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>argv</span>);</code></pre></div>
+<p>For at kunne køre eksemplet kræver det at pakken <code>yargs</code> er installeret, hvilket kan gøres med kommandoen <code>npm i yargs</code>.</p>
+<p>Her er indholdet af <code>package.json</code>.</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-json data-lang=json>{
-  <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;serial-json-read&#34;</span>,
+  <span style=color:#f92672>&#34;name&#34;</span>: <span style=color:#e6db74>&#34;cli-args&#34;</span>,
   <span style=color:#f92672>&#34;version&#34;</span>: <span style=color:#e6db74>&#34;1.0.0&#34;</span>,
   <span style=color:#f92672>&#34;description&#34;</span>: <span style=color:#e6db74>&#34;&#34;</span>,
-  <span style=color:#f92672>&#34;main&#34;</span>: <span style=color:#e6db74>&#34;index.js&#34;</span>,
+  <span style=color:#f92672>&#34;main&#34;</span>: <span style=color:#e6db74>&#34;cli-yargs-demo.js&#34;</span>,
   <span style=color:#f92672>&#34;scripts&#34;</span>: {
     <span style=color:#f92672>&#34;test&#34;</span>: <span style=color:#e6db74>&#34;echo \&#34;Error: no test specified\&#34; &amp;&amp; exit 1&#34;</span>
   },
   <span style=color:#f92672>&#34;author&#34;</span>: <span style=color:#e6db74>&#34;&#34;</span>,
   <span style=color:#f92672>&#34;license&#34;</span>: <span style=color:#e6db74>&#34;ISC&#34;</span>,
   <span style=color:#f92672>&#34;dependencies&#34;</span>: {
-<span style=display:block;width:100%;background-color:#3c3d38>    <span style=color:#f92672>&#34;serialport&#34;</span>: <span style=color:#e6db74>&#34;^8.0.7&#34;</span>
-</span>  }
+    <span style=color:#f92672>&#34;yargs&#34;</span>: <span style=color:#e6db74>&#34;^17.2.1&#34;</span>
+  }
 }</code></pre></div>
-<p>Bemærk de to pakker der er listet under afhængigheder.</p>
-<p>Derefter skal du oprette filen <code>serial-json-read.js</code> med følgende indhold.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>SerialPort</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#34;serialport&#34;</span>);
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>Readline</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#34;@serialport/parser-readline&#34;</span>);
+<p>Her er et eksempel på output fra programmet.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-txt data-lang=txt>$ node cli-yargs-demo.js       
+{ _: [], &#39;$0&#39;: &#39;cli-yargs-demo.js&#39; }
+$ node cli-yargs-demo.js -h    
+cli-yargs-demo.js [command]
 
-<span style=color:#75715e>// Change the serial port to fit your serup
-</span><span style=color:#75715e>// on linux the device could look like this: &#34;/dev/tty-usbserial1&#34;
-</span><span style=color:#75715e></span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>serialPortName</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;COM6&#34;</span>;
+Commands:
+  cli-yargs-demo.js lyr  Tells whether an year is leap year or not
 
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>portOptions</span> <span style=color:#f92672>=</span> {
-  <span style=color:#a6e22e>baudRate</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>115200</span>
-};
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>port</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>SerialPort</span>(<span style=color:#a6e22e>serialPortName</span>, <span style=color:#a6e22e>portOptions</span>);
+      --version  Show version number                                   [boolean]
+  -t, --time     Tell the present Time                                 [boolean]
+$ node cli-yargs-demo.js --version
+1.0.0
+$ node cli-yargs-demo.js --help lyr
+cli-yargs-demo.js lyr
 
-<span style=color:#75715e>// Open errors will be emitted as an error event
-</span><span style=color:#75715e></span><span style=color:#a6e22e>port</span>.<span style=color:#a6e22e>on</span>(<span style=color:#e6db74>&#39;error&#39;</span>, <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>err</span>) {
-  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;Error: &#39;</span>, <span style=color:#a6e22e>err</span>.<span style=color:#a6e22e>message</span>)
-});
 
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>parser</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>port</span>.<span style=color:#a6e22e>pipe</span>(<span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Readline</span>({ <span style=color:#a6e22e>delimiter</span><span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;\r\n&#34;</span> }));
-
-<span style=color:#a6e22e>parser</span>.<span style=color:#a6e22e>on</span>(<span style=color:#e6db74>&#34;data&#34;</span>, <span style=color:#a6e22e>doSomethingWithData</span>);
-
-<span style=color:#75715e>// Callback function for processing the received data
-</span><span style=color:#75715e></span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>doSomethingWithData</span>(<span style=color:#a6e22e>data</span>) {
-  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;--- Line received on serial port ------------&#34;</span>);
-  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;Raw data: &#39;</span>, <span style=color:#a6e22e>data</span>);
-
-  <span style=color:#75715e>// parse json data
-</span><span style=color:#75715e></span>  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>obj</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>JSON</span>.<span style=color:#a6e22e>parse</span>(<span style=color:#a6e22e>data</span>);
-
-  <span style=color:#75715e>// print object
-</span><span style=color:#75715e></span>  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;Parsed object:&#34;</span>);
-  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>obj</span>);
-
-  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;Contents of object property:&#34;</span>);
-  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>obj</span>.<span style=color:#a6e22e>tagId</span>);
-  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;--- data processing done -------------------&#34;</span>);
+Options:
+      --version  Show version number                                   [boolean]
+  -t, --time     Tell the present Time                                 [boolean]
+  -h, --help     Show help                                             [boolean]
+  -y, --year     the year to check for                                  [number]
+$ node cli-yargs-demo.js lyr       
+2021 is NOT a Leap Year
+{ _: [ &#39;lyr&#39; ], &#39;$0&#39;: &#39;cli-yargs-demo.js&#39; }
+$ node cli-yargs-demo.js lyr --time
+The current time is:  22.48.45
+2021 is NOT a Leap Year
+{ _: [ &#39;lyr&#39; ], time: true, t: true, &#39;$0&#39;: &#39;cli-yargs-demo.js&#39; }
+$ node cli-yargs-demo.js lyr --time -y 3000
+The current time is:  22.48.59
+3000 is NOT a Leap Year
+{
+  _: [ &#39;lyr&#39; ],
+  time: true,
+  t: true,
+  y: 3000,
+  year: 3000,
+  &#39;$0&#39;: &#39;cli-yargs-demo.js&#39;
 }</code></pre></div>
-<p><em>NB!</em> Du skal ændre navnet på serielporten, så det passer med den port din Arduino er tilsluttet til.</p>
-<p>Nu kan du køre eksemplet med denne kommando:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh>node serial-json-read.js</code></pre></div>
-<p>For at få noget meningsfuldt ud af at køre eksemplet skal der, som nævnt ovenfor, være en Arduino tilkoblet til en serielporten på computeren, og denne Arduino skal sende beskeder i det forventede json format.
-Når dette ellers er opfyldt vil man se noget lignende dette output i terminalen.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-txt data-lang=txt>$ node .\serial-json-read.js
---- Line received on serial port ------------
-Raw data:  {&#34;waitTime&#34;:2307,&#34;tagIdIndex&#34;:4,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 15 90 DB 2C&#34;}
-Parsed object:
-{ waitTime: 2307,
-  tagIdIndex: 4,
-  tagId: &#39;E2 00 00 1B 63 15 02 48 15 90 DB 2C&#39; }
-Contents of object property:
-E2 00 00 1B 63 15 02 48 15 90 DB 2C
---- data processing done -------------------
---- Line received on serial port ------------
-Raw data:  {&#34;waitTime&#34;:3073,&#34;tagIdIndex&#34;:3,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 17 20 DA F4&#34;}
-Parsed object:
-{ waitTime: 3073,
-  tagIdIndex: 3,
-  tagId: &#39;E2 00 00 1B 63 15 02 48 17 20 DA F4&#39; }
-Contents of object property:
-E2 00 00 1B 63 15 02 48 17 20 DA F4
---- data processing done -------------------
---- Line received on serial port ------------
-Raw data:  {&#34;waitTime&#34;:6930,&#34;tagIdIndex&#34;:2,&#34;tagId&#34;:&#34;E2 00 00 1B 63 15 02 48 17 00 DA F8&#34;}
-Parsed object:
-{ waitTime: 6930,
-  tagIdIndex: 2,
-  tagId: &#39;E2 00 00 1B 63 15 02 48 17 00 DA F8&#39; }
-Contents of object property:
-E2 00 00 1B 63 15 02 48 17 00 DA F8
---- data processing done -------------------</code></pre></div>
 <h2 id=materiale>Materiale</h2>
 <ul>
-<li><a href=/tech/arduino/json-beacon/>JSON Beacon eksemplet til Arduino</a></li>
-<li><a href=https://serialport.io/>Node Serialport</a></li>
-<li><a href=https://serialport.io/docs/guide-usage>Node Serialport Documentation</a></li>
-<li><a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse>JSON.parse()</a></li>
+<li><a href=https://nodejs.dev/learn/nodejs-accept-arguments-from-the-command-line>Node.js, accept arguments from the command line</a></li>
+<li><a href=https://nodejs.org/en/knowledge/command-line/how-to-parse-command-line-arguments/>Yargs; Leap year example</a></li>
+<li><a href=https://www.npmjs.com/package/minimist>minimist</a> - npm package</li>
+<li><a href=https://www.npmjs.com/package/yargs>yargs</a> - npm package</li>
 </ul>
 <footer class=footline>
 </footer>
 </div>
 </div>
 <div id=navigation>
-<a class="nav nav-prev" href=/tech/node/readline-stdin/ title="Readline on Stdin"> <i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/tech/node/socket-io-demo/ title="Socket IO" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=/tech/node/intro/ title=Intro> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/tech/node/discord-bot/ title="Discord Bot" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div>
 </section>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
