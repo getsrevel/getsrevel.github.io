@@ -5,7 +5,7 @@
 <meta name=generator content="Hugo 0.88.1">
 <meta name=description content>
 <link rel=icon href=/images/favicon.png type=image/png>
-<title>Mastermind :: Getsrevel</title>
+<title>Array Stats :: Getsrevel</title>
 <link href=/css/nucleus.css?1635371005 rel=stylesheet>
 <link href=/css/fontawesome-all.min.css?1635371005 rel=stylesheet>
 <link href=/css/hybrid.css?1635371005 rel=stylesheet>
@@ -22,7 +22,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158806272-1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-158806272-1')</script>
 </head>
-<body data-url=/project/mastermind/>
+<body data-url=/project/array-stats/>
 <nav id=sidebar>
 <div id=header-wrapper>
 <div id=header>
@@ -52,14 +52,14 @@ Project
 HTML Basics
 </a>
 </li>
-<li data-nav-id=/project/array-stats/ title="Array Stats" class=dd-item>
+<li data-nav-id=/project/array-stats/ title="Array Stats" class="dd-item
+parent
+active">
 <a href=/project/array-stats/>
 Array Stats
 </a>
 </li>
-<li data-nav-id=/project/mastermind/ title=Mastermind class="dd-item
-parent
-active">
+<li data-nav-id=/project/mastermind/ title=Mastermind class=dd-item>
 <a href=/project/mastermind/>
 Mastermind
 </a>
@@ -500,19 +500,19 @@ Git Intro
 </span>
 <span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <span class=links>
-<a href=/>Getsrevel</a> > <a href=/project/>Project</a> > Mastermind
+<a href=/>Getsrevel</a> > <a href=/project/>Project</a> > Array Stats
 </span>
 </div>
 <div class=progress>
 <div class=wrapper>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#opgave-mastermind-bot>Opgave: Mastermind Bot</a>
+<li>
 <ul>
-<li><a href=#del-1-discord-bot-fundament>Del 1: Discord bot (fundament)</a></li>
-<li><a href=#del-2-mastermind-bot-udvidelse>Del 2: Mastermind Bot (udvidelse)</a></li>
+<li><a href=#hints>Hints</a></li>
 </ul>
 </li>
+<li><a href=#materiale>Materiale</a></li>
 </ul>
 </nav>
 </div>
@@ -523,59 +523,43 @@ Git Intro
 </div>
 <div id=body-inner>
 <h1>
-Mastermind
+Array Stats
 </h1>
-<figure><img src=mastermind-game.jpg><figcaption>
-<h4>Mastermind spillet.</h4>
-</figcaption>
-</figure>
-<p>I dette projekt skal der laves en løsning der gør de muligt at dyste mod computeren i Mastermind.</p>
-<h2 id=opgave-mastermind-bot>Opgave: Mastermind Bot</h2>
-<p>Denne opgave går ud på at lave en discord bot som man kan dyste mod i &ldquo;Mastermind&rdquo;.</p>
-<h3 id=del-1-discord-bot-fundament>Del 1: Discord bot (fundament)</h3>
-<p>Lav en discord bot som beskrevet i disse guides:</p>
+<ol>
+<li>Lav et program, der simulerer kast med 6 terninger. Der udføres f.eks. 100 kast. Optæl i et array hyppigheden af summen af øjenantallene.</li>
+<li>Udvid programmet til at kunne lave statistik på kast med et vilkårligt antal terninger.</li>
+<li>Udvid programmet til at kunne lave statistik på kast med terninger med et vilkårligt antal sider.</li>
+<li>Ændr programmet, så man kan angive antallet af terninger og sider på kommandolinjen.</li>
+</ol>
+<h3 id=hints>Hints</h3>
+<p>For at lave en &lsquo;terning&rsquo; med seks sider kan du bruge denne stump kode, der generer et <a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random#getting_a_random_integer_between_two_values_inclusive>tilfældigt tal mellem 1 og 6</a>.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>value</span> <span style=color:#f92672>=</span> Math.<span style=color:#a6e22e>floor</span>(Math.<span style=color:#a6e22e>random</span>() <span style=color:#f92672>*</span> <span style=color:#ae81ff>6</span>) <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span></code></pre></div>
+<p>Kommandolinje argumenter kan f.eks. benyttes således
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>args</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>process</span>.<span style=color:#a6e22e>argv</span>.<span style=color:#a6e22e>slice</span>(<span style=color:#ae81ff>2</span>)
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>args</span>)
+
+<span style=color:#66d9ef>if</span>(<span style=color:#ae81ff>1</span> <span style=color:#f92672>==</span> <span style=color:#a6e22e>args</span>.<span style=color:#a6e22e>length</span>){
+  <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>name</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>args</span>[<span style=color:#ae81ff>0</span>]
+  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>`Hello, </span><span style=color:#e6db74>${</span><span style=color:#a6e22e>name</span><span style=color:#e6db74>}</span><span style=color:#e6db74>!`</span>)
+} <span style=color:#66d9ef>else</span> {
+  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;Hello, world!&#34;</span>)  
+}</code></pre></div></p>
+<p>Her en lidt mere udførlig introduktion til <a href=/tech/node/cli-args/>CLI argumenter</a>.</p>
+<h2 id=materiale>Materiale</h2>
 <ul>
-<li><a href=/tech/node/discord-bot/>Discord Bot tutorial</a></li>
-<li><a href=https://thecodingtrain.com/learning/bots/discord/>Discord Bot</a> The Coding Train video guide</li>
-</ul>
-<h3 id=del-2-mastermind-bot-udvidelse>Del 2: Mastermind Bot (udvidelse)</h3>
-<p>Lav en ny kommando i din discord bot, der gør det muligt at spille &ldquo;Mastermind&rdquo; mod computeren.</p>
-<p>Start med at studere reglerne til spillet.
-Kender du ikke spillet i forvejen, kan du med fordele spille et par spil vha. en af de mange apps,
-der er lavet. F.eks <a href="https://play.google.com/store/apps/details?id=dk.logicom.mastermind">denne udgave af mastermind til Android</a>,
-eller i en <a href=https://www.webgamesonline.com/mastermind/index.php>web udgave af mastermind</a>.</p>
-<h4 id=kravspecifikation>Kravspecifikation</h4>
-<ul>
-<li>Det skal være muligt at få hjælp til interaktion med spillet (e.g syntaks for gyldige kommandoer).</li>
-<li>Det skal være muligt at starte spillet.</li>
-<li>Computeren skal generere en hemmelig kode.</li>
-<li>Koden skal bestå af 4 ud af mulige 6 forskellige farver (eller tegn).</li>
-<li>Der må gerne forekomme gentagelser af den samme farve i koden.</li>
-<li>Det skal være muligt at afgive et gæt.</li>
-<li>Bot&rsquo;en skal give tilbagemelding på hvert gæt bestående af
-<ul>
-<li>Antal modtagne gæt.</li>
-<li>Gentagelse af det afgivne gæt</li>
-<li>Angivelse af antal rigtigt placerede farver</li>
-<li>Angivelse af antal rigtige farver</li>
-</ul>
-</li>
-<li>Hvis man gætter koden, skal der gives tilbagemelding om at man har vundet.</li>
-<li>Hvis koden ikke er gættet efter 10 forsøg, har computeren vundet.
-Dette skal annonceres i svaret, og den hemmelige kode afsløres, så man kan kontrollere at alt er gået retfærdigt til.</li>
-</ul>
-<h4 id=ekstra-ideer-og-nice-to-have-funktioner>Ekstra ideer og <em>nice to have</em> funktioner</h4>
-<ul>
-<li>Man skal have mulighed for at give op, få vist koden og starte forfra.</li>
-<li>Hold styr på hvor mange gange parterne har vundet.</li>
+<li><a href=https://javascript.info/array>Arrays in javascript</a></li>
+<li><a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor>Math.floor()</a></li>
+<li><a href=https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random>Math.random()</a></li>
+<li><a href=/tech/node/cli-args/>CLI arguments intro</a></li>
+<li><a href=https://nodejs.dev/learn/nodejs-accept-arguments-from-the-command-line>Node.js, accept arguments from the command line</a></li>
 </ul>
 <footer class=footline>
 </footer>
 </div>
 </div>
 <div id=navigation>
-<a class="nav nav-prev" href=/project/array-stats/ title="Array Stats"> <i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/project/rock-paper-scissor/ title="Rock Paper Scissor" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=/project/html-basics/ title="HTML Basics"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/project/mastermind/ title=Mastermind style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div>
 </section>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
