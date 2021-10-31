@@ -5,24 +5,24 @@
 <meta name=generator content="Hugo 0.88.1">
 <meta name=description content>
 <link rel=icon href=/images/favicon.png type=image/png>
-<title>Input Events :: Getsrevel</title>
-<link href=/css/nucleus.css?1635716114 rel=stylesheet>
-<link href=/css/fontawesome-all.min.css?1635716114 rel=stylesheet>
-<link href=/css/hybrid.css?1635716114 rel=stylesheet>
-<link href=/css/featherlight.min.css?1635716114 rel=stylesheet>
-<link href=/css/perfect-scrollbar.min.css?1635716114 rel=stylesheet>
-<link href=/css/auto-complete.css?1635716114 rel=stylesheet>
-<link href=/css/atom-one-dark-reasonable.css?1635716114 rel=stylesheet>
-<link href=/css/theme.css?1635716114 rel=stylesheet>
-<link href=/css/tabs.css?1635716114 rel=stylesheet>
-<link href=/css/hugo-theme.css?1635716114 rel=stylesheet>
-<link href=/css/theme-getsrevel.css?1635716114 rel=stylesheet>
-<script src=/js/jquery-3.3.1.min.js?1635716114></script>
+<title>String Manipulation :: Getsrevel</title>
+<link href=/css/nucleus.css?1635716112 rel=stylesheet>
+<link href=/css/fontawesome-all.min.css?1635716112 rel=stylesheet>
+<link href=/css/hybrid.css?1635716112 rel=stylesheet>
+<link href=/css/featherlight.min.css?1635716112 rel=stylesheet>
+<link href=/css/perfect-scrollbar.min.css?1635716112 rel=stylesheet>
+<link href=/css/auto-complete.css?1635716112 rel=stylesheet>
+<link href=/css/atom-one-dark-reasonable.css?1635716112 rel=stylesheet>
+<link href=/css/theme.css?1635716112 rel=stylesheet>
+<link href=/css/tabs.css?1635716112 rel=stylesheet>
+<link href=/css/hugo-theme.css?1635716112 rel=stylesheet>
+<link href=/css/theme-getsrevel.css?1635716112 rel=stylesheet>
+<script src=/js/jquery-3.3.1.min.js?1635716112></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158806272-1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-158806272-1')</script>
 </head>
-<body data-url=/tech/p5js/input-events/>
+<body data-url=/project/string-manipulation/>
 <nav id=sidebar>
 <div id=header-wrapper>
 <div id=header>
@@ -34,14 +34,15 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/js/lunr.min.js?1635716114></script>
-<script type=text/javascript src=/js/auto-complete.js?1635716114></script>
+<script type=text/javascript src=/js/lunr.min.js?1635716112></script>
+<script type=text/javascript src=/js/auto-complete.js?1635716112></script>
 <script type=text/javascript>var baseurl="https://getsrevel.github.io/"</script>
-<script type=text/javascript src=/js/search.js?1635716114></script>
+<script type=text/javascript src=/js/search.js?1635716112></script>
 </div>
 <div class=highlightable>
 <ul class=topics>
-<li data-nav-id=/project/ title=Project class=dd-item>
+<li data-nav-id=/project/ title=Project class="dd-item
+parent">
 <a href=/project/>
 Project
 </a>
@@ -51,7 +52,9 @@ Project
 HTML Basics
 </a>
 </li>
-<li data-nav-id=/project/string-manipulation/ title="String Manipulation" class=dd-item>
+<li data-nav-id=/project/string-manipulation/ title="String Manipulation" class="dd-item
+parent
+active">
 <a href=/project/string-manipulation/>
 String Manipulation
 </a>
@@ -123,8 +126,7 @@ Stickman
 </li>
 </ul>
 </li>
-<li data-nav-id=/tech/ title=Tech class="dd-item
-parent">
+<li data-nav-id=/tech/ title=Tech class=dd-item>
 <a href=/tech/>
 Tech
 </a>
@@ -338,8 +340,7 @@ Web Scraping
 </li>
 </ul>
 </li>
-<li data-nav-id=/tech/p5js/ title=p5.js class="dd-item
-parent">
+<li data-nav-id=/tech/p5js/ title=p5.js class=dd-item>
 <a href=/tech/p5js/>
 p5.js
 </a>
@@ -354,9 +355,7 @@ Intro
 Canvas
 </a>
 </li>
-<li data-nav-id=/tech/p5js/input-events/ title="Input Events" class="dd-item
-parent
-active">
+<li data-nav-id=/tech/p5js/input-events/ title="Input Events" class=dd-item>
 <a href=/tech/p5js/input-events/>
 Input Events
 </a>
@@ -506,14 +505,13 @@ Git Intro
 </span>
 <span id=toc-menu><i class="fas fa-list-alt"></i></span>
 <span class=links>
-<a href=/>Getsrevel</a> > <a href=/tech/>Tech</a> > <a href=/tech/p5js/>p5.js</a> > Input Events
+<a href=/>Getsrevel</a> > <a href=/project/>Project</a> > String Manipulation
 </span>
 </div>
 <div class=progress>
 <div class=wrapper>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#demo>Demo</a></li>
 <li><a href=#materiale>Materiale</a></li>
 </ul>
 </nav>
@@ -525,104 +523,49 @@ Git Intro
 </div>
 <div id=body-inner>
 <h1>
-Input Events
+String Manipulation
 </h1>
-<p>Eksemplet viser, hvordan man kan benytte input events fra keyboard og mus til at ændre på figurens udseende.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>fillColor</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;black&#39;</span>
-<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>sizeMultiplier</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
-
-<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>setup</span>() {
-  <span style=color:#a6e22e>createCanvas</span>(<span style=color:#a6e22e>windowWidth</span>, <span style=color:#a6e22e>windowHeight</span>)
-  <span style=color:#a6e22e>rectMode</span>(<span style=color:#a6e22e>CENTER</span>)
-}
-
-<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>draw</span>() {
-  <span style=color:#a6e22e>background</span>(<span style=color:#ae81ff>220</span>);
-  <span style=color:#a6e22e>text</span>(<span style=color:#e6db74>&#34;Press &#39;r&#39;, &#39;b&#39; or click mouse to change color&#34;</span>, <span style=color:#ae81ff>40</span>, <span style=color:#ae81ff>40</span>)
-  <span style=color:#a6e22e>textSize</span>(<span style=color:#ae81ff>20</span>)
-  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>xPos</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>mouseX</span>
-  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>yPos</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>mouseY</span>
-  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>shapeSize</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>80</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>sizeMultiplier</span>
-
-  <span style=color:#a6e22e>fill</span>(<span style=color:#a6e22e>fillColor</span>)
-  <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>keyIsPressed</span>) {
-    <span style=color:#a6e22e>rect</span>(<span style=color:#a6e22e>xPos</span>, <span style=color:#a6e22e>yPos</span>, <span style=color:#a6e22e>shapeSize</span>)
-  } <span style=color:#66d9ef>else</span> {
-    <span style=color:#a6e22e>circle</span>(<span style=color:#a6e22e>xPos</span>, <span style=color:#a6e22e>yPos</span>, <span style=color:#a6e22e>shapeSize</span>)
-  }
-}
-
-<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>keyPressed</span>() {
-  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;pressed&#34;</span>, <span style=color:#a6e22e>key</span>)
-  <span style=color:#66d9ef>if</span> (<span style=color:#e6db74>&#39;b&#39;</span> <span style=color:#f92672>==</span> <span style=color:#a6e22e>key</span>) {
-    <span style=color:#a6e22e>fillColor</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;blue&#39;</span>
-  }
-  <span style=color:#66d9ef>if</span> (<span style=color:#e6db74>&#39;r&#39;</span> <span style=color:#f92672>==</span> <span style=color:#a6e22e>key</span>) {
-    <span style=color:#a6e22e>fillColor</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;red&#39;</span>
-  }
-}
-
-<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>keyReleased</span>() {
-  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;released&#34;</span>, <span style=color:#a6e22e>key</span>)
-  <span style=color:#a6e22e>sizeMultiplier</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>
-}
-
-<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>mousePressed</span>() {
-  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;mouse pressed&#34;</span>)
-  <span style=color:#a6e22e>fillColor</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;yellow&#39;</span>
-  <span style=color:#a6e22e>sizeMultiplier</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>3</span>
-}
-
-<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>mouseReleased</span>() {
-  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;mouse released&#34;</span>)
-  <span style=color:#a6e22e>fillColor</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;black&#39;</span>
-  <span style=color:#a6e22e>sizeMultiplier</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>3</span>
-}</code></pre></div>
-<h2 id=demo>Demo</h2>
-<p>Prøv det <a href=demo/>kørende eksempel</a></p>
+<ol>
+<li>Skriv et program, der finder positionen af det første mellemrum i en streng.
+(vink: Brug metoden IndexOf(" &ldquo;))</li>
+<li>Skriv et program, der fjerner det første ord i en sætning (indtil første mellemrum).</li>
+<li>Skriv et program, der tæller antallet af mellemrum i en tekst.</li>
+<li>Skriv et program, der fjerner den første forekomst af ordet &ldquo;måske&rdquo; fra en tekst. Ændr derefter programmet, så det fjerner alle forekomster af ordet (brug en løkke).</li>
+<li>Skriv et program, der finder og fjerner alle forekomster af ordet &ldquo;måske&rdquo; fra en tekst, uanset om det er skrevet med store eller små bogstaver.</li>
+<li>Skriv et program, der undersøger, om en tekst er et palindrom, dvs. med samme stavning forfra og bagfra (som f.eks. &ldquo;regninger&rdquo;, &ldquo;russerdressur&rdquo;, &ldquo;vær dog god ræv&rdquo;). (vink: Træk de enkelte tegn ud af strengene med Substring(n,n+1) og husk, at strengobjekter skal sammenlignes med .Equals()-metoden: str1.Equals(str2)).</li>
+<li>Udvid programmet til at tage højde for store/små bogstaver, tegnsætning og mellemrum, sådan at de følgende palindromer også genkendes: &ldquo;Selmas lakserøde garagedøre skal samles&rdquo; og &ldquo;Åge lo, da baronesse Nora bad Ole gå&rdquo;.</li>
+</ol>
 <h2 id=materiale>Materiale</h2>
 <ul>
-<li><a href=https://p5js.org/reference/#/p5/setup>setup()</a></li>
-<li><a href=https://p5js.org/reference/#/p5/draw>draw()</a></li>
-<li><a href=https://p5js.org/reference/#/p5/createCanvas>createCanvas()</a></li>
-<li><a href=https://p5js.org/reference/#/p5/rectMode>rectMode()</a></li>
-<li><a href=https://p5js.org/reference/#/p5/background>background()</a></li>
-<li><a href=https://p5js.org/reference/#/p5/text>text()</a></li>
-<li><a href=https://p5js.org/reference/#/p5/textSize>textSize()</a></li>
-<li><a href=https://p5js.org/reference/#/p5/fill>fill()</a></li>
-<li><a href=https://p5js.org/reference/#/p5/rect>rect()</a></li>
-<li><a href=https://p5js.org/reference/#/p5/circle>circle()</a></li>
-<li><a href=https://p5js.org/reference/#/p5/mouseX>mouseX</a></li>
-<li><a href=https://p5js.org/reference/#/p5/mouseY>mouseY</a></li>
-<li><a href=https://p5js.org/reference/#/p5/keyIsPressed>keyIsPressed</a></li>
-<li><a href=https://p5js.org/reference/#/p5/keyPressed>keyPressed()</a></li>
-<li><a href=https://p5js.org/reference/#/p5/keyReleased>keyReleased()</a></li>
-<li><a href=https://p5js.org/reference/#/p5/mousePressed>mousePressed()</a></li>
-<li><a href=https://p5js.org/reference/#/p5/mouseReleased>mouseReleased()</a></li>
+<li><a href=https://www.w3schools.com/cs/>C# Tutorial</a></li>
+<li><a href=https://www.w3schools.com/cs/cs_strings.php>C# Tutorial - Strings</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.indexof?view=net-5.0">String.IndexOf Method</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.equals?view=net-5.0">String.Equals Method</a></li>
+<li><a href="https://docs.microsoft.com/en-us/dotnet/api/system.string.substring?view=net-5.0">String.Substring Method</a></li>
 </ul>
 <footer class=footline>
 </footer>
 </div>
 </div>
 <div id=navigation>
-<a class="nav nav-prev" href=/tech/p5js/canvas/ title=Canvas> <i class="fa fa-chevron-left"></i></a>
-<a class="nav nav-next" href=/tech/p5js/circle-collision/ title="Circle Collision" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
+<a class="nav nav-prev" href=/project/html-basics/ title="HTML Basics"> <i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=/project/array-stats/ title="Array Stats" style=margin-right:0><i class="fa fa-chevron-right"></i></a>
 </div>
 </section>
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/js/clipboard.min.js?1635716114></script>
-<script src=/js/perfect-scrollbar.min.js?1635716114></script>
-<script src=/js/perfect-scrollbar.jquery.min.js?1635716114></script>
-<script src=/js/jquery.sticky.js?1635716114></script>
-<script src=/js/featherlight.min.js?1635716114></script>
-<script src=/js/highlight.pack.js?1635716114></script>
+<script src=/js/clipboard.min.js?1635716112></script>
+<script src=/js/perfect-scrollbar.min.js?1635716112></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1635716112></script>
+<script src=/js/jquery.sticky.js?1635716112></script>
+<script src=/js/featherlight.min.js?1635716112></script>
+<script src=/js/highlight.pack.js?1635716112></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/js/modernizr.custom-3.6.0.js?1635716114></script>
-<script src=/js/learn.js?1635716114></script>
-<script src=/js/hugo-learn.js?1635716114></script>
-<script src=/mermaid/mermaid.js?1635716114></script>
+<script src=/js/modernizr.custom-3.6.0.js?1635716112></script>
+<script src=/js/learn.js?1635716112></script>
+<script src=/js/hugo-learn.js?1635716112></script>
+<script src=/mermaid/mermaid.js?1635716112></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>
