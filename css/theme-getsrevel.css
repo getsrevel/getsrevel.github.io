@@ -131,8 +131,15 @@ a:hover {
 }
 
 @media only print {
-    #top-bar-sticky-wrapper, #navigation > .nav {
+    #top-bar-sticky-wrapper, #navigation > .nav, #head-tags {
         display: none;
     }
 
+    /* show url after links when printing */
+    #body a.highlight::after {
+        content: '['attr(href)']';
+        background-color: transparent;
+        margin-left: 0.2em;
+        display: inline;
+    }
 }
