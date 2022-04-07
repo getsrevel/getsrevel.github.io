@@ -6,18 +6,18 @@
 <meta name=description content>
 <link rel=icon href=/images/favicon.png type=image/png>
 <title>Discord Bot :: Getsrevel</title>
-<link href=/css/nucleus.css?1644533154 rel=stylesheet>
-<link href=/css/fontawesome-all.min.css?1644533154 rel=stylesheet>
-<link href=/css/hybrid.css?1644533154 rel=stylesheet>
-<link href=/css/featherlight.min.css?1644533154 rel=stylesheet>
-<link href=/css/perfect-scrollbar.min.css?1644533154 rel=stylesheet>
-<link href=/css/auto-complete.css?1644533154 rel=stylesheet>
-<link href=/css/atom-one-dark-reasonable.css?1644533154 rel=stylesheet>
-<link href=/css/theme.css?1644533154 rel=stylesheet>
-<link href=/css/tabs.css?1644533154 rel=stylesheet>
-<link href=/css/hugo-theme.css?1644533154 rel=stylesheet>
-<link href=/css/theme-getsrevel.css?1644533154 rel=stylesheet>
-<script src=/js/jquery-3.3.1.min.js?1644533154></script>
+<link href=/css/nucleus.css?1649323837 rel=stylesheet>
+<link href=/css/fontawesome-all.min.css?1649323837 rel=stylesheet>
+<link href=/css/hybrid.css?1649323837 rel=stylesheet>
+<link href=/css/featherlight.min.css?1649323837 rel=stylesheet>
+<link href=/css/perfect-scrollbar.min.css?1649323837 rel=stylesheet>
+<link href=/css/auto-complete.css?1649323837 rel=stylesheet>
+<link href=/css/atom-one-dark-reasonable.css?1649323837 rel=stylesheet>
+<link href=/css/theme.css?1649323837 rel=stylesheet>
+<link href=/css/tabs.css?1649323837 rel=stylesheet>
+<link href=/css/hugo-theme.css?1649323837 rel=stylesheet>
+<link href=/css/theme-getsrevel.css?1649323837 rel=stylesheet>
+<script src=/js/jquery-3.3.1.min.js?1649323837></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158806272-1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-158806272-1')</script>
@@ -34,10 +34,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/js/lunr.min.js?1644533154></script>
-<script type=text/javascript src=/js/auto-complete.js?1644533154></script>
+<script type=text/javascript src=/js/lunr.min.js?1649323837></script>
+<script type=text/javascript src=/js/auto-complete.js?1649323837></script>
 <script type=text/javascript>var baseurl="https://getsrevel.github.io/"</script>
-<script type=text/javascript src=/js/search.js?1644533154></script>
+<script type=text/javascript src=/js/search.js?1649323837></script>
 </div>
 <div class=highlightable>
 <ul class=topics>
@@ -619,10 +619,10 @@ Derefter kan du køre din bot, med denne kommando.</p>
   <span style=color:#f92672>&#34;author&#34;</span>: <span style=color:#e6db74>&#34;&#34;</span>,
   <span style=color:#f92672>&#34;license&#34;</span>: <span style=color:#e6db74>&#34;ISC&#34;</span>,
   <span style=color:#f92672>&#34;dependencies&#34;</span>: {
-<span style=display:block;width:100%;background-color:#3c3d38>    <span style=color:#f92672>&#34;axios&#34;</span>: <span style=color:#e6db74>&#34;^0.21.1&#34;</span>,
-</span><span style=display:block;width:100%;background-color:#3c3d38>    <span style=color:#f92672>&#34;cowsay&#34;</span>: <span style=color:#e6db74>&#34;^1.4.0&#34;</span>,
-</span><span style=display:block;width:100%;background-color:#3c3d38>    <span style=color:#f92672>&#34;discord.js&#34;</span>: <span style=color:#e6db74>&#34;^12.5.1&#34;</span>,
-</span><span style=display:block;width:100%;background-color:#3c3d38>    <span style=color:#f92672>&#34;dotenv&#34;</span>: <span style=color:#e6db74>&#34;^8.2.0&#34;</span>,
+<span style=display:block;width:100%;background-color:#3c3d38>    <span style=color:#f92672>&#34;axios&#34;</span>: <span style=color:#e6db74>&#34;^0.26.1&#34;</span>,
+</span><span style=display:block;width:100%;background-color:#3c3d38>    <span style=color:#f92672>&#34;cowsay&#34;</span>: <span style=color:#e6db74>&#34;^1.5.0&#34;</span>,
+</span><span style=display:block;width:100%;background-color:#3c3d38>    <span style=color:#f92672>&#34;discord.js&#34;</span>: <span style=color:#e6db74>&#34;^13.6.0&#34;</span>,
+</span><span style=display:block;width:100%;background-color:#3c3d38>    <span style=color:#f92672>&#34;dotenv&#34;</span>: <span style=color:#e6db74>&#34;^16.0.0&#34;</span>,
 </span><span style=display:block;width:100%;background-color:#3c3d38>    <span style=color:#f92672>&#34;random-fortune&#34;</span>: <span style=color:#e6db74>&#34;^0.2.0&#34;</span>
 </span>  }
 }</code></pre></div>
@@ -633,17 +633,18 @@ Bemærk hvordan kommandohåndteringen er uddelegeret til et andet modul.</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#39;dotenv&#39;</span>).<span style=color:#a6e22e>config</span>();
 <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>TOKEN</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>process</span>.<span style=color:#a6e22e>env</span>.<span style=color:#a6e22e>TOKEN</span>;
 
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>Discord</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#39;discord.js&#39;</span>);
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>client</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Discord</span>.<span style=color:#a6e22e>Client</span>();
+<span style=color:#66d9ef>const</span> {<span style=color:#a6e22e>Client</span>, <span style=color:#a6e22e>Intents</span>} <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#39;discord.js&#39;</span>);
+<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>config</span> <span style=color:#f92672>=</span> {<span style=color:#a6e22e>intents</span><span style=color:#f92672>:</span>[<span style=color:#a6e22e>Intents</span>.<span style=color:#a6e22e>FLAGS</span>.<span style=color:#a6e22e>GUILDS</span>, <span style=color:#a6e22e>Intents</span>.<span style=color:#a6e22e>FLAGS</span>.<span style=color:#a6e22e>GUILD_MESSAGES</span>]};
+<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>client</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Client</span>(<span style=color:#a6e22e>config</span>);
 <span style=color:#a6e22e>client</span>.<span style=color:#a6e22e>login</span>(<span style=color:#a6e22e>TOKEN</span>);
 
 <span style=color:#a6e22e>client</span>.<span style=color:#a6e22e>on</span>(<span style=color:#e6db74>&#39;ready&#39;</span>, () =&gt; {
   <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>`Logged in as </span><span style=color:#e6db74>${</span><span style=color:#a6e22e>client</span>.<span style=color:#a6e22e>user</span>.<span style=color:#a6e22e>tag</span><span style=color:#e6db74>}</span><span style=color:#e6db74>!`</span>);
 });
+<span style=display:block;width:100%;background-color:#3c3d38>
+</span><span style=display:block;width:100%;background-color:#3c3d38><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>commandHandler</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#39;./commands&#39;</span>);
+</span><span style=color:#a6e22e>client</span>.<span style=color:#a6e22e>on</span>(<span style=color:#e6db74>&#39;message&#39;</span>, <span style=color:#a6e22e>commandHandler</span>);
 
-<span style=display:block;width:100%;background-color:#3c3d38><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>commandHandler</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>require</span>(<span style=color:#e6db74>&#39;./commands&#39;</span>);
-</span><span style=display:block;width:100%;background-color:#3c3d38><span style=color:#a6e22e>client</span>.<span style=color:#a6e22e>on</span>(<span style=color:#e6db74>&#39;message&#39;</span>, <span style=color:#a6e22e>commandHandler</span>);
-</span>
 <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#39;Beep beep! 🤖&#39;</span>);</code></pre></div>
 <h2 id=kommandofortolker>Kommandofortolker</h2>
 <p>Håndtering af de indkomne kommandoer er placeret i filen <code>commands.js</code>.
@@ -722,7 +723,13 @@ Den er implementeret i filen <code>commands/ping.js</code>.
 <p>Denne kommando svarer tilbage med en besked tilfældigt udvalgt fra en liste med svarmuligheder.
 Den er implementeret i filen <code>commands/hmm.js</code>.</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>ufoUrl</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;https://i.pinimg.com/originals/39/b2/34/39b234d75c67da28abdcb38b1b4cf649.png&#39;</span>;
-<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>replies</span> <span style=color:#f92672>=</span> [<span style=color:#a6e22e>ufoUrl</span>, <span style=color:#e6db74>&#39;🤖 says go 🏄 and ⛷️&#39;</span>, <span style=color:#e6db74>&#39;(╯°□°）╯︵ ┻━┻&#39;</span>, <span style=color:#e6db74>&#39;¯\_(ツ)_/¯&#39;</span>, <span style=color:#e6db74>&#39;Så er der 🍰&#39;</span>];
+<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>replies</span> <span style=color:#f92672>=</span> [
+  <span style=color:#a6e22e>ufoUrl</span>,
+  <span style=color:#e6db74>&#39;🤖 says go 🏄 and ⛷️&#39;</span>,
+  <span style=color:#e6db74>&#39;(╯°□°）╯︵ ┻━┻&#39;</span>,
+  <span style=color:#e6db74>&#39;¯\_(ツ)_/¯&#39;</span>,
+  <span style=color:#e6db74>&#39;Så er der 🍰&#39;</span>
+];
 
 <span style=color:#a6e22e>module</span>.<span style=color:#a6e22e>exports</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>msg</span>, <span style=color:#a6e22e>args</span>) =&gt; {
   <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>index</span> <span style=color:#f92672>=</span> Math.<span style=color:#a6e22e>floor</span>(Math.<span style=color:#a6e22e>random</span>() <span style=color:#f92672>*</span> <span style=color:#a6e22e>replies</span>.<span style=color:#a6e22e>length</span>);
@@ -844,17 +851,17 @@ Husk at det er nødvendigt at genstarte programmet, hvis der laves ændringer i 
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/js/clipboard.min.js?1644533154></script>
-<script src=/js/perfect-scrollbar.min.js?1644533154></script>
-<script src=/js/perfect-scrollbar.jquery.min.js?1644533154></script>
-<script src=/js/jquery.sticky.js?1644533154></script>
-<script src=/js/featherlight.min.js?1644533154></script>
-<script src=/js/highlight.pack.js?1644533154></script>
+<script src=/js/clipboard.min.js?1649323837></script>
+<script src=/js/perfect-scrollbar.min.js?1649323837></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1649323837></script>
+<script src=/js/jquery.sticky.js?1649323837></script>
+<script src=/js/featherlight.min.js?1649323837></script>
+<script src=/js/highlight.pack.js?1649323837></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/js/modernizr.custom-3.6.0.js?1644533154></script>
-<script src=/js/learn.js?1644533154></script>
-<script src=/js/hugo-learn.js?1644533154></script>
-<script src=/mermaid/mermaid.js?1644533154></script>
+<script src=/js/modernizr.custom-3.6.0.js?1649323837></script>
+<script src=/js/learn.js?1649323837></script>
+<script src=/js/hugo-learn.js?1649323837></script>
+<script src=/mermaid/mermaid.js?1649323837></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>
