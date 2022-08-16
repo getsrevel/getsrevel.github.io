@@ -6,18 +6,18 @@
 <meta name=description content>
 <link rel=icon href=/images/favicon.png type=image/png>
 <title>Mastermind :: Getsrevel</title>
-<link href=/css/nucleus.css?1660559892 rel=stylesheet>
-<link href=/css/fontawesome-all.min.css?1660559892 rel=stylesheet>
-<link href=/css/hybrid.css?1660559892 rel=stylesheet>
-<link href=/css/featherlight.min.css?1660559892 rel=stylesheet>
-<link href=/css/perfect-scrollbar.min.css?1660559892 rel=stylesheet>
-<link href=/css/auto-complete.css?1660559892 rel=stylesheet>
-<link href=/css/atom-one-dark-reasonable.css?1660559892 rel=stylesheet>
-<link href=/css/theme.css?1660559892 rel=stylesheet>
-<link href=/css/tabs.css?1660559892 rel=stylesheet>
-<link href=/css/hugo-theme.css?1660559892 rel=stylesheet>
-<link href=/css/theme-getsrevel.css?1660559892 rel=stylesheet>
-<script src=/js/jquery-3.3.1.min.js?1660559892></script>
+<link href=/css/nucleus.css?1660683344 rel=stylesheet>
+<link href=/css/fontawesome-all.min.css?1660683344 rel=stylesheet>
+<link href=/css/hybrid.css?1660683344 rel=stylesheet>
+<link href=/css/featherlight.min.css?1660683344 rel=stylesheet>
+<link href=/css/perfect-scrollbar.min.css?1660683344 rel=stylesheet>
+<link href=/css/auto-complete.css?1660683344 rel=stylesheet>
+<link href=/css/atom-one-dark-reasonable.css?1660683344 rel=stylesheet>
+<link href=/css/theme.css?1660683344 rel=stylesheet>
+<link href=/css/tabs.css?1660683344 rel=stylesheet>
+<link href=/css/hugo-theme.css?1660683344 rel=stylesheet>
+<link href=/css/theme-getsrevel.css?1660683344 rel=stylesheet>
+<script src=/js/jquery-3.3.1.min.js?1660683344></script>
 <style>:root #header+#content>#left>#rlblock_left{display:none!important}</style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158806272-1"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','UA-158806272-1')</script>
@@ -34,10 +34,10 @@
 <input data-search-input id=search-by type=search placeholder=Search...>
 <span data-search-clear><i class="fas fa-times"></i></span>
 </div>
-<script type=text/javascript src=/js/lunr.min.js?1660559892></script>
-<script type=text/javascript src=/js/auto-complete.js?1660559892></script>
+<script type=text/javascript src=/js/lunr.min.js?1660683344></script>
+<script type=text/javascript src=/js/auto-complete.js?1660683344></script>
 <script type=text/javascript>var baseurl="https://getsrevel.github.io/"</script>
-<script type=text/javascript src=/js/search.js?1660559892></script>
+<script type=text/javascript src=/js/search.js?1660683344></script>
 </div>
 <div class=highlightable>
 <ul class=topics>
@@ -597,6 +597,75 @@ Dette skal annonceres i svaret, og den hemmelige kode afsløres, så man kan kon
 <li>Man skal have mulighed for at give op, få vist koden og starte forfra.</li>
 <li>Hold styr på hvor mange gange parterne har vundet.</li>
 </ul>
+<p>Her er et eksempel på hvordan interaktionen med programmet kan laves.</p>
+<pre><code>!mm help
+</code></pre>
+<blockquote>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-txt data-lang=txt>Welcome to Mastermind!
+
+Guess the secrect code.
+Code consist of 4 numbers in the range 1 through 6.
+
+Show this help message
+
+  !mm
+or
+  !mm help
+
+Start / restart game
+
+  !mm start
+
+Make a guess for the code 1234
+
+  !mm g 1234 
+
+The game response shows your guesses and provides feedback
+  o : code contains number
+  x : correct placement of number</code></pre></div>
+</blockquote>
+<pre><code>!mm start
+</code></pre>
+<blockquote>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-txt data-lang=txt>Starting new mastermind game, generated secrect code.</code></pre></div>
+</blockquote>
+<pre><code>!mm g 1234
+</code></pre>
+<blockquote>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-txt data-lang=txt>1 : [1, 2, 3, 4] | ooo</code></pre></div>
+</blockquote>
+<pre><code>!mm g 1235
+</code></pre>
+<blockquote>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-txt data-lang=txt>1 : [1, 2, 3, 4] | ooo
+2 : [1, 2, 3, 5] | ooo</code></pre></div>
+</blockquote>
+<pre><code>!mm g 1236
+</code></pre>
+<blockquote>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-txt data-lang=txt>1 : [1, 2, 3, 4] | ooo
+2 : [1, 2, 3, 5] | ooo
+3 : [1, 2, 3, 6] | oo</code></pre></div>
+</blockquote>
+<pre><code>!mm g 2354
+</code></pre>
+<blockquote>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-txt data-lang=txt>1 : [1, 2, 3, 4] | ooo
+2 : [1, 2, 3, 5] | ooo
+3 : [1, 2, 3, 6] | oo
+4 : [2, 3, 5, 4] | xooo</code></pre></div>
+</blockquote>
+<pre><code>!mm g 2543
+</code></pre>
+<blockquote>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-txt data-lang=txt>1 : [1, 2, 3, 4] | ooo
+2 : [1, 2, 3, 5] | ooo
+3 : [1, 2, 3, 6] | oo
+4 : [2, 3, 5, 4] | xooo
+5 : [2, 5, 4, 3] | xxxx
+### You win ###
+Secret code is: [2, 5, 4, 3]</code></pre></div>
+</blockquote>
 <footer class=footline>
 </footer>
 </div>
@@ -609,17 +678,17 @@ Dette skal annonceres i svaret, og den hemmelige kode afsløres, så man kan kon
 <div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px>
 <div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div>
 </div>
-<script src=/js/clipboard.min.js?1660559892></script>
-<script src=/js/perfect-scrollbar.min.js?1660559892></script>
-<script src=/js/perfect-scrollbar.jquery.min.js?1660559892></script>
-<script src=/js/jquery.sticky.js?1660559892></script>
-<script src=/js/featherlight.min.js?1660559892></script>
-<script src=/js/highlight.pack.js?1660559892></script>
+<script src=/js/clipboard.min.js?1660683344></script>
+<script src=/js/perfect-scrollbar.min.js?1660683344></script>
+<script src=/js/perfect-scrollbar.jquery.min.js?1660683344></script>
+<script src=/js/jquery.sticky.js?1660683344></script>
+<script src=/js/featherlight.min.js?1660683344></script>
+<script src=/js/highlight.pack.js?1660683344></script>
 <script>hljs.initHighlightingOnLoad()</script>
-<script src=/js/modernizr.custom-3.6.0.js?1660559892></script>
-<script src=/js/learn.js?1660559892></script>
-<script src=/js/hugo-learn.js?1660559892></script>
-<script src=/mermaid/mermaid.js?1660559892></script>
+<script src=/js/modernizr.custom-3.6.0.js?1660683344></script>
+<script src=/js/learn.js?1660683344></script>
+<script src=/js/hugo-learn.js?1660683344></script>
+<script src=/mermaid/mermaid.js?1660683344></script>
 <script>mermaid.initialize({startOnLoad:!0})</script>
 </body>
 </html>
