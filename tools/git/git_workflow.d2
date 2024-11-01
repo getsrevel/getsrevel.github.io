@@ -1,0 +1,18 @@
+# generate png file using:
+# d2 --layout=dagre --sketch --pad 10 .\git_workflow.d2 .\git_workflow.png
+
+edit :opret/rediger/slet fil(er)
+stage : udvælg ændringer
+do_push: Klar til\noffentliggørelse? {
+    shape: diamond
+}
+push : Skub ændriger til 'remote'
+commit : Commit i lokalt depot
+
+edit -> stage
+stage -> commit
+
+commit -> do_push
+do_push -> edit : Nej
+do_push -> push : Ja
+push --> edit

@@ -1,0 +1,33 @@
+# generate png file using:
+# d2 --sketch --layout=dagre --pad 10 .\git_shared_repo.d2 .\git_shared_repo.png
+
+# direction: right
+remote: "Server (e.g. github)" {
+  repo: Remote repository {
+    shape: cylinder
+  }
+  repo
+}
+
+you: Your machine{
+    wd: Working directory
+    repo: Local repository {
+        shape: cylinder
+    }
+    wd -> repo: commit
+    wd <- repo: checkout
+}
+
+friend: Friends machine {
+  wd: Working directory
+  repo: Local repository {
+    shape: cylinder
+  }
+  wd -> repo: commit
+  wd <- repo: checkout
+}
+
+you.repo -> remote.repo: push
+you.repo <- remote.repo: pull
+friend.repo -> remote.repo: push
+friend.repo <- remote.repo: pull

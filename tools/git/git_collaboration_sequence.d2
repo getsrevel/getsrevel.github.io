@@ -1,0 +1,61 @@
+# generate png file using:
+# d2 --sketch --layout=dagre --pad 10 .\git_collaboration_sequence.d2 .\git_collaboration_sequence.png
+
+shape: sequence_diagram
+a: Alice {
+  shape: person
+}
+b: Bob {
+  shape: person
+}
+r: Remote\n(Github) {
+  shape: cylinder
+}
+
+Succesful interaction: {
+  b -> b.s1self: commit
+  b -> r.s1: push
+  b <- r.s1: success {
+    style.stroke-dash: 5
+  }
+  b -> a.s1: Please pull \nthe latest code
+  a.s1 -> r.s2: push
+  a.s1 <- r.s2: success {style.stroke-dash: 5}
+  a.s1 -> b: Ok done {style.stroke-dash: 5}
+
+  a -> a.s1self: commit
+  a -> r.s3: push
+  a <- r.s3: success {style.stroke-dash: 5}
+
+  a -> b.s1: I pushed some changes
+  b.s1 -> r.s4: pull
+  b.s1 <- r.s4: latest code {style.stroke-dash: 5}
+  b.s1 -> a: OK, done {style.stroke-dash: 5}
+}
+
+Handling merge conflicts: {
+  b -> b.c1self: commit
+  a -> a.c1self: commit
+  a -> r.c1: push
+  a <- r.c1: success {style.stroke-dash: 5}
+
+  a -> b.c1: I pushed\nsome changes
+  b.c1 -> r.c2: push
+  b.c1 <- r.c2: error, not on latest commit {style.stroke-dash: 5}
+  b.c1 -> r.c3: pull
+  b.c1 <- r.c3: latest code {style.stroke-dash: 5}
+
+  #   b.c1 -> a: Oh no, lots of conflicts!
+  b.Oh no, lots of conflicts!
+
+  b.c1 -> b.c1: resolve conflicts\n locally
+  b.c1 -> r.c4: push
+  b.c1 <- r.c4: success {style.stroke-dash: 5}
+  b.c1 -> a.c1: Managed to resolve the\n conflicts, please review {style.stroke-dash: 5}
+
+  a.c1 -> r.c5: pull
+  a.c1 <- r.c5: latest code {style.stroke-dash: 5}
+
+  a -> b.c2: I pulled the code, no issues. Sorry!
+  a <- b.c2: Ok, great {style.stroke-dash: 5}
+}

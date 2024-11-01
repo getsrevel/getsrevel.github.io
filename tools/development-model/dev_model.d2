@@ -1,0 +1,22 @@
+# generate png file using:
+# d2 --sketch --layout=dagre --pad 10 .\dev_model.d2 .\dev_model.png
+
+*: {
+    shape: circle
+}
+
+# direction: right
+direction: right
+
+idea: "       Idé        "
+release: Frigivelse\naf\nfærdigt\nsystem
+
+idea -> planning
+planning: Planlægning
+implementation: Udarbejdelse
+test: Evaluering\n og Test
+
+planning -> implementation
+implementation -> test
+test -> planning
+test -> release

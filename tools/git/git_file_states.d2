@@ -1,0 +1,25 @@
+# generate png file using:
+# d2 --sketch --layout=elk --pad 10 .\git_file_states.d2 .\git_file_states.png
+
+wd: Working directory {shape: rectangle}
+
+wd: {
+  *: {
+    shape: oval
+  }
+  Untracked -> Staged: add
+  Modified -> Staged: add
+}
+none.style.opacity: 0
+none -> wd.Untracked: create
+r.commited -> wd.Modified: edit
+wd.Staged -> r.commited: commit
+
+r.commited -> wd.Untracked: delete
+
+r: Repository {
+  shape: cylinder
+}
+r.commited: {
+  shape: oval
+}
